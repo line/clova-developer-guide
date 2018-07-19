@@ -23,6 +23,16 @@ LINE株式会社（以下、当社といいます）は、Clova事務局とし�
   </thead>
   <tbody>
   <tr>
+    <td>v1.1</td><td>2018/07/19</td>
+    <td>
+      <ul>
+        <li><a href="/CEK/Guides/Register_Collaborator.md">複数のユーザーでExtensionの編集・テストを行う</a> 追加</li>
+        <li><a href="/CEK/Examples/Extension_Examples.md">サンプルのExtension</a> 追加</li>
+        <li><a href="/DevConsole/Guides/CEK/Update_Extension.md">Extensionをアップデートする</a> 追加</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
     <td>v1.0</td><td>2018/07/12</td>
     <td>
       <ul>
