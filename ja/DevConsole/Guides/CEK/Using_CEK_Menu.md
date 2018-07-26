@@ -16,8 +16,3 @@ CEKメニューでは、次の作業を行うことができます。
 * [Extensionを削除および中止する](/DevConsole/Guides/CEK/Remove_Extension.md)
 
 このうち、登録、配布、アップデート、中止および削除はExtensionの管理に属する概念です。
-
-<div class="danger">
- <p><strong>注意</strong></p>
- <p>Custom Extensionは、現時点ではClova WAVEでは動作確認することができません。</p>
-</div>

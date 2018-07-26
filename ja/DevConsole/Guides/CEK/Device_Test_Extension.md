@@ -10,8 +10,3 @@
 発話の取得を開始するには、"ログ取得を開始する"ボタンを押してください。ログ取得を開始してからClovaデバイスに向けて話しかけられた発話履歴のみを表示することができます。また、画面を閉じた場合には発話履歴を閲覧することはできませんので、発話を確認するにはツールを開いてから、毎回"ログ取得を開始する"ボタンを押して下さい。
 
 ![](/DevConsole/Resources/Images/DevConsole-DeviceTest_StartTest.png)
-
-<div class="danger">
- <p><strong>注意</strong></p>
- <p>Custom Extensionは、現時点ではClova WAVEでは動作確認することができません。</p>
-</div>

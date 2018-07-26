@@ -13,8 +13,3 @@ Clova Developer Centerは、CEKメニューを提供します。それぞれの�
   * [Extensionを配布する](/DevConsole/Guides/CEK/Deploy_Extension.md)
   * [Extensionをアップデートする](/DevConsole/Guides/CEK/Update_Extension.md)
   * [Extensionを中止および削除する](/DevConsole/Guides/CEK/Remove_Extension.md)
-
-  <div class="danger">
-   <p><strong>注意</strong></p>
-   <p>Custom Extensionは、現時点ではClova WAVEでは動作確認することができません。</p>
-  </div>

@@ -13,10 +13,6 @@ Custom Extensionとは、Clovaが基本的に提供している機能やサー�
 * [マルチターン対話をする](#DoMultiturnDialog)
 * [オーディオコンテンツを提供する](#ProvideAudioContent)
 
-<div class="danger">
- <p><strong>注意</strong></p>
- <p>Custom Extensionは、現時点ではClova WAVEでは動作確認することができません。</p>
-</div>
 
 {% include "/CEK/Guides/BuildCustomExtension/Preparation.md" %}
 

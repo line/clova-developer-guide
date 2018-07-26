@@ -23,6 +23,14 @@ LINE株式会社（以下、当社といいます）は、Clova事務局とし�
   </thead>
   <tbody>
   <tr>
+    <td>v1.1.2</td><td>2018/07/26</td>
+    <td>
+      <ul>
+        <li>Clova WAVEのCustom Extension対応開始</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
     <td>v1.1.1</td><td>2018/07/25</td>
     <td>
       <ul>

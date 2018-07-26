@@ -5,11 +5,6 @@
 * [テスターを登録する](/CEK/Guides/Register_Collaborator.md#RegisterTester)
 
 <div class="danger">
- <p><strong>注意</strong></p>
- <p>Custom Extensionは、現時点ではClova WAVEでは動作確認することができません。</p>
-</div>
-
-<div class="danger">
 <p><strong>注意</strong></p>
   <p>実際のデバイスでテストするには、<strong>{{ book.DevConsole.cek_skill_info }}</strong>に外部からアクセスできる実際のExtensionサーバーのURLを必ず登録する必要があります。</p></li>
 </div>
