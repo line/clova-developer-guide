@@ -52,6 +52,11 @@ Extensionの基本情報をすべて入力すると、作成されたExtension�
 
 ![](/DevConsole/Resources/Images/DevConsole-Extension_List_After_Creation.png)
 
+<div class="note">
+  <p><strong>メモ</strong></p>
+  <p>呼び出し名(メイン)や呼び出し名(サブ)が反映されるまでに数分時間がかかる場合があります。</p>
+</div>
+
 ## サーバーとの連携を設定する {#SetServerConnection}
 
 ExtensionはCEKとHTTPSで通信します。その際、CEKはExtensionにHTTPリクエストを送り、ExtensionはCEKにHTTPレスポンスを返します。CEKがExtensionにHTTPリクエストを送るためには、Clova Developer Centerでサーバーとの連携を設定する必要があります。[Extensionの基本情報を入力](#InputExtensionInfo)すると、作成されたExtensionに対し、サーバーとの連携を設定できます。
@@ -72,9 +77,9 @@ $ curl "https://yourdomain.com/pizzabot" -X POST
   <li>Extensionの情報入力UIで、上にある<strong>{{ book.DevConsole.cek_configuration }}</strong>タブをクリックします。</li>
   <li>ExtensionサーバーのURL(エンドポイント)を<strong>{{ book.DevConsole.cek_service_endpoint_url }}</strong>項目に入力します。
     <div class="note">
-    <p><strong>メモ</strong></p>
-    <p>Extensionのサーバーは、HTTPSのみ許可されます。HTTPSで443ポートに設定してください。</p>
-  </div>
+      <p><strong>メモ</strong></p>
+      <p>Extensionのサーバーは、HTTPSのみ許可されます。HTTPSで443ポートに設定してください。</p>
+    </div>
   </li>
   <li>Extensionが提供するサービスのアカウントが、Clovaのユーザーアカウントとの連携を必要とする場合、<strong>{{ book.DevConsole.cek_account_linking }}</strong>項目で<strong>{{ book.DevConsole.cek_yes }}</strong>を選択します。アカウント連携の詳細については、<a href="#SetAccountLinking">アカウント連携を設定する</a>を参照してください。</li>
   <li><strong>{{ book.DevConsole.cek_ssl_certificate }}</strong>項目のボタンをクリックします。Extensionを提供するサーバーは、必ず信頼された認証局から発行された証明書を使用しなければなりません。(自己署名証明書は使用できません)</li>

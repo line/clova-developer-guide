@@ -31,8 +31,8 @@
 ユーザーへの権限の追加・削除は、以下の手順で実施します。
 
 1. [Admin権限を追加する](#AssignAdminRight)
-3. [Admin権限を削除する](#RemoveAdminRight)
-2. [テスターを追加する](#RegisterTester)（※ 現在はご利用いただけません）
+2. [Admin権限を削除する](#RemoveAdminRight)
+3. [テスターを追加する](#RegisterTester)
 4. [テスターを削除する](#RemoveTester)
 
 ### 1. Admin権限を追加する {#AssignAdminRight}
@@ -64,7 +64,20 @@ Admin権限は、次の手順で付与します。
 
 ### 2. Admin権限を削除する {#RemoveAdminRight}
 
-※ 現在、この機能はご利用いただけません。
+1. Admin権限を持つユーザーが[LINE Developersコンソール](https://developers.line.me/console/)に接続し、**プロバイダーリスト** を表示します。  
+![](/CEK/Resources/Images/CEK_Test_LineDev_Provider_List.png)
+
+2. プロバイダーを選択し、当該の **Clovaスキル** をクリックします。  
+![](/CEK/Resources/Images/CEK_Test_LineDev_Channel_List.png)
+
+3. **権限管理** タブをクリックし、Admin権限を削除したいユーザーのメールアドレスの右に表示されている **編集** ボタンをクリックします。  
+![](/CEK/Resources/Images/CEK_Remove_Admin_LineDev_Admin_Tab.png)
+
+4. 名前の左に表示されたごみ箱のアイコンをクリックします。  
+![](/CEK/Resources/Images/CEK_Remove_Admin_LineDev_Edit_Button.png)
+
+5. 確認画面が表示されたら、**削除** ボタンをクリックします。  
+![](/CEK/Resources/Images/CEK_Remove_Admin_LineDev_Confirm.png)
 
 
 

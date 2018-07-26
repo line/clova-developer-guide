@@ -1,5 +1,5 @@
 ## HTTPメッセージ {#HTTPMessage}
-CEKとExtensionが通信する際、HTTP/1.1を使用して基本的なHTTPリクエストとHTTPレスポンスをやり取りします。CEKとExtensionが通信する際、HTTPメッセージのボディには、JSON形式のメッセージが含まれます。ここでは、CEKとExtensionがやり取りするHTTPメッセージの構成について説明します。
+CEKとExtensionが通信する際、HTTP/1.1を使用して基本的なHTTPSリクエストとHTTPSレスポンスをやり取りします。CEKとExtensionが通信する際、HTTPメッセージのボディには、JSON形式のメッセージが含まれます。ここでは、CEKとExtensionがやり取りするHTTPメッセージの構成について説明します。
 
 * [HTTPヘッダー](#HTTPHeader)
 * [HTTPボディ](#HTTPBody)

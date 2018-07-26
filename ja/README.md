@@ -23,7 +23,16 @@ LINE株式会社（以下、当社といいます）は、Clova事務局とし�
   </thead>
   <tbody>
   <tr>
-    <td>v1.1</td><td>2018/07/19</td>
+    <td>v1.1.1</td><td>2018/07/25</td>
+    <td>
+      <ul>
+        <li><a href="/CEK/Guides/Register_Collaborator.md">複数のユーザーでExtensionの編集・テストを行う</a> 更新（<a href="/CEK/Guides/Register_Collaborator.md#RemoveAdminRight">Admin権限を削除する</a> 追加）</li>
+        <li><a href="/CEK/Guides/Clova_CEK_SDK.md">Clova Extensions Kitソフトウェア開発キット</a> 更新（<a href="/CEK/Guides/Clova_CEK_SDK.md#SDK_For_Elixir">CEK SDK for Elixir</a> 追加）</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td>v1.1.0</td><td>2018/07/19</td>
     <td>
       <ul>
         <li><a href="/CEK/Guides/Register_Collaborator.md">複数のユーザーでExtensionの編集・テストを行う</a> 追加</li>
@@ -33,7 +42,7 @@ LINE株式会社（以下、当社といいます）は、Clova事務局とし�
     </td>
   </tr>
   <tr>
-    <td>v1.0</td><td>2018/07/12</td>
+    <td>v1.0.0</td><td>2018/07/12</td>
     <td>
       <ul>
         <li>初版リリース</li>

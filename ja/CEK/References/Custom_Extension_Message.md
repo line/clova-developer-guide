@@ -430,7 +430,7 @@ CEKは、Clovaが解析したユーザーのリクエストをCustom Extension�
 
 | フィールド名       | データ型    | フィールドの説明                     | Optional |
 |---------------|---------|-----------------------------|:---------:|
-| `type`          | string  | リクエストメッセージのタイプ。`"LaunchRequest"`の値に固定されます。 |   |
+| `type`          | string  | リクエストメッセージのタイプ。`"LaunchRequest"`の値に固定されます。 |    |
 
 #### SessionEndedRequest {#CustomExtSessionEndedRequest}
 `SessionEndedRequest`タイプは、ユーザーの特定のスキルの使用が終了したことを示すリクエストです。次の状況でこのメッセージを受信します。
@@ -772,20 +772,20 @@ CIC APIは、ユーザーのクライアントデバイスがClovaと通信を�
 クライアントに対して、特定のオーディオストリームを再生するか、または再生キューに追加するように指示します。
 
 ### Payload fields
-| フィールド名       | データ型    | フィールドの説明                     | 任意 |
+| フィールド名       | データ型    | フィールドの説明                     | Optional |
 |---------------|---------|-----------------------------|:---------:|
-| `audioItem`               | object | 再生するオーディオストリームのメタデータと、再生に必要なオーディオストリームの情報を持つオブジェクト                     | 常時 |
-| `audioItem.artImageUrl`   | string | オーディオコンテンツに関連する画像(アルバムの画像)のURL                                                  | 条件付き  |
-| `audioItem.audioItemId`   | string | オーディオストリームを区別するID。クライアントはこの値に基づいて、重複するPlayディレクティブを削除できます。 | 常時 |
-| `audioItem.headerText`    | string | 主に、現在の再生リストのタイトルを表すテキストフィールド                                                | 条件付き  |
-| `audioItem.stream`        | [AudioStreamInfoObject](#AudioStreamInfoObject) | 再生に必要なオーディオストリームの情報を持つオブジェクト        | 常時 |
-| `audioItem.titleSubText1` | string | 主にアーティスト名を表すテキストフィールド                                                          | 常時 |
-| `audioItem.titleSubText2` | string | 主にアルバム名を表すサブテキストフィールド                                                      | 条件付き |
-| `audioItem.titleText`     | string | 現在のオーディオコンテンツのタイトルを表すテキストフィールド                                                         | 常時  |
-| `playBehavior`            | string | ディレクティブに含まれたオーディオストリームを、クライアントでいつ再生するかを指定するフィールド<ul><li><code>"REPLACE_ALL"</code>：再生キューをすべてクリアして、送信されたオーディオストリームをすぐに再生します。</li><li><code>"ENQUEUE"</code>：再生キューに、送信されたオーディオストリームを追加します。</li></ul> | 常時 |
-| `source`                  | object | オーディオストリーミングサービスの提供元                                                    | 常時 |
-| `source.logoUrl`          | string | オーディオストリーミングサービスのロゴ画像のURLこのフィールドがなかったり、またはフィールド値が空の場合や、ロゴ画像を表示できない場合、`source.name`フィールド内のオーディオストリーミングサービスの名前を表示する必要があります。  | 条件付き |
-| `source.name`             | string | オーディオストリーミングサービスの名前                                                        | 常時 |
+| `audioItem`               | object | 再生するオーディオストリームのメタデータと、再生に必要なオーディオストリームの情報を持つオブジェクト                     |    |
+| `audioItem.artImageUrl`   | string | オーディオコンテンツに関連する画像(アルバムの画像)のURL                                                  | Optional  |
+| `audioItem.audioItemId`   | string | オーディオストリームを区別するID。クライアントはこの値に基づいて、重複するPlayディレクティブを削除できます。 |    |
+| `audioItem.headerText`    | string | 主に、現在の再生リストのタイトルを表すテキストフィールド                                                | Optional  |
+| `audioItem.stream`        | [AudioStreamInfoObject](#AudioStreamInfoObject) | 再生に必要なオーディオストリームの情報を持つオブジェクト        |    |
+| `audioItem.titleSubText1` | string | 主にアーティスト名を表すテキストフィールド                                                          |    |
+| `audioItem.titleSubText2` | string | 主にアルバム名を表すサブテキストフィールド                                                      | Optional |
+| `audioItem.titleText`     | string | 現在のオーディオコンテンツのタイトルを表すテキストフィールド                                                         |     |
+| `playBehavior`            | string | ディレクティブに含まれたオーディオストリームを、クライアントでいつ再生するかを指定するフィールド<ul><li><code>"REPLACE_ALL"</code>：再生キューをすべてクリアして、送信されたオーディオストリームをすぐに再生します。</li><li><code>"ENQUEUE"</code>：再生キューに、送信されたオーディオストリームを追加します。</li></ul> |    |
+| `source`                  | object | オーディオストリーミングサービスの提供元                                                    |    |
+| `source.logoUrl`          | string | オーディオストリーミングサービスのロゴ画像のURLこのフィールドがなかったり、またはフィールド値が空の場合や、ロゴ画像を表示できない場合、`source.name`フィールド内のオーディオストリーミングサービスの名前を表示する必要があります。  | Optional |
+| `source.name`             | string | オーディオストリーミングサービスの名前                                                        |    |
 
 ### 備考
 ストリーミングサービスの課金などの理由により、実際のストリーミング情報、つまりストリーミングのURLなどの情報を、再生する直前に取得する場合があります。`audioItem.stream.urlPlayable`フィールドの値によって、次のように区分されます。
@@ -895,10 +895,10 @@ CIC APIは、ユーザーのクライアントデバイスがClovaと通信を�
 
 #### Payload fields
 
-| フィールド名       | データ型    | フィールドの説明                     | 必須/選択 |
+| フィールド名       | データ型    | フィールドの説明                     | Optional |
 |---------------|---------|-----------------------------|:---------:|
-| `token`                | string | オーディオストリームのトークン    | 必須 |
-| `offsetInMilliseconds` | number | クライアントが再生しているストリームの現在のオフセット。ミリ秒単位です。                         | 必須  |
+| `token`                | string | オーディオストリームのトークン    |    |
+| `offsetInMilliseconds` | number | クライアントが再生しているストリームの現在のオフセット。ミリ秒単位です。                         |     |
 
 #### Message example
 {% raw %}
@@ -934,10 +934,10 @@ CIC APIは、ユーザーのクライアントデバイスがClovaと通信を�
 
 #### Payload fields
 
-| フィールド名       | データ型    | フィールドの説明                     | 必須/選択 |
+| フィールド名       | データ型    | フィールドの説明                     | Optional |
 |---------------|---------|-----------------------------|:---------:|
-| `token`                | string | オーディオストリームのトークン | 必須 |
-| `offsetInMilliseconds` | number | クライアントが再生しているストリームの現在のオフセット。ミリ秒単位です。                         | 必須  |
+| `token`                | string | オーディオストリームのトークン |    |
+| `offsetInMilliseconds` | number | クライアントが再生しているストリームの現在のオフセット。ミリ秒単位です。                         |     |
 
 #### Message example
 {% raw %}
@@ -973,10 +973,10 @@ CIC APIは、ユーザーのクライアントデバイスがClovaと通信を�
 
 #### Payload fields
 
-| フィールド名       | データ型    | フィールドの説明                     | 必須/選択 |
+| フィールド名       | データ型    | フィールドの説明                     | Optional |
 |---------------|---------|-----------------------------|:---------:|
-| `token`                | string | オーディオストリームのトークン | 必須 |
-| `offsetInMilliseconds` | number | クライアントが再生しているストリームの現在のオフセット。ミリ秒単位です。                         | 必須  |
+| `token`                | string | オーディオストリームのトークン |    |
+| `offsetInMilliseconds` | number | クライアントが再生しているストリームの現在のオフセット。ミリ秒単位です。                         |     |
 
 #### Message example
 {% raw %}
@@ -1011,10 +1011,10 @@ CIC APIは、ユーザーのクライアントデバイスがClovaと通信を�
 
 #### Payload fields
 
-| フィールド名       | データ型    | フィールドの説明                     | 必須/選択 |
+| フィールド名       | データ型    | フィールドの説明                     | Optional |
 |---------------|---------|-----------------------------|:---------:|
-| `token`                | string | オーディオストリームのトークン | 必須 |
-| `offsetInMilliseconds` | number | クライアントが再生しているストリームの現在のオフセット。ミリ秒単位です。                         | 必須  |
+| `token`                | string | オーディオストリームのトークン |    |
+| `offsetInMilliseconds` | number | クライアントが再生しているストリームの現在のオフセット。ミリ秒単位です。                         |     |
 
 #### Message example
 {% raw %}
@@ -1049,10 +1049,10 @@ CIC APIは、ユーザーのクライアントデバイスがClovaと通信を�
 
 #### Payload fields
 
-| フィールド名       | データ型    | フィールドの説明                     | 必須/選択 |
+| フィールド名       | データ型    | フィールドの説明                     | Optional |
 |---------------|---------|-----------------------------|:---------:|
-| `token`                | string | オーディオストリームのトークン | 必須 |
-| `offsetInMilliseconds` | number | 再生しているストリームの現在のオフセット。ミリ秒単位です。                         | 必須  |
+| `token`                | string | オーディオストリームのトークン |    |
+| `offsetInMilliseconds` | number | 再生しているストリームの現在のオフセット。ミリ秒単位です。                         |     |
 
 #### Message example
 {% raw %}
@@ -1087,10 +1087,10 @@ CIC APIは、ユーザーのクライアントデバイスがClovaと通信を�
 
 #### Payload fields
 
-| フィールド名       | データ型    | フィールドの説明                     | 必須/選択 |
+| フィールド名       | データ型    | フィールドの説明                     | Optional |
 |---------------|---------|-----------------------------|:---------:|
-| `token`                | string | オーディオストリームのトークン | 必須 |
-| `offsetInMilliseconds` | number | 再生しているストリームの現在のオフセット。ミリ秒単位です。                         | 必須  |
+| `token`                | string | オーディオストリームのトークン |    |
+| `offsetInMilliseconds` | number | 再生しているストリームの現在のオフセット。ミリ秒単位です。                         |     |
 
 #### Message example
 {% raw %}
@@ -1126,10 +1126,10 @@ CIC APIは、ユーザーのクライアントデバイスがClovaと通信を�
 
 #### Payload fields
 
-| フィールド名       | データ型    | フィールドの説明                     | 必須/選択 |
+| フィールド名       | データ型    | フィールドの説明                     | Optional |
 |---------------|---------|-----------------------------|:---------:|
-| `token`                | string | オーディオストリームのトークン | 必須 |
-| `offsetInMilliseconds` | number | 再生しているストリームの現在のオフセット。ミリ秒単位です。                         | 必須  |
+| `token`                | string | オーディオストリームのトークン |    |
+| `offsetInMilliseconds` | number | 再生しているストリームの現在のオフセット。ミリ秒単位です。                         |     |
 
 #### Message example
 {% raw %}
@@ -1165,10 +1165,10 @@ CIC APIは、ユーザーのクライアントデバイスがClovaと通信を�
 
 #### Payload fields
 
-| フィールド名       | データ型    | フィールドの説明                     | 必須/選択 |
+| フィールド名       | データ型    | フィールドの説明                     | Optional |
 |---------------|---------|-----------------------------|:---------:|
-| `token`                | string | オーディオストリームのトークン | 必須 |
-| `offsetInMilliseconds` | number | 再生しているストリームの現在のオフセット。ミリ秒単位です。                         | 必須  |
+| `token`                | string | オーディオストリームのトークン |    |
+| `offsetInMilliseconds` | number | 再生しているストリームの現在のオフセット。ミリ秒単位です。                         |     |
 
 #### Message example
 {% raw %}
@@ -1203,10 +1203,10 @@ CIC APIは、ユーザーのクライアントデバイスがClovaと通信を�
 [`AudioPlayer.StreamRequested`](#StreamRequested)イベントに対する応答です。実際に再生できるオーディオストリームの情報を受信するために使用します。クライアントがコンテンツを再生できるように、オーディオストリームの情報にストリーミングURLが必ず含まれます。
 
 #### Payload fields
-| フィールド名 | データ型 | フィールドの説明 | 任意 |
+| フィールド名 | データ型 | フィールドの説明 | Optional |
 |---------|------|--------|:---------:|
-| `audioItemId` | string | オーディオストリームの情報を区別するための値。クライアントはこの値に基づいて、重複するPlayディレクティブを削除できます。 | 常時 |
-| `audioStream` | [AudioStreamInfoObject](#AudioStreamInfoObject) | 再生に必要なオーディオストリームの情報を持つオブジェクト       | 常時 |
+| `audioItemId` | string | オーディオストリームの情報を区別するための値。クライアントはこの値に基づいて、重複するPlayディレクティブを削除できます。 |    |
+| `audioStream` | [AudioStreamInfoObject](#AudioStreamInfoObject) | 再生に必要なオーディオストリームの情報を持つオブジェクト       |    |
 
 #### 備考
 `StreamDeliver`ディレクティブで送信される`AudioStreamInfoObject`オブジェクトは、既存の[`AudioPlayer.Play`](#Play)ディレクティブで送信された`AudioStreamInfoObject`オブジェクトと重複しないように、一部の内容が省略されることがあります。ストリームを再生する際、`StreamDeliver`ディレクティブと、すでに受信した[`Play`](#Play)ディレクティブの`payload.audioStream`情報を組み合わせて使用する必要があります。
@@ -1244,10 +1244,10 @@ CIC APIは、ユーザーのクライアントデバイスがClovaと通信を�
 オーディオストリームを再生するために、ストリーミングのURLなど、追加の情報をCICにリクエストするイベントです。
 
 #### Payload fields
-| フィールド名       | データ型    | フィールドの説明                     | 必須/選択 |
+| フィールド名       | データ型    | フィールドの説明                     | Optional |
 |---------------|---------|-----------------------------|:---------:|
-| `audioItemId`   | string  | オーディオストリームのトークン          | 必須 |
-| `audioStream`   | [AudioStreamInfoObject](#AudioStreamInfoObject) | Playディレクティブの`audioItem.stream` | 必須 |
+| `audioItemId`   | string  | オーディオストリームのトークン          |    |
+| `audioStream`   | [AudioStreamInfoObject](#AudioStreamInfoObject) | Playディレクティブの`audioItem.stream` |    |
 
 #### 備考
 ストリーミングサービスの課金などの理由により、ときには、実際のオーディオストリームの情報の発行を、再生直前に遅延させる必要が生じます。このイベントは、このようにオーディオストリームの情報をあらかじめ準備してはいけない場合のために設計されたAPIです。クライアントは、このイベントを再生直前より先に送信しない必要があります。
@@ -1369,36 +1369,36 @@ CIC APIは、ユーザーのクライアントデバイスがClovaと通信を�
 CICから、メディアプレーヤーに表示する再生リスト、アルバムの画像、歌詞のような再生メタデータをクライアントに送信し、表示するように指示します。ユーザーからオーディオの再生をリクエストされたとき、クライアントは[`AudioPlayer.Play`](#Play)ディレクティブを受信してメディアを再生します。ディスプレイを持つクライアントは、必要に応じてメディアプレーヤーに再生関連情報を表示する必要があります。その際、[`TemplateRuntime.RequestPlayerInfo`](#RequestPlayerInfo)イベントで再生メタデータをCICにリクエストし、`TemplateRuntime.RenderPlayerInfo`ディレクティブを受信します。`TemplateRuntime.RenderPlayerInfo`ディレクティブには、現在再生するメディアコンテンツと、後で再生するメディアコンテンツの再生メタデータが含まれます。クライアントは、`TemplateRuntime.RenderPlayerInfo`ディレクティブの再生メタデータをユーザーに提供して、現在再生しているメディアのメタデータおよび再生リストを表示することができます。
 
 #### Payload fields
-| フィールド名       | データ型    | フィールドの説明                     | 任意 |
+| フィールド名       | データ型    | フィールドの説明                     | Optional |
 |---------------|---------|-----------------------------|:---------:|
-| `displayType`               | string | メディアコンテンツを表示する形式。<ul><li><code>"list"</code>：リストで表示する</li><li><code>"single"</code>：1つのアイテムを表示する</li></ul>       | 常時 |
-| `controls[]`                | object array | クライアントがメディアプレーヤーで表示すべきボタンの情報を持つオブジェクト配列です。             | 常時 |
-| `controls[].enabled`        | boolean      | `controls[].name`で設定されたボタンを、メディアプレーヤーで有効にするかを示します。<ul><li><code>true</code>：有効にする</li><li><code>false</code>：無効にする</li></ul>  | 常時  |
-| `controls[].name`           | string       | ボタンの名前。次のいずれかになります。<ul><li><code>"NEXT"</code>：「次」ボタン</li><li><code>"PLAY_PAUSE"</code>：「再生/一時停止」ボタン</li><li><code>"PREVIOUS"</code>：「前」ボタン</li></ul>  | 常時  |
-| `controls[].selected`       | boolean      | メディアコンテンツが選択されているかを示します。この値は、ユーザーの「好き」という概念を表す際に使用することができます。この値が`true`に設定されていたら、ユーザーが好きなアイテムとして登録したコンテンツであることを示します。メディアプレーヤーの関連するUIで、そのことを表す必要があります。<ul><li><code>true</code>：選択済み</li><li><code>false</code>：未選択</li></ul> | 常時  |
-| `controls[].type`           | string       | ボタンのタイプ。現在、`"BUTTON"`のみ使用します。  | 常時 |
-| `playableItems[]`           | object array | 再生できるメディアコンテンツのリストを持つオブジェクト配列です。このフィールドは、空の配列の場合があります。  | 常時 |
-| `playableItems[].artImageUrl`  | string    | メディアコンテンツ関連画像のURL。アルバムのジャケット画像や関連アイコンなどの画像があるURLです。      | 条件付き |
-| `playableItems[].controls[]`                | object array  | 特定のメディアコンテンツを再生するとき、表示すべきボタンの情報を持つオブジェクト配列です。このオブジェクト配列は省略できます。  | 条件付き |
-| `playableItems[].controls[].enabled`        | boolean      | `playableItems[].controls[].name`で設定されたボタンを、メディアプレーヤーで有効にするかを示します。<ul><li><code>true</code>：有効にする</li><li><code>false</code>：無効にする</li></ul>  | 常時  |
-| `playableItems[].controls[].name`           | string       | ボタンの名前。次のいずれかになります。<ul><li><code>"NEXT"</code>：「次」ボタン</li><li><code>"PLAY_PAUSE"</code>：「再生/一時停止」ボタン</li><li><code>"PREVIOUS"</code>：「前」ボタン</li></ul>  | 常時  |
-| `playableItems[].controls[].selected`       | boolean      | メディアコンテンツが選択されているかを示します。この値は、ユーザーの「好き」という概念を表す際に使用することができます。この値が`true`に設定されていたら、ユーザーが好きなアイテムとして登録したコンテンツであることを示します。メディアプレーヤーの関連するUIで、そのことを表す必要があります。<ul><li><code>true</code>：選択済み</li><li><code>false</code>：未選択</li></ul> | 常時  |
-| `playableItems[].controls[].type`           | string       | ボタンのタイプ。現在、`"BUTTON"`のみ使用します。  | 常時 |
-| `playableItems[].headerText`       | string        | 主に、現在の再生リストのタイトルを表すテキストフィールド                                                | 条件付き  |
-| `playableItems[].isLive`           | boolean       | リアルタイムのコンテンツかどうかを示す値。<ul><li><code>true</code>：リアルタイムのコンテンツ</li><li><code>false</code>：リアルタイムのコンテンツではない</li></ul><div class="note"><p><strong>メモ</strong></p><p>リアルタイムのコンテンツの場合、リアルタイムのコンテンツであることを表すアイコン(例：liveアイコン)を表示する必要があります。</p></div>  | 条件付き  |
-| `playableItems[].lyrics[]`         | object array  | 歌詞のデータを持つオブジェクト配列。                                                            | 条件付き  |
-| `playableItems[].lyrics[].data`    | string        | 歌詞のデータ。このフィールドと`playableItems[].lyrics[].url`フィールドのうち、1つは存在します。              | 条件付き  |
-| `playableItems[].lyrics[].format`  | string        | 歌詞データの形式。<ul><li><code>"LRC"</code>：<a href="https://en.wikipedia.org/wiki/LRC_(file_format)" target="_blank">LRC形式</a></li><li><code>"PLAIN"</code>：テキスト形式</li></ul>  | 常時  |
-| `playableItems[].lyrics[].url`     | string        | 歌詞データのURL。このフィールドと`playableItems[].lyrics[].data`フィールドのうち、1つは存在します。        | 条件付き  |
-| `playableItems[].showAdultIcon`    | boolean       | 成人向けコンテンツを示すアイコンを表示するかどうか。<ul><li><code>true</code>：表示する。</li><li><code>false</code>：表示しない。</li></ul>   | 常時  |
-| `playableItems[].titleSubText1`    | string        | 主にアーティスト名を表すテキストフィールド                                                          | 常時 |
-| `playableItems[].titleSubText2`    | string        | 主にアルバム名を表すサブテキストフィールド                                                      | 条件付き |
-| `playableItems[].titleText`        | string        | 現在のオーディオコンテンツのタイトルを表すテキストフィールド                                                         | 常時  |
-| `playableItems[].token`            | string        | メディアコンテンツのトークン                                                                     | 常時 |
-| `provider`                         | object        | メディアコンテンツ提供元の情報を持つオブジェクト                                                         | 条件付き |
-| `provider.logoUrl`                 | string        | メディアコンテンツ提供元のロゴ画像のURL                                                         | 条件付き |
-| `provider.name`                    | string        | メディアコンテンツ提供元の名前                                                                   | 常時  |
-| `provider.smallLogoUrl`            | string        | メディアコンテンツ提供元の小さなロゴ画像のURL                                                | 条件付き |
+| `displayType`               | string | メディアコンテンツを表示する形式。<ul><li><code>"list"</code>：リストで表示する</li><li><code>"single"</code>：1つのアイテムを表示する</li></ul>       |    |
+| `controls[]`                | object array | クライアントがメディアプレーヤーで表示すべきボタンの情報を持つオブジェクト配列です。             |    |
+| `controls[].enabled`        | boolean      | `controls[].name`で設定されたボタンを、メディアプレーヤーで有効にするかを示します。<ul><li><code>true</code>：有効にする</li><li><code>false</code>：無効にする</li></ul>  |     |
+| `controls[].name`           | string       | ボタンの名前。次のいずれかになります。<ul><li><code>"NEXT"</code>：「次」ボタン</li><li><code>"PLAY_PAUSE"</code>：「再生/一時停止」ボタン</li><li><code>"PREVIOUS"</code>：「前」ボタン</li></ul>  |     |
+| `controls[].selected`       | boolean      | メディアコンテンツが選択されているかを示します。この値は、ユーザーの「好き」という概念を表す際に使用することができます。この値が`true`に設定されていたら、ユーザーが好きなアイテムとして登録したコンテンツであることを示します。メディアプレーヤーの関連するUIで、そのことを表す必要があります。<ul><li><code>true</code>：選択済み</li><li><code>false</code>：未選択</li></ul> |     |
+| `controls[].type`           | string       | ボタンのタイプ。現在、`"BUTTON"`のみ使用します。  |    |
+| `playableItems[]`           | object array | 再生できるメディアコンテンツのリストを持つオブジェクト配列です。このフィールドは、空の配列の場合があります。  |    |
+| `playableItems[].artImageUrl`  | string    | メディアコンテンツ関連画像のURL。アルバムのジャケット画像や関連アイコンなどの画像があるURLです。      | Optional |
+| `playableItems[].controls[]`                | object array  | 特定のメディアコンテンツを再生するとき、表示すべきボタンの情報を持つオブジェクト配列です。このオブジェクト配列は省略できます。  | Optional |
+| `playableItems[].controls[].enabled`        | boolean      | `playableItems[].controls[].name`で設定されたボタンを、メディアプレーヤーで有効にするかを示します。<ul><li><code>true</code>：有効にする</li><li><code>false</code>：無効にする</li></ul>  |     |
+| `playableItems[].controls[].name`           | string       | ボタンの名前。次のいずれかになります。<ul><li><code>"NEXT"</code>：「次」ボタン</li><li><code>"PLAY_PAUSE"</code>：「再生/一時停止」ボタン</li><li><code>"PREVIOUS"</code>：「前」ボタン</li></ul>  |     |
+| `playableItems[].controls[].selected`       | boolean      | メディアコンテンツが選択されているかを示します。この値は、ユーザーの「好き」という概念を表す際に使用することができます。この値が`true`に設定されていたら、ユーザーが好きなアイテムとして登録したコンテンツであることを示します。メディアプレーヤーの関連するUIで、そのことを表す必要があります。<ul><li><code>true</code>：選択済み</li><li><code>false</code>：未選択</li></ul> |     |
+| `playableItems[].controls[].type`           | string       | ボタンのタイプ。現在、`"BUTTON"`のみ使用します。  |    |
+| `playableItems[].headerText`       | string        | 主に、現在の再生リストのタイトルを表すテキストフィールド                                                | Optional  |
+| `playableItems[].isLive`           | boolean       | リアルタイムのコンテンツかどうかを示す値。<ul><li><code>true</code>：リアルタイムのコンテンツ</li><li><code>false</code>：リアルタイムのコンテンツではない</li></ul><div class="note"><p><strong>メモ</strong></p><p>リアルタイムのコンテンツの場合、リアルタイムのコンテンツであることを表すアイコン(例：liveアイコン)を表示する必要があります。</p></div>  | Optional  |
+| `playableItems[].lyrics[]`         | object array  | 歌詞のデータを持つオブジェクト配列。                                                            | Optional  |
+| `playableItems[].lyrics[].data`    | string        | 歌詞のデータ。このフィールドと`playableItems[].lyrics[].url`フィールドのうち、1つは存在します。              | Optional  |
+| `playableItems[].lyrics[].format`  | string        | 歌詞データの形式。<ul><li><code>"LRC"</code>：<a href="https://en.wikipedia.org/wiki/LRC_(file_format)" target="_blank">LRC形式</a></li><li><code>"PLAIN"</code>：テキスト形式</li></ul>  |     |
+| `playableItems[].lyrics[].url`     | string        | 歌詞データのURL。このフィールドと`playableItems[].lyrics[].data`フィールドのうち、1つは存在します。        | Optional  |
+| `playableItems[].showAdultIcon`    | boolean       | 成人向けコンテンツを示すアイコンを表示するかどうか。<ul><li><code>true</code>：表示する。</li><li><code>false</code>：表示しない。</li></ul>   |     |
+| `playableItems[].titleSubText1`    | string        | 主にアーティスト名を表すテキストフィールド                                                          |    |
+| `playableItems[].titleSubText2`    | string        | 主にアルバム名を表すサブテキストフィールド                                                      | Optional |
+| `playableItems[].titleText`        | string        | 現在のオーディオコンテンツのタイトルを表すテキストフィールド                                                         |     |
+| `playableItems[].token`            | string        | メディアコンテンツのトークン                                                                     |    |
+| `provider`                         | object        | メディアコンテンツ提供元の情報を持つオブジェクト                                                         | Optional |
+| `provider.logoUrl`                 | string        | メディアコンテンツ提供元のロゴ画像のURL                                                         | Optional |
+| `provider.name`                    | string        | メディアコンテンツ提供元の名前                                                                   |     |
+| `provider.smallLogoUrl`            | string        | メディアコンテンツ提供元の小さなロゴ画像のURL                                                | Optional |
 
 #### Message example
 {% raw %}
@@ -1508,12 +1508,12 @@ CICから、メディアプレーヤーに表示する再生リスト、アル�
 
 #### Payload fields
 
-| フィールド名       | データ型    | フィールドの説明                     | 必須/選択 |
+| フィールド名       | データ型    | フィールドの説明                     | Optional |
 |---------------|---------|-----------------------------|:---------:|
-| `token`        | string  | 再生メタデータを取得するとき、開始の基準となるオーディオストリームのトークン。 | 必須 |
-| `range`        | object  | 再生メタデータの範囲を指定するオブジェクト。このフィールドが使用されていない場合、クライアントは任意の数のメタデータを受信します。   | 任意  |
-| `range.before` | number  | 基準となるメディアコンテンツから、n個前以前の再生リストに含まれた再生メタデータをリクエストします。  | 任意  |
-| `range.after`  | number  | 基準となるメディアコンテンツから、n個以降の再生リストに含まれた再生メタデータをリクエストします。例えば、`range.before`フィールドの値を指定しないで、`range.after`を`5`に設定すると、基準のメディアコンテンツを含めて、合計6つのメディアコンテンツに該当する再生メタデータを受信します。 | 任意  |
+| `token`        | string  | 再生メタデータを取得するとき、開始の基準となるオーディオストリームのトークン。 |    |
+| `range`        | object  | 再生メタデータの範囲を指定するオブジェクト。このフィールドが使用されていない場合、クライアントは任意の数のメタデータを受信します。   | Optional  |
+| `range.before` | number  | 基準となるメディアコンテンツから、n個前以前の再生リストに含まれた再生メタデータをリクエストします。  | Optional  |
+| `range.after`  | number  | 基準となるメディアコンテンツから、n個以降の再生リストに含まれた再生メタデータをリクエストします。例えば、`range.before`フィールドの値を指定しないで、`range.after`を`5`に設定すると、基準のメディアコンテンツを含めて、合計6つのメディアコンテンツに該当する再生メタデータを受信します。 | Optional  |
 
 #### Message example
 
@@ -1545,18 +1545,18 @@ CICから、メディアプレーヤーに表示する再生リスト、アル�
 再生するオーディオストリームのストリーミング情報を持つオブジェクトです。クライアントに対して再生するストリーミングの情報を送信したり、クライアントがCICに対して、現在再生しているコンテンツのストリーミング情報を送信するとき使用します。
 
 #### Object fields
-| フィールド名       | データ型    | フィールドの説明                     | 必須/任意 |
+| フィールド名       | データ型    | フィールドの説明                     | Optional |
 |---------------|---------|-----------------------------|:-------------:|
-| `beginAtInMilliseconds`  | number | 再生を開始するオフセット。ミリ秒単位で、この値が指定されている場合、クライアントは、そのオーディオストリームを指定されたオフセットから再生する必要があります。この値が0に設定されている場合、ストリームを最初から再生します。          | 必須/常時 |
-| `customData`             | string | 現在のストリームに関連して、任意の形式を持つメタデータ情報。特定のカテゴリに分類されたり、定義されないストリーミング情報は、このフィールドに含まれるか、または入力される必要があります。オーディオストリーム再生のコンテキストに必要な追加の値を、サービスプロバイダーがカスタムで追加できます。<div class="danger"><p><strong>注意</strong></p><p>クライアントは、このフィールドの値を任意に使用してはなりません。問題が発生する恐れがあります。また、このフィールドの値はストリームの再生状態を送信する際、PlaybackStateコンテキストの`stream`フィールドにそのまま含まれる必要があります。</p></div> | 任意/条件付き  |
-| `durationInMilliseconds` | number | オーディオストリームの再生時間。クライアントは、`beginAtInMilliseconds`フィールドに指定されている再生のオフセットから、このフィールドに指定されている再生時間だけ、そのオーディオストリームをシークおよび再生できます。例えば、`beginAtInMilliseconds`フィールドの値が`10000`で、このフィールドの値が`60000`の場合、そのオーディオストリームの10秒から70秒までの区間を再生およびシークすることができます。ミリ秒単位です。   | 任意/条件付き  |
-| `progressReport`         | object  | 再生が開始してから、再生状態をレポートするタイミングを指定するオブジェクト                                                  | 任意/条件付き |
-| `progressReport.progressReportDelayInMilliseconds`    | number | 再生が開始してから、指定された時間が経過した後に、再生状態をレポートするように指定する値です。ミリ秒単位で、このフィールドの値はnullの場合があります。  | 任意/条件付き |
-| `progressReport.progressReportIntervalInMilliseconds` | number | 再生中に、指定された間隔ごとに再生状態をレポートするように指定する値です。ミリ秒単位で、このフィールドの値はnullの場合があります。        | 任意/条件付き |
-| `progressReport.progressReportPositionInMilliseconds` | number | 再生中に、指定された再生位置を経過する度に、再生状態をレポートするように指定する値です。ミリ秒単位で、このフィールドの値はnullの場合があります。    | 任意/条件付き |
-| `token`                  | string  | オーディオストリームのトークン                                                                                   | 必須/常時 |
-| `url`                    | string  | オーディオストリームのURL                                                                                     | 必須/常時 |
-| `urlPlayable`            | boolean | `url`フィールドのオーディオストリームのURLがすぐに再生できるかを示す値。<ul><li><code>true</code>：すぐに再生できるURL</li><li><code>false</code>：すぐに再生できないURL。<a href="#StreamRequested"><code>AudioPlayer.StreamRequested</code></a>イベントでオーディオストリームの情報を追加でリクエストする必要があります。</li></ul>        | 必須/常時 |
+| `beginAtInMilliseconds`  | number | 再生を開始するオフセット。ミリ秒単位で、この値が指定されている場合、クライアントは、そのオーディオストリームを指定されたオフセットから再生する必要があります。この値が0に設定されている場合、ストリームを最初から再生します。          |    |
+| `customData`             | string | 現在のストリームに関連して、任意の形式を持つメタデータ情報。特定のカテゴリに分類されたり、定義されないストリーミング情報は、このフィールドに含まれるか、または入力される必要があります。オーディオストリーム再生のコンテキストに必要な追加の値を、サービスプロバイダーがカスタムで追加できます。<div class="danger"><p><strong>注意</strong></p><p>クライアントは、このフィールドの値を任意に使用してはなりません。問題が発生する恐れがあります。また、このフィールドの値はストリームの再生状態を送信する際、<a href="/CIC/References/Context_Objects.html#PlaybackState">PlaybackStateコンテキスト</a>の`stream`フィールドにそのまま含まれる必要があります。</p></div> | Optional  |
+| `durationInMilliseconds` | number | オーディオストリームの再生時間。クライアントは、`beginAtInMilliseconds`フィールドに指定されている再生のオフセットから、このフィールドに指定されている再生時間だけ、そのオーディオストリームをシークおよび再生できます。例えば、`beginAtInMilliseconds`フィールドの値が`10000`で、このフィールドの値が`60000`の場合、そのオーディオストリームの10秒から70秒までの区間を再生およびシークすることができます。ミリ秒単位です。   | Optional  |
+| `progressReport`         | object  | 再生が開始してから、再生状態をレポートするタイミングを指定するオブジェクト                                                  | Optional |
+| `progressReport.progressReportDelayInMilliseconds`    | number | 再生が開始してから、指定された時間が経過した後に、再生状態をレポートするように指定する値です。ミリ秒単位で、このフィールドの値はnullの場合があります。  | Optional |
+| `progressReport.progressReportIntervalInMilliseconds` | number | 再生中に、指定された間隔ごとに再生状態をレポートするように指定する値です。ミリ秒単位で、このフィールドの値はnullの場合があります。        | Optional |
+| `progressReport.progressReportPositionInMilliseconds` | number | 再生中に、指定された再生位置を経過する度に、再生状態をレポートするように指定する値です。ミリ秒単位で、このフィールドの値はnullの場合があります。    | Optional |
+| `token`                  | string  | オーディオストリームのトークン                                                                                   |    |
+| `url`                    | string  | オーディオストリームのURL                                                                                     |    |
+| `urlPlayable`            | boolean | `url`フィールドのオーディオストリームのURLがすぐに再生できるかを示す値。<ul><li><code>true</code>：すぐに再生できるURL</li><li><code>false</code>：すぐに再生できないURL。<a href="#StreamRequested"><code>AudioPlayer.StreamRequested</code></a>イベントでオーディオストリームの情報を追加でリクエストする必要があります。</li></ul>        |    |
 
 #### 備考
 * クライアントは、`beginAtInMilliseconds`と`durationInMilliseconds`フィールドに指定されている区間に対してストリームの再生を完了すると、[`AudioPlayer.PlayFinished`](#PlayFinished)イベントをCICに送信します。
@@ -1629,13 +1629,13 @@ CICから、メディアプレーヤーに表示する再生リスト、アル�
 
 #### Payload fields
 
-| フィールド名       | データ型    | フィールドの説明                     | 必須/選択 |
+| フィールド名       | データ型    | フィールドの説明                     | Optional |
 |---------------|---------|-----------------------------|:---------:|
-| `offsetInMilliseconds` | number | 最近再生したメディアの最後の再生ポイント(オフセット)ミリ秒単位で、`playerActivity`の値が`"IDLE"`の場合、このフィールドの値を入力する必要はありません。                                                  | 任意 |
-| `playerActivity`       | string | プレイヤーの状態を示す値です。次のような値を持ちます。<ul><li><code>"IDLE"</code>：非アクティブ状態</li><li><code>"PLAYING"</code>：再生中</li><li><code>"PAUSED"</code>：一時停止状態</li><li><code>"STOPPED"</code>：停止状態</li></ul> | 必須 |
-| `repeatMode`           | string  | リピート再生モード<ul><li><code>"NONE"</code>：リピート再生しない</li><li><code>"REPEAT_ONE"</code>：一曲リピート再生</li></ul>                                                   | 必須  |
-| `stream`               | [AudioStreamInfoObject](#AudioStreamInfoObject) | 再生中のオーディオの詳細情報が保存されているオブジェクト`playerActivity`の値が`"IDLE"`の場合、このフィールドの値を入力する必要はありません。[`AudioPlayer.Play`](#Play)または[`AudioPlayer.StreamDeliver`](#StreamDeliver)ディレクティブで送信されたオーディオの情報(`stream`オブジェクト)の値を入力します。 | 任意 |
-| `totalInMilliseconds`  | number | 最近再生したメディアの全長[`AudioPlayer.Play`](#Play)ディレクティブで送信された([AudioStreamInfoObject](#AudioStreamInfoObject))に`durationInMilliseconds`フィールドの値がある場合、このフィールドに入力します。ミリ秒単位で、`playerActivity`の値が`"IDLE"`の場合、このフィールドの値を入力する必要はありません。                                                               | 任意 |
+| `offsetInMilliseconds` | number | 最近再生したメディアの最後の再生ポイント(オフセット)ミリ秒単位で、`playerActivity`の値が`"IDLE"`の場合、このフィールドの値を入力する必要はありません。                                                  | Optional |
+| `playerActivity`       | string | プレイヤーの状態を示す値です。次のような値を持ちます。<ul><li><code>"IDLE"</code>：非アクティブ状態</li><li><code>"PLAYING"</code>：再生中</li><li><code>"PAUSED"</code>：一時停止状態</li><li><code>"STOPPED"</code>：停止状態</li></ul> |    |
+| `repeatMode`           | string  | リピート再生モード<ul><li><code>"NONE"</code>：リピート再生しない</li><li><code>"REPEAT_ONE"</code>：一曲リピート再生</li></ul>                                                   |     |
+| `stream`               | [AudioStreamInfoObject](#AudioStreamInfoObject) | 再生中のオーディオの詳細情報が保存されているオブジェクト`playerActivity`の値が`"IDLE"`の場合、このフィールドの値を入力する必要はありません。[`AudioPlayer.Play`](#Play)または[`AudioPlayer.StreamDeliver`](#StreamDeliver)ディレクティブで送信されたオーディオの情報(`stream`オブジェクト)の値を入力します。 | Optional |
+| `totalInMilliseconds`  | number | 最近再生したメディアの全長[`AudioPlayer.Play`](#Play)ディレクティブで送信された([AudioStreamInfoObject](#AudioStreamInfoObject))に`durationInMilliseconds`フィールドの値がある場合、このフィールドに入力します。ミリ秒単位で、`playerActivity`の値が`"IDLE"`の場合、このフィールドの値を入力する必要はありません。                                                               | Optional |
 
 #### Object example
 

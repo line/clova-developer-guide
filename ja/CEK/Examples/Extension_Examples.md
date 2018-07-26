@@ -14,6 +14,6 @@ Clovaでサービス提供中の一部のExtensionを紹介します。簡単な
 * Node.jsで実装されています。
 
 ### GitHubリポジトリ
-{{ book.GitHubBaseURLforExtensionExample }}/clova-extension-sample-dice
+[{{ book.GitHubBaseURLforExtensionExample }}/clova-extension-sample-dice]({{ book.GitHubBaseURLforExtensionExample }}/clova-extension-sample-dice)
 
 

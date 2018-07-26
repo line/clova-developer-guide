@@ -124,7 +124,7 @@ Extensionの設計は、まず最初にExtensionの目標を設定すること�
 
 Clovaの機能に影響があるフレーズを含めることはできません。
 * 呼び名
-  * 例：「ねぇClova」「Clova」「Clovaちゃん」「ジェシカ」
+  * 例：「ねぇClova」「Clova」「Clovaちゃん」「Clovaさん」
 * Clovaの既存機能に影響があるフレーズ
   * 例：「LINE送って」「今日の天気は？」「おもしろニュース」「今日の運勢」
 * スキルを実行、終了するフレーズ
@@ -479,9 +479,9 @@ Extensionは、ユーザーのリクエストを処理し、その結果をClova
 > <p class="ldiag">「ヴィヴァルディの四季を再生して」</p>
 > <p class="rdiag">「はい。ヴィヴァルディの四季を再生します」(TTS)</p>
 > <p class="rdiag">AudioPlayer.Play: ヴィヴァルディの四季第1楽章</p>
-> <p class="ldiag">「クローバー、ちょっと止めて」</p>
+> <p class="ldiag">「ねぇClova、ちょっと止めて」</p>
 > <p class="rdiag">AudioPlayer.Pause: 再生を停止する</p>
-> <p class="ldiag">「クローバー、再生を再開して」</p>
+> <p class="ldiag">「ねぇClova、再生を再開して」</p>
 > <p class="rdiag">AudioPlayer.Resume: 再生を再開する</p>
 > <p class="ldiag">「次」</p>
 > <p class="rdiag">AudioPlayer.Play: ヴィヴァルディの四季第2楽章</p>
