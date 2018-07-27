@@ -23,4 +23,3 @@ Clovaプラットフォームは、次の2種類のExtensionをサポートお�
 
 * [Custom Extension](/CEK/Guides/Build_Custom_Extension.md)：サードパーティが機能を新しく提供することができるExtensionです。Custom Extensionを利用すると、音楽、ショッピングなど、外部サービスの機能を提供できます。
 * [Clova Home Extension](/CEK/Guides/Build_Clova_Home_Extension.md)：IoTデバイス制御サービスを提供するExtensionです。
-

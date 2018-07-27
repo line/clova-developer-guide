@@ -23,6 +23,17 @@ LINE株式会社（以下、当社といいます）は、Clova事務局とし�
   </thead>
   <tbody>
   <tr>
+    <td>v1.1.3</td><td>2018/07/27</td>
+    <td>
+      <ul>
+        <li><a href="/CEK/Guides/Clova_CEK_SDK.md">Clova Extensions Kitソフトウェア開発キット</a> 更新（<a href="/CEK/Guides/Clova_CEK_SDK.md#SDK_For_Kotlin">CEK SDK for Kotlin</a> 追加）</li>
+        <li><a href="/Design/Design_Guideline_For_Extension.md#InvocationNameRequirement" target="_blank">スキル名/呼び出し名の要件</a> 更新（Clovaの呼び名を「ねぇClova」に統一）</li>
+        <li><a href="/DevConsole/Guides/CEK/Register_Extension.md#InputExtensionInfo" target="_blank">Extensionの基本情報を入力する</a> 更新（「提供者について」の説明を追加）</li>
+        <li><a href="/DevConsole/Guides/CEK/Deploy_Extension.md#InputDeploymentInfo" target="_blank">配布情報を入力する</a> 更新（「代表サンプル発話」の入力例を追加）</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
     <td>v1.1.2</td><td>2018/07/26</td>
     <td>
       <ul>

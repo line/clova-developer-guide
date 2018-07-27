@@ -42,8 +42,9 @@ Extensionの基本情報は、Clova Developer CenterでExtensionを作成する�
   <li><strong>提供者について</strong>：Extensionを作成した主体についての情報を入力します。<strong>企業</strong>または<strong>個人</strong>を選択すると、該当する入力フィールドが表示されます。</li>
     <ol>
       <li><strong>{{ book.DevConsole.cek_provider }}</strong>：Extensionを作成した主体(企業や個人)の名前、またはニックネームを入力します。後ほどスキルストアに表示され、Extensionを審査する際にチェックされます。</li>
-      <li><strong>{{ book.DevConsole.cek_email }}</strong>項目に、連絡可能なメールアドレスを入力します。</li>
-      <li>提供者区分で<strong>企業</strong>を選んだ場合は、<strong>本社所在地</strong>、<strong>代表電話番号</strong>、<strong>代表者名</strong>、<strong>企業サイト</strong>項目も入力してください。</li>
+      <li><strong>{{ book.DevConsole.cek_email }}</strong>項目に、当社より連絡可能なメールアドレスを入力します。サイトには表示されません。</li>
+      <li>提供者区分で<strong>企業</strong>を選んだ場合は、<strong>本社所在地</strong>、<strong>代表電話番号</strong>、<strong>代表者名</strong>、<strong>企業サイト</strong>項目も入力してください。こちらは審査に必要な情報であり、サイトには表示されません。</li>
+      <li><strong>Extensionと連携するID</strong>：<a href="https://clova-developers.line.me/guide/#/CEK/Guides/Link_Messaging_API.md" target="_blank">Custom ExtensionとLINEの連携</a>を行う場合に、スキルと連動するLINEのアカウントを選択してください。ここで選択したLINEアカウントを友だち追加できるリンクがスキルストアに追加されます。</li>
     </ol>
   <li>Extensionの基本情報をすべて入力したら、<strong>{{ book.DevConsole.cek_create }}</strong>ボタンをクリックします。</li>
 </ol>

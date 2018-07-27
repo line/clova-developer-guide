@@ -7,10 +7,10 @@ Custom Extensionで、ユーザーに音楽やポッドキャストなどのオ�
   * [オーディオコンテンツの再生をコントロールする](#ControlAudioPlayback)
 
 * 任意
-  * [再生状態の変更および進行状況を収集する](#CollectPlaybackStatusAndProgress)
+  * [オーディオコンテンツのメタデータを提供する](#ProvidingMetaDataForDisplay)
+  * [再生状態の変更および進行状況のレポートを収集する](#CollectPlaybackStatusAndProgress)
   * [セキュリティのためにオーディオコンテンツのURLを更新する](#UpdateAudioURLForSecurity)
   * [再生コントロールの動作方法を変更する](#CustomizePlaybackControl)
-  * [オーディオコンテンツのメタデータを提供する](#ProvidingMetaDataForDisplay)
 
 <div class="danger">
   <p><strong>注意</strong></p>
@@ -291,7 +291,7 @@ Custom Extensionは、レスポンスメッセージを使って、クライア�
 * [`AudioPlayer.ProgressReportPositionPassed`](/CEK/References/CEK_API.md#ProgressReportPositionPassed)イベント：オーディオコンテンツの特定の位置(オフセット)を再生するときに、進行状況をレポートする
 * [`AudioPlayer.ProgressReportIntervalPassed`](/CEK/References/CEK_API.md#ProgressReportIntervalPassed)イベント：再生中の場合、特定の間隔で繰り返し進行状況をレポートする
 
-以下は、`RequestEvent`タイプのリクエストメッセージで送信されたレポートのサンプルです。
+以下は、`EventRequest`タイプのリクエストメッセージで送信されたレポートのサンプルです。
 ```json
 
 {

@@ -6,7 +6,7 @@
   "author": "LINE Corporation",
   "variables": {
     "ClassifiedInfo": "Confidential",
-    "DocVersion": "v1.1.2",
+    "DocVersion": "v1.1.3",
     "language": "ja",
     "TargetCountryCode": "JP",
     "TargetReaderType": "Internal",
