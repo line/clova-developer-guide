@@ -4,13 +4,10 @@ Custom Extensionで、ユーザーに音楽やポッドキャストなどのオ�
 
 * 必須
   * [オーディオコンテンツの再生を指示する](#DirectClientToPlayAudio)
-  * [オーディオコンテンツの再生をコントロールする](#ControlAudioPlayback)
 
 * 任意
-  * [オーディオコンテンツのメタデータを提供する](#ProvidingMetaDataForDisplay)
   * [再生状態の変更および進行状況のレポートを収集する](#CollectPlaybackStatusAndProgress)
   * [セキュリティのためにオーディオコンテンツのURLを更新する](#UpdateAudioURLForSecurity)
-  * [再生コントロールの動作方法を変更する](#CustomizePlaybackControl)
 
 <div class="danger">
   <p><strong>注意</strong></p>
@@ -82,205 +79,6 @@ Custom Extensionで、ユーザーに音楽やポッドキャストなどのオ�
   <p>日本では現在、cardをサポートしておりません。</p>
 </div>
 
-### オーディオコンテンツの再生をコントロールする {#ControlAudioPlayback}
-クライアントがオーディオを再生しているときに、ユーザーが「前」「次」などのように再生のコントロールに関連する発話を発した場合、ユーザーのリクエストは`IntentRequest`タイプのリクエストメッセージでCustom Extensionに渡されます。現在、CEKはCustom Extensionで再生のコントロールに関連するユーザーのインテントを、以下のような[ビルトインインテント](/Design/Design_Guideline_For_Extension.md#BuiltinIntent)として渡すようになっています。
-
-* `Clova.NextIntent`
-* `Clova.PauseIntent`
-* `Clova.PreviousIntent`
-* `Clova.ResumeIntent`
-* `Clova.StopIntent`
-
-<div class="danger">
-  <p><strong>注意</strong></p>
-  <p>オーディオコンテンツのコントロールに関連するイベントは、必須の実装項目です。特に、<code>Clova.PauseIntent</code>と<code>Clova.StopIntent</code>ビルトインインテントに対応するアクションが実装されていないと、ユーザーにとってサービスの利便性を損ないますので審査時にリジェクト対象になります。</p>
-</div>
-
-ユーザーが「一時停止」「再生を再開して」「ストップ」などのように発話した場合、Custom Extensionは再生の一時停止、再生再開、再生停止のリクエストに対応する必要があります。その際、クライアントはそれぞれのリクエストに対し、`Clova.PauseIntent`、`Clova.ResumeIntent`、`Clova.StopIntent`ビルトインインテントを`IntentRequest`タイプのリクエストメッセージで受け取ります。Custom Extensionは、それに対応して、それぞれ以下のディレクティブを[レスポンスメッセージ](/CEK/References/CEK_API.md#CustomExtResponseMessage)でCEKに送信する必要があります。
-
-* [`PlaybackController.Pause`](/CEK/References/CEK_API.md#Pause)ディレクティブ：クライアントに、再生中のオーディオストリームを一時停止するように指示する
-* [`PlaybackController.Resume`](/CEK/References/CEK_API.md#Resume)ディレクティブ：クライアントに、オーディオストリームの再生を再開するように指示する
-* [`PlaybackController.Stop`](/CEK/References/CEK_API.md#Stop)ディレクティブ：クライアントに、オーディオストリームの再生を停止するように指示する
-
-以下は、`PlaybackController.Pause`ディレクティブをCustom Extensionのレスポンスメッセージに含めたサンプルです。
-```json
-{
-  "version": "1.0",
-  "sessionAttributes": {},
-  "response": {
-    "card": {},
-    "directives": [
-      {
-        "directive": {
-          "header": {
-            "namespace": "PlaybackController",
-            "name": "Pause"
-          },
-          "payload": {}
-        }
-      }
-    ],
-    "outputSpeech": {},
-    "shouldEndSession": true
-  }
-}
-```
-
-ユーザーが「前」「次」に該当する発話をして、`Clova.NextIntent`または`Clova.PreviousIntent`ビルトインインテントを`IntentReqeust`タイプのリクエストメッセージで受け取ると、[レスポンスメッセージ](/CEK/References/CEK_API.md#CustomExtResponseMessage)でユーザーが前に聞いた、または次に聞くはずの[オーディオコンテンツを再生するように指示する(`AudioPlayer.Play`)](#DirectClientToPlayAudio)必要があります。
-
-<div class="note">
-  <p><strong>メモ</strong></p>
-  <p>前または次に該当するオーディオコンテンツがなかったり、有効ではない場合、「再生する前または次の曲がありません」などの音声出力を<a href="/CEK/Guides/Build_Custom_Extension.html#ReturnCustomExtensionResponse">レスポンスメッセージで返す</a>必要があります。</p>
-</div>
-
-<div class="danger">
- <p><strong>注意</strong></p>
- <p>日本では現在、cardをサポートしておりません。</p>
-</div>
-
-### オーディオコンテンツのメタデータを提供する {#ProvidingMetaDataForDisplay}
-
-[オーディオコンテンツの再生を指示する](#DirectClientToPlayAudio) [`AudioPlayer.Play`](/CEK/References/CEK_API.md#Play)ディレクティブには、タイトル、アルバム、歌詞などの情報は含まれていません。Custom Extensionは、クライアントからリクエストされると、そのようなメタデータを提供する必要があります。
-
-クライアントは、コンテンツの再生メタデータを取得するために、[`TemplateRuntime.ReqeusetPlayerInfo`](/CEK/References/CEK_API.md#ReqeusetPlayerInfo)イベントをClovaに送信します。そのとき、イベントの内容は[`EventRequest`](/CEK/References/CEK_API.md#CustomExtEventRequest)タイプのリクエストメッセージで、以下のように送信されます。ちなみに、以下のサンプルは`eJyr5lIqSSyITy4tKs4vUrJSUE`トークンを持つコンテンツを基準に、次の10曲のメタデータをリクエストしたことを表しています。
-
-```json
-{
-  "context": {
-    ...
-  },
-  "request": {
-    "type": "EventRequest",
-    "requestId": "e5464288-50ff-4e99-928d-4a301e083d41",
-    "timestamp": "2017-09-05T05:41:21Z",
-    "event": {
-      "namespace": "TemplateRuntime",
-      "name": "RequestPlayerInfo",
-      "payload": {
-        "token": "eJyr5lIqSSyITy4tKs4vUrJSUE",
-        "range": {
-          "after": 10
-        }
-      }
-    }
-  },
-  "session": {
-      "new": true,
-      "sessionAttributes": {},
-      "sessionId": "69b20cc1-9166-41f3-a2dd-85b70f8e0bf5"
-  },
-  "version": "1.0"
-}
-```
-
-Custom Extensionは、レスポンスメッセージを使って、クライアントからリクエストされたコンテンツのメタデータを返す必要があります。[`TemplateRuntime.RenderPlayerInfo`](/CEK/References/CEK_API.md#RenderPlayerInfo)ディレクティブをレスポンスメッセージに含める必要があります。
-
-```json
-{
-  "version": "1.0",
-  "sessionAttributes": {},
-  "response": {
-    "card": {},
-    "directives": [
-      {
-        "header": {
-          "namespace": "TemplateRuntime",
-          "name": "RenderPlayerInfo"
-        },
-        "payload": {
-          "controls": [
-            {
-              "enabled": true,
-              "name": "PLAY_PAUSE",
-              "selected": false,
-              "type": "BUTTON"
-            },
-            {
-              "enabled": true,
-              "name": "NEXT",
-              "selected": false,
-              "type": "BUTTON"
-            },
-            {
-              "enabled": true,
-              "name": "PREVIOUS",
-              "selected": false,
-              "type": "BUTTON"
-            }
-          ],
-          "displayType": "list",
-          "playableItems": [
-            {
-              "artImageUrl": "http://DUMMY_DOMAIN/example/album/662058.jpg",
-              "controls": [
-                {
-                  "enabled": true,
-                  "name": "LIKE_DISLIKE",
-                  "selected": false,
-                  "type": "BUTTON"
-                }
-              ],
-              "headerText": "Classic",
-              "lyrics": [
-                {
-                  "data": null,
-                  "format": "PLAIN",
-                  "url": null
-                }
-              ],
-              "isLive": false,
-              "showAdultIcon": false,
-              "titleSubText1": "Happy Birthday - Brown Ver.",
-              "titleSubText2": "A song for Brown",
-              "titleText": "The theme song for LINE Friend - Brown",
-              "token": "eJyr5lIqSSyITy4tKs4vUrJSUE"
-            },
-            {
-              "artImageUrl": "http://DUMMY_DOMAIN/example/album/202646.jpg",
-              "controls": [
-                {
-                  "enabled": true,
-                  "name": "LIKE_DISLIKE",
-                  "selected": false,
-                  "type": "BUTTON"
-                }
-              ],
-              "headerText": "Classic",
-              "lyrics": [
-                {
-                  "data": null,
-                  "format": "PLAIN",
-                  "url": null
-                }
-              ],
-              "isLive": true,
-              "showAdultIcon": false,
-              "titleSubText1": "Happy Birthday - Sally Ver.",
-              "titleSubText2": "A song for Sally",
-              "titleText": "The theme song for LINE Friend - Sally",
-              "token": "eJyr5lIqSSyITy4tKs4vUrJSUEo2"
-            },
-            ...
-          ],
-          "provider": {
-            "logoUrl": "https://DUMMY_DOMAIN/logo_180125.png",
-            "name": "SampleMusicProvider",
-            "smallLogoUrl": "https://DUMMY_DOMAIN/smallLogo_180125.png"
-          }
-        }
-      }
-    ],
-    "outputSpeech": {},
-    "shouldEndSession": true
-  }
-}
-```
-
-<div class="danger">
-  <p><strong>注意</strong></p>
-  <p>日本では現在、cardをサポートしておりません。</p>
-</div>
-
 ### 再生状態の変更および進行状況のレポートを収集する {#CollectPlaybackStatusAndProgress}
 
 [`AudioPlayer.Play`](/CEK/References/CEK_API.md#Play)ディレクティブでオーディオを再生するクライアントは、再生が開始、一時停止、再開、終了するタイミングで、[`AudioPlayer.PlayStarted`](/CEK/References/CEK_API.md#PlayStarted)、[`AudioPlayer.PlayPaused`](/CEK/References/CEK_API.md#PlayPaused)、[`AudioPlayer.PlayResumed`](/CEK/References/CEK_API.md#PlayResumed)、[`AudioPlayer.PlayStopped`](/CEK/References/CEK_API.md#PlayStopped)、[`AudioPlayer.PlayFinished`](/CEK/References/CEK_API.md#PlayFinished)のようなイベントをClovaに送信します。そのとき、Clovaはそのイベントの内容を[`EventRequest`](/CEK/References/CEK_API.md#CustomExtEventRequest)タイプのリクエストメッセージでCustom Extensionに送信します。
@@ -333,7 +131,7 @@ Custom Extensionは、レスポンスメッセージを使って、クライア�
 
 <div class="danger">
   <p><strong>注意</strong></p>
-  <p>再生の進行状況のレポートに関する<code>EventRequest</code>タイプのリクエストメッセージのうち、<code>AudioPlayer.PlayFinished</code>イベントが含まれたメッセージを受け取った場合、Custom Extensionは、再生完了に対するクライアントの次のアクションをレスポンスメッセージで返す必要があります。そのアクションとして、次の<a href="#DirectClientToPlayAudio">オーディオコンテンツの再生を指示する</a>こともできますし、再生停止などの<a href="#ControlAudioPlayback">再生コントロール</a>を指示することもできます。</p>
+  <p>再生の進行状況のレポートに関する<code>EventRequest</code>タイプのリクエストメッセージのうち、<code>AudioPlayer.PlayFinished</code>イベントが含まれたメッセージを受け取った場合、Custom Extensionは、再生完了に対するクライアントの次のアクションをレスポンスメッセージで返す必要があります。そのアクションとして、次の<a href="#DirectClientToPlayAudio">オーディオコンテンツの再生を指示する</a>ことができます。</p>
 </div>
 
 ちなみに、このセクションで扱っている`AudioPlayer`名前欄イベントには、`AudioPlayer.PlaybackState`コンテキストが含まれます。その情報もまた、`EventRequest`タイプのリクエストメッセージが送信されるときに含まれるので、Custom Extensionは含まれた`AudioPlayer.PlaybackState`コンテキストからオーディオコンテンツのID、再生状態、オーディオコンテンツの再生位置などを把握できます。
@@ -457,11 +255,3 @@ Custom Extensionは、そのタイミングで、再生できるオーディオ�
   <p>日本では現在、cardをサポートしておりません。</p>
 </div>
 
-### 再生コントロールの動作方法を変更する {#CustomizePlaybackControl}
-
-オーディオコンテンツを提供するサービスやコンテンツの特性によって、再生の一時停止、再生再開、再生停止などの[再生コントロール](#ControlAudioPlayback)の動作を少し違った形で実装する必要がある場合があります。例えば、リアルタイムのストリーミングコンテンツの場合、一時停止機能を適用できない可能性があります。その場合、ユーザーから`Clova.PauseIntent`[ビルトインインテント](/Design/Design_Guideline_For_Extension.md#BuiltinIntent)のリクエストがあっても、そのリクエストを処理できないと応答したり、または`Clova.StopIntent`のような対応を処理したりすることができます。`Clova.StopIntent`のような対応を処理する場合、[レスポンスメッセージ](/CEK/References/CEK_API.md#CustomExtResponseMessage)に[`PlaybackController.Pause`](/CEK/References/CEK_API.md#Pause)ディレクティブの代わりに[`PlaybackController.Stop`](/CEK/References/CEK_API.md#Stop)ディレクティブを応答として返すように実装することができます。
-
-<div class="note">
-  <p><strong>メモ</strong></p>
-  <p>可能な限り仕様に沿った実装をすることを推奨しますが、リアルタイムのストリーミングコンテンツなど実装のユースケースによっては、ユーザの混乱を避けるために再生コントロールの動作を変更してください。</p>
-</div>

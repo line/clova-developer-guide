@@ -23,6 +23,14 @@ LINE株式会社（以下、当社といいます）は、Clova事務局とし�
   </thead>
   <tbody>
   <tr>
+    <td>v1.1.4</td><td>2018/08/02</td>
+    <td>
+      <ul>
+        <li><a href="/DevConsole/Guides/CEK/Deploy_Extension.md#InputDeploymentInfo">配布情報を入力する</a> 更新（検索キーワードについての説明を追加、スキルストアの画像を更新）</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
     <td>v1.1.3</td><td>2018/07/27</td>
     <td>
       <ul>

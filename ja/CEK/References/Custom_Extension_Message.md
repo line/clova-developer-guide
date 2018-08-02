@@ -280,7 +280,7 @@ CEKは、Clovaが解析したユーザーのリクエストをCustom Extension�
 * [`SessionEndedRequest`](#CustomExtSessionEndedRequest)
 
 #### EventRequest {#CustomExtEventRequest}
-`EventRequest`タイプは、クライアントの状態の変化や、それに伴うリクエストをExtensionに渡すために使用されるリクエストタイプです。CEKは、`EventRequest`のリクエストタイプを使用して、ユーザーが特定のスキルを有効または無効にした結果を渡したり、クライアントの[オーディオ再生状態をExtensionにレポート](/CEK/Guides/Build_Custom_Extension.md#CollectPlaybackStatusAndProgress)したり、また[オーディオ再生に関する付加情報をExtensionにリクエスト](/CEK/Guides/Build_Custom_Extension.md#ProvidingMetaDataForDisplay)したりします。Extensionの開発者は、スキルの有効化/無効化、オーディオ再生状態のレポートまたは付加情報のリクエストに適切な作業を処理する必要があります。
+`EventRequest`タイプは、クライアントの状態の変化や、それに伴うリクエストをExtensionに渡すために使用されるリクエストタイプです。CEKは、`EventRequest`のリクエストタイプを使用して、ユーザーが特定のスキルを有効または無効にした結果を渡したり、クライアントの[オーディオ再生状態をExtensionにレポート](/CEK/Guides/Build_Custom_Extension.md#CollectPlaybackStatusAndProgress)することができます。Extensionの開発者は、スキルの有効化/無効化、オーディオ再生状態のレポートまたは付加情報のリクエストに適切な作業を処理する必要があります。
 
 `EventRequest`リクエストタイプでオーディオ再生状態をレポートしたり、付加情報のリクエストをExtensionに送信するとき、以下の[CIC API](#CICAPIforAudioPlayback)を使用します。
 
@@ -293,7 +293,6 @@ CEKは、Clovaが解析したユーザーのリクエストをCustom Extension�
 * [`AudioPlayer.ProgressReportIntervalPassed`](#ProgressReportIntervalPassed)
 * [`AudioPlayer.ProgressReportPositionPassed`](#ProgressReportPositionPassed)
 * [`AudioPlayer.StreamRequested`](#StreamRequested)
-* [`TemplateRuntime.RequestPlayerInfo`](#RequestPlayerInfo)
 
 `EventRequest`タイプのメッセージの`request`オブジェクトのフィールドは、次のように構成されます。
 
@@ -349,19 +348,7 @@ CEKは、Clovaが解析したユーザーのリクエストをCustom Extension�
   }
 }
 
-// サンプル3. 音楽のメタデータをリクエストしたとき
-"event": {
-  "namespace": "TemplateRuntime",
-  "name": "RequestPlayerInfo",
-  "payload": {
-    "token": "eJyr5lIqSSyITy4tKs4vUrJSUE",
-    "range": {
-      "after": 10
-    }
-  }
-}
-
-// サンプル4. 音楽再生を停止したとき
+// サンプル3. 音楽再生を停止したとき
 "request": {
   "type": "EventRequest",
   "requestId": "e5464288-50ff-4e99-928d-4a301e083d41",
@@ -515,7 +502,7 @@ Extensionは、リクエストメッセージを処理して、レスポンス�
 |---------------|---------|-----------------------------|:---------:|
 | `response`                               | object       | Extensionのレスポンス情報を含むオブジェクト                            |  |
 | `response.card`                          | object       | コンテンツテンプレート形式のデータで、クライアントの画面に表示するコンテンツをこのフィールドで渡すことができます。       |  |
-| `response.directives[]`                  | object array | ExtensionがCEKに渡すディレクティブです。`response.directives`フィールドは、主にオーディオコンテンツを提供するために使用されます。以下の[CIC API](#CICAPIforAudioPlayback) ディレクティブをサポートしています。<ul><li><code>AudioPlayer.Play</code></li><li><code>AudioPlayer.StreamDeliver</code></li><li><code>PlaybackController.Pause</code></li><li><code>PlaybackController.Resume</code></li><li><code>PlaybackController.Stop</code></li><li><code>TemplateRuntime.RenderPlayerInfo</code></li></ul> |  |
+| `response.directives[]`                  | object array | ExtensionがCEKに渡すディレクティブです。`response.directives`フィールドは、主にオーディオコンテンツを提供するために使用されます。以下の[CIC API](#CICAPIforAudioPlayback) ディレクティブをサポートしています。<ul><li><code>AudioPlayer.Play</code></li><li><code>AudioPlayer.StreamDeliver</code></li><li><code>PlaybackController.Pause</code></li><li><code>PlaybackController.Resume</code></li><li><code>PlaybackController.Stop</code></li></ul> |  |
 | `response.directives[].header`           | object       | ディレクティブのヘッダー                                          |  |
 | `response.directives[].header.messageId` | string       | メッセージID(UUID)。メッセージを区別するための識別子です。   |  |
 | `response.directives[].header.name`      | string       | ディレクティブのAPI名                                      |  |
@@ -536,7 +523,7 @@ Extensionは、リクエストメッセージを処理して、レスポンス�
 | `response.reprompt.outputSpeech.verbose`          | object       | 画面を持たないクライアントデバイスに渡す際に使用されます。詳細音声情報を含んでいます。 | Optional |
 | `response.reprompt.outputSpeech.verbose.type`     | string       | 出力する音声情報のタイプ単文と複文タイプの音声情報のみ入力できます。<ul><li><code>"SimpleSpeech"</code>：単文タイプの音声情報です。最も基本的な音声情報を渡す際に使用されます。この値を指定した場合、<code>response.outputSpeech.verbose.values</code>フィールドが<a href="#CustomExtSpeechInfoObject"><code>SpeechInfoObject</code></a>オブジェクトを持っている必要があります。</li><li><code>"SpeechList"</code>：複文タイプの音声情報です。複数の文章を出力する際に使用されます。この値を指定した場合、<code>response.outputSpeech.verbose.values</code>フィールドが<a href="#CustomExtSpeechInfoObject"><code>SpeechInfoObject</code></a>オブジェクト配列を持っている必要があります。</li></ul> |  |
 | `response.reprompt.outputSpeech.verbose.values[]`           | [SpeechInfoObject](#CustomExtSpeechInfoObject) or [SpeechInfoObject](#CustomExtSpeechInfoObject) array | クライアントデバイスで出力する詳細音声情報を持っているオブジェクトまたはオブジェクト配列 |  |
-| `response.shouldEndSession`              | boolean      | セッション終了のフラグクライアントに特定のExtensionの使用が終了したことを示すフィールドです。[`SessionEndedRequest`](#CustomExtSessionEndedRequest)タイプのリクエストメッセージを受け取る前に、Extensionから先に使用終了を示す際に使用されます。<ul><li>true：使用を終了する</li><li>false：引き続き使用する。ユーザーとマルチターン対話を行います。</li></ul> |  |
+| `response.shouldEndSession`              | boolean      | セッション終了のフラグ。クライアントに特定のExtensionの使用が終了したことを示すフィールドです。[`SessionEndedRequest`](#CustomExtSessionEndedRequest)タイプのリクエストメッセージを受け取る前に、Extensionから先に使用終了を示す際に使用されます。<ul><li>true：使用を終了する</li><li>false：引き続き使用する。ユーザーとマルチターン対話を行います。</li></ul> |  |
 | `sessionAttributes`                      | object       | ユーザーとのマルチターン対話に必要な情報を保存するために使用されるオブジェクト。Custom Extensionは、`sessionAttributes`フィールドを使用して途中までの情報をCEKに渡します。ユーザーの追加のリクエストを受け付けると、その情報は再び[リクエストメッセージ](#CustomExtRequestMessage)の`session.sessionAttributes`フィールドで渡されます。`sessionAttributes`オブジェクトは、キー(key)と値(value)のペアで構成され、Custom Extensionを実装する際に任意で定義できます。保存する値がない場合、空のオブジェクトを入力します。 |  |
 | `version`                                | string       | メッセージフォーマットのバージョン(CEKのバージョン)                        |  |
 
@@ -765,8 +752,6 @@ CIC APIは、ユーザーのクライアントデバイスがClovaと通信を�
 | PlaybackController | [`Pause`](#Pause)              | ディレクティブ | クライアントに、再生中のオーディオストリームを一時停止するように指示します。        |
 | PlaybackController | [`Resume`](#Resume)            | ディレクティブ | クライアントに、オーディオストリームの再生を再開するように指示します。                |
 | PlaybackController | [`Stop`](#Stop)                | ディレクティブ | クライアントに、オーディオストリームの再生を停止するように指示します。                |
-| TemplateRuntime | [`RenderPlayerInfo`](#RenderPlayerInfo)        | ディレクティブ | CICから、メディアプレーヤーに表示する再生リスト、アルバムの画像、歌詞のような再生メタデータをクライアントに送信し、表示するように指示します。 |
-| TemplateRuntime | [`RequestPlayerInfo`](#RequestPlayerInfo)      | イベント     | クライアントから、メディアプレーヤーに表示する再生リスト、アルバムの画像、歌詞のような再生メタデータをCICにリクエストします。 |
 
 ## Playディレクティブ {#Play}
 クライアントに対して、特定のオーディオストリームを再生するか、または再生キューに追加するように指示します。
@@ -1364,183 +1349,6 @@ CIC APIは、ユーザーのクライアントデバイスがClovaと通信を�
 #### 次の項目も参照してください。
 * [`AudioPlayer.PlayResumed`](#PlayResumed)
 
-### TemplateRuntime.RenderPlayerInfoディレクティブ {#RenderPlayerInfo}
-
-CICから、メディアプレーヤーに表示する再生リスト、アルバムの画像、歌詞のような再生メタデータをクライアントに送信し、表示するように指示します。ユーザーからオーディオの再生をリクエストされたとき、クライアントは[`AudioPlayer.Play`](#Play)ディレクティブを受信してメディアを再生します。ディスプレイを持つクライアントは、必要に応じてメディアプレーヤーに再生関連情報を表示する必要があります。その際、[`TemplateRuntime.RequestPlayerInfo`](#RequestPlayerInfo)イベントで再生メタデータをCICにリクエストし、`TemplateRuntime.RenderPlayerInfo`ディレクティブを受信します。`TemplateRuntime.RenderPlayerInfo`ディレクティブには、現在再生するメディアコンテンツと、後で再生するメディアコンテンツの再生メタデータが含まれます。クライアントは、`TemplateRuntime.RenderPlayerInfo`ディレクティブの再生メタデータをユーザーに提供して、現在再生しているメディアのメタデータおよび再生リストを表示することができます。
-
-#### Payload fields
-| フィールド名       | データ型    | フィールドの説明                     | Optional |
-|---------------|---------|-----------------------------|:---------:|
-| `displayType`               | string | メディアコンテンツを表示する形式。<ul><li><code>"list"</code>：リストで表示する</li><li><code>"single"</code>：1つのアイテムを表示する</li></ul>       |    |
-| `controls[]`                | object array | クライアントがメディアプレーヤーで表示すべきボタンの情報を持つオブジェクト配列です。             |    |
-| `controls[].enabled`        | boolean      | `controls[].name`で設定されたボタンを、メディアプレーヤーで有効にするかを示します。<ul><li><code>true</code>：有効にする</li><li><code>false</code>：無効にする</li></ul>  |     |
-| `controls[].name`           | string       | ボタンの名前。次のいずれかになります。<ul><li><code>"NEXT"</code>：「次」ボタン</li><li><code>"PLAY_PAUSE"</code>：「再生/一時停止」ボタン</li><li><code>"PREVIOUS"</code>：「前」ボタン</li></ul>  |     |
-| `controls[].selected`       | boolean      | メディアコンテンツが選択されているかを示します。この値は、ユーザーの「好き」という概念を表す際に使用することができます。この値が`true`に設定されていたら、ユーザーが好きなアイテムとして登録したコンテンツであることを示します。メディアプレーヤーの関連するUIで、そのことを表す必要があります。<ul><li><code>true</code>：選択済み</li><li><code>false</code>：未選択</li></ul> |     |
-| `controls[].type`           | string       | ボタンのタイプ。現在、`"BUTTON"`のみ使用します。  |    |
-| `playableItems[]`           | object array | 再生できるメディアコンテンツのリストを持つオブジェクト配列です。このフィールドは、空の配列の場合があります。  |    |
-| `playableItems[].artImageUrl`  | string    | メディアコンテンツ関連画像のURL。アルバムのジャケット画像や関連アイコンなどの画像があるURLです。      | Optional |
-| `playableItems[].controls[]`                | object array  | 特定のメディアコンテンツを再生するとき、表示すべきボタンの情報を持つオブジェクト配列です。このオブジェクト配列は省略できます。  | Optional |
-| `playableItems[].controls[].enabled`        | boolean      | `playableItems[].controls[].name`で設定されたボタンを、メディアプレーヤーで有効にするかを示します。<ul><li><code>true</code>：有効にする</li><li><code>false</code>：無効にする</li></ul>  |     |
-| `playableItems[].controls[].name`           | string       | ボタンの名前。次のいずれかになります。<ul><li><code>"NEXT"</code>：「次」ボタン</li><li><code>"PLAY_PAUSE"</code>：「再生/一時停止」ボタン</li><li><code>"PREVIOUS"</code>：「前」ボタン</li></ul>  |     |
-| `playableItems[].controls[].selected`       | boolean      | メディアコンテンツが選択されているかを示します。この値は、ユーザーの「好き」という概念を表す際に使用することができます。この値が`true`に設定されていたら、ユーザーが好きなアイテムとして登録したコンテンツであることを示します。メディアプレーヤーの関連するUIで、そのことを表す必要があります。<ul><li><code>true</code>：選択済み</li><li><code>false</code>：未選択</li></ul> |     |
-| `playableItems[].controls[].type`           | string       | ボタンのタイプ。現在、`"BUTTON"`のみ使用します。  |    |
-| `playableItems[].headerText`       | string        | 主に、現在の再生リストのタイトルを表すテキストフィールド                                                | Optional  |
-| `playableItems[].isLive`           | boolean       | リアルタイムのコンテンツかどうかを示す値。<ul><li><code>true</code>：リアルタイムのコンテンツ</li><li><code>false</code>：リアルタイムのコンテンツではない</li></ul><div class="note"><p><strong>メモ</strong></p><p>リアルタイムのコンテンツの場合、リアルタイムのコンテンツであることを表すアイコン(例：liveアイコン)を表示する必要があります。</p></div>  | Optional  |
-| `playableItems[].lyrics[]`         | object array  | 歌詞のデータを持つオブジェクト配列。                                                            | Optional  |
-| `playableItems[].lyrics[].data`    | string        | 歌詞のデータ。このフィールドと`playableItems[].lyrics[].url`フィールドのうち、1つは存在します。              | Optional  |
-| `playableItems[].lyrics[].format`  | string        | 歌詞データの形式。<ul><li><code>"LRC"</code>：<a href="https://en.wikipedia.org/wiki/LRC_(file_format)" target="_blank">LRC形式</a></li><li><code>"PLAIN"</code>：テキスト形式</li></ul>  |     |
-| `playableItems[].lyrics[].url`     | string        | 歌詞データのURL。このフィールドと`playableItems[].lyrics[].data`フィールドのうち、1つは存在します。        | Optional  |
-| `playableItems[].showAdultIcon`    | boolean       | 成人向けコンテンツを示すアイコンを表示するかどうか。<ul><li><code>true</code>：表示する。</li><li><code>false</code>：表示しない。</li></ul>   |     |
-| `playableItems[].titleSubText1`    | string        | 主にアーティスト名を表すテキストフィールド                                                          |    |
-| `playableItems[].titleSubText2`    | string        | 主にアルバム名を表すサブテキストフィールド                                                      | Optional |
-| `playableItems[].titleText`        | string        | 現在のオーディオコンテンツのタイトルを表すテキストフィールド                                                         |     |
-| `playableItems[].token`            | string        | メディアコンテンツのトークン                                                                     |    |
-| `provider`                         | object        | メディアコンテンツ提供元の情報を持つオブジェクト                                                         | Optional |
-| `provider.logoUrl`                 | string        | メディアコンテンツ提供元のロゴ画像のURL                                                         | Optional |
-| `provider.name`                    | string        | メディアコンテンツ提供元の名前                                                                   |     |
-| `provider.smallLogoUrl`            | string        | メディアコンテンツ提供元の小さなロゴ画像のURL                                                | Optional |
-
-#### Message example
-{% raw %}
-
-```json
-{
-  "directive": {
-    "header": {
-      "namespace": "TemplateRuntime",
-      "name": "RenderPlayerInfo",
-      "dialogRequestId": "34abac3-cb46-611c-5111-47eab87b7",
-      "messageId": "ad13f0d6-bb11-ca23-99aa-312a0b213805"
-    },
-    "payload": {
-      "controls": [
-        {
-          "enabled": true,
-          "name": "PLAY_PAUSE",
-          "selected": false,
-          "type": "BUTTON"
-        },
-        {
-          "enabled": true,
-          "name": "NEXT",
-          "selected": false,
-          "type": "BUTTON"
-        },
-        {
-          "enabled": true,
-          "name": "PREVIOUS",
-          "selected": false,
-          "type": "BUTTON"
-        }
-      ],
-      "displayType": "list",
-      "playableItems": [
-        {
-          "artImageUrl": "http://DUMMY_DOMAIN/example/album/662058.jpg",
-          "controls": [
-            {
-              "enabled": true,
-              "name": "LIKE_DISLIKE",
-              "selected": false,
-              "type": "BUTTON"
-            }
-          ],
-          "headerText": "Classic",
-          "lyrics": [
-            {
-              "data": null,
-              "format": "PLAIN",
-              "url": null
-            }
-          ],
-          "isLive": false,
-          "showAdultIcon": false,
-          "titleSubText1": "Alice Sara Ott, Symphonie Orchester Des Bayerischen Rundfunks, Esa-Pekka Salonen",
-          "titleSubText2": "Wonderland - Edvard Grieg : Piano Concerto, Lyric Pieces",
-          "titleText": "Grieg : Piano Concerto In A Minor, Op.16 - 3. Allegro moderato molto e marcato (Live)",
-          "token": "eJyr5lIqSSyITy4tKs4vUrJSUE="
-        },
-        {
-          "artImageUrl": "http://DUMMY_DOMAIN/example/album/202646.jpg",
-          "controls": [
-            {
-              "enabled": true,
-              "name": "LIKE_DISLIKE",
-              "selected": false,
-              "type": "BUTTON"
-            }
-          ],
-          "headerText": "Classic",
-          "lyrics": [
-            {
-              "data": null,
-              "format": "PLAIN",
-              "url": null
-            }
-          ],
-          "isLive": true,
-          "showAdultIcon": false,
-          "titleSubText1": "Berliner Philharmoniker, Herbert Von Karajan",
-          "titleSubText2": "Mendelssohn : Violin Concerto; A Midsummer Night`s Dream",
-          "titleText": "Symphony No.4 In A Op.90 'Italian' - III.Con Moto Moderato",
-          "token": "eJyr5lIqSSyITy4tKs4vUrJSUEo2"
-        },
-        ...
-      ],
-      "provider": {
-        "logoUrl": "https://DUMMY_DOMAIN/logo_180125.png",
-        "name": "SampleMusicProvider",
-        "smallLogoUrl": "https://DUMMY_DOMAIN/smallLogo_180125.png"
-      }
-    }
-  }
-}
-```
-
-{% endraw %}
-
-#### 次の項目も参照してください。
-* [`AudioPlayer.Play`](#Play)
-* [`TemplateRuntime.RequestPlayerInfo`](#RequestPlayerInfo)
-
-### TemplateRuntime.RequestPlayerInfoイベント {#RequestPlayerInfo}
-クライアントから、メディアプレーヤーに表示する再生リスト、アルバムの画像、歌詞のような再生メタデータをCICにリクエストします。
-
-#### Payload fields
-
-| フィールド名       | データ型    | フィールドの説明                     | Optional |
-|---------------|---------|-----------------------------|:---------:|
-| `token`        | string  | 再生メタデータを取得するとき、開始の基準となるオーディオストリームのトークン。 |    |
-| `range`        | object  | 再生メタデータの範囲を指定するオブジェクト。このフィールドが使用されていない場合、クライアントは任意の数のメタデータを受信します。   | Optional  |
-| `range.before` | number  | 基準となるメディアコンテンツから、n個前以前の再生リストに含まれた再生メタデータをリクエストします。  | Optional  |
-| `range.after`  | number  | 基準となるメディアコンテンツから、n個以降の再生リストに含まれた再生メタデータをリクエストします。例えば、`range.before`フィールドの値を指定しないで、`range.after`を`5`に設定すると、基準のメディアコンテンツを含めて、合計6つのメディアコンテンツに該当する再生メタデータを受信します。 | Optional  |
-
-#### Message example
-
-{% raw %}
-
-```json
-{
-  "context": [
-    ...
-  ],
-  "event": {
-    "header": {
-      "namespace": "TemplateRuntime",
-      "name": "RequestPlayerInfo",
-      "messageId": "2fcb6a62-393d-46ad-a5c4-b3db9b640045"
-    },
-    "payload": {
-      "token": "eJyr5lIqSSyITy4tKs4vUrJSUE"
-    }
-  }
-}
-```
-{% endraw %}
-
-#### 次の項目も参照してください。
-* [`AudioPlayer.Play`](#Play)
-
 ### AudioStreamInfoObject {#AudioStreamInfoObject}
 再生するオーディオストリームのストリーミング情報を持つオブジェクトです。クライアントに対して再生するストリーミングの情報を送信したり、クライアントがCICに対して、現在再生しているコンテンツのストリーミング情報を送信するとき使用します。
 
@@ -1691,4 +1499,3 @@ CICから、メディアプレーヤーに表示する再生リスト、アル�
   <p><strong>注意</strong></p>
   <p>オーディオコンテンツの再生に対応していないClovaデバイスがあります。現時点ではXperia Ear Duoではオーディオコンテンツに対応していません。</p>
 </div>
-

@@ -24,7 +24,7 @@ Extensionをユーザーに説明するための情報として、Clovaアプリ
 * **サービスを提供する国および地域**：現在、日本でのみExtensionを配布できます。
 * **{{ book.DevConsole.cek_full_skill_desc }}**：**{{ book.DevConsole.ExtensionPage }}** でユーザーに提供するExtensionの説明です。案内に従って作成します。
 * **{{ book.DevConsole.cek_example_phrases }}**：ユーザーがExtensionをどのように使用できるかを示す例です。**{{ book.DevConsole.ExtensionPage }}** に表示されます。なお、1番目の例は **{{ book.DevConsole.StoreHome }}** にも表示されるため、「〜を起動して」「〜を開いて」など、スキルを起動するフレーズを含めて登録してください。（例：ねぇClova、ピザボットを起動して）
-* **{{ book.DevConsole.cek_keywords }}**：ユーザーが特定のキーワードでExtensionを検索する際に、その検索結果にExtensionが含まれるように設定します（カンマ区切りで5つまで登録可能）。
+* **{{ book.DevConsole.cek_keywords }}**：ユーザーが特定のキーワードでExtensionを検索する際に、その検索結果にExtensionが含まれるように設定します（カンマ区切りで5つまで登録可能）。現在スキルストアに検索機能はありませんが、今後提供が予定されており、予め入力することが可能です。
 {% if book.language !== "ja" %}
 * **{{ book.DevConsole.cek_small_icon }}**：小サイズ(108x108ピクセル)のExtensionのアイコンファイルです。**{{ book.DevConsole.ManageExtensions }}** と **{{ book.DevConsole.ExtensionPage }}** に表示されます。
 {% endif %}
