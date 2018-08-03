@@ -23,6 +23,14 @@ LINE株式会社（以下、当社といいます）は、Clova事務局とし�
   </thead>
   <tbody>
   <tr>
+    <td>v1.1.5</td><td>2018/08/03</td>
+    <td>
+      <ul>
+        <li><a href="/CEK/Guides/Clova_CEK_SDK.md">Clova Extensions Kitソフトウェア開発キット</a> 更新（<a href="/CEK/Guides/Clova_CEK_SDK.md#SDK_For_Python">CEK SDK for Python</a> 追加）</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
     <td>v1.1.4</td><td>2018/08/02</td>
     <td>
       <ul>
