@@ -14,7 +14,7 @@ Custom ExtensionはCEKから[Custom Extensionメッセージ](/CEK/References/CE
 |---------|--------------|---------|
 |[LaunchRequest](#HandleLaunchRequest) | _[Extensionの呼び出し名]_ + 「起動して/開いて/実行して」 | 「ピザボットを起動して」 |
 | [IntentRequest](#HandleIntentRequest)| (`LaunchRequest`タイプのリクエストを受け付けた状態で) _[Extensionごとに登録したコマンド]_ | (ピザボット起動状態で)「注文を確認して」 |
-| [SessionEndedRequest](#HandleSessionEndedRequest) | (`LaunchRequest`タイプのリクエストを受け付けた状態で)「終了して/終了/もういい」 | 「(ピザボットを)終了して」 |
+| [SessionEndedRequest](#HandleSessionEndedRequest) | (`LaunchRequest`タイプのリクエストを受け付けた状態で)「終了して/終了/やめて」 | 「(ピザボットを)終了して」 |
 
 <div class="note">
 <p><strong>メモ</strong></p>
@@ -154,7 +154,7 @@ IntentRequestタイプのリクエストは、`request.type`フィールドに`"
 
 ### SessionEndedRequestの処理 {#HandleSessionEndedRequest}
 
-[`SessionEndedRequest`タイプのリクエスト](/CEK/References/CEK_API.md#CustomExtSessionEndedRequest)は、ユーザーが特定のモードやCustom Extensionの使用を中断すると宣言したことを示す際に使用されます。ユーザーが「終了して」「もういい」などのように指示した場合、クライアントはExtensionの使用を中断し、CEKは対話サービスを提供するExtensionに`SessionEndedRequest`タイプのリクエストを渡します。
+[`SessionEndedRequest`タイプのリクエスト](/CEK/References/CEK_API.md#CustomExtSessionEndedRequest)は、ユーザーが特定のモードやCustom Extensionの使用を中断すると宣言したことを示す際に使用されます。ユーザーが「終了して」「やめて」などのように指示した場合、クライアントはExtensionの使用を中断し、CEKは対話サービスを提供するExtensionに`SessionEndedRequest`タイプのリクエストを渡します。
 
 `SessionEndedRequest`タイプのメッセージは`request.type`フィールドに`"SessionEndedRequest"`の値を持ち、`LaunchRequest`タイプと同じく`request`フィールドにユーザーの発話の解析情報は含まれません。Extensionの開発者は、サービス終了時の後処理を実施してください。
 

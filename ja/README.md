@@ -9,7 +9,9 @@ LINE株式会社（以下、当社といいます）は、Clova事務局とし�
 </div>
 
 ## お問い合わせ
-ドキュメントの内容に関するお問い合わせは、指定のClova提携担当者までお願いします。
+このドキュメントに関するお問い合わせや開発時のご質問の際にはこちらをご利用ください。
+Clovaの質問には`Clova`や`CEK`のタグをご利用ください。
+<a href="https://www.line-community.me/questions" target="_blank">LINE developers community > Q&A</a>
 
 ## ドキュメントのバージョンおよび変更履歴
 
@@ -23,6 +25,14 @@ LINE株式会社（以下、当社といいます）は、Clova事務局とし�
   </thead>
   <tbody>
   <tr>
+    <td>v1.1.7</td><td>2018/08/24</td>
+    <td>
+      <ul>
+        <li><a href="/DevConsole/Guides/CEK/Deploy_Extension.md">Extensionを配布する</a> 更新（<a href="/DevConsole/Guides/CEK/Deploy_Extension.md#DeployInSkillStore">スキルストアに表示される</a> 追加）</li>
+      </ul>
+    </td>
+  </tr>
+    <tr>
     <td>v1.1.6</td><td>2018/08/09</td>
     <td>
       <ul>

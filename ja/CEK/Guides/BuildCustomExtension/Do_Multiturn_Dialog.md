@@ -9,7 +9,7 @@ CEKから渡されたユーザーのリクエスト([`IntentRequest`](/CEK/Guide
 {
   "version": "1.0",
   "session": {
-    "new": true,
+    "new": false,
     "sessionAttributes": {},
     "sessionId": "a29cfead-c5ba-474d-8745-6c1a6625f0c5",
     "user": {

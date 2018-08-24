@@ -92,7 +92,7 @@ Extensionの設計は、まず最初にExtensionの目標を設定すること�
 
 ### スキル名/呼び出し名の要件 {#InvocationNameRequirement}
 
-スキル名/呼び出し名は、次の要件を満たしていることが必要です。
+スキル名/呼び出し名は、次の条件を満たしていることが必要です。
 1. [単語1語でないこと](#WordInGeneral)
 2. [人名や地名、場所でないこと](#ProperNoun)
 3. [Clovaの機能に影響があるフレーズを含まないこと](#PhrasesForClova)
@@ -322,7 +322,7 @@ BBQピザ1つ出前取ってくれる?
 
 <div class="note">
   <p><strong>メモ</strong></p>
-  <p>今後<a href="/DevConsole/Guides/CEK/Test_Extension.md#TestInteractionModel">対話モデルのテスト</a>や、実際のユーザーのログを参照して完成度を高めていくことができます。対話モデルをテストする際には、サンプル発話の作成者ではなく、第三者がテストすることをお勧めします。そうすることで、新たな発話パターンを見つける事ができます。</p>
+  <p><a href="/DevConsole/Guides/CEK/Test_Extension.md#TestInteractionModel">対話モデルのテスト</a>や、統計機能の「発話」データ（<a href="https://clova-developers.line.me/cek/#/list" target="_blank">スキル設定</a>画面で<strong>統計</strong>を選択して表示）を参照して調整することにより、完成度を高めることができます。対話モデルをテストする際には、サンプル発話の作成者ではなく、第三者がテストすることをお勧めします。そうすることで、新たな発話パターンを見つけることができます。</p>
 </div>
 
 
@@ -461,7 +461,6 @@ Extensionは、ユーザーのリクエストを処理し、その結果をClova
 * Custom Extensionは、ユーザーのリクエストがあると、クライアントがオーディオコンテンツを再生できるようにレスポンスメッセージ(`AudioPlayer.Play`)を返す必要があります。
 * Custom Extensionは、ユーザーのリクエストがあると、いつでもオーディオコンテンツを一時停止または停止できる必要があります。
 * Custom Extensionは、一時停止または停止したコンテンツを再開または再生できる必要があります。
-* Custom Extensionは前や次に曲戻し/曲送りできる必要があります。
 
 以下は、オーディオコンテンツ再生タイプの簡単なユーザーシナリオです。
 
@@ -474,8 +473,6 @@ Extensionは、ユーザーのリクエストを処理し、その結果をClova
 > <p class="rdiag">AudioPlayer.Pause: 再生を停止する</p>
 > <p class="ldiag">「ねぇClova、再生を再開して」</p>
 > <p class="rdiag">AudioPlayer.Resume: 再生を再開する</p>
-> <p class="ldiag">「次」</p>
-> <p class="rdiag">AudioPlayer.Play: ヴィヴァルディの四季第2楽章</p>
 
 <div class="note">
   <p><strong>メモ</strong></p>

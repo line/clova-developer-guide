@@ -8,5 +8,5 @@
 
 このチュートリアルを学習すると、以下の項目を理解することができます。
 * [1番目のチュートリアル：簡単なExtensionを作成してテストする](/CEK/Tutorials/Build_Simple_Extension.md)
-* [2番目のチュートリアル：「はい」「いいえ」のような基本的な意思表現を処理する](/CEK/Tutorials/Handle_Builtin_Intents.md)
+* [2番目のチュートリアル：「はい」「いいえ」のような基本的な意図表現を処理する](/CEK/Tutorials/Handle_Builtin_Intents.md)
 * 3番目のチュートリアル(追加予定)：ユーザーが入力した情報を活用する対話モデルを適用する

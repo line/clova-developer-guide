@@ -6,6 +6,7 @@ Extensionの配布は、通常、次の順で行われます。
 * [配布情報を入力する](#InputDeploymentInfo)
 * [プライバシーポリシーおよびコンプライアンス情報を入力する](#InputComplianceInfo)
 * [審査をリクエストする](#RequestExtensionSubmission)
+* [スキルストアに表示される](#DeployInSkillStore)
 
 ## 配布情報を入力する {#InputDeploymentInfo}
 
@@ -109,3 +110,13 @@ Extensionを審査する際に確認する評価項目は次のとおりです�
 その際、**{{ book.DevConsole.cek_message }}** の **{{ book.DevConsole.cek_view }}** メニューをクリックすると、審査のフィードバックを確認できます。
 
 ![](/DevConsole/Resources/Images/DevConsole-Show_Submission_Feedback.png)
+
+## スキルストアに表示される {#DeployInSkillStore}
+
+審査を通過すると、作成したスキルはClovaアプリの **{{ book.DevConsole.StoreHome }}** に表示されます。エンドユーザーは、**スキルリスト** からスキルを選択し、**{{ book.DevConsole.ExtensionPage }}** に表示される **利用開始** ボタンをタップすることでスキルを利用することができます。
+
+
+<div class="note">
+  <p><strong>メモ</strong></p>
+  <p>自分が開発したスキルは、審査通過後もClovaアプリでは<strong>現在テスト中のスキル</strong>の欄に表示され、Clova Developer Centerのスキル設定画面では<strong>{{ book.DevConsole.cek_status }}</strong>が<strong>{{ book.DevConsole.cek_status_prd }}</strong>として表示されます。</p>
+</div>

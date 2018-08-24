@@ -32,7 +32,7 @@
 
 <div class="note">
   <p><strong>メモ</strong></p>
-  <p><code>sessionAttributes</code>フィールドは、拡張のために予約されたフィールドです。<code>response.directives</code>フィールドはExtensionがCEKに渡すディレクティブです。<code>response.directives</code>フィールドで使用するディレクティブは、今後APIを提供する予定です。</p>
+  <p><code>sessionAttributes</code>フィールドは、拡張のために予約されたフィールドです。<code>response.directives</code>フィールドはExtensionがCEKに渡すディレクティブです。<code>response.directives</code>フィールドで使用するディレクティブは、現在、主にオーディオコンテンツを提供するために使用されます。</p>
 </div>
 
 次のように、場合によって複数の文章を出力するようにレスポンスメッセージを作成することができます。あるいは、インターネット上のオーディオファイルを再生するようにレスポンスメッセージを作成することもできます。
