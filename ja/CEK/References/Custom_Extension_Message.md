@@ -568,7 +568,7 @@ SpeechInfoObjectオブジェクトはレスポンスメッセージの`response.
   }
 }
 
-//例2：単文タイプ(SimpleSpeech)の音声情報を返す-テキスト、URLを使用
+//例2：複文タイプ(SpeechList)の音声情報を返す-テキスト、URLを使用
 {
   "version": "1.0",
   "sessionAttributes": {},
