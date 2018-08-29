@@ -36,6 +36,11 @@ Extensionを設計するための[対話モデル](/Design/Design_Guideline_For_
 
 ![](/DevConsole/Resources/Images/DevConsole-Added_Built-in_Slot_Type.png)
 
+<div class="danger">
+  <p><strong>注意</strong></p>
+  <p>ビルトインスロットタイプのうち、`CLOVA.ORDER`は一時的に利用を停止しています。対応完了までしばらくお待ちください。</p>
+</div>
+
 ## カスタムスロットタイプを追加する {#AddCustomSlotType}
 
 次に、Extensionで使用する[カスタムスロットタイプ](/Design/Design_Guideline_For_Extension.md#Slot)を定義します。[ビルトインスロットタイプを追加する](#AddBuiltinSlotType)時と同様に、ピザの宅配Extensionを作成すると仮定します。この場合、ユーザーの発話の中で、ピザの種類に当たる部分をカスタムスロットタイプとして定義することができます。以下の表のような代表語と同義語を持つ、「PIZZA_TYPE」というカスタムスロットタイプを追加してみます。

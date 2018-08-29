@@ -47,6 +47,7 @@
     * [LaunchRequestを処理する](/CEK/Guides/Build_Custom_Extension.md#HandleLaunchRequest)
     * [IntentRequestを処理する](/CEK/Guides/Build_Custom_Extension.md#HandleIntentRequest)
     * [SessionEndedRequestを処理する](/CEK/Guides/Build_Custom_Extension.md#HandleSessionEndedRequest)
+    * [リクエストメッセージを検証する](/CEK/Guides/Build_Custom_Extension.md#RequestMessageValidation)
   * [Custom Extensionでレスポンスを返す](/CEK/Guides/Build_Custom_Extension.md#ReturnCustomExtensionResponse)
   * [マルチターン対話をする](/CEK/Guides/Build_Custom_Extension.md#DoMultiturnDialog)
   * [オーディオコンテンツを提供する](/CEK/Guides/Build_Custom_Extension.md#ProvideAudioContent)
@@ -72,7 +73,6 @@
   * [HTTPメッセージ](/CEK/References/CEK_API.md#HTTPMessage)
     * [HTTPヘッダー](/CEK/References/CEK_API.md#HTTPHeader)
     * [HTTPボディ](/CEK/References/CEK_API.md#HTTPBody)
-    * [リクエストメッセージを検証する](/CEK/References/CEK_API.md#RequestMessageValidation)
   * [Custom Extensionのメッセージ](/CEK/References/CEK_API.md#CustomExtMessage)
     * [リクエストメッセージ](/CEK/References/CEK_API.md#CustomExtRequestMessage)
     * [リクエストタイプ](/CEK/References/CEK_API.md#CustomExtRequestType)
@@ -81,6 +81,11 @@
       * [`LaunchRequest`](/CEK/References/CEK_API.md#CustomExtLaunchRequest)
       * [`SessionEndedRequest`](/CEK/References/CEK_API.md#CustomExtSessionEndedRequest)
     * [レスポンスメッセージ](/CEK/References/CEK_API.md#CustomExtResponseMessage)
+  * [対話モデル](/CEK/References/CEK_API.md#InteractionModel)
+    * [ビルトインインテント](/CEK/References/CEK_API.md#BuiltinIntent)
+    * [ビルトインスロットタイプ](/CEK/References/CEK_API.md#BuiltinSlotType)
+      * [`CLOVA.DATETIME`](/CEK/References/CEK_API.md#ClovaDatetime)
+      * [`CLOVA.DURATION`](/CEK/References/CEK_API.md#ClovaDuration)
 
 ## Clova Developer Center
 

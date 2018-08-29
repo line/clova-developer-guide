@@ -25,6 +25,18 @@ Clovaの質問には`Clova`や`CEK`のタグをご利用ください。
   </thead>
   <tbody>
   <tr>
+    <td>v1.1.8</td><td>2018/08/29</td>
+    <td>
+      <ul>
+        <li><a href="/CEK/References/CEK_API.md">CEK APIのリファレンス</a> 更新</li>
+          <ul>
+            <li><a href="/CEK/References/CEK_API.md#InteractionModel">対話モデル</a> 追加</li>
+            <li>ビルトインスロットタイプ（<a href="/CEK/References/CEK_API.md#ClovaDatetime">CLOVA.DATETIME</a>、<a href="/CEK/References/CEK_API.md#ClovaDuration">CLOVA.DURATION</a>）の説明 追加</li>
+          </ul>
+      </ul>
+    </td>
+  </tr>
+  <tr>
     <td>v1.1.7</td><td>2018/08/24</td>
     <td>
       <ul>
