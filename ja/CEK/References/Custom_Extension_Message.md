@@ -894,11 +894,8 @@ CIC APIは、ユーザーのクライアントデバイスがClovaと通信を�
     ...
   ],
   "event": {
-    "header": {
-      "namespace": "AudioPlayer",
-      "name": "PlayFinished",
-      "messageId": "4e4080d6-c440-498a-bb73-ae86c6312806"
-    },
+    "namespace": "AudioPlayer",
+    "name": "PlayFinished",
     "payload": {
       "token": "TR-NM-4435786",
       "offsetInMilliseconds": 183000
@@ -933,11 +930,8 @@ CIC APIは、ユーザーのクライアントデバイスがClovaと通信を�
     ...
   ],
   "event": {
-    "header": {
-      "namespace": "AudioPlayer",
-      "name": "PlayPaused",
-      "messageId": "4e4080d6-c440-498a-bb73-ae86c6312806"
-    },
+    "namespace": "AudioPlayer",
+    "name": "PlayPaused",
     "payload": {
       "token": "TR-NM-4435786",
       "offsetInMilliseconds": 83100
@@ -972,11 +966,8 @@ CIC APIは、ユーザーのクライアントデバイスがClovaと通信を�
     ...
   ],
   "event": {
-    "header": {
-      "namespace": "AudioPlayer",
-      "name": "PlayResumed",
-      "messageId": "4e4080d6-c440-498a-bb73-ae86c6312806"
-    },
+    "namespace": "AudioPlayer",
+    "name": "PlayResumed",
     "payload": {
       "token": "TR-NM-4435786",
       "offsetInMilliseconds": 83100
@@ -1010,11 +1001,8 @@ CIC APIは、ユーザーのクライアントデバイスがClovaと通信を�
     ...
   ],
   "event": {
-    "header": {
-      "namespace": "AudioPlayer",
-      "name": "PlayStarted",
-      "messageId": "4e4080d6-c440-498a-bb73-ae86c6312806"
-    },
+    "namespace": "AudioPlayer",
+    "name": "PlayStarted",
     "payload": {
       "token": "TR-NM-4435786",
       "offsetInMilliseconds": 0
@@ -1048,11 +1036,8 @@ CIC APIは、ユーザーのクライアントデバイスがClovaと通信を�
     ...
   ],
   "event": {
-    "header": {
-      "namespace": "AudioPlayer",
-      "name": "PlayStopped",
-      "messageId": "4e4080d6-c440-498a-bb73-ae86c6312806"
-    },
+    "namespace": "AudioPlayer",
+    "name": "PlayStopped",
     "payload": {
       "token": "TR-NM-4435786",
       "offsetInMilliseconds": 83100
@@ -1086,11 +1071,8 @@ CIC APIは、ユーザーのクライアントデバイスがClovaと通信を�
     ...
   ],
   "event": {
-    "header": {
-      "namespace": "AudioPlayer",
-      "name": "ProgressReportDelayPassed",
-      "messageId": "4e4080d6-c440-498a-bb73-ae86c6312806"
-    },
+    "namespace": "AudioPlayer",
+    "name": "ProgressReportDelayPassed",
     "payload": {
       "token": "TR-NM-4435786",
       "offsetInMilliseconds": 60000
@@ -1125,11 +1107,8 @@ CIC APIは、ユーザーのクライアントデバイスがClovaと通信を�
     ...
   ],
   "event": {
-    "header": {
-      "namespace": "AudioPlayer",
-      "name": "ProgressReportIntervalPassed",
-      "messageId": "4e4080d6-c440-498a-bb73-ae86c6312806"
-    },
+    "namespace": "AudioPlayer",
+    "name": "ProgressReportIntervalPassed",
     "payload": {
       "token": "TR-NM-4435786",
       "offsetInMilliseconds": 120000
@@ -1164,11 +1143,8 @@ CIC APIは、ユーザーのクライアントデバイスがClovaと通信を�
     ...
   ],
   "event": {
-    "header": {
-      "namespace": "AudioPlayer",
-      "name": "ProgressReportPositionPassed",
-      "messageId": "4e4080d6-c440-498a-bb73-ae86c6312806"
-    },
+    "namespace": "AudioPlayer",
+    "name": "ProgressReportPositionPassed",
     "payload": {
       "token": "TR-NM-4435786",
       "offsetInMilliseconds": 150000
@@ -1246,11 +1222,8 @@ CIC APIは、ユーザーのクライアントデバイスがClovaと通信を�
     ...
   ],
   "event": {
-    "header": {
-      "namespace": "AudioPlayer",
-      "name": "StreamRequested",
-      "messageId": "198cf12-4020-b98a-b73b-1234ab312806"
-    },
+    "namespace": "AudioPlayer",
+    "name": "StreamRequested",
     "payload": {
       "audioItemId": "ac192f4c-8f12-4a58-8ace-e3127eb297a4",
       "audioStream": {
