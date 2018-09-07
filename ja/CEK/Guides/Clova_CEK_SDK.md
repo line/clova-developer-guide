@@ -1,4 +1,4 @@
-# Clova Extensions Kitソフトウェア開発キット
+# Clova Extensions Kitソフトウェア開発キット（CEK SDK）
 
 GitHubにてClova Extensions Kitソフトウェア開発キットを提供しています。このSDKにはライブラリ、サンプル等が含まれており、Clovaスキルを開発する際に役立ちます。
 
@@ -21,6 +21,9 @@ GitHubにてClova Extensions Kitソフトウェア開発キットを提供して
 
 ## CEK SDK for Elixir {#SDK_For_Elixir}
 <a href="{{ book.GitHubBaseURLforExtensionExample }}/clova-cek-sdk-elixir">{{ book.GitHubBaseURLforExtensionExample }}/clova-cek-sdk-elixir</a>
+
+## CEK SDK for Go {#SDK_For_Go}
+<a href="{{ book.GitHubBaseURLforExtensionExample }}/clova-cek-sdk-go">{{ book.GitHubBaseURLforExtensionExample }}/clova-cek-sdk-go</a>
 
 <div class="note">
   <p><strong>メモ</strong></p>

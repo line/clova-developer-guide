@@ -25,6 +25,14 @@ Clovaの質問には`Clova`や`CEK`のタグをご利用ください。
   </thead>
   <tbody>
   <tr>
+    <td>v1.1.9</td><td>2018/09/07</td>
+    <td>
+      <ul>
+      <li><a href="/CEK/Guides/Clova_CEK_SDK.md">Clova Extensions Kitソフトウェア開発キット</a> 更新（<a href="/CEK/Guides/Clova_CEK_SDK.md#SDK_For_Go">CEK SDK for Go</a> 追加）</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
     <td>v1.1.8</td><td>2018/08/29</td>
     <td>
       <ul>

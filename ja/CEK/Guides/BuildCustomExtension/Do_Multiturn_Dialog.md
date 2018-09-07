@@ -1,6 +1,6 @@
 ## マルチターン対話をする {#DoMultiturnDialog}
 
-CEKから渡されたユーザーのリクエスト([`IntentRequest`](/CEK/Guides/Build_Custom_Extension.md#HandleIntentRequest))に、Custom Extensionがサービスを提供したり、または動作するために必要な情報がすべて含まれていないことがあります。また、シングルターンの対話では、1回の発話でユーザーのリクエストを受け付けることが難しい場合もあります。その場合、Custom Extensionはユーザーから足りない情報を引き出すために、マルチターンの対話を行うことができます。
+Custom Extensionがサービスを提供したり、または動作するために必要な情報が、CEKから渡されたユーザーのリクエスト([`IntentRequest`](/CEK/Guides/Build_Custom_Extension.md#HandleIntentRequest))にすべて含まれていないことがあります。また、シングルターンの対話では、1回の発話でユーザーのリクエストを受け付けることが難しい場合もあります。その場合、Custom Extensionはユーザーから足りない情報を聞き出すために、マルチターンの対話を行うことができます。
 
 例えば、ユーザーが「ペパロニピザを頼んで」と発話したと仮定します。それを受け、CEKは次のようなリクエストメッセージを送信します。
 
@@ -65,7 +65,8 @@ Custom Extensionがピザの種類だけでなく、注文する数量に関す�
 ```
 {% endraw %}
 
-ユーザーが必要な数量まで話すと、Clovaプラットフォームは、次のように解析された数量情報と一緒に、保存していた`sessionAttributes`オブジェクトの情報を[リクエストメッセージ](/CEK/References/CEK_API.md#CustomExtRequestMessage)の`session.sessionAttributes`フィールドに含めて再送信します。その際、追加に送信されたメッセージは前のメッセージと同じ`session.sessionId`値を持ち、Custom Extensionは受信した追加の情報を使用して次の動作を行います。
+ユーザーの応答サンプルリクエストは次のようになります。マルチターン対話において追加で送信されたメッセージの`session.new`は`false`になり、前のメッセージと同じ`session.sessionId`値を持ちます。
+また、解析した結果と共に、前回のレスポンスに含まれていた`sessionAttributes`オブジェクトの情報を[リクエストメッセージ](/CEK/References/CEK_API.md#CustomExtRequestMessage)の`session.sessionAttributes`フィールドに含めて再送信します。Custom Extensionはこれらの受信した追加の情報を使用して次の動作を行うことができます。
 
 {% raw %}
 ```json
