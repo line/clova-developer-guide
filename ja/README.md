@@ -25,6 +25,19 @@ Clovaの質問には`Clova`や`CEK`のタグをご利用ください。
   </thead>
   <tbody>
   <tr>
+    <td>v1.1.10</td><td>2018/09/20</td>
+    <td>
+      <ul>
+        <li><a href="/Design/Design_Guideline_For_Extension.md">Extensionのデザインガイドライン</a> 更新（<a href="/Design/Design_Guideline_For_Extension.md#CustomSlotType">カスタムスロットタイプ</a> 同義語登録数の上限の説明 追加）</li>
+        <li><a href="/DevConsole/Guides/CEK/Register_Interaction_Model.md">対話モデルを登録する</a> 更新</li>
+          <ul>
+            <li><a href="/DevConsole/Guides/CEK/Register_Interaction_Model.md#AddCustomSlotType">カスタムスロットタイプ</a> 同義語の登録数上限の説明を追加</li>
+            <li><a href="/DevConsole/Guides/CEK/Register_Interaction_Model.md#AddCustomIntent">カスタムインテント</a> サンプル発話の登録数上限の説明を追加</li>
+          </ul>
+      </ul>
+    </td>
+  </tr>
+  <tr>
     <td>v1.1.9</td><td>2018/09/07</td>
     <td>
       <ul>

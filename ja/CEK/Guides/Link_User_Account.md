@@ -91,7 +91,7 @@ Extensionにアカウント連携を適用するには、ユーザーがアカ�
 
 以下は、クライアントアプリまたはクライアントデバイスとペアリングするアプリが、ログインページをリクエストするURLの例です。
 
-<pre><code>https://yourdomain.com/login?state=qwer123
+<pre><code>https://example.com/login?state=qwer123
                             &client_id=clova-extension
                             &scope=listen_music%20basic_profile
                             &response_type=code
@@ -148,7 +148,7 @@ Clovaがユーザーアカウントを連携するために認可コードを取
   "context": {
     "System": {
       "application": {
-        "applicationId": "com.yourdomain.extension.pizzabot"
+        "applicationId": "com.example.extension.pizzabot"
       },
       "user": {
         "userId": "U399a1e08a8d474521fc4bbd8c7b4148f",

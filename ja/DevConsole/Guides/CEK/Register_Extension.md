@@ -34,7 +34,7 @@ Extensionの基本情報は、Clova Developer CenterでExtensionを作成する�
   <li><strong>{{ book.DevConsole.cek_type }}</strong>項目で、登録するExtensionのタイプを選択します。Extensionのタイプを選択すると、該当する入力フィールドが表示されます。</li>
   <li>Extension ID、スキル名、呼び出し名を次の項目に入力します。
     <ol>
-      <li><strong>{{ book.DevConsole.cek_id }}</strong>：Extensionの一意のIDです。リバースドメインネームの形式で入力します。(例：com.yourdomain.extension.pizzabot)</li>
+      <li><strong>{{ book.DevConsole.cek_id }}</strong>：Extensionの一意のIDです。リバースドメインネームの形式で入力します。(例：com.example.extension.pizzabot)</li>
       <li><strong>{{ book.DevConsole.cek_name }}</strong>：Extensionの名前です。今後スキルストアで表示されます。</li>
       <li><strong>{{ book.DevConsole.cek_invocation_name }}</strong>：ユーザーがExtensionを呼び出す際に呼ぶ名前です。保有しているサービス、会社および組織の名前を使用できますが、ユーザーにとって呼びやすい、シンプルな言葉を指定することをお勧めします。他社の名前やサービスに該当する言葉は使用できません。<strong>{{ book.DevConsole.cek_invocation_name }}</strong>は、Extensionを審査する際にチェックされます。なお、<strong>{{ book.DevConsole.cek_invocation_name }}</strong>は音声認識結果によって表記が揺らぐ可能性があります。Extensionを正しく呼び出すために、必須項目の「呼び出し名（メイン）」のほか、追加で4つの「呼び出し名（サブ）」を設定することができます。</li>
     </ol>
@@ -66,7 +66,7 @@ Extensionのサーバーを登録するには、先にExtensionのサーバー�
 
 {% raw %}
 ```bash
-$ curl "https://yourdomain.com/pizzabot" -X POST
+$ curl "https://example.com/pizzabot" -X POST
 ```
 {% endraw %}
 
