@@ -1,0 +1,83 @@
+scale max 880 width
+skinparam sequenceMessageAlign center
+skinparam shadowing false
+skinparam roundcorner 10
+skinparam padding 10
+skinparam defaultFontSize 12
+skinparam defaultFontName sans-serif
+skinparam sequence {
+	ArrowColor #000000
+	ActorBorderColor #000000
+	ActorFontStyle Bolder
+
+	LifeLineBorderColor #000000
+	LifeLineBackgroundColor transparent
+	ParticipantBorderColor transparent
+	ParticipantFontSize 14
+	ParticipantFontColor #ffffff
+	ParticipantFontStyle bold
+
+	BoxBorderColor #000000
+	BoxFontColor #ffffff
+    BoxFontSize 14
+    BoxFontStyle bold
+}
+skinparam note {
+	BackgroundColor #9EA0CA
+	BorderColor #ffffff
+	FontColor #ffffff
+	FontSize 14
+	FontStyle bold
+}
+hide footbox
+
+actor "ユーザー" as user
+participant "クライアントアプリ\nまたはペアリングアプリ" as app #9EA0CA
+participant CEK as cek #05D686
+actor "開発者" as dev #9EA0CA
+participant Extension as ext #9EA0CA
+participant "認可サーバー" as auth #9EA0CA
+
+dev ->> cek: 認証関連情報を事前に登録(OAuth 2.0)\l- 認証URL\l- クライアントID\l- クライアントシークレット\l- リダイレクトURI\l- アクセストークンURI\l- ...
+
+activate cek
+deactivate cek
+
+user ->> app: Extensionを有効にする
+
+activate app
+  app ->> cek: 認証URLをリクエストする
+
+  activate cek
+    cek -->> app: 認証URLを返す
+  deactivate cek
+
+  app ->> auth: ログインページをリクエストする(認証URL)
+
+  activate auth
+    auth -->> app: ログインページを返す
+  deactivate auth
+
+  app -> app: ログインページを表示する
+  user ->> app: アカウント認証(ログイン)
+  app ->> auth: 認証をリクエストする
+
+  activate auth
+  auth -->> app: またはアクセストークンをリダイレクトURIと一緒に返す
+  deactivate auth
+
+  app ->> cek: 認可コード\lまたはアクセストークンを渡す
+deactivate app
+
+  activate cek
+    opt "authorization type" == "code grant"
+      cek ->> auth: アクセストークンURIに認可コードをパラメータで渡す
+      activate auth
+        auth -->> cek: アクセストークンを返す
+      deactivate auth
+    end
+
+    cek -> cek: ユーザーアカウント情報に\nアクセストークンを保存する
+    cek ->> ext: アクセストークンを含めてユーザーのリクエストを渡す
+    deactivate cek
+    activate ext
