@@ -78,8 +78,8 @@ Extensionの審査をリクエストするには、登録したExtensionのリ�
 
 ![](/DevConsole/Resources/Images/DevConsole-Submission_Request_Message.png)
 
-<div class="note">
-  <p><strong>メモ</strong></p>
+<div class="danger">
+  <p><strong>注意</strong></p>
   <p>審査中には、Extensionの情報と対話モデルを修正できません。</p>
 </div>
 

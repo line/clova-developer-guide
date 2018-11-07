@@ -18,7 +18,7 @@ Custom ExtensionはCEKから[Custom Extensionメッセージ](/CEK/References/CE
 
 <div class="note">
 <p><strong>メモ</strong></p>
-<p><a href="/CEK/References/CEK_API.html#CustomExtEventRequest"><code>EventRequest</code></a>は、ユーザの発話の有無に関わらず、デバイスの状態が変化したときにExtensionに送信されるメッセージです。これらのイベントは、デバイスの状態を取得したり、状態変化したことを検知することに利用できます。また、Extensionが<a href="/CEK/Guides/Build_Custom_Extension.html#ProvideAudioContent">オーディオコンテンツを提供する</a>際にも使用されます。ここでは、オーディオコンテンツ再生時の<code>EventRequest</code>については説明しません。</p>
+<p><a href="/CEK/References/CEK_API.md#CustomExtEventRequest"><code>EventRequest</code></a>は、ユーザの発話の有無に関わらず、デバイスの状態が変化したときにExtensionに送信されるメッセージです。これらのイベントは、デバイスの状態を取得したり、状態変化したことを検知することに利用できます。また、Extensionが<a href="/CEK/Guides/Build_Custom_Extension.md#ProvideAudioContent">オーディオコンテンツを提供する</a>際にも使用されます。ここでは、オーディオコンテンツ再生時の<code>EventRequest</code>については説明しません。</p>
 </div>
 
 ### LaunchRequestの処理 {#HandleLaunchRequest}

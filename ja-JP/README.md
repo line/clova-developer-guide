@@ -25,6 +25,14 @@ Clovaの質問には`Clova`や`CEK`のタグをご利用ください。
   </thead>
   <tbody>
   <tr>
+    <td>v1.2.1</td><td>2018/11/08</td>
+    <td>
+      <ul>
+        <li><a href="/Design/Design_Guideline_For_Extension.md">Extensionのデザインガイドライン</a> 更新（<a href="/Design/Design_Guideline_For_Extension.md#DefineSubInvocationName">呼び出し名（サブ）を定義する</a> 追加）</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
     <td>v1.2.0</td><td>2018/10/11</td>
     <td>
       <ul>

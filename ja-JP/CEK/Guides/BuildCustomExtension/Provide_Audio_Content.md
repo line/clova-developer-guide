@@ -71,7 +71,7 @@ Custom Extensionで、ユーザーに音楽やポッドキャストなどのオ�
 
 <div class="note">
   <p><strong>メモ</strong></p>
-  <p>音楽を再生する<a href="/CEK/Guides/Build_Custom_Extension.html#ReturnCustomExtensionResponse">レスポンスメッセージ</a>には、<code>response.outputSpeech</code>フィールドを追加することもできます。例えば、ユーザーに対して、「リクエストしたオーディオコンテンツを再生します」という音声出力(TTS)を再生し、その後にオーディオコンテンツの再生を開始することができます。</p>
+  <p>音楽を再生する<a href="/CEK/Guides/Build_Custom_Extension.md#ReturnCustomExtensionResponse">レスポンスメッセージ</a>には、<code>response.outputSpeech</code>フィールドを追加することもできます。例えば、ユーザーに対して、「リクエストしたオーディオコンテンツを再生します」という音声出力(TTS)を再生し、その後にオーディオコンテンツの再生を開始することができます。</p>
 </div>
 
 <div class="danger">
