@@ -1,10 +1,10 @@
 # 複数のユーザーでExtensionの編集・テストを行う
 
-複数のユーザーが共同でExtensionの編集・テストを行うには、Extensionを作成したオーナーが、他のユーザーに権限を付与する必要があります。具体的には、[LINE Developers](https://developers.line.me/)に開発者として登録が完了しているユーザーに対して権限を付与することが可能です。
+複数のユーザーが共同でExtensionの編集・テストを行うには、Extensionを作成したオーナーが、他のユーザーに権限を付与する必要があります。具体的には、[LINE Developers](https://developers.line.biz/)に開発者として登録が完了しているユーザーに対して権限を付与することが可能です。
 
 <div class="note">
   <p><strong>メモ</strong></p>
-  <p>LINE Developersの開発者アカウントの登録については、<a href="https://developers.line.me/ja/docs/line-login/getting-started/">LINE Developers のドキュメント</a>の<strong>2. 開発者として登録する(初回ログイン時のみ)</strong>を参照してください。</p>
+  <p>LINE Developersの開発者アカウントの登録については、<a href="https://developers.line.biz/ja/docs/line-login/getting-started/">LINE Developers のドキュメント</a>の<strong>2. 開発者として登録する(初回ログイン時のみ)</strong>を参照してください。</p>
 </div>
 
 ## 権限の種類 {#RoleType}
@@ -14,8 +14,8 @@
 * テスター権限
 
 ユーザーを **Admin** として登録すると、以下を実行できます。
-* [LINE Developersコンソール](https://developers.line.me/console/)でチャネルを管理する（基本設定、権限管理、テスター管理）
-* [Clova Developer Center β](https://clova-developers.line.me/)でスキルを開発する（基本情報の修正、配布情報の修正、対話モデルの修正）
+* [LINE Developersコンソール](https://developers.line.biz/console/)でチャネルを管理する（基本設定、権限管理、テスター管理）
+* [Clova Developer Center β](https://clova-developers.line.biz/)でスキルを開発する（基本情報の修正、配布情報の修正、対話モデルの修正）
 * Clovaデバイスでの動作検証
 
 ユーザーを **テスター** として登録すると、以下を実行できます。
@@ -39,7 +39,7 @@
 
 Admin権限は、次の手順で付与します。
 
-1. [LINE Developersコンソール](https://developers.line.me/console/)に接続し、**プロバイダーリスト** を表示します。  
+1. [LINE Developersコンソール](https://developers.line.biz/console/)に接続し、**プロバイダーリスト** を表示します。  
 ![](/CEK/Resources/Images/CEK_Test_LineDev_Provider_List.png)
 
 2. 共同で開発したいスキルが含まれるプロバイダーを選択し、当該の **Clovaスキル** をクリックします。  
@@ -64,7 +64,7 @@ Admin権限は、次の手順で付与します。
 
 ### 2. Admin権限を削除する {#RemoveAdminRight}
 
-1. Admin権限を持つユーザーが[LINE Developersコンソール](https://developers.line.me/console/)に接続し、**プロバイダーリスト** を表示します。  
+1. Admin権限を持つユーザーが[LINE Developersコンソール](https://developers.line.biz/console/)に接続し、**プロバイダーリスト** を表示します。  
 ![](/CEK/Resources/Images/CEK_Test_LineDev_Provider_List.png)
 
 2. プロバイダーを選択し、当該の **Clovaスキル** をクリックします。  
@@ -85,7 +85,7 @@ Admin権限は、次の手順で付与します。
 
 テスターは、次の手順で登録します。
 
-1. Admin権限を持つユーザーが[LINE Developersコンソール](https://developers.line.me/console/)に接続し、**プロバイダーリスト** を表示します。  
+1. Admin権限を持つユーザーが[LINE Developersコンソール](https://developers.line.biz/console/)に接続し、**プロバイダーリスト** を表示します。  
 ![](/CEK/Resources/Images/CEK_Test_LineDev_Provider_List.png)
 
 2. テストするスキルが含まれるプロバイダーを選択し、当該の **Clovaスキル** をクリックします。  
@@ -121,7 +121,7 @@ Admin権限は、次の手順で付与します。
 
 #### Admin権限を持つユーザーがテスターを削除する  {#RemoveByAdmin}
 
-1. Admin権限を持つユーザーが[LINE Developersコンソール](https://developers.line.me/console/)に接続し、**プロバイダーリスト** を表示します。  
+1. Admin権限を持つユーザーが[LINE Developersコンソール](https://developers.line.biz/console/)に接続し、**プロバイダーリスト** を表示します。  
 ![](/CEK/Resources/Images/CEK_Test_LineDev_Provider_List.png)
 
 2. プロバイダーを選択し、当該の **Clovaスキル** をクリックします。  
@@ -139,7 +139,7 @@ Admin権限は、次の手順で付与します。
 
 #### テスターをやめる {#QuitTester}
 
-1. テスターが[LINE Developersコンソール](https://developers.line.me/console/)に接続し、**プロバイダーリスト** を表示します。  
+1. テスターが[LINE Developersコンソール](https://developers.line.biz/console/)に接続し、**プロバイダーリスト** を表示します。  
 ![](/CEK/Resources/Images/CEK_Remove_Tester_LineDev_Provider_List.png)
 
 2. プロバイダーを選択し、当該の **Clovaスキル** をクリックします。  

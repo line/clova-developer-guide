@@ -1,5 +1,5 @@
 # このドキュメントについて
-このドキュメントは、ClovaのCICとCEKプラットフォームの開発ガイドおよびAPIリファレンスを提供します。対象となる読者は、CICを使用してClovaのサービスと連携するデバイスまたはアプリを開発するクライアント開発者と、CEKを使用したオンラインコンテンツおよびサービスの提供を希望するExtension開発者です。
+このドキュメントは、ClovaのCEKプラットフォームの開発ガイドおよびAPIリファレンスを提供します。対象となる読者は、CICを使用してClovaのサービスと連携するデバイスまたはアプリを開発するクライアント開発者と、CEKを使用したオンラインコンテンツおよびサービスの提供を希望するExtension開発者です。
 
 LINE株式会社（以下、当社といいます）は、Clova事務局としてスキルの審査やスキルストアの運営を行います。
 
@@ -24,6 +24,15 @@ Clovaの質問には`Clova`や`CEK`のタグをご利用ください。
     </tr>
   </thead>
   <tbody>
+  <tr>
+    <td>v1.2.2</td><td>2018/11/15</td>
+    <td>
+      <ul>
+        <li><a href="https://clova-developers.line.biz/">Clova Developer Center β</a> URL変更</li>
+        <li><a href="https://developers.line.biz/">LINE Developers</a> URL変更</li>
+      </ul>
+    </td>
+  </tr>
   <tr>
     <td>v1.2.1</td><td>2018/11/08</td>
     <td>

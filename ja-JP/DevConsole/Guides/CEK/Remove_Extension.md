@@ -1,6 +1,6 @@
 # Extensionを削除および中止する
 
-審査をリクエストする前のExtensionは、[LINE Developersコンソール](https://developers.line.me/console/)で削除が可能です。
+審査をリクエストする前のExtensionは、[LINE Developersコンソール](https://developers.line.biz/console/)で削除が可能です。
 ただし、以下の状態にあるExtensionはすぐに削除することはできません。
 
 * Extensionが審査を受けている場合
@@ -16,7 +16,7 @@
 
 審査をリクエストする前のExtensionは、LINE Developersコンソールで削除が可能です。
 
-1. [LINE Developersコンソール](https://developers.line.me/console/)にログインします。
+1. [LINE Developersコンソール](https://developers.line.biz/console/)にログインします。
 
 2. **プロバイダーリスト** から、削除したいスキルが含まれるプロバイダーを選択します。  
 ![](/DevConsole/Resources/Images/DevConsole-LineDev_Provider_List.png)  

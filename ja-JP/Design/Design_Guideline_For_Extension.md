@@ -146,7 +146,7 @@ Clovaの機能に影響があるフレーズを含めることはできません
 
 #### 6. 利用規約に違反していないこと {#TermsOfUse}
 
-[Clova Extensions Kit利用規約](https://clova-developers.line.me/cek/#/terms)を遵守しなければなりません。第三者の権利の侵害したり、わいせつな表現を用いたりした呼び出し名であってはなりません。
+[Clova Extensions Kit利用規約](https://clova-developers.line.biz/cek/#/terms)を遵守しなければなりません。第三者の権利の侵害したり、わいせつな表現を用いたりした呼び出し名であってはなりません。
 
 #### 7. その他の留意事項 {#OtherNotices}
 * 原則として、Extensionのスキル名と呼び出し名は、日本のユーザーを対象としてください。例外として、独自のブランド名や知的財産、名前や場所等の固有名詞等は使用可能です。
@@ -357,7 +357,7 @@ BBQピザ1つ出前取ってくれる?
 
 <div class="note">
   <p><strong>メモ</strong></p>
-  <p><a href="/DevConsole/Guides/CEK/Test_Extension.md#TestInteractionModel">対話モデルのテスト</a>や、統計機能の「発話」データ（<a href="https://clova-developers.line.me/cek/#/list" target="_blank">スキル設定</a>画面で<strong>統計</strong>を選択して表示）を参照して調整することにより、完成度を高めることができます。対話モデルをテストする際には、サンプル発話の作成者ではなく、第三者がテストすることをお勧めします。そうすることで、新たな発話パターンを見つけることができます。</p>
+  <p><a href="/DevConsole/Guides/CEK/Test_Extension.md#TestInteractionModel">対話モデルのテスト</a>や、統計機能の「発話」データ（<a href="https://clova-developers.line.biz/cek/#/list" target="_blank">スキル設定</a>画面で<strong>統計</strong>を選択して表示）を参照して調整することにより、完成度を高めることができます。対話モデルをテストする際には、サンプル発話の作成者ではなく、第三者がテストすることをお勧めします。そうすることで、新たな発話パターンを見つけることができます。</p>
 </div>
 
 
@@ -625,7 +625,7 @@ Extensionでオーディオコンテンツを提供する場合、必ずClovaで
 
 * 開発者やその他第三者のデバイス（例：IoT製品）との連携が発生するスキルに関しては、Clova事務局は動作テストのために、開発者に対して別途製品の提出を求めることがあります。
 * 日本以外を対象としたものは許可されない場合があります。
-* 上記に記載されていない場合でも、[Clova Extensions Kit利用規約](https://clova-developers.line.me/cek/#/terms)に違反しているものは許可されません。
+* 上記に記載されていない場合でも、[Clova Extensions Kit利用規約](https://clova-developers.line.biz/cek/#/terms)に違反しているものは許可されません。
 * 本ガイドラインは随時変更される可能性があります。あらかじめご了承ください。
 
 <div class="note">

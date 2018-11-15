@@ -8,7 +8,7 @@ Clova Developer Center βで[Extensionを登録](/DevConsole/Guides/CEK/Register
 ## Clova Developer Center βにログインする {#LoginClovaDevCenter}
 Clova Developer Center βにログインします。
 
-1. LINEアカウントへのログインに利用しているメールアドレスとパスワードを用いて、[Clova Developer Center β](https://clova-developers.line.me/)にログインします。  
+1. LINEアカウントへのログインに利用しているメールアドレスとパスワードを用いて、[Clova Developer Center β](https://clova-developers.line.biz/)にログインします。  
 ![](/DevConsole/Resources/Images/DevConsole-LINE_Login.png)
 
 2. 同意画面が表示されたら、**同意する** をクリックします（初回ログイン時のみ）。  
@@ -23,7 +23,7 @@ Clova Developer Center βにログインします。
 <div class="note">
   <p><strong>メモ</strong></p>
   <p>Clova Developer Center βを使用するには、LINE Developersの開発者アカウントの登録が必要です。
-  登録については <a href="https://developers.line.me/ja/docs/line-login/getting-started/">LINE Developers のドキュメント</a>の<strong>2. 開発者として登録する(初回ログイン時のみ)</strong>を参照してください。</p>
+  登録については <a href="https://developers.line.biz/ja/docs/line-login/getting-started/">LINE Developers のドキュメント</a>の<strong>2. 開発者として登録する(初回ログイン時のみ)</strong>を参照してください。</p>
 </div>
 
 ## LINE Developersコンソールでチャネルを作成する {#CreateSkillChannel}

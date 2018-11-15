@@ -20,7 +20,7 @@ Custom ExtensionとLINEの連携を実施するには、以下の条件を満た
   ![](/CEK/Resources/Images/CEK_Messaging_API_LineManager.png)
 
   設定方法については、こちらのドキュメントもご確認ください。  
-  [LINE Developers ドキュメント > Messaging API > ボットを作成する](https://developers.line.me/ja/docs/messaging-api/building-bot/)
+  [LINE Developers ドキュメント > Messaging API > ボットを作成する](https://developers.line.biz/ja/docs/messaging-api/building-bot/)
 
 2. ユーザーがボットを友だち追加していること  
   ユーザーがスキルを利用していても、LINE上で友達になっていないボットからのメッセージを受け取ることはできません。
@@ -44,7 +44,7 @@ Custom ExtensionとLINEの連携を実施するには、以下の条件を満た
 
 * Messaging APIのPush API  
 
-  [LINE Developers ドキュメント > Messaging API > APIリファレンス > 共通プロパティ](https://developers.line.me/ja/docs/messaging-api/reference/#anchor-ff6d9a0f9685bb1dfdde749b9044d243cadd542e)  
+  [LINE Developers ドキュメント > Messaging API > APIリファレンス > 共通プロパティ](https://developers.line.biz/ja/docs/messaging-api/reference/#anchor-ff6d9a0f9685bb1dfdde749b9044d243cadd542e)  
   送信元ユーザーの`userId`がユーザー識別子です。​Custom Extensionの`session.user.userId`​をご利用ください。  
 
 つまり、以下のようなコードになります。
@@ -69,5 +69,5 @@ client.pushMessage(request.​session.user.userId​​​, message)
   });​
 ```
 Messaging APIのプッシュメッセージの詳細な仕様については、こちらをご確認ください。  
-[LINE Developers ドキュメント > Messaging API > APIリファレンス > プッシュメッセージを送る](https://developers.line.me/ja/docs/messaging-api/reference/#anchor-0c00cb0f42b970892f7c3382f92620dca5a110fc)
+[LINE Developers ドキュメント > Messaging API > APIリファレンス > プッシュメッセージを送る](https://developers.line.biz/ja/docs/messaging-api/reference/#anchor-0c00cb0f42b970892f7c3382f92620dca5a110fc)
 ​

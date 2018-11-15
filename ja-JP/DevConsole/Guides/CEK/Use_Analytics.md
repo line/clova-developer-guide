@@ -2,7 +2,7 @@
 
 Clova Developer Center βには、スキルの利用状況を解析するためのツール **Clova Analytics** が用意されています。
 
-Clova Analyticsは、Clova Developer Center βにログインした状態で<a href="https://clova-developers.line.me/cek/#/list" target="_blank">スキル設定</a>画面を開き、各スキルの **統計** 欄に表示された **確認** をクリックすると表示されます。
+Clova Analyticsは、Clova Developer Center βにログインした状態で<a href="https://clova-developers.line.biz/cek/#/list" target="_blank">スキル設定</a>画面を開き、各スキルの **統計** 欄に表示された **確認** をクリックすると表示されます。
 
 ![](/DevConsole/Resources/Images/DevConsole-Analytics_Console_Home.png)
 

@@ -19,7 +19,7 @@ git clone {{ book.GitHubBaseURLforExtensionExample }}/clova-extension-sample-dic
 cd clova-extension-sample-dice
 git checkout tutorial1
 npm install
-node app.js
+DEBUG=true node app.js
 ```
 
 こうやって実行したExtensionサーバーが正しく動作しているか確認するには、Postmanを使用してリクエストを送信します。詳細については、<a href="{{ book.GitHubBaseURLforExtensionExample }}/clova-extension-sample-dice" target="_blank">サイコロ遊びExtensionのgithubページ</a>で確認できます。
