@@ -4,8 +4,27 @@ Clova Home Extensionは、外部のIoTサービスを利用して、家庭内の
 
 ![](/CEK/Resources/Images/CEK_Clova_Home_Extension_Operation_Structure.png)
 
-<div class="note">
-<p><strong>メモ</strong></p>
-<p>Clova Developer Centerでは Clova Home Extension の情報登録を受け付けておりません。Clova Home Extension を利用した連携に興味のある企業様は、<a href="https://partner.line.me/ja" target="_blank"> LINE Partner </a> よりお問い合わせください。
-</p>
-</div>
+{% include book.ClovaHome.restricted_note %}
+
+Clova Home Extensionを作成する際の事前準備と、Custom ExtensionがCEKとどのようなメッセージをやり取りし、どのように動作するかについて説明します。
+
+Clova Home Extensionの開発者は、次の内容を知っておく必要があります。
+
+* [準備事項](#Preparation)
+* [Discovery機能を提供する](#ProvideDeviceDiscovery)
+* [Clova Home Extensionリクエストを処理する](#HandleClovaHomeExtensionRequest)
+* [Clova Home Extensionレスポンスを返す](#ReturnClovaHomeExtensionResponse)
+* [リクエストメッセージを検証する](#RequestMessageValidation)
+
+
+{% include 'BuildClovaHomeExtension/Preparation.md' %}
+
+{% include 'BuildClovaHomeExtension/Provide_Device_Discovery.md' %}
+
+{% include 'BuildClovaHomeExtension/Handle_Clova_Home_Extension_Request.md'  %}
+
+{% include 'BuildClovaHomeExtension/Return_Clova_Home_Extension_Response.md'  %}
+
+{% include "BuildCustomExtension/Validating_Request_Message.md" %}
+
+{% include book.ClovaHome.restricted_note %}

@@ -6,11 +6,11 @@ Extensionを構築するには、サーバーにHTTPを使用してメッセー�
 Clovaがサービスする「サイコロ遊び」というExtensionは、そのソースコードが公開されています。
 ソースコードをダウンロードして実行するには、次の項目が必要です。
 
-| 項目     | 説明                               | Optional |
-|---------|-----------------------------------|:-------:|
-| <a href="https://git-scm.com/" target="_blank">git</a>    | ソースコードをダウンロードするために必要です。          | Optional     |
-| <a href="https://nodejs.org/" target="_blank">node.js</a> | Extensionサーバーを実行するために必要です。          |        |
-| <a href="https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop" target="_blank">Google Chrome拡張機能「Postman - REST Client」</a> | Extensionサーバーが動作しているか確認するために必要です。 | Optional     |
+| 項目                         | 説明                               | Optional |
+| ---------------------------- | ---------------------------------- | :------: |
+| <a href="https://git-scm.com/" target="_blank">git</a>    | ソースコードをダウンロードするために必要です。 | Optional |
+| <a href="https://nodejs.org/" target="_blank">node.js</a> | Extensionサーバーを実行するために必要です。    | <!-- --> |
+| <a href="https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop" target="_blank">Google Chrome拡張機能「Postman - REST Client」</a> | Extensionサーバーが動作しているか確認するために必要です。 | Optional |
 
 必要なソフトウェアをインストールして、次のようにサイコロ遊びExtensionのソースコードをダウンロードし、実行します。`tutorial1`ブランチを使用します。
 

@@ -11,9 +11,9 @@ Custom ExtensionはCEKから[Custom Extensionメッセージ](/CEK/References/CE
 3つのリクエストタイプと、各リクエストタイプのユーザーの発話パターンは次のとおりです。
 
 | リクエストタイプ | ユーザーの発話パターン | サンプル発話 |
-|---------|--------------|---------|
-|[LaunchRequest](#HandleLaunchRequest) | _[Extensionの呼び出し名]_ + 「を起動して/を開いて/に繋いで」 | 「ピザボットを起動して」 |
-| [IntentRequest](#HandleIntentRequest)| (`LaunchRequest`タイプのリクエストを受け付けた状態で) _[Extensionごとに登録したコマンド]_ | (ピザボット起動状態で)「注文を確認して」 |
+| ---------------- | ---------------------- | ------------ |
+| [LaunchRequest](#HandleLaunchRequest) | _[Extensionの呼び出し名]_ + 「を起動して/を開いて/に繋いで」 | 「ピザボットを起動して」 |
+| [IntentRequest](#HandleIntentRequest) | (`LaunchRequest`タイプのリクエストを受け付けた状態で) _[Extensionごとに登録したコマンド]_ | (ピザボット起動状態で)「注文を確認して」 |
 | [SessionEndedRequest](#HandleSessionEndedRequest) | (`LaunchRequest`タイプのリクエストを受け付けた状態で)「終了して/終了/やめて」 | 「(ピザボットを)終了して」 |
 
 <div class="note">

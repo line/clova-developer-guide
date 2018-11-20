@@ -6,6 +6,7 @@
 * [用語および略語](/Glossary.md)
 
 ## デザイン
+
 * [Extensionのデザインガイドライン](/Design/Design_Guideline_For_Extension.md)
   * [目標を設定する](/Design/Design_Guideline_For_Extension.md#SettingGoal)
   * [ユーザーシナリオスクリプトを作成する](/Design/Design_Guideline_For_Extension.md#MakeUseCaseScenarioScript)
@@ -61,7 +62,6 @@
   * [複数のユーザーでExtensionの編集・テストを行う](/CEK/Guides/Register_Collaborator.md)
     * [権限の種類](/CEK/Guides/Register_Collaborator.md#RoleType)
     * [権限を管理する](/CEK/Guides/Register_Collaborator.md#ManageRole)
-* [Clova Home Extensionを作成する](/CEK/Guides/Build_Clova_Home_Extension.md)
 * [ユーザーアカウントを連携する](/CEK/Guides/Link_User_Account.md)
   * [アカウント連携の動作について](/CEK/Guides/Link_User_Account.md#UnderstandAccountLinking)
     * [アカウント連携を設定する](/CEK/Guides/Link_User_Account.md#SetupAccountLinking)
@@ -90,6 +90,26 @@
     * [ビルトインスロットタイプ](/CEK/References/CEK_API.md#BuiltinSlotType)
       * [`CLOVA.DATETIME`](/CEK/References/CEK_API.md#ClovaDatetime)
       * [`CLOVA.DURATION`](/CEK/References/CEK_API.md#ClovaDuration)
+
+## Clova Home Extension
+
+* [Clova Home Extensionを作成する](/CEK/Guides/Build_Clova_Home_Extension.md)
+  * [準備事項](/CEK/Guides/Build_Clova_Home_Extension.md#Preparation)
+  * [Discoveryを提供する](/CEK/Guides/Build_Clova_Home_Extension.md#ProvideDeviceDiscovery)
+  * [Clova Home Extensionリクエストを処理する](/CEK/Guides/Build_Clova_Home_Extension.md#HandleClovaHomeExtensionRequest)
+  * [Clova Home Extensionレスポンスを返す](/CEK/Guides/Build_Clova_Home_Extension.md#ReturnClovaHomeExtensionResponse)
+  * [リクエストメッセージを検証する](/CEK/Guides/Build_Clova_Home_Extension.md#RequestMessageValidation)
+* [Clova Home Extension API のリファレンス](/CEK/References/CEK_API_ClovaHome.md)
+  * [HTTPメッセージ](/CEK/References/CEK_API_ClovaHome.md#HTTPMessage)
+    * [HTTPヘッダー](/CEK/References/CEK_API_ClovaHome.md#HTTPHeader)
+    * [HTTPボディ](/CEK/References/CEK_API_ClovaHome.md#HTTPBody)
+  * [Clova Home Extensionメッセージ](/CEK/References/CEK_API_ClovaHome.md#ClovaHomeExtMessage)
+    * [メッセージフォーマット](/CEK/References/CEK_API_ClovaHome.md#ClovaHomeExtMessageFormat)
+    * [インターフェース](/CEK/References/CEK_API_ClovaHome.md#ClovaHomeExtInterface)
+      * [Control](/CEK/References/ClovaHomeInterface/Control_Interfaces.md)
+      * [Discovery](/CEK/References/ClovaHomeInterface/Discovery_Interfaces.md)
+      * [Error](/CEK/References/ClovaHomeInterface/Error_Interfaces.md)
+      * [共有オブジェクト](/CEK/References/ClovaHomeInterface/Shared_Objects.md)
 
 ## Clova Developer Center
 

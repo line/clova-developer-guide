@@ -52,5 +52,5 @@ Extensionが審査を通過し、サービスが開始されている場合に�
 <div class="note">
   <p><strong>メモ</strong></p>
   <p>サービス中のExtensionを中止する際にはClova事務局の確認が必要で、webから中止の申請はできません。
-  <p>中止する際は、停止を申請する理由を記載し<a href="mailto://{{ book.ExtensionAdminEmail }}">{{ book.ExtensionAdminEmail }}</a>までご連絡ください。</p>
+  <p>中止する際は、停止を申請する理由を記載し<a href="mailto:{{ book.ExtensionAdminEmail }}">{{ book.ExtensionAdminEmail }}</a>までご連絡ください。</p>
 </div>

@@ -6,7 +6,7 @@
   "author": "LINE Corporation",
   "variables": {
     "ClassifiedInfo": "Confidential",
-    "DocVersion": "v1.2.2",
+    "DocVersion": "v2.0.0",
     "language": "ja",
     "TargetCountryCode": "JP",
     "TargetReaderType": "Internal",
@@ -122,6 +122,9 @@
       "cek_builder_select_slottype_builtin": "ビルトインスロットタイプ",
       "cek_builder_slot_layer_select_slot": "登録されたスロットを選択",
       "cek_builder_test_no_response": "応答がありません"
+    },
+    "ClovaHome": {
+      "restricted_note":"/CEK/ClovaHome_Restricted.md"
     }
   },
   "pdf": {

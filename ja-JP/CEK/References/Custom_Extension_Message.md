@@ -54,38 +54,38 @@ CEKは、Clovaが解析したユーザーのリクエストをCustom Extension�
 {% endraw %}
 
 #### Message fields
-| フィールド名       | データ型    | フィールドの説明                     | Optional |
-|---------------|---------|-----------------------------|:---------:|
-| `context`                                  | object  | クライアントのコンテキスト情報を持っているオブジェクト                                |  |
-| `context.AudioPlayer`                      | object  | クライアントが現在再生しているか、最後に再生したメディアの情報を持っているオブジェクト | Optional |
-| `context.AudioPlayer.offsetInMilliseconds` | number  | 最近再生したメディアの最後の再生ポイント(offset)。単位はミリ秒であり、`playerActivity`の値が`"IDLE"`の場合、このフィールドは空の場合があります。                                       | Optional |
-| `context.AudioPlayer.playerActivity`       | string  | プレイヤーの状態を示す値。次のような値を持ちます。<ul><li><code>"IDLE"</code>：非アクティブ状態</li><li><code>"PLAYING"</code>：再生中</li><li><code>"PAUSED"</code>：一時停止状態</li><li><code>"STOPPED"</code>：中止状態</li></ul> |  |
-| `context.AudioPlayer.stream`               | AudioStreamInfoObject(準備中) | 再生中のオーディオの詳細情報を保存したオブジェクト。`playerActivity`の値が`"IDLE"`の場合、このフィールドが空であることがあります。    | Optional |
-| `context.AudioPlayer.totalInMilliseconds`  | number  | 最近再生したオーディオの全体の長さ。単位はミリ秒で、`playerActivity`の値が`"IDLE"`の場合、このフィールドが空であることがあります。                                                                  | Optional |
-| `context.System`                           | object  | クライアントシステムのコンテキスト情報を持っているオブジェクト                          |  |
-| `context.System.application`               | object  | ユーザーの意図によって実行されるExtensionの情報を持っているオブジェクト       |  |
-| `context.System.application.applicationId` | string  | ExtensionのID                                                 |  |
-| `context.System.device`                    | object  | クライアントデバイスの情報を持っているオブジェクト                               |  |
-| `context.System.device.deviceId`           | string  | クライアントデバイスのID。モデル名とデバイスのシリアル番号を組み合わせた情報など、ユーザーのデバイスを識別できる情報が渡されます。 |  |
-| `context.System.device.display`            | object  | クライアントデバイスのディスプレイ情報を持っているオブジェクト                                                 |  |
-| `context.System.device.display.contentLayer`        | object | ディスプレイでコンテンツが表示される領域の解像度情報を持つオブジェクト。`context.System.device.display.size`の値が`"none"`の場合、このフィールドは省略されます。  | Optional |
-| `context.System.device.display.contentLayer.width`  | number | ディスプレイでコンテンツが表示される領域の幅。ピクセル(px)単位です。             |  |
-| `context.System.device.display.contentLayer.height` | number | ディスプレイでコンテンツが表示される領域の高さ。ピクセル(px)単位です。             |  |
-| `context.System.device.display.dpi`         | number | ディスプレイ装置のDPI。`context.System.device.display.size`の値が`"none"`の場合、このフィールドは省略されます。          | Optional |
-| `context.System.device.display.orientation` | string | ディスプレイ装置の向き。`context.System.device.display.size`の値が`"none"`の場合、このフィールドは省略されます。<ul><li><code>"landscape"</code>：横方向</li><li><code>"portrait"</code>：縦方向</li></ul>                      | Optional |
-| `context.System.device.display.size`        | string | ディスプレイ装置の解像度を示す値。あらかじめ指定された値または任意の解像度のサイズを表す値(`"custom"`)が入力されています。しかし、ディスプレイ装置がないことを表す値(`"none"`)が入力されていることもあります。<ul><li><code>"none"</code>：クライアントデバイスにディスプレイ装置がない</li><li><code>"s100"</code>：低解像度(160px X 107px)</li><li><code>"m100"</code>：中解像度(427px X 240px)</li><li><code>"l100"</code>：高解像度(640px X 360px)</li><li><code>"xl100"</code>：超高解像度(xlarge type、899px X 506px)</li><li><code>"custom"</code>：あらかじめ定義された規格ではない解像度。</li></ul><div class="note"><p><strong>メモ</strong></p><p>クライアントデバイスのアスペクト比とDPIに適合した画質のメディアコンテンツを提供する必要があります。</p></div> |  |
-| `context.System.user`                      | object  | クライアントデバイスに認証されたデフォルトユーザーの情報を持っているオブジェクト                 |  |
-| `context.System.user.userId`               | string  | デバイスのデフォルトユーザーのClova ID                                    |  |
-| `context.System.user.accessToken`          | string  | 特定のサービスのユーザーアカウントのアクセストークン。デバイスのデフォルトユーザーと連携されたユーザーアカウントのアクセストークンが渡されます。CEKは、外部サービスの認可サーバーから取得したユーザーアカウントのアクセストークンを渡します。詳細については、[ユーザーアカウントを連携する](/CEK/Guides/Link_User_Account.md)を参照してください。 |  |
-| `request`                                 | object  | 解析されたユーザーの発話情報を持っているオブジェクト。[リクエストタイプ](#CustomExtRequestType)によって、構成されるフィールドが異なります。 |  |
-| `session`                                  | object  | セッション情報を持っているオブジェクト。ここでいうセッションとは、ユーザーのリクエストを区分する単位です。     |  |
-| `session.new`                              | boolean | リクエストメッセージが新しいセッションに対するものか、それとも既存のセッションに対するものかを区分します。<ul><li>true：新しいセッション</li><li>false：既存のセッション</li></ul>  |  |
-| `session.sessionAttributes`                       | object  | ユーザーとのマルチターン対話に必要な情報を保存したオブジェクト。Custom Extensionは、[レスポンスメッセージ](#CustomExtResponseMessage)の`response.sessionAttributes`フィールドを使用して中間情報をCEKに渡します。ユーザーの追加のリクエストを受け付けると、その情報は再びリクエストメッセージの`session.sessionAttributes`フィールドで渡されます。オブジェクトはキー(key)と値(value)のペアで構成され、Custom Extensionを実装する際、任意に定義できます。保存された値がない場合、空のオブジェクトが渡されます。   |  |
-| `session.sessionId`                        | string  | セッションID                                                    |  |
-| `session.user`                             | object  | 現在のユーザーの情報を持っているオブジェクト                             |  |
-| `session.user.userId`                      | string  | 現在のユーザーのClova ID。`context.System.user.userId`の値と異なることがあります。 |  |
-| `session.user.accessToken`                 | string  | 特定のサービスのユーザーアカウントのアクセストークン。現在のユーザーと連携されたユーザーアカウントのアクセストークンが渡されます。CEKは、外部サービスの認可サーバーから取得したユーザーアカウントのアクセストークンを渡します。詳細については、[ユーザーアカウントを連携する](/CEK/Guides/Link_User_Account.md)を参照してください。| Optional |
-| `version`                                  | string  | メッセージフォーマットのバージョン(CEKのバージョン)                          | <!-- --> |
+| フィールド名 | データ型 | フィールドの説明 | Optional |
+| ------------ | -------- | ---------------- | :------: |
+| `context`    | object   | クライアントのコンテキスト情報を持っているオブジェクト | <!-- --> |
+| `context.AudioPlayer` | object   | クライアントが現在再生しているか、最後に再生したメディアの情報を持っているオブジェクト | Optional |
+| `context.AudioPlayer.offsetInMilliseconds` | number   | 最近再生したメディアの最後の再生ポイント(offset)。単位はミリ秒であり、`playerActivity`の値が`"IDLE"`の場合、このフィールドは空の場合があります。 | Optional |
+| `context.AudioPlayer.playerActivity` | string   | プレイヤーの状態を示す値。次のような値を持ちます。<ul><li><code>"IDLE"</code>：非アクティブ状態</li><li><code>"PLAYING"</code>：再生中</li><li><code>"PAUSED"</code>：一時停止状態</li><li><code>"STOPPED"</code>：中止状態</li></ul> | <!-- --> |
+| `context.AudioPlayer.stream` | AudioStreamInfoObject(準備中) | 再生中のオーディオの詳細情報を保存したオブジェクト。`playerActivity`の値が`"IDLE"`の場合、このフィールドが空であることがあります。 | Optional |
+| `context.AudioPlayer.totalInMilliseconds` | number   | 最近再生したオーディオの全体の長さ。単位はミリ秒で、`playerActivity`の値が`"IDLE"`の場合、このフィールドが空であることがあります。 | Optional |
+| `context.System` | object   | クライアントシステムのコンテキスト情報を持っているオブジェクト | <!-- --> |
+| `context.System.application` | object   | ユーザーの意図によって実行されるExtensionの情報を持っているオブジェクト | <!-- --> |
+| `context.System.application.applicationId` | string   | ExtensionのID | <!-- --> |
+| `context.System.device` | object   | クライアントデバイスの情報を持っているオブジェクト | <!-- --> |
+| `context.System.device.deviceId` | string   | クライアントデバイスのID。モデル名とデバイスのシリアル番号を組み合わせた情報など、ユーザーのデバイスを識別できる情報が渡されます。 | <!-- --> |
+| `context.System.device.display` | object   | クライアントデバイスのディスプレイ情報を持っているオブジェクト | <!-- --> |
+| `context.System.device.display.contentLayer` | object   | ディスプレイでコンテンツが表示される領域の解像度情報を持つオブジェクト。`context.System.device.display.size`の値が`"none"`の場合、このフィールドは省略されます。 | Optional |
+| `context.System.device.display.contentLayer.width` | number   | ディスプレイでコンテンツが表示される領域の幅。ピクセル(px)単位です。 | <!-- --> |
+| `context.System.device.display.contentLayer.height` | number   | ディスプレイでコンテンツが表示される領域の高さ。ピクセル(px)単位です。 | <!-- --> |
+| `context.System.device.display.dpi` | number   | ディスプレイ装置のDPI。`context.System.device.display.size`の値が`"none"`の場合、このフィールドは省略されます。 | Optional |
+| `context.System.device.display.orientation` | string   | ディスプレイ装置の向き。`context.System.device.display.size`の値が`"none"`の場合、このフィールドは省略されます。<ul><li><code>"landscape"</code>：横方向</li><li><code>"portrait"</code>：縦方向</li></ul> | Optional |
+| `context.System.device.display.size` | string   | ディスプレイ装置の解像度を示す値。あらかじめ指定された値または任意の解像度のサイズを表す値(`"custom"`)が入力されています。しかし、ディスプレイ装置がないことを表す値(`"none"`)が入力されていることもあります。<ul><li><code>"none"</code>：クライアントデバイスにディスプレイ装置がない</li><li><code>"s100"</code>：低解像度(160px X 107px)</li><li><code>"m100"</code>：中解像度(427px X 240px)</li><li><code>"l100"</code>：高解像度(640px X 360px)</li><li><code>"xl100"</code>：超高解像度(xlarge type、899px X 506px)</li><li><code>"custom"</code>：あらかじめ定義された規格ではない解像度。</li></ul><div class="note"><p><strong>メモ</strong></p><p>クライアントデバイスのアスペクト比とDPIに適合した画質のメディアコンテンツを提供する必要があります。</p></div> | <!-- --> |
+| `context.System.user` | object   | クライアントデバイスに認証されたデフォルトユーザーの情報を持っているオブジェクト | <!-- --> |
+| `context.System.user.userId` | string   | デバイスのデフォルトユーザーのClova ID | <!-- --> |
+| `context.System.user.accessToken` | string   | 特定のサービスのユーザーアカウントのアクセストークン。デバイスのデフォルトユーザーと連携されたユーザーアカウントのアクセストークンが渡されます。CEKは、外部サービスの認可サーバーから取得したユーザーアカウントのアクセストークンを渡します。詳細については、[ユーザーアカウントを連携する](/CEK/Guides/Link_User_Account.md)を参照してください。 | <!-- --> |
+| `request`    | object   | 解析されたユーザーの発話情報を持っているオブジェクト。[リクエストタイプ](#CustomExtRequestType)によって、構成されるフィールドが異なります。 | <!-- --> |
+| `session`    | object   | セッション情報を持っているオブジェクト。ここでいうセッションとは、ユーザーのリクエストを区分する単位です。 | <!-- --> |
+| `session.new` | boolean  | リクエストメッセージが新しいセッションに対するものか、それとも既存のセッションに対するものかを区分します。<ul><li>true：新しいセッション</li><li>false：既存のセッション</li></ul> | <!-- --> |
+| `session.sessionAttributes` | object   | ユーザーとのマルチターン対話に必要な情報を保存したオブジェクト。Custom Extensionは、[レスポンスメッセージ](#CustomExtResponseMessage)の`response.sessionAttributes`フィールドを使用して中間情報をCEKに渡します。ユーザーの追加のリクエストを受け付けると、その情報は再びリクエストメッセージの`session.sessionAttributes`フィールドで渡されます。オブジェクトはキー(key)と値(value)のペアで構成され、Custom Extensionを実装する際、任意に定義できます。保存された値がない場合、空のオブジェクトが渡されます。 | <!-- --> |
+| `session.sessionId` | string   | セッションID | <!-- --> |
+| `session.user` | object   | 現在のユーザーの情報を持っているオブジェクト | <!-- --> |
+| `session.user.userId` | string   | 現在のユーザーのClova ID。`context.System.user.userId`の値と異なることがあります。 | <!-- --> |
+| `session.user.accessToken` | string   | 特定のサービスのユーザーアカウントのアクセストークン。現在のユーザーと連携されたユーザーアカウントのアクセストークンが渡されます。CEKは、外部サービスの認可サーバーから取得したユーザーアカウントのアクセストークンを渡します。詳細については、[ユーザーアカウントを連携する](/CEK/Guides/Link_User_Account.md)を参照してください。 | Optional |
+| `version`    | string   | メッセージフォーマットのバージョン(CEKのバージョン) | <!-- --> |
 
 #### Message example
 {% raw %}
@@ -311,15 +311,15 @@ CEKは、Clovaが解析したユーザーのリクエストをCustom Extension�
 ```
 {% endraw %}
 
-| フィールド名       | データ型    | フィールドの説明                     | Optional |
-|---------------|---------|-----------------------------|:---------:|
-| `event`           | object  | クライアントがClovaに渡した情報が保存されているオブジェクト                                       |    |
-| `event.name`      | string  | クライアントがClovaに送信したイベントの名前。例えばスキルが有効、もしくは無効への切り替えを示すイベントの名前は、`SkillEnabled`や`SkillDisabled`になります。スキルの有効/無効の切り替えを示すリクエストを受け取った際には、[リクエストメッセージ](#CustomExtRequestMessage)の`context.System.application.applicationId`フィールドと`context.System.user.userId`フィールドを利用してユーザー情報を初期登録したり、利用終了したユーザーのデータを廃棄する実装をしてください。 |    |
-| `event.namespace` | string  | クライアントがClovaに送信したイベントの名前空間、または、スキルが有効か無効かを示す名前空間。スキルが有効か無効かを示す名前空間は、`ClovaSkill`に固定されます。   |   |
-| `event.payload`   | object  | クライアントがClovaに送信した`payload`または`payload`の一部の情報。一部のイベント、または、スキルが有効か無効かを示すための`EventRequest`リクエストは、`payload`が空のオブジェクトの場合があります。 |    |
-| `requestId`       | string  | クライアントがClovaに情報を渡すときに作成されたダイアログID(`event.header.dialogRequestId`)    |   |
-| `timestamp`       | string  | クライアントがClovaに情報を渡した日時(タイムスタンプ、<a href="https://en.wikipedia.org/wiki/ISO_8601" target="_blank">ISO 8601</a>)<div class="note"><p><strong>メモ</strong></p><p>CEKは<code>EventRequest</code>タイプのリクエストの順序を保証しません。クライアントからのリクエストの順序は、このフィールドの値から把握することができます。</p></div>                    |   |
-| `type`            | string  | リクエストメッセージのタイプ。`"EventRequest"`の値に固定されます。         | <!-- --> |
+| フィールド名      | データ型 | フィールドの説明 | Optional |
+| ----------------- | -------- | ---------------- | :------: |
+| `event`           | object   | クライアントがClovaに渡した情報が保存されているオブジェクト  | <!-- --> |
+| `event.name`      | string   | クライアントがClovaに送信したイベントの名前。例えばスキルが有効、もしくは無効への切り替えを示すイベントの名前は、`SkillEnabled`や`SkillDisabled`になります。スキルの有効/無効の切り替えを示すリクエストを受け取った際には、[リクエストメッセージ](#CustomExtRequestMessage)の`context.System.application.applicationId`フィールドと`context.System.user.userId`フィールドを利用してユーザー情報を初期登録したり、利用終了したユーザーのデータを廃棄する実装をしてください。 | <!-- --> |
+| `event.namespace` | string   | クライアントがClovaに送信したイベントの名前空間、または、スキルが有効か無効かを示す名前空間。スキルが有効か無効かを示す名前空間は、`ClovaSkill`に固定されます。 | <!-- --> |
+| `event.payload`   | object   | クライアントがClovaに送信した`payload`または`payload`の一部の情報。一部のイベント、または、スキルが有効か無効かを示すための`EventRequest`リクエストは、`payload`が空のオブジェクトの場合があります。 | <!-- --> |
+| `requestId`       | string   | クライアントがClovaに情報を渡すときに作成されたダイアログID(`event.header.dialogRequestId`) | <!-- --> |
+| `timestamp`       | string   | クライアントがClovaに情報を渡した日時(タイムスタンプ、<a href="https://en.wikipedia.org/wiki/ISO_8601" target="_blank">ISO 8601</a>)<div class="note"><p><strong>メモ</strong></p><p>CEKは<code>EventRequest</code>タイプのリクエストの順序を保証しません。クライアントからのリクエストの順序は、このフィールドの値から把握することができます。</p></div> | <!-- --> |
+| `type`            | string   | リクエストメッセージのタイプ。`"EventRequest"`の値に固定されます。 | <!-- --> |
 
 以下は、`EventRequest`タイプのメッセージの`request`オブジェクトフィールドのサンプルです。
 
@@ -378,12 +378,12 @@ CEKは、Clovaが解析したユーザーのリクエストをCustom Extension�
 ```
 {% endraw %}
 
-| フィールド名       | データ型    | フィールドの説明                     | Optional |
-|---------------|---------|-----------------------------|:---------:|
-| `intent`        | object  | ユーザーのリクエストを解析した情報が保存されたオブジェクト([インテント](/Design/Design_Guideline_For_Extension.md#Intent))                         |  |
-| `intent.name`   | string  | インテント名。対話モデルに定義した[インテント](/Design/Design_Guideline_For_Extension.md#Intent)をこのフィールドで識別できます。  |  |
-| `intent.slots`  | object  | Extensionがインテントを処理する際に要求される情報(スロット)が保存されたオブジェクト。このフィールドは、`intent.name`フィールドに入力された[インテント](/Design/Design_Guideline_For_Extension.md#Intent)によって構成が異なることがあります。 |  |
-| `type`          | string  | リクエストメッセージのタイプ。`"IntentRequest"`の値に固定されます。                                                                     | <!-- --> |
+| フィールド名   | データ型 | フィールドの説明 | Optional |
+| -------------- | -------- | ---------------- | :------: |
+| `intent`       | object   | ユーザーのリクエストを解析した情報が保存されたオブジェクト([インテント](/Design/Design_Guideline_For_Extension.md#Intent)) | <!-- --> |
+| `intent.name`  | string   | インテント名。対話モデルに定義した[インテント](/Design/Design_Guideline_For_Extension.md#Intent)をこのフィールドで識別できます。 | <!-- --> |
+| `intent.slots` | object   | Extensionがインテントを処理する際に要求される情報(スロット)が保存されたオブジェクト。このフィールドは、`intent.name`フィールドに入力された[インテント](/Design/Design_Guideline_For_Extension.md#Intent)によって構成が異なることがあります。 | <!-- --> |
+| `type`         | string   | リクエストメッセージのタイプ。`"IntentRequest"`の値に固定されます。 | <!-- --> |
 
 以下は、`IntentRequest`タイプのメッセージの`request`オブジェクトフィールドのサンプルです。
 
@@ -415,9 +415,9 @@ CEKは、Clovaが解析したユーザーのリクエストをCustom Extension�
 ```
 {% endraw %}
 
-| フィールド名       | データ型    | フィールドの説明                     | Optional |
-|---------------|---------|-----------------------------|:---------:|
-| `type`          | string  | リクエストメッセージのタイプ。`"LaunchRequest"`の値に固定されます。 | <!-- --> |
+| フィールド名 | データ型 | フィールドの説明 | Optional |
+| ------------ | -------- | ---------------- | :------: |
+| `type`       | string   | リクエストメッセージのタイプ。`"LaunchRequest"`の値に固定されます。 | <!-- --> |
 
 #### SessionEndedRequest {#CustomExtSessionEndedRequest}
 `SessionEndedRequest`タイプは、ユーザーの特定のスキルの使用が終了したことを示すリクエストです。次の状況でこのメッセージを受信します。
@@ -441,9 +441,9 @@ CEKは、Clovaが解析したユーザーのリクエストをCustom Extension�
 ```
 {% endraw %}
 
-| フィールド名       | データ型    | フィールドの説明                     | Optional |
-|---------------|---------|-----------------------------|:---------:|
-| `type`          | string  | リクエストメッセージのタイプ。`"SessionEndedRequest"`の値に固定されます。 | <!-- --> |
+| フィールド名 | データ型 | フィールドの説明 | Optional |
+| ------------ | -------- | ---------------- | :------: |
+| `type`       | string   | リクエストメッセージのタイプ。`"SessionEndedRequest"`の値に固定されます。 | <!-- --> |
 
 ### レスポンスメッセージ {#CustomExtResponseMessage}
 Extensionは、リクエストメッセージを処理して、レスポンスメッセージを渡す必要があります(HTTPレスポンス)。ここでは、レスポンスメッセージの構造と各フィールドについて説明します。
@@ -498,34 +498,34 @@ Extensionは、リクエストメッセージを処理して、レスポンス�
 </div>
 
 #### Message fields
-| フィールド名       | データ型    | フィールドの説明                     | Optional |
-|---------------|---------|-----------------------------|:---------:|
-| `response`                               | object       | Extensionのレスポンス情報を含むオブジェクト                            |  |
-| `response.card`                          | object       | コンテンツテンプレート形式のデータで、クライアントの画面に表示するコンテンツをこのフィールドで渡すことができます       |  |
-| `response.directives[]`                  | object array | ExtensionがCEKに渡すディレクティブ。`response.directives`フィールドは、主にオーディオコンテンツを提供するために使用されます。以下の[CIC API](#CICAPIforAudioPlayback) ディレクティブをサポートしています。<ul><li><code>AudioPlayer.Play</code></li><li><code>AudioPlayer.StreamDeliver</code></li><li><code>PlaybackController.Pause</code></li><li><code>PlaybackController.Resume</code></li><li><code>PlaybackController.Stop</code></li></ul> |  |
-| `response.directives[].header`           | object       | ディレクティブのヘッダー                                          |  |
-| `response.directives[].header.messageId` | string       | メッセージID(UUID)。メッセージを区別するための識別子です。   |  |
-| `response.directives[].header.name`      | string       | ディレクティブのAPI名                                      |  |
-| `response.directives[].header.namespace` | string       | ディレクティブのAPI名前欄                                |  |
-| `response.directives[].payload`          | object       | ディレクティブに関する情報を持つオブジェクト。ディレクティブに応じて、payloadオブジェクトの構成とフィールド値を変更できます。         |  |
-| `response.outputSpeech`                  | object       | 音声に合成する情報を含んでいるオブジェクト。合成された音声はCICを介してクライアントに渡されます。              |  |
-| `response.outputSpeech.brief`            | [SpeechInfoObject](#CustomExtSpeechInfoObject) | 出力する要約音声情報                    | Optional |
-| `response.outputSpeech.type`             | string       | 出力する音声情報のタイプ<ul><li><code>"SimpleSpeech"</code>：単文タイプの音声情報です。最も基本となるタイプで、この値を指定した場合、<code>response.outputSpeech.values</code>フィールドが<a href="#CustomExtSpeechInfoObject"><code>SpeechInfoObject</code></a>オブジェクトを持っている必要があります。</li><li><code>"SpeechList"</code>：複文タイプの音声情報です。複数の文章を出力する際に使用されます。この値を指定した場合、<code>response.outputSpeech.values</code>フィールドが<a href="#CustomExtSpeechInfoObject"><code>SpeechInfoObject</code></a>オブジェクト配列を持っている必要があります。</li><li><code>"SpeechSet"</code>：複合タイプの音声情報です。画面を持たないクライアントデバイスに、要約音声情報と詳細音声情報を渡す際に使用されます。この値を指定した場合、<code>response.outputSpeech.values</code>フィールドの代わりに<code>response.outputSpeech.brief</code>と<code>response.outputSpeech.verbose</code>フィールドを持つ必要があります。</li></ul> |  |
-| `response.outputSpeech.values[]`           | [SpeechInfoObject](#CustomExtSpeechInfoObject) or [SpeechInfoObject](#CustomExtSpeechInfoObject) array | クライアントデバイスで出力する音声情報を持っているオブジェクトまたはオブジェクト配列 | Optional |
-| `response.outputSpeech.verbose`          | object       | 画面を持たないクライアントデバイスに渡す際に使用されます。詳細音声情報を含んでいます。 | Optional |
-| `response.outputSpeech.verbose.type`     | string       | 出力する音声情報のタイプ。単文と複文タイプの音声情報のみ入力できます。<ul><li><code>"SimpleSpeech"</code>：単文タイプの音声情報です。最も基本的な音声情報を渡す際に使用されます。この値を指定した場合、<code>response.outputSpeech.verbose.values</code>フィールドが<a href="#CustomExtSpeechInfoObject"><code>SpeechInfoObject</code></a>オブジェクトを持っている必要があります。</li><li><code>"SpeechList"</code>：複文タイプの音声情報です。複数の文章を出力する際に使用されます。この値を指定した場合、<code>response.outputSpeech.verbose.values</code>フィールドが<a href="#CustomExtSpeechInfoObject"><code>SpeechInfoObject</code></a>オブジェクト配列を持っている必要があります。</li></ul> |  |
-| `response.outputSpeech.verbose.values[]`           | [SpeechInfoObject](#CustomExtSpeechInfoObject) or [SpeechInfoObject](#CustomExtSpeechInfoObject) array | クライアントデバイスで出力する詳細音声情報を持っているオブジェクトまたはオブジェクト配列 |  |
-| `response.reprompt`                               | obejct       | ユーザーの追加の発話を促す音声情報を含んでいるオブジェクト。`response.reprompt`フィールドを使用すると、ユーザーにマルチターン対話を続けるか尋ねたり、または必須情報を話すように促すことができます。通常、マルチターン対話を行う際、ユーザーが追加の発話をしないと、入力待ち時間が過ぎ、マルチターン対話が自動的に終了します。<div class="note"><p><strong>メモ</strong></p><p><code>response.reprompt</code>フィールドは、<code>response.shouldEndSession</code>フィールド値を<code>false</code>に入力した場合、有効です。主に単文タイプの音声情報(<code>"SimpleSpeech"</code>)を渡すことをお勧めします。<code>response.reprompt</code>フィールドを使用すると、入力待ち時間を最大1回延長できます。</p></div> | Optional |
-| `response.reprompt.outputSpeech`                  | object       | 音声に合成する情報を含んでいるオブジェクト。合成された音声はCICを介してクライアントに渡されます。              |  |
-| `response.reprompt.outputSpeech.brief`            | [SpeechInfoObject](#CustomExtSpeechInfoObject) | 出力する要約音声情報                    | Optional |
-| `response.reprompt.outputSpeech.type`             | string       | 出力する音声情報のタイプ<ul><li>"SimpleSpeech"：単文タイプの音声情報です。最も基本となるタイプで、この値を指定した場合、<code>response.outputSpeech.values</code>フィールドが<a href="#CustomExtSpeechInfoObject"><code>SpeechInfoObject</code></a>オブジェクトを持っている必要があります。</li><li><code>"SpeechList"</code>：複文タイプの音声情報です。複数の文章を出力する際に使用されます。この値を指定した場合、<code>response.outputSpeech.values</code>フィールドが<a href="#CustomExtSpeechInfoObject"><code>SpeechInfoObject</code></a>オブジェクト配列を持っている必要があります。</li><li><code>"SpeechSet"</code>：複合タイプの音声情報です。画面を持たないクライアントデバイスに、要約音声情報と詳細音声情報を渡す際に使用されます。この値を指定した場合、<code>response.outputSpeech.values</code>フィールドの代わりに<code>response.outputSpeech.brief</code>と<code>response.outputSpeech.verbose</code>フィールドを持つ必要があります。</li></ul> |  |
-| `response.reprompt.outputSpeech.values[]`           | [SpeechInfoObject](#CustomExtSpeechInfoObject) or [SpeechInfoObject](#CustomExtSpeechInfoObject) array | クライアントデバイスで出力する音声情報を持っているオブジェクトまたはオブジェクト配列 | Optional |
-| `response.reprompt.outputSpeech.verbose`          | object       | 画面を持たないクライアントデバイスに渡す際に使用されます。詳細音声情報を含んでいます。 | Optional |
-| `response.reprompt.outputSpeech.verbose.type`     | string       | 出力する音声情報のタイプ。単文と複文タイプの音声情報のみ入力できます。<ul><li><code>"SimpleSpeech"</code>：単文タイプの音声情報です。最も基本的な音声情報を渡す際に使用されます。この値を指定した場合、<code>response.outputSpeech.verbose.values</code>フィールドが<a href="#CustomExtSpeechInfoObject"><code>SpeechInfoObject</code></a>オブジェクトを持っている必要があります。</li><li><code>"SpeechList"</code>：複文タイプの音声情報です。複数の文章を出力する際に使用されます。この値を指定した場合、<code>response.outputSpeech.verbose.values</code>フィールドが<a href="#CustomExtSpeechInfoObject"><code>SpeechInfoObject</code></a>オブジェクト配列を持っている必要があります。</li></ul> |  |
-| `response.reprompt.outputSpeech.verbose.values[]`           | [SpeechInfoObject](#CustomExtSpeechInfoObject) or [SpeechInfoObject](#CustomExtSpeechInfoObject) array | クライアントデバイスで出力する詳細音声情報を持っているオブジェクトまたはオブジェクト配列 |  |
-| `response.shouldEndSession`              | boolean      | セッション終了のフラグ。クライアントに特定のExtensionの使用が終了したことを示すフィールドです。[`SessionEndedRequest`](#CustomExtSessionEndedRequest)タイプのリクエストメッセージを受け取る前に、Extensionから先に使用終了を示す際に使用されます。<ul><li>true：使用を終了する</li><li>false：引き続き使用する。ユーザーとマルチターン対話を行います。</li></ul> |  |
-| `sessionAttributes`                      | object       | ユーザーとのマルチターン対話に必要な情報を保存するために使用されるオブジェクト。Custom Extensionは、`sessionAttributes`フィールドを使用して途中までの情報をCEKに渡します。ユーザーの追加のリクエストを受け付けると、その情報は再び[リクエストメッセージ](#CustomExtRequestMessage)の`session.sessionAttributes`フィールドで渡されます。`sessionAttributes`オブジェクトは、キー(key)と値(value)のペアで構成され、Custom Extensionを実装する際に任意で定義できます。保存する値がない場合、空のオブジェクトを入力します。 |  |
-| `version`                                | string       | メッセージフォーマットのバージョン(CEKのバージョン)                        | <!-- --> |
+| フィールド名 | データ型 | フィールドの説明 | Optional |
+| ------------ | -------- | ---------------- | :------: |
+| `response`   | object | Extensionのレスポンス情報を含むオブジェクト | <!-- --> |
+| `response.card` | object | コンテンツテンプレート形式のデータで、クライアントの画面に表示するコンテンツをこのフィールドで渡すことができます | <!-- --> |
+| `response.directives[]` | object array | ExtensionがCEKに渡すディレクティブ。`response.directives`フィールドは、主にオーディオコンテンツを提供するために使用されます。以下の[CIC API](#CICAPIforAudioPlayback) ディレクティブをサポートしています。<ul><li><code>AudioPlayer.Play</code></li><li><code>AudioPlayer.StreamDeliver</code></li><li><code>PlaybackController.Pause</code></li><li><code>PlaybackController.Resume</code></li><li><code>PlaybackController.Stop</code></li></ul> | <!-- --> |
+| `response.directives[].header` | object | ディレクティブのヘッダー | <!-- --> |
+| `response.directives[].header.messageId` | string | メッセージID(UUID)。メッセージを区別するための識別子です。 | <!-- --> |
+| `response.directives[].header.name` | string | ディレクティブのAPI名 | <!-- --> |
+| `response.directives[].header.namespace` | string | ディレクティブのAPI名前欄 | <!-- --> |
+| `response.directives[].payload` | object | ディレクティブに関する情報を持つオブジェクト。ディレクティブに応じて、payloadオブジェクトの構成とフィールド値を変更できます。 | <!-- --> |
+| `response.outputSpeech` | object | 音声に合成する情報を含んでいるオブジェクト。合成された音声はCICを介してクライアントに渡されます。 | <!-- --> |
+| `response.outputSpeech.brief` | [SpeechInfoObject](#CustomExtSpeechInfoObject) | 出力する要約音声情報 | Optional |
+| `response.outputSpeech.type` | string | 出力する音声情報のタイプ<ul><li><code>"SimpleSpeech"</code>：単文タイプの音声情報です。最も基本となるタイプで、この値を指定した場合、<code>response.outputSpeech.values</code>フィールドが<a href="#CustomExtSpeechInfoObject"><code>SpeechInfoObject</code></a>オブジェクトを持っている必要があります。</li><li><code>"SpeechList"</code>：複文タイプの音声情報です。複数の文章を出力する際に使用されます。この値を指定した場合、<code>response.outputSpeech.values</code>フィールドが<a href="#CustomExtSpeechInfoObject"><code>SpeechInfoObject</code></a>オブジェクト配列を持っている必要があります。</li><li><code>"SpeechSet"</code>：複合タイプの音声情報です。画面を持たないクライアントデバイスに、要約音声情報と詳細音声情報を渡す際に使用されます。この値を指定した場合、<code>response.outputSpeech.values</code>フィールドの代わりに<code>response.outputSpeech.brief</code>と<code>response.outputSpeech.verbose</code>フィールドを持つ必要があります。</li></ul> | <!-- --> |
+| `response.outputSpeech.values[]` | [SpeechInfoObject](#CustomExtSpeechInfoObject) or [SpeechInfoObject](#CustomExtSpeechInfoObject) array | クライアントデバイスで出力する音声情報を持っているオブジェクトまたはオブジェクト配列 | Optional |
+| `response.outputSpeech.verbose` | object | 画面を持たないクライアントデバイスに渡す際に使用されます。詳細音声情報を含んでいます。 | Optional |
+| `response.outputSpeech.verbose.type` | string | 出力する音声情報のタイプ。単文と複文タイプの音声情報のみ入力できます。<ul><li><code>"SimpleSpeech"</code>：単文タイプの音声情報です。最も基本的な音声情報を渡す際に使用されます。この値を指定した場合、<code>response.outputSpeech.verbose.values</code>フィールドが<a href="#CustomExtSpeechInfoObject"><code>SpeechInfoObject</code></a>オブジェクトを持っている必要があります。</li><li><code>"SpeechList"</code>：複文タイプの音声情報です。複数の文章を出力する際に使用されます。この値を指定した場合、<code>response.outputSpeech.verbose.values</code>フィールドが<a href="#CustomExtSpeechInfoObject"><code>SpeechInfoObject</code></a>オブジェクト配列を持っている必要があります。</li></ul> | <!-- --> |
+| `response.outputSpeech.verbose.values[]` | [SpeechInfoObject](#CustomExtSpeechInfoObject) or [SpeechInfoObject](#CustomExtSpeechInfoObject) array | クライアントデバイスで出力する詳細音声情報を持っているオブジェクトまたはオブジェクト配列 | <!-- --> |
+| `response.reprompt` | obejct | ユーザーの追加の発話を促す音声情報を含んでいるオブジェクト。`response.reprompt`フィールドを使用すると、ユーザーにマルチターン対話を続けるか尋ねたり、または必須情報を話すように促すことができます。通常、マルチターン対話を行う際、ユーザーが追加の発話をしないと、入力待ち時間が過ぎ、マルチターン対話が自動的に終了します。<div class="note"><p><strong>メモ</strong></p><p><code>response.reprompt</code>フィールドは、<code>response.shouldEndSession</code>フィールド値を<code>false</code>に入力した場合、有効です。主に単文タイプの音声情報(<code>"SimpleSpeech"</code>)を渡すことをお勧めします。<code>response.reprompt</code>フィールドを使用すると、入力待ち時間を最大1回延長できます。</p></div> | Optional |
+| `response.reprompt.outputSpeech` | object | 音声に合成する情報を含んでいるオブジェクト。合成された音声はCICを介してクライアントに渡されます。 | <!-- --> |
+| `response.reprompt.outputSpeech.brief` | [SpeechInfoObject](#CustomExtSpeechInfoObject)  | 出力する要約音声情報 | Optional |
+| `response.reprompt.outputSpeech.type` | string | 出力する音声情報のタイプ<ul><li>"SimpleSpeech"：単文タイプの音声情報です。最も基本となるタイプで、この値を指定した場合、<code>response.outputSpeech.values</code>フィールドが<a href="#CustomExtSpeechInfoObject"><code>SpeechInfoObject</code></a>オブジェクトを持っている必要があります。</li><li><code>"SpeechList"</code>：複文タイプの音声情報です。複数の文章を出力する際に使用されます。この値を指定した場合、<code>response.outputSpeech.values</code>フィールドが<a href="#CustomExtSpeechInfoObject"><code>SpeechInfoObject</code></a>オブジェクト配列を持っている必要があります。</li><li><code>"SpeechSet"</code>：複合タイプの音声情報です。画面を持たないクライアントデバイスに、要約音声情報と詳細音声情報を渡す際に使用されます。この値を指定した場合、<code>response.outputSpeech.values</code>フィールドの代わりに<code>response.outputSpeech.brief</code>と<code>response.outputSpeech.verbose</code>フィールドを持つ必要があります。</li></ul> | <!-- --> |
+| `response.reprompt.outputSpeech.values[]` | [SpeechInfoObject](#CustomExtSpeechInfoObject) or [SpeechInfoObject](#CustomExtSpeechInfoObject) array | クライアントデバイスで出力する音声情報を持っているオブジェクトまたはオブジェクト配列 | Optional |
+| `response.reprompt.outputSpeech.verbose` | object | 画面を持たないクライアントデバイスに渡す際に使用されます。詳細音声情報を含んでいます。 | Optional |
+| `response.reprompt.outputSpeech.verbose.type` | string | 出力する音声情報のタイプ。単文と複文タイプの音声情報のみ入力できます。<ul><li><code>"SimpleSpeech"</code>：単文タイプの音声情報です。最も基本的な音声情報を渡す際に使用されます。この値を指定した場合、<code>response.outputSpeech.verbose.values</code>フィールドが<a href="#CustomExtSpeechInfoObject"><code>SpeechInfoObject</code></a>オブジェクトを持っている必要があります。</li><li><code>"SpeechList"</code>：複文タイプの音声情報です。複数の文章を出力する際に使用されます。この値を指定した場合、<code>response.outputSpeech.verbose.values</code>フィールドが<a href="#CustomExtSpeechInfoObject"><code>SpeechInfoObject</code></a>オブジェクト配列を持っている必要があります。</li></ul> | <!-- --> |
+| `response.reprompt.outputSpeech.verbose.values[]` | [SpeechInfoObject](#CustomExtSpeechInfoObject) or [SpeechInfoObject](#CustomExtSpeechInfoObject) array | クライアントデバイスで出力する詳細音声情報を持っているオブジェクトまたはオブジェクト配列 | <!-- --> |
+| `response.shouldEndSession` | boolean | セッション終了のフラグ。クライアントに特定のExtensionの使用が終了したことを示すフィールドです。[`SessionEndedRequest`](#CustomExtSessionEndedRequest)タイプのリクエストメッセージを受け取る前に、Extensionから先に使用終了を示す際に使用されます。<ul><li>true：使用を終了する</li><li>false：引き続き使用する。ユーザーとマルチターン対話を行います。</li></ul> | <!-- --> |
+| `sessionAttributes` | object | ユーザーとのマルチターン対話に必要な情報を保存するために使用されるオブジェクト。Custom Extensionは、`sessionAttributes`フィールドを使用して途中までの情報をCEKに渡します。ユーザーの追加のリクエストを受け付けると、その情報は再び[リクエストメッセージ](#CustomExtRequestMessage)の`session.sessionAttributes`フィールドで渡されます。`sessionAttributes`オブジェクトは、キー(key)と値(value)のペアで構成され、Custom Extensionを実装する際に任意で定義できます。保存する値がない場合、空のオブジェクトを入力します。 | <!-- --> |
+| `version` | string | メッセージフォーマットのバージョン(CEKのバージョン) | <!-- --> |
 
 <div class="note">
   <p><strong>メモ</strong></p>
@@ -545,11 +545,11 @@ Extensionは、リクエストメッセージを処理して、レスポンス�
 #### SpeechInfoObject {#CustomExtSpeechInfoObject}
 SpeechInfoObjectオブジェクトはレスポンスメッセージの`response.outputSpeech`で再使用されるオブジェクトです。ユーザーに出力する音声情報の最も小さな単位である単文レベルの発話情報です。このオブジェクトは、次のフィールドを持ちます。
 
-| フィールド名        | データ型         | 説明                                                                | Optional |
-|----------------|--------------|--------------------------------------------------------------------|:-----:|
-| `lang`           | string       | 音声を合成する際に使用する言語のコード。現在、次の値を持ちます。<ul><li><code>"en"</code>：英語</li><li><code>"ja"</code>：日本語</li><li><code>"ko"</code>：韓国語</li><li><code>""</code>：<code>type</code>フィールドの値が<code>"URL"</code>の場合、このフィールドは空の文字列(empty string)を持ちます。</li></ul>         |  |
-| `type`           | string       | 再生する音声のタイプ。このフィールドの値によって、`value`フィールドの値の形式が異なります。現在、次の値を持ちます。<ul><li><code>"PlainText"</code>：テキスト</li><li><code>"URL"</code>：音声および音楽を再生できるファイルのURI</li></ul>            |  |
-| `value`          | string       | 音声を合成する内容または音声ファイルのURI<ul><li>音声ファイル：ファイル形式については、<a href="/Design/Design_Guideline_For_Extension.md#SupportedAudioCompressionFormat">プラットフォームでサポートされるオーディオ圧縮形式</a>を参照してください。</li></ul>                               | <!-- --> |
+| フィールド名 | データ型 | 説明                                    | Optional |
+| ------------ | -------- | --------------------------------------- | :------: |
+| `lang`       | string   | 音声を合成する際に使用する言語のコード。現在、次の値を持ちます。<ul><li><code>"en"</code>：英語</li><li><code>"ja"</code>：日本語</li><li><code>"ko"</code>：韓国語</li><li><code>""</code>：<code>type</code>フィールドの値が<code>"URL"</code>の場合、このフィールドは空の文字列(empty string)を持ちます。</li></ul> | <!-- --> |
+| `type`       | string   | 再生する音声のタイプ。このフィールドの値によって、`value`フィールドの値の形式が異なります。現在、次の値を持ちます。<ul><li><code>"PlainText"</code>：テキスト</li><li><code>"URL"</code>：音声および音楽を再生できるファイルのURI</li></ul> | <!-- --> |
+| `value`      | string   | 音声を合成する内容または音声ファイルのURI<ul><li>音声ファイル：ファイル形式については、<a href="/Design/Design_Guideline_For_Extension.md#SupportedAudioCompressionFormat">プラットフォームでサポートされるオーディオ圧縮形式</a>を参照してください。</li></ul> | <!-- --> |
 
 #### Message example
 {% raw %}
@@ -741,41 +741,41 @@ CIC APIは、ユーザーのクライアントデバイスがClovaと通信を�
 
 従って、Custom Extensionがオーディオコンテンツを提供する場合、以下のCIC APIを理解しておく必要があります。
 
-| 名前欄   | メッセージ         | タイプ  | 説明                                   |
-|-------------|------------------|---------|---------------------------------------------|
-| AudioPlayer | [`Play`](#Play)                       | ディレクティブ | クライアントに対して、特定のオーディオストリームを再生するか、または再生キューに追加するように指示します。                         |
-| AudioPlayer | [`PlayFinished`](#PlayFinished)       | イベント     | クライアントがオーディオストリームの再生を終了するとき、そのオーディオストリームの情報をCICにレポートするために使用します。     |
-| AudioPlayer | [`PlayPaused`](#PlayPaused)           | イベント     | クライアントがオーディオストリームの再生を一時停止するとき、そのオーディオストリームの情報をCICにレポートするために使用します。 |
-| AudioPlayer | [`PlayResumed`](#PlayResumed)         | イベント     | クライアントがオーディオストリームの再生を再開するとき、そのオーディオストリームの情報をCICにレポートするために使用します。         |
-| AudioPlayer | [`PlayStarted`](#PlayStarted)         | イベント     | クライアントがオーディオストリームの再生を開始するとき、そのオーディオストリームの情報をCICにレポートするために使用します。    |
-| AudioPlayer | [`PlayStopped`](#PlayStopped)         | イベント     | クライアントがオーディオストリームの再生を停止するとき、そのオーディオストリームの情報をCICにレポートするために使用します。    |
-| AudioPlayer | [`ProgressReportDelayPassed`](#ProgressReportPositionPassed) | イベント | オーディオストリームの再生が開始してから、指定された遅延期間が経過したタイミングの再生状態をCICにレポートするために使用します。 |
-| AudioPlayer | [`ProgressReportIntervalPassed`](#ProgressReportPositionPassed)| イベント | オーディオストリームの再生が開始してから、指定された間隔ごとの再生状態をCICにレポートするために使用します。 |
-| AudioPlayer | [`ProgressReportPositionPassed`](#ProgressReportPositionPassed) | イベント | オーディオストリームの再生が開始してから、指定されたタイミングに、そのときの再生状態をCICにレポートするために使用します。 |
-| AudioPlayer | [`StreamDeliver`](#StreamDeliver)     | ディレクティブ | [`AudioPlayer.StreamRequested`](#StreamRequested)イベントに対する応答です。実際に再生できるオーディオストリームの情報を受信するために使用します。 |
-| AudioPlayer | [`StreamRequested`](#StreamRequested) | イベント     | オーディオストリームを再生するために、ストリーミングのURLなど、追加の情報をCICにリクエストするイベントです。               |
-| PlaybackController | [`Pause`](#Pause)              | ディレクティブ | クライアントに、再生中のオーディオストリームを一時停止するように指示します。        |
-| PlaybackController | [`Resume`](#Resume)            | ディレクティブ | クライアントに、オーディオストリームの再生を再開するように指示します。                |
-| PlaybackController | [`Stop`](#Stop)                | ディレクティブ | クライアントに、オーディオストリームの再生を停止するように指示します。                |
+| 名前欄             | メッセージ       | タイプ         | 説明                 |
+| ------------------ | ---------------- | -------------- | -------------------- |
+| AudioPlayer        | [`Play`](#Play)  | ディレクティブ | クライアントに対して、特定のオーディオストリームを再生するか、または再生キューに追加するように指示します。 |
+| AudioPlayer        | [`PlayFinished`](#PlayFinished) | イベント | クライアントがオーディオストリームの再生を終了するとき、そのオーディオストリームの情報をCICにレポートするために使用します。 |
+| AudioPlayer        | [`PlayPaused`](#PlayPaused) | イベント | クライアントがオーディオストリームの再生を一時停止するとき、そのオーディオストリームの情報をCICにレポートするために使用します。 |
+| AudioPlayer        | [`PlayResumed`](#PlayResumed) | イベント | クライアントがオーディオストリームの再生を再開するとき、そのオーディオストリームの情報をCICにレポートするために使用します。 |
+| AudioPlayer        | [`PlayStarted`](#PlayStarted) | イベント | クライアントがオーディオストリームの再生を開始するとき、そのオーディオストリームの情報をCICにレポートするために使用します。 |
+| AudioPlayer        | [`PlayStopped`](#PlayStopped) | イベント | クライアントがオーディオストリームの再生を停止するとき、そのオーディオストリームの情報をCICにレポートするために使用します。 |
+| AudioPlayer        | [`ProgressReportDelayPassed`](#ProgressReportPositionPassed) | イベント | オーディオストリームの再生が開始してから、指定された遅延期間が経過したタイミングの再生状態をCICにレポートするために使用します。 |
+| AudioPlayer        | [`ProgressReportIntervalPassed`](#ProgressReportPositionPassed) | イベント | オーディオストリームの再生が開始してから、指定された間隔ごとの再生状態をCICにレポートするために使用します。 |
+| AudioPlayer        | [`ProgressReportPositionPassed`](#ProgressReportPositionPassed) | イベント | オーディオストリームの再生が開始してから、指定されたタイミングに、そのときの再生状態をCICにレポートするために使用します。 |
+| AudioPlayer        | [`StreamDeliver`](#StreamDeliver) | ディレクティブ | [`AudioPlayer.StreamRequested`](#StreamRequested)イベントに対する応答です。実際に再生できるオーディオストリームの情報を受信するために使用します。 |
+| AudioPlayer        | [`StreamRequested`](#StreamRequested) | イベント | オーディオストリームを再生するために、ストリーミングのURLなど、追加の情報をCICにリクエストするイベントです。 |
+| PlaybackController | [`Pause`](#Pause) | ディレクティブ | クライアントに、再生中のオーディオストリームを一時停止するように指示します。 |
+| PlaybackController | [`Resume`](#Resume) | ディレクティブ | クライアントに、オーディオストリームの再生を再開するように指示します。 |
+| PlaybackController | [`Stop`](#Stop) | ディレクティブ | クライアントに、オーディオストリームの再生を停止するように指示します。 |
 
 ## Playディレクティブ {#Play}
 クライアントに対して、特定のオーディオストリームを再生するか、または再生キューに追加するように指示します。
 
 ### Payload fields
-| フィールド名       | データ型    | フィールドの説明                     | Optional |
-|---------------|---------|-----------------------------|:---------:|
-| `audioItem`               | object | 再生するオーディオストリームのメタデータと、再生に必要なオーディオストリームの情報を持つオブジェクト                     |    |
-| `audioItem.artImageUrl`   | string | オーディオコンテンツに関連する画像(アルバムの画像)のURL                                                  | Optional  |
-| `audioItem.audioItemId`   | string | オーディオストリームを区別するID。クライアントはこの値に基づいて、重複するPlayディレクティブを削除できます。 |    |
-| `audioItem.headerText`    | string | 主に、現在の再生リストのタイトルを表すテキストフィールド                                                | Optional  |
-| `audioItem.stream`        | [AudioStreamInfoObject](#AudioStreamInfoObject) | 再生に必要なオーディオストリームの情報を持つオブジェクト        |    |
-| `audioItem.titleSubText1` | string | 主にアーティスト名を表すテキストフィールド                                                          |    |
-| `audioItem.titleSubText2` | string | 主にアルバム名を表すサブテキストフィールド                                                      | Optional |
-| `audioItem.titleText`     | string | 現在のオーディオコンテンツのタイトルを表すテキストフィールド                                                         |     |
-| `playBehavior`            | string | ディレクティブに含まれたオーディオストリームを、クライアントでいつ再生するかを指定するフィールド<ul><li><code>"REPLACE_ALL"</code>：再生キューをすべてクリアして、送信されたオーディオストリームをすぐに再生します。</li><li><code>"ENQUEUE"</code>：再生キューに、送信されたオーディオストリームを追加します。</li></ul> |    |
-| `source`                  | object | オーディオストリーミングサービスの提供元                                                    |    |
-| `source.logoUrl`          | string | オーディオストリーミングサービスのロゴ画像のURL。このフィールドがなかったり、またはフィールド値が空の場合や、ロゴ画像を表示できない場合、`source.name`フィールド内のオーディオストリーミングサービスの名前を表示する必要があります。  | Optional |
-| `source.name`             | string | オーディオストリーミングサービスの名前                                                        | <!-- --> |
+| フィールド名              | データ型 | フィールドの説明 | Optional |
+| ------------------------- | -------- | ---------------- | :------: |
+| `audioItem`               | object   | 再生するオーディオストリームのメタデータと、再生に必要なオーディオストリームの情報を持つオブジェクト | <!-- --> |
+| `audioItem.artImageUrl`   | string   | オーディオコンテンツに関連する画像(アルバムの画像)のURL | Optional |
+| `audioItem.audioItemId`   | string   | オーディオストリームを区別するID。クライアントはこの値に基づいて、重複するPlayディレクティブを削除できます。 | <!-- --> |
+| `audioItem.headerText`    | string   | 主に、現在の再生リストのタイトルを表すテキストフィールド | Optional |
+| `audioItem.stream`        | [AudioStreamInfoObject](#AudioStreamInfoObject) | 再生に必要なオーディオストリームの情報を持つオブジェクト     | <!-- --> |
+| `audioItem.titleSubText1` | string   | 主にアーティスト名を表すテキストフィールド | <!-- --> |
+| `audioItem.titleSubText2` | string   | 主にアルバム名を表すサブテキストフィールド | Optional |
+| `audioItem.titleText`     | string   | 現在のオーディオコンテンツのタイトルを表すテキストフィールド | <!-- --> |
+| `playBehavior`            | string   | ディレクティブに含まれたオーディオストリームを、クライアントでいつ再生するかを指定するフィールド<ul><li><code>"REPLACE_ALL"</code>：再生キューをすべてクリアして、送信されたオーディオストリームをすぐに再生します。</li><li><code>"ENQUEUE"</code>：再生キューに、送信されたオーディオストリームを追加します。</li></ul> | <!-- --> |
+| `source`                  | object   | オーディオストリーミングサービスの提供元 | <!-- --> |
+| `source.logoUrl`          | string   | オーディオストリーミングサービスのロゴ画像のURL。このフィールドがなかったり、またはフィールド値が空の場合や、ロゴ画像を表示できない場合、`source.name`フィールド内のオーディオストリーミングサービスの名前を表示する必要があります。 | Optional |
+| `source.name`             | string   | オーディオストリーミングサービスの名前 | <!-- --> |
 
 ### 備考
 ストリーミングサービスの課金などの理由により、実際のストリーミング情報、つまりストリーミングのURLなどの情報を、再生する直前に取得する場合があります。`audioItem.stream.urlPlayable`フィールドの値によって、次のように区分されます。
@@ -885,10 +885,10 @@ CIC APIは、ユーザーのクライアントデバイスがClovaと通信を�
 
 #### Payload fields
 
-| フィールド名       | データ型    | フィールドの説明                     | Optional |
-|---------------|---------|-----------------------------|:---------:|
-| `token`                | string | オーディオストリームのトークン    |    |
-| `offsetInMilliseconds` | number | クライアントが再生しているストリームの現在のオフセット。ミリ秒単位です。                         | <!-- --> |
+| フィールド名           | データ型 | フィールドの説明 | Optional |
+| ---------------------- | -------- | ---------------- | :------: |
+| `token`                | string   | オーディオストリームのトークン | <!-- --> |
+| `offsetInMilliseconds` | number   | クライアントが再生しているストリームの現在のオフセット。ミリ秒単位です。 | <!-- --> |
 
 #### Message example
 {% raw %}
@@ -924,10 +924,10 @@ CIC APIは、ユーザーのクライアントデバイスがClovaと通信を�
 
 #### Payload fields
 
-| フィールド名       | データ型    | フィールドの説明                     | Optional |
-|---------------|---------|-----------------------------|:---------:|
-| `token`                | string | オーディオストリームのトークン |    |
-| `offsetInMilliseconds` | number | クライアントが再生しているストリームの現在のオフセット。ミリ秒単位です。                         | <!-- --> |
+| フィールド名           | データ型 | フィールドの説明 | Optional |
+| ---------------------- | -------- | ---------------- | :------: |
+| `token`                | string   | オーディオストリームのトークン | <!-- --> |
+| `offsetInMilliseconds` | number   | クライアントが再生しているストリームの現在のオフセット。ミリ秒単位です。 | <!-- --> |
 
 #### Message example
 {% raw %}
@@ -963,10 +963,10 @@ CIC APIは、ユーザーのクライアントデバイスがClovaと通信を�
 
 #### Payload fields
 
-| フィールド名       | データ型    | フィールドの説明                     | Optional |
-|---------------|---------|-----------------------------|:---------:|
-| `token`                | string | オーディオストリームのトークン |    |
-| `offsetInMilliseconds` | number | クライアントが再生しているストリームの現在のオフセット。ミリ秒単位です。                         | <!-- --> |
+| フィールド名           | データ型 | フィールドの説明 | Optional |
+| ---------------------- | -------- | ---------------- | :------: |
+| `token`                | string   | オーディオストリームのトークン | <!-- --> |
+| `offsetInMilliseconds` | number   | クライアントが再生しているストリームの現在のオフセット。ミリ秒単位です。 | <!-- --> |
 
 #### Message example
 {% raw %}
@@ -1001,10 +1001,10 @@ CIC APIは、ユーザーのクライアントデバイスがClovaと通信を�
 
 #### Payload fields
 
-| フィールド名       | データ型    | フィールドの説明                     | Optional |
-|---------------|---------|-----------------------------|:---------:|
-| `token`                | string | オーディオストリームのトークン |    |
-| `offsetInMilliseconds` | number | クライアントが再生しているストリームの現在のオフセット。ミリ秒単位です。                         | <!-- --> |
+| フィールド名           | データ型 | フィールドの説明 | Optional |
+| ---------------------- | -------- | ---------------- | :------: |
+| `token`                | string   | オーディオストリームのトークン | <!-- --> |
+| `offsetInMilliseconds` | number   | クライアントが再生しているストリームの現在のオフセット。ミリ秒単位です。 | <!-- --> |
 
 #### Message example
 {% raw %}
@@ -1039,10 +1039,10 @@ CIC APIは、ユーザーのクライアントデバイスがClovaと通信を�
 
 #### Payload fields
 
-| フィールド名       | データ型    | フィールドの説明                     | Optional |
-|---------------|---------|-----------------------------|:---------:|
-| `token`                | string | オーディオストリームのトークン |    |
-| `offsetInMilliseconds` | number | 再生しているストリームの現在のオフセット。ミリ秒単位です。                         | <!-- --> |
+| フィールド名           | データ型 | フィールドの説明 | Optional |
+| ---------------------- | -------- | ---------------- | :------: |
+| `token`                | string   | オーディオストリームのトークン | <!-- --> |
+| `offsetInMilliseconds` | number   | 再生しているストリームの現在のオフセット。ミリ秒単位です。 | <!-- --> |
 
 #### Message example
 {% raw %}
@@ -1077,10 +1077,10 @@ CIC APIは、ユーザーのクライアントデバイスがClovaと通信を�
 
 #### Payload fields
 
-| フィールド名       | データ型    | フィールドの説明                     | Optional |
-|---------------|---------|-----------------------------|:---------:|
-| `token`                | string | オーディオストリームのトークン |    |
-| `offsetInMilliseconds` | number | 再生しているストリームの現在のオフセット。ミリ秒単位です。                         | <!-- --> |
+| フィールド名           | データ型 | フィールドの説明 | Optional |
+| ---------------------- | -------- | ---------------- | :------: |
+| `token`                | string   | オーディオストリームのトークン | <!-- --> |
+| `offsetInMilliseconds` | number   | 再生しているストリームの現在のオフセット。ミリ秒単位です。 | <!-- --> |
 
 #### Message example
 {% raw %}
@@ -1116,10 +1116,10 @@ CIC APIは、ユーザーのクライアントデバイスがClovaと通信を�
 
 #### Payload fields
 
-| フィールド名       | データ型    | フィールドの説明                     | Optional |
-|---------------|---------|-----------------------------|:---------:|
-| `token`                | string | オーディオストリームのトークン |    |
-| `offsetInMilliseconds` | number | 再生しているストリームの現在のオフセット。ミリ秒単位です。                         | <!-- --> |
+| フィールド名           | データ型 | フィールドの説明 | Optional |
+| ---------------------- | -------- | ---------------- | :------: |
+| `token`                | string   | オーディオストリームのトークン | <!-- --> |
+| `offsetInMilliseconds` | number   | 再生しているストリームの現在のオフセット。ミリ秒単位です。 | <!-- --> |
 
 #### Message example
 {% raw %}
@@ -1155,10 +1155,10 @@ CIC APIは、ユーザーのクライアントデバイスがClovaと通信を�
 
 #### Payload fields
 
-| フィールド名       | データ型    | フィールドの説明                     | Optional |
-|---------------|---------|-----------------------------|:---------:|
-| `token`                | string | オーディオストリームのトークン |    |
-| `offsetInMilliseconds` | number | 再生しているストリームの現在のオフセット。ミリ秒単位です。                         | <!-- --> |
+| フィールド名           | データ型 | フィールドの説明 | Optional |
+| ---------------------- | -------- | ---------------- | :------: |
+| `token`                | string   | オーディオストリームのトークン | <!-- --> |
+| `offsetInMilliseconds` | number   | 再生しているストリームの現在のオフセット。ミリ秒単位です。 | <!-- --> |
 
 #### Message example
 {% raw %}
@@ -1193,10 +1193,10 @@ CIC APIは、ユーザーのクライアントデバイスがClovaと通信を�
 [`AudioPlayer.StreamRequested`](#StreamRequested)イベントに対する応答です。実際に再生できるオーディオストリームの情報を受信するために使用します。クライアントがコンテンツを再生できるように、オーディオストリームの情報にストリーミングURLが必ず含まれます。
 
 #### Payload fields
-| フィールド名 | データ型 | フィールドの説明 | Optional |
-|---------|------|--------|:---------:|
-| `audioItemId` | string | オーディオストリームの情報を区別するための値。クライアントはこの値に基づいて、重複するPlayディレクティブを削除できます。 |    |
-| `audioStream` | [AudioStreamInfoObject](#AudioStreamInfoObject) | 再生に必要なオーディオストリームの情報を持つオブジェクト       | <!-- --> |
+| フィールド名  | データ型 | フィールドの説明 | Optional |
+| ------------- | -------- | ---------------- | :------: |
+| `audioItemId` | string   | オーディオストリームの情報を区別するための値。クライアントはこの値に基づいて、重複するPlayディレクティブを削除できます。 | <!-- --> |
+| `audioStream` | [AudioStreamInfoObject](#AudioStreamInfoObject) | 再生に必要なオーディオストリームの情報を持つオブジェクト | <!-- --> |
 
 #### 備考
 `StreamDeliver`ディレクティブで送信される`AudioStreamInfoObject`オブジェクトは、既存の[`AudioPlayer.Play`](#Play)ディレクティブで送信された`AudioStreamInfoObject`オブジェクトと重複しないように、一部の内容が省略されることがあります。ストリームを再生する際、`StreamDeliver`ディレクティブと、すでに受信した[`Play`](#Play)ディレクティブの`payload.audioStream`情報を組み合わせて使用する必要があります。
@@ -1234,10 +1234,10 @@ CIC APIは、ユーザーのクライアントデバイスがClovaと通信を�
 オーディオストリームを再生するために、ストリーミングのURLなど、追加の情報をCICにリクエストするイベントです。
 
 #### Payload fields
-| フィールド名       | データ型    | フィールドの説明                     | Optional |
-|---------------|---------|-----------------------------|:---------:|
-| `audioItemId`   | string  | オーディオストリームのトークン          |    |
-| `audioStream`   | [AudioStreamInfoObject](#AudioStreamInfoObject) | Playディレクティブの`audioItem.stream` | <!-- --> |
+| フィールド名  | データ型 | フィールドの説明 | Optional |
+| ------------- | -------- | ---------------- | :------: |
+| `audioItemId` | string   | オーディオストリームのトークン | <!-- --> |
+| `audioStream` | [AudioStreamInfoObject](#AudioStreamInfoObject) | Playディレクティブの`audioItem.stream` | <!-- --> |
 
 #### 備考
 ストリーミングサービスの課金などの理由により、ときには、実際のオーディオストリームの情報の発行を、再生直前に遅延させる必要が生じます。このイベントは、このようにオーディオストリームの情報をあらかじめ準備してはいけない場合のために設計されたAPIです。クライアントは、このイベントを再生直前より先に送信しない必要があります。
@@ -1358,18 +1358,18 @@ CIC APIは、ユーザーのクライアントデバイスがClovaと通信を�
 再生するオーディオストリームのストリーミング情報を持つオブジェクトです。クライアントに対して再生するストリーミングの情報を送信したり、クライアントがCICに対して、現在再生しているコンテンツのストリーミング情報を送信するとき使用します。
 
 #### Object fields
-| フィールド名       | データ型    | フィールドの説明                     | Optional |
-|---------------|---------|-----------------------------|:-------------:|
-| `beginAtInMilliseconds`  | number | 再生を開始するオフセット。ミリ秒単位で、この値が指定されている場合、クライアントは、そのオーディオストリームを指定されたオフセットから再生する必要があります。この値が0に設定されている場合、ストリームを最初から再生します。          |    |
-| `customData`             | string | 現在のストリームに関連して、任意の形式を持つメタデータ情報。特定のカテゴリに分類されたり、定義されないストリーミング情報は、このフィールドに含まれるか、または入力される必要があります。オーディオストリーム再生のコンテキストに必要な追加の値を、サービスプロバイダーがカスタムで追加できます。<div class="danger"><p><strong>注意</strong></p><p>クライアントは、このフィールドの値を任意に使用してはなりません。問題が発生する恐れがあります。また、このフィールドの値はストリームの再生状態を送信する際、<a href="/CEK/References/CEK_API.md#PlaybackState">PlaybackStateコンテキスト</a>の`stream`フィールドにそのまま含まれる必要があります。</p></div> | Optional  |
-| `durationInMilliseconds` | number | オーディオストリームの再生時間。クライアントは、`beginAtInMilliseconds`フィールドに指定されている再生のオフセットから、このフィールドに指定されている再生時間だけ、そのオーディオストリームをシークおよび再生できます。例えば、`beginAtInMilliseconds`フィールドの値が`10000`で、このフィールドの値が`60000`の場合、そのオーディオストリームの10秒から70秒までの区間を再生およびシークすることができます。ミリ秒単位です。   | Optional  |
-| `progressReport`         | object  | 再生が開始してから、再生状態をレポートするタイミングを指定するオブジェクト                                                  | Optional |
-| `progressReport.progressReportDelayInMilliseconds`    | number | 再生が開始してから、指定された時間が経過した後に、再生状態をレポートするように指定する値です。ミリ秒単位で、このフィールドの値はnullの場合があります。  | Optional |
-| `progressReport.progressReportIntervalInMilliseconds` | number | 再生中に、指定された間隔ごとに再生状態をレポートするように指定する値です。ミリ秒単位で、このフィールドの値はnullの場合があります。        | Optional |
-| `progressReport.progressReportPositionInMilliseconds` | number | 再生中に、指定された再生位置を経過する度に、再生状態をレポートするように指定する値です。ミリ秒単位で、このフィールドの値はnullの場合があります。    | Optional |
-| `token`                  | string  | オーディオストリームのトークン                                                                                   |    |
-| `url`                    | string  | オーディオストリームのURL                                                                                     |    |
-| `urlPlayable`            | boolean | `url`フィールドのオーディオストリームのURLがすぐに再生できるかを示す値。<ul><li><code>true</code>：すぐに再生できるURL</li><li><code>false</code>：すぐに再生できないURL。<a href="#StreamRequested"><code>AudioPlayer.StreamRequested</code></a>イベントでオーディオストリームの情報を追加でリクエストする必要があります。</li></ul>        | <!-- --> |
+| フィールド名 | データ型 | フィールドの説明 | Optional |
+| ------------ | -------- | ---------------- | :------: |
+| `beginAtInMilliseconds` | number   | 再生を開始するオフセット。ミリ秒単位で、この値が指定されている場合、クライアントは、そのオーディオストリームを指定されたオフセットから再生する必要があります。この値が0に設定されている場合、ストリームを最初から再生します。 | <!-- --> |
+| `customData` | string   | 現在のストリームに関連して、任意の形式を持つメタデータ情報。特定のカテゴリに分類されたり、定義されないストリーミング情報は、このフィールドに含まれるか、または入力される必要があります。オーディオストリーム再生のコンテキストに必要な追加の値を、サービスプロバイダーがカスタムで追加できます。<div class="danger"><p><strong>注意</strong></p><p>クライアントは、このフィールドの値を任意に使用してはなりません。問題が発生する恐れがあります。また、このフィールドの値はストリームの再生状態を送信する際、<a href="/CEK/References/CEK_API.md#PlaybackState">PlaybackStateコンテキスト</a>の`stream`フィールドにそのまま含まれる必要があります。</p></div> | Optional |
+| `durationInMilliseconds` | number   | オーディオストリームの再生時間。クライアントは、`beginAtInMilliseconds`フィールドに指定されている再生のオフセットから、このフィールドに指定されている再生時間だけ、そのオーディオストリームをシークおよび再生できます。例えば、`beginAtInMilliseconds`フィールドの値が`10000`で、このフィールドの値が`60000`の場合、そのオーディオストリームの10秒から70秒までの区間を再生およびシークすることができます。ミリ秒単位です。 | Optional |
+| `progressReport` | object   | 再生が開始してから、再生状態をレポートするタイミングを指定するオブジェクト | Optional |
+| `progressReport.progressReportDelayInMilliseconds` | number   | 再生が開始してから、指定された時間が経過した後に、再生状態をレポートするように指定する値です。ミリ秒単位で、このフィールドの値はnullの場合があります。 | Optional |
+| `progressReport.progressReportIntervalInMilliseconds` | number   | 再生中に、指定された間隔ごとに再生状態をレポートするように指定する値です。ミリ秒単位で、このフィールドの値はnullの場合があります。 | Optional |
+| `progressReport.progressReportPositionInMilliseconds` | number   | 再生中に、指定された再生位置を経過する度に、再生状態をレポートするように指定する値です。ミリ秒単位で、このフィールドの値はnullの場合があります。 | Optional |
+| `token`      | string   | オーディオストリームのトークン | <!-- --> |
+| `url`        | string   | オーディオストリームのURL | <!-- --> |
+| `urlPlayable` | boolean  | `url`フィールドのオーディオストリームのURLがすぐに再生できるかを示す値。<ul><li><code>true</code>：すぐに再生できるURL</li><li><code>false</code>：すぐに再生できないURL。<a href="#StreamRequested"><code>AudioPlayer.StreamRequested</code></a>イベントでオーディオストリームの情報を追加でリクエストする必要があります。</li></ul> | <!-- --> |
 
 #### 備考
 * クライアントは、`beginAtInMilliseconds`と`durationInMilliseconds`フィールドに指定されている区間に対してストリームの再生を完了すると、[`AudioPlayer.PlayFinished`](#PlayFinished)イベントをCICに送信します。
@@ -1442,13 +1442,13 @@ CIC APIは、ユーザーのクライアントデバイスがClovaと通信を�
 
 #### Payload fields
 
-| フィールド名       | データ型    | フィールドの説明                     | Optional |
-|---------------|---------|-----------------------------|:---------:|
-| `offsetInMilliseconds` | number | 最近再生したメディアの最後の再生ポイント(オフセット)。ミリ秒単位で、`playerActivity`の値が`"IDLE"`の場合、このフィールドの値を入力する必要はありません。                                                  | Optional |
-| `playerActivity`       | string | プレイヤーの状態を示す値です。次のような値を持ちます。<ul><li><code>"IDLE"</code>：非アクティブ状態</li><li><code>"PLAYING"</code>：再生中</li><li><code>"PAUSED"</code>：一時停止状態</li><li><code>"STOPPED"</code>：停止状態</li></ul> |    |
-| `repeatMode`           | string  | リピート再生モード<ul><li><code>"NONE"</code>：リピート再生しない</li><li><code>"REPEAT_ONE"</code>：一曲リピート再生</li></ul>                                                   |     |
+| フィールド名           | データ型 | フィールドの説明 | Optional |
+| ---------------------- | -------- | ---------------- | :------: |
+| `offsetInMilliseconds` | number   | 最近再生したメディアの最後の再生ポイント(オフセット)。ミリ秒単位で、`playerActivity`の値が`"IDLE"`の場合、このフィールドの値を入力する必要はありません。 | Optional |
+| `playerActivity`       | string   | プレイヤーの状態を示す値です。次のような値を持ちます。<ul><li><code>"IDLE"</code>：非アクティブ状態</li><li><code>"PLAYING"</code>：再生中</li><li><code>"PAUSED"</code>：一時停止状態</li><li><code>"STOPPED"</code>：停止状態</li></ul> | <!-- --> |
+| `repeatMode`           | string   | リピート再生モード<ul><li><code>"NONE"</code>：リピート再生しない</li><li><code>"REPEAT_ONE"</code>：一曲リピート再生</li></ul> | <!-- --> |
 | `stream`               | [AudioStreamInfoObject](#AudioStreamInfoObject) | 再生中のオーディオの詳細情報が保存されているオブジェクト。`playerActivity`の値が`"IDLE"`の場合、このフィールドの値を入力する必要はありません。[`AudioPlayer.Play`](#Play)ディレクティブで送信した場合は`stream`オブジェクト、[`AudioPlayer.StreamDeliver`](#StreamDeliver)ディレクティブで送信した場合は`audioStream`オブジェクトに入力されたオーディオの情報を入力します。 | Optional |
-| `totalInMilliseconds`  | number | 最近再生したメディアの全体の長さ。ミリ秒単位で、[`AudioPlayer.Play`](#Play)ディレクティブで送信された([AudioStreamInfoObject](#AudioStreamInfoObject))に`durationInMilliseconds`フィールドの値がある場合、このフィールドに入力します。`playerActivity`の値が`"IDLE"`の場合、このフィールドの値を入力する必要はありません。                                                               | Optional |
+| `totalInMilliseconds`  | number   | 最近再生したメディアの全体の長さ。ミリ秒単位で、[`AudioPlayer.Play`](#Play)ディレクティブで送信された([AudioStreamInfoObject](#AudioStreamInfoObject))に`durationInMilliseconds`フィールドの値がある場合、このフィールドに入力します。`playerActivity`の値が`"IDLE"`の場合、このフィールドの値を入力する必要はありません。 | Optional |
 
 #### Object example
 

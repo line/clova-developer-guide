@@ -44,7 +44,7 @@ Custom ExtensionとLINEの連携を実施するには、以下の条件を満た
 
 * Messaging APIのPush API  
 
-  [LINE Developers ドキュメント > Messaging API > APIリファレンス > 共通プロパティ](https://developers.line.biz/ja/docs/messaging-api/reference/#anchor-ff6d9a0f9685bb1dfdde749b9044d243cadd542e)  
+  [LINE Developers ドキュメント > Messaging API > APIリファレンス > 共通プロパティ](https://developers.line.biz/ja/reference/messaging-api/#common-properties)  
   送信元ユーザーの`userId`がユーザー識別子です。​Custom Extensionの`session.user.userId`​をご利用ください。  
 
 つまり、以下のようなコードになります。

@@ -25,6 +25,18 @@ Clovaの質問には`Clova`や`CEK`のタグをご利用ください。
   </thead>
   <tbody>
   <tr>
+    <td>v2.0.0</td><td>2018/11/20</td>
+    <td>
+      <ul>
+        <li><a href="/CEK/Guides/Build_Clova_Home_Extension.md">Clova Home Extension</a> 追加</li>
+          <ul>
+            <li><a href="/CEK/Guides/Build_Clova_Home_Extension.md">Clova Home Extension を作成する</a> 更新（<a href="/CEK/CEK_Overview.md">Clova Extensions Kit</a>より章を移動）</li>
+            <li><a href="/CEK/References/CEK_API_ClovaHome.md">Clova Home Extension API のリファレンス</a> 追加</li>
+          </ul>
+      </ul>
+    </td>
+  </tr>
+  <tr>
     <td>v1.2.2</td><td>2018/11/15</td>
     <td>
       <ul>
