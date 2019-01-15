@@ -23,7 +23,7 @@ Custom ExtensionとLINEの連携を実施するには、以下の条件を満た
   [LINE Developers ドキュメント > Messaging API > ボットを作成する](https://developers.line.biz/ja/docs/messaging-api/building-bot/)
 
 2. ユーザーがボットを友だち追加していること  
-  ユーザーがスキルを利用していても、LINE上で友達になっていないボットからのメッセージを受け取ることはできません。
+  ユーザーがスキルを利用していても、LINE上で友だちになっていないボットからのメッセージを受け取ることはできません。
 
 3. 同じサービス提供者から提供するCustom Extensionとボットであること  
   例えば、ある会社がピザ宅配サービスと旅行代理店サービスを提供している場合、ピザ宅配スキルと旅行代理店ボットでユーザーの紐付けをすることはできません。Custom Extensionとボットの不適切な紐付けが発見された場合は、当該のCustom Extensionを停止します。あらかじめご了承ください。

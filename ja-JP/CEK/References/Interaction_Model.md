@@ -55,8 +55,8 @@ CEKでは、あらかじめ次の情報が定義されています。
 {% raw %}
 ```json
 "slots": {
-  "Date":{
-    "name": {{string}},
+  {{slotName}}:{
+    "name": {{slotName}},
     "value": {{string}},
     "valueType": {{string}}
   }
@@ -68,19 +68,19 @@ CEKでは、あらかじめ次の情報が定義されています。
 | フィールド名           | データ型 | フィールドの説明 | Optional |
 | ---------------------- | -------- | ---------------- | :------: |
 | `slots`                | object   | Extensionがインテントを処理する際に要求される情報(スロット)が保存されたオブジェクト | <!-- --> |
-| `slots.Date`           | object   | CLOVA.DATETIMEスロットの情報が保存されたオブジェクト | <!-- --> |
-| `slots.Date.name`      | string   | `Date`に固定     | <!-- --> |
-| `slots.Date.value`     | string   | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)拡張形式に変換された日付・時刻 | <!-- --> |
-| `slots.Date.valueType` | string   | ユーザーのリクエストを解析した日付・時刻情報によって値が異なります。<ul><li>`TIME`：時刻</li><li>`DATE`：日付</li><li>`DATETIME`：日付と時刻</li><li>`TIME.INTERVAL`：時刻の範囲</li><li>`DATE.INTERVAL`：日付の範囲</li><li>`DATETIME.INTERVAL`：日時の範囲</li></ul> | <!-- --> |
+| `slots.{slotName}`           | object   | CLOVA.DATETIMEスロットの情報が保存されたオブジェクト | <!-- --> |
+| `slots.{slotName}.name`      | string   | 開発者が定義したスロット名 | <!-- --> |
+| `slots.{slotName}.value`     | string   | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)拡張形式に変換された日付・時刻 | <!-- --> |
+| `slots.{slotName}.valueType` | string   | ユーザーのリクエストを解析した日付・時刻情報によって値が異なります。<ul><li>`TIME`：時刻</li><li>`DATE`：日付</li><li>`DATETIME`：日付と時刻</li><li>`TIME.INTERVAL`：時刻の範囲</li><li>`DATE.INTERVAL`：日付の範囲</li><li>`DATETIME.INTERVAL`：日時の範囲</li></ul> | <!-- --> |
 
 ##### Object example
-※ 発話日付・時刻が「2018年8月10日（金）午前9時」の場合
+※ 発話日付・時刻が「2018年8月10日（金）午前9時」、スロット名を"TravelDate"と定義した場合
 {% raw %}
 ```json
 //例1: 「3時」と発話した場合
 "slots": {
-  "Date": {
-    "name": "Date",
+  "TravelDate": {
+    "name": "TravelDate",
     "value": "03:00:00",
     "valueType": "TIME"
   }
@@ -88,8 +88,8 @@ CEKでは、あらかじめ次の情報が定義されています。
 
 //例2: 「2018年8月10日」と発話した場合
 "slots": {
-  "Date": {
-    "name": "Date",
+  "TravelDate": {
+    "name": "TravelDate",
     "value": "2018-08-10",
     "valueType": "DATE"
   }
@@ -97,8 +97,8 @@ CEKでは、あらかじめ次の情報が定義されています。
 
 //例3: 「2018年8月10日3時」と発話した場合
 "slots": {
-  "Date": {
-    "name": "Date",
+  "TravelDate": {
+    "name": "TravelDate",
     "value": "2018-08-10T03:00:00+09:00",
     "valueType": "DATETIME"
   }
@@ -106,8 +106,8 @@ CEKでは、あらかじめ次の情報が定義されています。
 
 //例4: 「朝」と発話した場合
 "slots": {
-  "Date": {
-    "name": "Date",
+  "TravelDate": {
+    "name": "TravelDate",
     "value": "06:00:00/09:00:00",
     "valueType": "TIME.INTERVAL"
   }
@@ -115,8 +115,8 @@ CEKでは、あらかじめ次の情報が定義されています。
 
 //例5: 「秋」と発話した場合
 "slots": {
-  "Date": {
-    "name": "Date",
+  "TravelDate": {
+    "name": "TravelDate",
     "value": "2018-09-01/2018-11-30",
     "valueType": "DATE.INTERVAL"
   }
@@ -124,8 +124,8 @@ CEKでは、あらかじめ次の情報が定義されています。
 
 //例6: 「明日の昼」と発話した場合
 "slots": {
-  "Date": {
-    "name": "Date",
+  "TravelDate": {
+    "name": "TravelDate",
     "value": "2018-08-11T11:00:00+09:00/2018-08-09T13:00:00+09:00",
     "valueType": "DATE.INTERVAL"
   }
@@ -185,8 +185,8 @@ CEKでは、あらかじめ次の情報が定義されています。
 {% raw %}
 ```json
 "slots": {
-  "Duration": {
-    "name": {{string}},
+  "slotName": {
+    "name": {{slotName}},
     "value": {{string}}
   }
 }
@@ -197,33 +197,34 @@ CEKでは、あらかじめ次の情報が定義されています。
 | フィールド名           | データ型 | フィールドの説明 | Optional |
 | ---------------------- | -------- | ---------------- | :------: |
 | `slots`                | object   | Extensionがインテントを処理する際に要求される情報(スロット)が保存されたオブジェクト | <!-- --> |
-| `slots.Duration`       | object   | CLOVA.DURATIONスロットの情報が保存されたオブジェクト | <!-- --> |
-| `slots.Duration.name`  | string   | `Duration`に固定 | <!-- --> |
-| `slots.Duration.value` | string   | [ISO 8601 Duration](https://en.wikipedia.org/wiki/ISO_8601#Durations)形式に変換した値 | <!-- --> |
+| `slots.{slotName}`       | object   | CLOVA.DURATIONスロットの情報が保存されたオブジェクト | <!-- --> |
+| `slots.{slotName}.name`  | string   | 開発者が定義したスロット名 | <!-- --> |
+| `slots.{slotName}.value` | string   | [ISO 8601 Duration](https://en.wikipedia.org/wiki/ISO_8601#Durations)形式に変換した値 | <!-- --> |
 
 ##### Object example
+※ スロット名を"TravelPeriod"と定義した場合
 {% raw %}
 ```json
 //例1: 「5日間」と発話した場合
 "slots": {
-  "Duration": {
-    "name": "Duration",
+  "TravelPeriod": {
+    "name": "TravelPeriod",
     "value": "P5D"
   }
 }
 
 //例2: 「34分間」と発話した場合
 "slots": {
-  "Duration": {
-    "name": "Duration",
+  "TravelPeriod": {
+    "name": "TravelPeriod",
     "value": "PT34M"
   }
 }
 
 //例3: 「2時間5分25秒」と発話した場合
 "slots": {
-  "Duration": {
-    "name": "Duration",
+  "TravelPeriod": {
+    "name": "TravelPeriod",
     "value": "PT2H5M25S"
   }
 }

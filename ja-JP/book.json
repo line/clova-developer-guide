@@ -6,11 +6,11 @@
   "author": "LINE Corporation",
   "variables": {
     "ClassifiedInfo": "Confidential",
-    "DocVersion": "v2.0.0",
+    "DocVersion": "v2.0.1",
     "language": "ja",
     "TargetCountryCode": "JP",
     "TargetReaderType": "Internal",
-    "ExtensionAdminEmail": "dl_clova_skill_support@linecorp.com",
+    "ExtensionAdminEmail": "dl_clova_skill_discontinuation@linecorp.com",
     "DeveloperConsoleURL": "https://clova-developers.line.biz",
     "GitHubBaseURLforExtensionExample": "https://github.com/line",
     "DocOwner": "LINE",

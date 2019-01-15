@@ -25,6 +25,19 @@ Clovaの質問には`Clova`や`CEK`のタグをご利用ください。
   </thead>
   <tbody>
   <tr>
+    <td>v2.0.1</td><td>2019/01/15</td>
+    <td>
+      <ul>
+        <li><a href="/CEK/References/CEK_API.md">CEK APIのリファレンス</a> 更新</li>
+          <ul>
+           <li><a href="/CEK/References/CEK_API.md#ClovaDatetime">CLOVA.DATETIME</a> 更新（フィールド名およびフィールドの説明を修正）</li>
+           <li><a href="/CEK/References/CEK_API.md#ClovaDuration">CLOVA.DURATION</a> 更新（フィールド名およびフィールドの説明を修正）</li>
+          </ul>
+        <li><a href="/DevConsole/Guides/CEK/Remove_Extension.md">Extensionを削除および中止する</a> 更新（<a href="/DevConsole/Guides/CEK/Remove_Extension.md#RemoveExtensionInService">サービス中のExtensionを削除する</a>際の連絡先メールアドレスを変更）</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
     <td>v2.0.0</td><td>2018/11/20</td>
     <td>
       <ul>
