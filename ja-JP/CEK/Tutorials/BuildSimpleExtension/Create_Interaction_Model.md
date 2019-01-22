@@ -34,7 +34,7 @@
 
 	<div class="note">
 		<p><strong>メモ</strong></p>
-		<p>ビルドは3~5分ほどかかります。ビルドが開始されると<strong>{{ book.DevConsole.cek_builder_menu_build_in_progress }}</strong>に変わり、ビルドが完了すると<strong>{{ book.DevConsole.cek_builder_menu_build}}</strong>に戻ります。</p>
+		<p>ビルドには数分かかります。ビルドが開始されると<strong>{{ book.DevConsole.cek_builder_menu_build_in_progress }}</strong>に変わり、ビルドが完了すると<strong>{{ book.DevConsole.cek_builder_menu_build}}</strong>に戻ります。</p>
 	</div>
 
 2. ビルドが完了すると、**{{ book.DevConsole.cek_builder_menu_build}}**ボタンの下にある**{{ book.DevConsole.cek_test }}**メニューをクリックします。

@@ -180,7 +180,7 @@ IoTデバイスの情報の確認、デバイス操作のリクエストおよ�
 | ------------- | -------- | -------------------------------------- | :------: |
 | `accessToken` | string   | IoTサービスのユーザーアカウントのアクセストークン。CEKは、外部サービスの認可サーバーから取得したユーザーアカウントのアクセストークンを渡します。詳細については、[ユーザーアカウントを連携する](/CEK/Guides/Link_User_Account.md)を参照してください。 | <!-- --> |
 | `appliance`   | [ApplianceInfoObject](/CEK/References/ClovaHomeInterface/Shared_Objects.md#ApplianceInfoObject) | エンドポイントの情報を持つオブジェクト。`applianceId`フィールドは必須です。 | <!-- --> |
-| `count`       | [CountInfoObject](/CEK/References/ClovaHomeInterface/Shared_Objects.md#CountInfoObject) | 入力の切り替え命令を複数回おこしたい場合など、ユーザ発話を元にした回数の情報を持つオブジェクト。主にIRでの操作を想定しています。 | Optional |
+| `count`       | [CountInfoObject](/CEK/References/ClovaHomeInterface/Shared_Objects.md#CountInfoObject) | 入力の切り替え命令を複数回おこしたい場合など、ユーザー発話を元にした回数の情報を持つオブジェクト。主にIRでの操作を想定しています。 | Optional |
 
 
 ### Message example
@@ -4973,7 +4973,7 @@ IoTデバイスの情報の確認、デバイス操作のリクエストおよ�
 | `mode`              | [ModeInfoObject](/CEK/References/ClovaHomeInterface/Shared_Objects.md#ModeInfoObject) | 現在の運転モード情報を持つオブジェクト | Optional |
 
 ### 備考
-ユーザに通知すべき情報がある場合に、ペイロードに値を入れてCEKに返すことが出来ます。`applianceTypes` の値により、応答に使用出来るフィールドが違います。
+ユーザーに通知すべき情報がある場合に、ペイロードに値を入れてCEKに返すことが出来ます。`applianceTypes` の値により、応答に使用出来るフィールドが違います。
 
 | applianceTypes     | 応答に使用できるフィールド               |
 | ------------------ | ---------------------------------------- |

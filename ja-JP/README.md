@@ -25,6 +25,14 @@ Clovaの質問には`Clova`や`CEK`のタグをご利用ください。
   </thead>
   <tbody>
   <tr>
+    <td>v3.0.0</td><td>2019/01/22</td>
+    <td>
+      <ul>
+        <li><a href="https://clova-developers.line.biz" target="_blank">Clova Developer Center β</a>のUI変更に対応</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
     <td>v2.0.1</td><td>2019/01/15</td>
     <td>
       <ul>
@@ -82,10 +90,10 @@ Clovaの質問には`Clova`や`CEK`のタグをご利用ください。
     <td>
       <ul>
         <li><a href="/Design/Design_Guideline_For_Extension.md">Extensionのデザインガイドライン</a> 更新（<a href="/Design/Design_Guideline_For_Extension.md#CustomSlotType">カスタムスロットタイプ</a> 同義語登録数の上限の説明 追加）</li>
-        <li><a href="/DevConsole/Guides/CEK/Register_Interaction_Model.md">対話モデルを登録する</a> 更新</li>
+        <li><a href="/DevConsole/Guides/CEK/Register_Extension.md#RegisterInteractionModel">対話モデルを登録する</a> 更新</li>
           <ul>
-            <li><a href="/DevConsole/Guides/CEK/Register_Interaction_Model.md#AddCustomSlotType">カスタムスロットタイプ</a> 同義語の登録数上限の説明を追加</li>
-            <li><a href="/DevConsole/Guides/CEK/Register_Interaction_Model.md#AddCustomIntent">カスタムインテント</a> サンプル発話の登録数上限の説明を追加</li>
+            <li><a href="/DevConsole/Guides/CEK/Register_Extension.md#AddCustomSlotType">カスタムスロットタイプ</a> 同義語の登録数上限の説明を追加</li>
+            <li><a href="/DevConsole/Guides/CEK/Register_Extension.md#AddCustomIntent">カスタムインテント</a> サンプル発話の登録数上限の説明を追加</li>
           </ul>
       </ul>
     </td>
@@ -139,7 +147,7 @@ Clovaの質問には`Clova`や`CEK`のタグをご利用ください。
     <td>v1.1.4</td><td>2018/08/02</td>
     <td>
       <ul>
-        <li><a href="/DevConsole/Guides/CEK/Deploy_Extension.md#InputDeploymentInfo">配布情報を入力する</a> 更新（検索キーワードについての説明を追加、スキルストアの画像を更新）</li>
+        <li><a href="/DevConsole/Guides/CEK/Deploy_Extension.md#InputReviewInfo">配布情報を入力する</a> 更新（検索キーワードについての説明を追加、スキルストアの画像を更新）</li>
       </ul>
     </td>
   </tr>
@@ -149,8 +157,8 @@ Clovaの質問には`Clova`や`CEK`のタグをご利用ください。
       <ul>
         <li><a href="/CEK/Guides/Clova_CEK_SDK.md">Clova Extensions Kitソフトウェア開発キット</a> 更新（<a href="/CEK/Guides/Clova_CEK_SDK.md#SDK_For_Kotlin">CEK SDK for Kotlin</a> 追加）</li>
         <li><a href="/Design/Design_Guideline_For_Extension.md#InvocationNameRequirement" target="_blank">スキル名/呼び出し名の要件</a> 更新（Clovaの呼び名を「ねぇClova」に統一）</li>
-        <li><a href="/DevConsole/Guides/CEK/Register_Extension.md#InputExtensionInfo" target="_blank">Extensionの基本情報を入力する</a> 更新（「提供者について」の説明を追加）</li>
-        <li><a href="/DevConsole/Guides/CEK/Deploy_Extension.md#InputDeploymentInfo" target="_blank">配布情報を入力する</a> 更新（「代表サンプル発話」の入力例を追加）</li>
+        <li><a href="/DevConsole/Guides/CEK/Register_Extension.md#InputSkillInfo" target="_blank">Extensionの基本情報を入力する</a> 更新（「提供者について」の説明を追加）</li>
+        <li><a href="/DevConsole/Guides/CEK/Deploy_Extension.md#InputReviewInfo" target="_blank">配布情報を入力する</a> 更新（「代表サンプル発話」の入力例を追加）</li>
       </ul>
     </td>
   </tr>

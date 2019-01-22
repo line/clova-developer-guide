@@ -3,87 +3,48 @@
 
 Extensionの配布は、通常、次の順で行われます。
 
-* [配布情報を入力する](#InputDeploymentInfo)
-* [プライバシーポリシーおよびコンプライアンス情報を入力する](#InputComplianceInfo)
-* [審査をリクエストする](#RequestExtensionSubmission)
+* [審査情報を入力する](#InputReviewInfo)
+* [審査申請する](#RequestExtensionSubmission)
 * [スキルが公開される](#DeployInSkillStore)
 
-## 配布情報を入力する {#InputDeploymentInfo}
-
-Clova Developer Centerで[Extensionを登録](/DevConsole/Guides/CEK/Register_Extension.md)し、[対話モデルを登録](/DevConsole/Guides/CEK/Register_Interaction_Model.md)すると、配布情報の入力が可能になります。Extensionのメニュー画面で **{{ book.DevConsole.cek_publishing }}** を選択してください。
+## 審査情報を入力する {#InputReviewInfo}
+[Clova Developer Centerに登録](/DevConsole/Guides/CEK/Register_Extension.md)されたスキルは、Clova事務局による審査を受け、通過すると配布されます。その審査に必要な情報を入力します。
+**登録済みスキル** リストの **管理** 項目にある **審査申請** を選択します。
 
 ![](/DevConsole/Resources/Images/DevConsole-Deployment_Info_Menu.png)
 
-次のように配布情報を入力します。
+**{{ book.DevConsole.cek_review_step_setting }}** の入力ページが開いたら、次のように情報を入力します。
 
 ![](/DevConsole/Resources/Images/DevConsole-Input_Deployment_Info.png)
 
-Extensionをユーザーに説明するための情報として、Clovaアプリの **{{ book.DevConsole.ManageExtensions }}** メニュー(スキルストア)でユーザーに提供されます。次の情報を入力する必要があります。
+<ol>
+  <li><strong>{{ book.DevConsole.cek_provider_type }}</strong>を選択すると、該当する入力項目が表示されます。</li>
+  <li><strong>{{ book.DevConsole.cek_provider }}</strong>：Extensionを作成した主体(企業や個人)の名前、またはニックネームを入力します。{{ book.DevConsole.ManageExtensions }}に表示され、Extensionを審査する際にチェックされます。</li>
+  <li><strong>{{ book.DevConsole.cek_provider_tts }}</strong>：音声で読み上げるときに発音される提供者の名称です。読み上げボタンを押して、提供者名を正しく発音できることを確認してください。</li>
+  <li><strong>{{ book.DevConsole.cek_provider_email }}</strong>項目に、当社より連絡可能なメールアドレスを入力します。{{ book.DevConsole.ManageExtensions }}には表示されません。</li>
+  <li>{{ book.DevConsole.cek_provider_type }}で<strong>{{ book.DevConsole.cek_provider_corporation }}</strong>を選んだ場合は、<strong>本社所在地</strong>、<strong>代表電話番号</strong>、<strong>代表者名</strong>、<strong>企業サイト</strong>項目を入力してください。こちらは審査に必要な情報であり、{{ book.DevConsole.ManageExtensions }}には表示されません。</li>
+  <li><strong>{{ book.DevConsole.cek_line_bot_mid }}</strong>：<a href="https://clova-developers.line.biz/guide/CEK/Guides/Link_Messaging_API.md" target="_blank">Custom ExtensionとLINEの連携</a>を行う場合に、スキルと連動するLINEのアカウントを選択してください。ここで選択したLINEアカウントを友だち追加できるリンクがスキルストアに追加されます。</li>
+  <li><strong>{{ book.DevConsole.cek_test_instructions }}</strong>：<a href="https://clova-developers.line.biz/guide/DevConsole/Guides/CEK/Deploy_Extension.md#RequestExtensionSubmission" target="_blank">Extensionの審査</a>プロセスでClova事務局がExtensionを確認する際、必要とされる参考情報です。{{ book.DevConsole.ManageExtensions }}には表示されません。案内に従って作成します。</li>
+  <li>入力が完了したら<strong>{{ book.DevConsole.cek_save }}</strong>ボタンをクリックします。</li>
+</ol>
 
-* **{{ book.DevConsole.cek_category }}**：Extensionのカテゴリです。ユーザーがカテゴリごとにExtensionを探したり、検索する際に利用されます。
-* **{{ book.DevConsole.cek_test_instructions }}**：[Extensionの審査](#RequestExtensionSubmission)プロセスでClova事務局がExtensionを確認する際、必要とされる参考情報です。エンドユーザーには表示されません。案内に従って作成します。
-* **サービスを提供する国および地域**：現在、日本でのみExtensionを配布できます。
-* **{{ book.DevConsole.cek_full_skill_desc }}**：**{{ book.DevConsole.ExtensionPage }}** でユーザーに提供するExtensionの説明です。案内に従って作成します。
-* **{{ book.DevConsole.cek_example_phrases }}**：ユーザーがExtensionをどのように使用できるかを示す例です。**{{ book.DevConsole.ExtensionPage }}** に表示されます。なお、1番目の例は **{{ book.DevConsole.StoreHome }}** にも表示されるため、「〜を起動して」「〜を開いて」など、スキルを起動するフレーズを含めて登録してください。（例：ねぇClova、ピザボットを起動して）
-* **{{ book.DevConsole.cek_keywords }}**：ユーザーが特定のキーワードでExtensionを検索する際に、その検索結果にExtensionが含まれるように設定します（カンマ区切りで5つまで登録可能）。スキルストアの検索機能の検索対象になります。
-{% if book.language !== "ja" %}
-* **{{ book.DevConsole.cek_small_icon }}**：小サイズ(108x108ピクセル)のExtensionのアイコンファイルです。**{{ book.DevConsole.ManageExtensions }}** と **{{ book.DevConsole.ExtensionPage }}** に表示されます。
-{% endif %}
-* **{{ book.DevConsole.cek_large_icon }}**：スキルストアおよびClovaアプリで表示されるExtensionのアイコンファイルです。512x512ピクセルの円形もしくは正方形で作成してください。
-* **対象デバイス** : Extensionが動作するClovaデバイスを選択します。チェックを外したデバイスからはスキルを呼び出すことができません。
 
-このように入力された情報は、Clovaアプリの **{{ book.DevConsole.ManageExtensions }}** で次のように表示されます。
+## 審査申請する {#RequestExtensionSubmission}
 
-| {{ book.DevConsole.StoreHome }} | {{ book.DevConsole.ExtensionPage }} |
-| ------------------------------- | ----------------------------------- |
-| ![Extension List](/DevConsole/Resources/Images/DevConsole-Store_UI_Example-Extension_Store_Home.png) | ![Extension Details](/DevConsole/Resources/Images/DevConsole-Store_UI_Example-Extension_Page.png) |
+**{{ book.DevConsole.cek_review_step_setting }}** の入力が完了すると、登録したExtensionの審査をリクエストできます。Clova事務局は、登録されたExtensionの情報、実際の動作確認と適合性などを審査します。
 
-<div class="note">
-  <p><strong>メモ</strong></p>
-  <p><strong>{{ book.DevConsole.ExtensionPage }}</strong>に表示される一部の情報には、登録されている<a href="/DevConsole/Guides/CEK/Register_Extension.md#InputExtensionInfo">Extensionの基本情報</a>が使用されます。</p>
-</div>
-
-## プライバシーポリシーおよびコンプライアンス情報を入力する {#InputComplianceInfo}
-
-Extensionの配布に必要な情報を入力する最後の段階です。プライバシーポリシーおよびコンプライアンス関連の情報を入力します。Extensionの登録メニューで **{{ book.DevConsole.cek_privacy }}** を選択します。
-
-![](/DevConsole/Resources/Images/DevConsole-Policy_Menu.png)
-
-以下のように情報を入力します。
-
-![](/DevConsole/Resources/Images/DevConsole-Input_Policy.png)
-
-* **{{ book.DevConsole.cek_allow_purchase }}**：Extensionを使用する際、ユーザーが決済をしたり支払いをする場面がある場合、**{{ book.DevConsole.cek_yes }}** を選択します。
-* **{{ book.DevConsole.cek_use_personal_info }}**：Extensionがユーザーの個人情報を取得する場合、**{{ book.DevConsole.cek_yes }}** を選択します。
-* **{{ book.DevConsole.cek_privacy_policy_url }}**：Extensionが個人情報を取得する場合、それに関するプライバシーポリシーを提供するページを入力します。Extension説明ページの一番下に表示されます。
-* **{{ book.DevConsole.cek_terms_of_use }}**：Extensionに関する免責条項を提供するページを入力します。プライバシーポリシーのURLと同じく、Extension説明ページの一番下に表示されます。
-
-**{{ book.DevConsole.cek_privacy_policy_url }}** と **{{ book.DevConsole.cek_terms_of_use }}** に入力された内容は、**{{ book.DevConsole.ExtensionPage }}** で次のように表示されます。
-
-![](/DevConsole/Resources/Images/DevConsole-Store_UI_Example-Extension_Policy.png)
-
-## 審査をリクエストする {#RequestExtensionSubmission}
-
-Extensionの[配布情報](#InputDeploymentInfo)と[プライバシーポリシーおよびコンプライアンス情報](#InputComplianceInfo)まで入力すると、登録したExtensionの審査をリクエストできます。Clova事務局は、登録されたExtensionの情報、実際の動作確認と適合性などを審査します。
-
-Extensionの審査をリクエストするには、登録したExtensionのリストで **{{ book.DevConsole.cek_request_submit }}** メニューをクリックします。
+Extensionの審査をリクエストするには、左のメニューから **{{ book.DevConsole.cek_review_step_submit}}** を選択します。
 
 ![](/DevConsole/Resources/Images/DevConsole-Submit_Extension_1.png)
 
-または[プライバシーポリシーおよびコンプライアンス情報](#InputComplianceInfo)を入力する画面の一番下にある **{{ book.DevConsole.cek_request_submit }}** ボタンをクリックして、リクエストすることもできます。
-
-![](/DevConsole/Resources/Images/DevConsole-Submit_Extension_2.png)
-
-**{{ book.DevConsole.cek_request_submit }}** をクリックすると、以下のように審査のリクエストに関する情報をClova事務局に送信できます。
-
-![](/DevConsole/Resources/Images/DevConsole-Submission_Request_Message.png)
+**{{ book.DevConsole.cek_request_submit_info }}** を入力し、注意事項のチェックボックスにチェックを入れて、**{{ book.DevConsole.cek_request_submit }}** ボタンをクリックすると審査申請が完了します。
 
 <div class="danger">
   <p><strong>注意</strong></p>
-  <p>審査中には、Extensionの情報と対話モデルを修正できません。</p>
+  <p>審査中には、情報の修正はできません。</p>
 </div>
 
-スキル審査は、スキルストアへ反映する前に、Clova事務局にて実施します。もし、[ユーザーアカウントの連携](/CEK/Guides/Link_User_Account.md)が必要なサービスの場合は、[配布情報を入力](#InputDeploymentInfo)する際に、テスト用のアカウント名およびパスワードを **{{ book.DevConsole.cek_test_instructions }}** 欄に入力していただく必要があります。
+スキル審査は、スキルストアへ反映する前に、Clova事務局にて実施します。もし、[ユーザーアカウントの連携](/CEK/Guides/Link_User_Account.md)が必要なサービスの場合は、[配布情報を入力](#InputReviewInfo)する際に、テスト用のアカウント名およびパスワードを **{{ book.DevConsole.cek_test_instructions }}** 欄に入力していただく必要があります。
 
 Extensionを審査する際に確認する評価項目は次のとおりです。
 

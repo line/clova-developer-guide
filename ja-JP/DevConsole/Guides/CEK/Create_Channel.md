@@ -8,16 +8,22 @@ Clova Developer Center βで[Extensionを登録](/DevConsole/Guides/CEK/Register
 ## Clova Developer Center βにログインする {#LoginClovaDevCenter}
 Clova Developer Center βにログインします。
 
-1. LINEアカウントへのログインに利用しているメールアドレスとパスワードを用いて、[Clova Developer Center β](https://clova-developers.line.biz/)にログインします。  
+1. [Clova Developer Center β](https://clova-developers.line.biz/)ホーム画面の **ログイン** をクリックします。  
+![](/DevConsole/Resources/Images/DevConsole-Console_Login.png)
+
+2. アカウントの選択画面が表示されたら、**LINEアカウントでログイン** をクリックします。  
 ![](/DevConsole/Resources/Images/DevConsole-LINE_Login.png)
 
-2. 同意画面が表示されたら、**同意する** をクリックします（初回ログイン時のみ）。  
+3. LINEアカウントへのログインに利用しているメールアドレスとパスワードを入力し、**ログイン** をクリックします。  
+![](/DevConsole/Resources/Images/DevConsole-LINE_Login_2.png)
+
+4. 同意画面が表示されたら、**同意する** をクリックします（初回ログイン時のみ）。  
 ![](/DevConsole/Resources/Images/DevConsole-Access_Agreement.png)
 
-3. **スキル設定** または **スキルを開発する** をクリックします。  
+5. **スキル設定** または **スキルを開発する** をクリックします。  
 ![](/DevConsole/Resources/Images/DevConsole-Entering_CEK_Menu.png)
 
-4. **LINE Developersでスキルチャネルを新規作成** をクリックします。  
+6. **LINE Developersでスキルチャネルを新規作成** をクリックします。  
 ![](/DevConsole/Resources/Images/DevConsole-First_Look_of_Extension_List.png)
 
 <div class="note">
@@ -37,11 +43,10 @@ LINE Developersコンソールでチャネルを作成します。
 </div>
 
 1. 新規チャネル作成画面で、プロバイダーを選択します。あらかじめ作成したプロバイダーを使用する場合は、当該のプロバイダーをラジオボタンで選択し、**次のページ** をクリックします。  
-![](/DevConsole/Resources/Images/DevConsole-Create_Channel_1.png)
+  ![](/DevConsole/Resources/Images/DevConsole-Create_Channel_1.png)  
+  新規にプロバイダーを作成する場合は、ラジオボタンで **新規プロバイダー作成** を選択すると入力フォームが表示されます。新しく追加するプロバイダー名を入力して **次のページ**  をクリックします。
 
-  新規にプロバイダーを作成する場合は、ラジオボタンで **新規プロバイダー作成** を選択すると入力フォームが表示されます。新しく追加するプロバイダー名を入力して **次のページ**  をクリックします。  
-![](/DevConsole/Resources/Images/DevConsole-Create_Channel_2.png)
-
+  ![](/DevConsole/Resources/Images/DevConsole-Create_Channel_2.png)  
   <div class="note">
       <p><strong>メモ</strong></p>
       <p>プロバイダーとは、スキルを提供する組織のことです。

@@ -8,7 +8,7 @@ Clova Home ExtensionがCEKにエラーを返す際に使用されるインター
 
 | メッセージ            | タイプ         | 説明                                |
 | --------------------- | -------------- | ----------------------------------- |
-| [`ActionTemporarilyBlockedError`](#ActionTemporarilyBlockedError) | Error Response | リクエストが短時間に複数回行われた際など、機器およびユーザ安全のためリクエストをキャンセルした場合、CEKにこのメッセージをレスポンスをとして返します。 |
+| [`ActionTemporarilyBlockedError`](#ActionTemporarilyBlockedError) | Error Response | リクエストが短時間に複数回行われた際など、機器およびユーザー安全のためリクエストをキャンセルした場合、CEKにこのメッセージをレスポンスをとして返します。 |
 | [`ConditionsNotMetError`](#ConditionsNotMetError)  | Error Response | エンドポイントが動作するための特定の条件(ステータス)が満たされていない場合、CEKにこのメッセージをレスポンスとして返します。 |
 | [`DeviceFailureError`](#DeviceFailureError) | Error Response | エンドポイントに障害が発生した場合、CEKにこのメッセージをレスポンスとして返します。 |
 | [`DriverInternalError`](#DriverInternalError) | Error Response | 内部エラーが発生した場合、CEKにこのメッセージをレスポンスとして返します。 |
@@ -28,7 +28,7 @@ Clova Home ExtensionがCEKにエラーを返す際に使用されるインター
 </div>
 
 ## ActionTemporarilyBlockedError {#ActionTemporarilyBlockedError}
-リクエストが短時間に複数回行われた際など、機器およびユーザ安全のためリクエストをキャンセルした場合、CEKにこのメッセージをレスポンスをとして返します。CEKはこのメッセージを受け取ると、あらかじめ用意されたエラーメッセージをクライアントに送信します。
+リクエストが短時間に複数回行われた際など、機器およびユーザー安全のためリクエストをキャンセルした場合、CEKにこのメッセージをレスポンスをとして返します。CEKはこのメッセージを受け取ると、あらかじめ用意されたエラーメッセージをクライアントに送信します。
 
 ### Payload fields
 

@@ -51,7 +51,7 @@ Extensionの設計は、まず最初にExtensionの目標を設定すること�
 
 <div class="note">
   <p><strong>メモ</strong></p>
-  <p>こうして作成された目標は、<a href="#MakeUseCaseScenarioScript">ユーザーシナリオのスクリプトを作成</a>する時や、<a href="#DefineInteractionModel">対話モデル</a>を定義する際の基盤情報となります。また、<a href="/DevConsole/Guides/CEK/Deploy_Extension.md#InputDeploymentInfo">Extensionを配布</a>する際にその情報を登録する必要があります。その情報に基づいて、Extensionが正しく動作するか<a href="/DevConsole/Guides/CEK/Deploy_Extension.md#RequestExtensionSubmission">審査</a>を受けることになります。</p>
+  <p>こうして作成された目標は、<a href="#MakeUseCaseScenarioScript">ユーザーシナリオのスクリプトを作成</a>する時や、<a href="#DefineInteractionModel">対話モデル</a>を定義する際の基盤情報となります。また、<a href="/DevConsole/Guides/CEK/Deploy_Extension.md#InputReviewInfo">Extensionを配布</a>する際にその情報を登録する必要があります。その情報に基づいて、Extensionが正しく動作するか<a href="/DevConsole/Guides/CEK/Deploy_Extension.md#RequestExtensionSubmission">審査</a>を受けることになります。</p>
 </div>
 
 ## ユーザーシナリオスクリプトを作成する {#MakeUseCaseScenarioScript}
@@ -182,16 +182,16 @@ Clovaの機能に影響があるフレーズを含めることはできません
 
 #### 音声認識結果を確認する {#CheckUserUtterance}
 
-呼び出し名（サブ）を定義する際は、対話モデルのテストの[発話履歴](/DevConsole/Guides/CEK/Device_Test_Extension.md)機能を利用して、次のようなパターンでClovaデバイスに呼びかけた場合の音声認識結果を確認します。
+呼び出し名（サブ）を定義する際は、対話モデルのテストの[発話履歴](/DevConsole/Guides/CEK/Test_Extension.md#DeviceTest)機能を利用して、次のようなパターンでClovaデバイスに呼びかけた場合の音声認識結果を確認します。
 
 * 「ねぇClova、<呼び出し名>を起動して」
 * 「ねぇClova、<呼び出し名>を開いて」
 * 「ねぇClova、<呼び出し名>につないで」
 * 「ねぇClova、<呼び出し名>」
 
-発話テストを複数回繰り返し、その中で多かった認識結果から<呼び出し名>にあたる部分の表記を抜き出して[Extensionの基本情報](/DevConsole/Guides/CEK/Register_Extension.md#InputExtensionInfo)の呼び出し名（サブ）に入力します。
+発話テストを複数回繰り返し、その中で多かった認識結果から<呼び出し名>にあたる部分の表記を抜き出して[Extensionの基本情報](/DevConsole/Guides/CEK/Register_Extension.md#InputSkillInfo)の呼び出し名（サブ）に入力します。
 
-Clovaデバイスの実機を使用して発話履歴（音声認識の結果）を確認する手順については、[Clovaデバイスでテストする](/DevConsole/Guides/CEK/Device_Test_Extension.md)を参照してください。
+Clovaデバイスの実機を使用して発話履歴（音声認識の結果）を確認する手順については、[Clovaデバイスでテストする](/DevConsole/Guides/CEK/Test_Extension.md#DeviceTest)を参照してください。
 
 <div class="note">
   <p><strong>メモ</strong></p>
@@ -288,7 +288,7 @@ Clovaデバイスの実機を使用して発話履歴（音声認識の結果）
 
 上記のようにスロットタイプを定義したら、次はそれぞれのインテントで使用するスロットの名前を定義し、そのスロットがどんなスロットタイプを持つか宣言する必要があります。例えば、「OrderPizza」インテントは、ピザの種類に関する情報のために「pizzaType」、ピザの数量に関する情報のために「pizzaAmount」というスロットを宣言し、スロットごとにあらかじめ定義した「PIZZA_TYPE」のカスタムスロットタイプと、すでに提供されている「CLOVA.NUMBER」のビルトインスロットタイプを指定することができます。
 
-現在、同義語の登録数の上限は、1つのスロットタイプ毎に代表語と同義語を合わせて20万件となっています。詳細については[カスタムスロットタイプを追加する](/DevConsole/Guides/CEK/Register_Interaction_Model.md#AddCustomSlotType)を参照してください。
+現在、同義語の登録数の上限は、1つのスロットタイプ毎に代表語と同義語を合わせて20万件となっています。詳細については[カスタムスロットタイプを追加する](/DevConsole/Guides/CEK/Register_Extension.md#AddCustomSlotType)を参照してください。
 
 ### サンプル発話 {#UtteranceExample}
 インテントを定義する際、様々なサンプル発話を列挙することができます。サンプル発話は、Clovaが同じ意図を持つ様々な言い方を認識するにあたって必要な基本データであり、ユーザーの発話のうち、スロットに該当する情報を把握する際に利用されます。サンプル発話を適切に入力しておくと、ユーザーの意図を正しく認識する対話モデルを作成することができます。サンプル発話は、可能な限り次の事項に従って作成することを強くお勧めします。
@@ -361,7 +361,7 @@ BBQピザ1つ出前取ってくれる?
 </div>
 
 
-[Clova Developer Center](/DevConsole/ClovaDevConsole_Overview.md)で[対話モデルを登録](/DevConsole/Guides/CEK/Register_Interaction_Model.md)すると、[登録されたCustom Extension](/DevConsole/Guides/CEK/Register_Extension.md)が次のようなJSONメッセージを受信します。
+[Clova Developer Center](/DevConsole/ClovaDevConsole_Overview.md)で[対話モデルを登録](/DevConsole/Guides/CEK/Register_Extension.md#RegisterInteractionModel)すると、[登録されたCustom Extension](/DevConsole/Guides/CEK/Register_Extension.md)が次のようなJSONメッセージを受信します。
 
 {% raw %}
 
@@ -548,7 +548,7 @@ Extensionでオーディオコンテンツを提供する場合、必ずClovaで
 #### 1. スキルの完全性 {#SkillCompleteness}
 
 * サーバーの保守が必要であるなどやむを得ない場合を除き、ユーザーのリクエストに対して正常に応答できないもの。
-* 基本情報（[基本設定](/DevConsole/Guides/CEK/Register_Extension.md#InputExtensionInfo)や[サーバー設定](/DevConsole/Guides/CEK/Register_Extension.md#SetServerConnection)、[配布情報](/DevConsole/Guides/CEK/Deploy_Extension.md#InputDeploymentInfo)等）に正しい情報が登録されていない、または、情報が不足しているもの。  
+* 基本情報（[基本設定](/DevConsole/Guides/CEK/Register_Extension.md#InputSkillInfo)や[サーバー設定](/DevConsole/Guides/CEK/Register_Extension.md#SetServerConnection)、[審査情報](/DevConsole/Guides/CEK/Deploy_Extension.md#InputReviewInfo)等）に正しい情報が登録されていない、または、情報が不足しているもの。  
 なお、情報は常に最新の状態になるように努める必要があります。
 * 発話がうまく認識できない、または明らかな技術上の問題があるもの。
 * サーバー連携やアカウント連携など、Clova事務局が指定するセキュリティ要件や技術要件を満たしていないもの。

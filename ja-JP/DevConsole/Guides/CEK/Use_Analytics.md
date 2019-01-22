@@ -21,13 +21,13 @@ Clova Analyticsは、Clova Developer Center βにログインした状態で<a h
 
 ### Move to
 
-画面右上の **Move To** ドロップダウンリストで表示するスキルを切り替えることができます。スキル設定画面に戻ってスキルを選択し直す必要はありません。
+**Move To** ドロップダウンリストで表示するスキルを切り替えることができます。スキル設定画面に戻ってスキルを選択し直す必要はありません。
 
 ![](/DevConsole/Resources/Images/DevConsole-Analytics_Select_Extension.png)
 
 ### 表示期間
 
-画面左上の **表示期間** ドロップダウンリストで、表示する集計期間を選択します。ここでは各表示期間の詳細について説明します。  
+**表示期間** ドロップダウンリストで、表示する集計期間を選択します。ここでは各表示期間の詳細について説明します。  
 ※ サマリー画面に本機能はありません。
 
 ![](/DevConsole/Resources/Images/DevConsole-Analytics_Select_Inquiry_Period.png)  
@@ -51,7 +51,7 @@ Clova Analyticsは、Clova Developer Center βにログインした状態で<a h
 
 ### 時間単位
 
-画面右上のボタンで、グラフに表示する単位を「日」「時間」で切り替えることができます。  
+グラフに表示する単位を「日」「時間」で切り替えることができます。  
 ※ サマリー画面に本機能はありません。
 
 ![](/DevConsole/Resources/Images/DevConsole-Analytics_Select_Time_Unit_Day.png)  ![](/DevConsole/Resources/Images/DevConsole-Analytics_Select_Time_Unit_Hour.png)

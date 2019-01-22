@@ -11,7 +11,7 @@ CEKは次の機能を提供します。
 * ClovaとExtension間のインターフェース
 
 ## CEKの仕組み {#CEKInteractionStructure}
-Clovaは、CICから入力されたユーザーの発話を認識し、CEKを介して、あらかじめ[登録された対話モデル](/DevConsole/Guides/CEK/Register_Interaction_Model.md)を参照してユーザーの発話を解析します。CEKは解析されたユーザーの発話をExtensionに渡し、Extensionはユーザーリクエストの処理結果をレスポンスとして返す必要があります。その際、すでに定義されたメッセージフォーマットに合わせてメッセージのやり取りをします。CEKとExtensionは<a href="https://tools.ietf.org/html/rfc2616" target="_blank">HTTP/1.1</a>で通信します。
+Clovaは、CICから入力されたユーザーの発話を認識し、CEKを介して、あらかじめ[登録された対話モデル](/DevConsole/Guides/CEK/Register_Extension.md#RegisterInteractionModel)を参照してユーザーの発話を解析します。CEKは解析されたユーザーの発話をExtensionに渡し、Extensionはユーザーリクエストの処理結果をレスポンスとして返す必要があります。その際、すでに定義されたメッセージフォーマットに合わせてメッセージのやり取りをします。CEKとExtensionは<a href="https://tools.ietf.org/html/rfc2616" target="_blank">HTTP/1.1</a>で通信します。
 
 ClovaプラットフォームとExtensionのデータフローは以下のようになります。
 
