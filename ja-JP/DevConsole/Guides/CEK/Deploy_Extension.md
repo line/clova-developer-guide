@@ -25,7 +25,7 @@ Extensionの配布は、通常、次の順で行われます。
   <li>{{ book.DevConsole.cek_provider_type }}で<strong>{{ book.DevConsole.cek_provider_corporation }}</strong>を選んだ場合は、<strong>本社所在地</strong>、<strong>代表電話番号</strong>、<strong>代表者名</strong>、<strong>企業サイト</strong>項目を入力してください。こちらは審査に必要な情報であり、{{ book.DevConsole.ManageExtensions }}には表示されません。</li>
   <li><strong>{{ book.DevConsole.cek_line_bot_mid }}</strong>：<a href="https://clova-developers.line.biz/guide/CEK/Guides/Link_Messaging_API.md" target="_blank">Custom ExtensionとLINEの連携</a>を行う場合に、スキルと連動するLINEのアカウントを選択してください。ここで選択したLINEアカウントを友だち追加できるリンクがスキルストアに追加されます。</li>
   <li><strong>{{ book.DevConsole.cek_test_instructions }}</strong>：<a href="https://clova-developers.line.biz/guide/DevConsole/Guides/CEK/Deploy_Extension.md#RequestExtensionSubmission" target="_blank">Extensionの審査</a>プロセスでClova事務局がExtensionを確認する際、必要とされる参考情報です。{{ book.DevConsole.ManageExtensions }}には表示されません。案内に従って作成します。</li>
-  <li>入力が完了したら<strong>{{ book.DevConsole.cek_save }}</strong>ボタンをクリックします。</li>
+  <li>**{{ book.DevConsole.cek_save }}** ボタンをクリックして、入力した内容を保存します。**{{ book.DevConsole.cek_next }}** をクリックすると、{{ book.DevConsole.cek_review_step_submit}}画面に遷移します。</li>
 </ol>
 
 

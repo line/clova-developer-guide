@@ -9,11 +9,6 @@ Custom Extensionで、ユーザーに音楽やポッドキャストなどのオ�
   * [再生状態の変更および進行状況のレポートを収集する](#CollectPlaybackStatusAndProgress)
   * [セキュリティのためにオーディオコンテンツのURLを更新する](#UpdateAudioURLForSecurity)
 
-<div class="danger">
-  <p><strong>注意</strong></p>
-  <p>オーディオコンテンツの再生に対応していないClovaデバイスがあります。現時点ではXperia Ear Duoではオーディオコンテンツに対応していません。</p>
-</div>
-
 ### オーディオコンテンツの再生を指示する {#DirectClientToPlayAudio}
 
 ユーザーから音楽や、または音楽のような形でオーディオコンテンツの再生をリクエストされたとき、そのオーディオコンテンツの情報を渡す必要があります。ユーザーからのオーディオコンテンツ再生のリクエストが[`IntentRequest`](/CEK/References/CEK_API.md#CustomExtIntentRequest)タイプのリクエストでCustom Extensionに渡され、Custom Extensionはその`IntentRequest`タイプのリクエストメッセージに対する[レスポンスメッセージ](/CEK/References/CEK_API.md#CustomExtResponseMessage)を返す必要があります。そのとき、そのメッセージにクライアントがオーディオコンテンツを再生するように指示する[`AudioPlayer.Play`](/CEK/References/CEK_API.md#Play)ディレクティブを含めます。

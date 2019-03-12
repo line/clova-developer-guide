@@ -34,9 +34,8 @@ $ curl "https://example.com/pizzabot" -X POST
     </div>
   </li>
   <li>ExtensionがAudioPlayerを使用する場合は、<strong>{{ book.DevConsole.cek_audioplayer }}</strong>項目で<strong>{{ book.DevConsole.cek_yes }}</strong>を選択を選択します。</li>
-  <li>入力が完了したら<strong>{{ book.DevConsole.cek_save }}</strong>ボタンをクリックします。</li>
+  <li><strong>{{ book.DevConsole.cek_save }}</strong>ボタンをクリックして、入力した内容を保存します。<strong>{{ book.DevConsole.cek_next }}</strong>をクリックすると、{{ book.DevConsole.cek_dev_accountlinking }}の設定画面に遷移します。</li>
 </ol>
-
 
 ### アカウント連携を設定する {#SetAccountLinking}
 
@@ -65,7 +64,7 @@ Extensionが提供するサービスのアカウントが、Clovaのユーザー
       <li><strong>Credentials in request body</strong>：サービスのアクセストークンを取得するため、資格情報がボディーに入力される場合</li>
     </ul>
   </li>
-  <li>入力が完了したら<strong>{{ book.DevConsole.cek_save }}</strong>ボタンをクリックします。</li>
+  <li><strong>{{ book.DevConsole.cek_save }}</strong>ボタンをクリックして、入力した内容を保存します。<strong>{{ book.DevConsole.cek_next }}</strong>をクリックすると、{{ book.DevConsole.cek_user_configuration }}画面に遷移します。</li>
 </ol>
 
 <div id="RedirectURI" class="note">

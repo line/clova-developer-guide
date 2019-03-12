@@ -7,10 +7,11 @@
 ### 新規のカスタムインテントを作成する
 ここでは、サイコロを振れというリクエストに対し、1つのサイコロを振る、簡単なインテントを作成します。
 
-1. サンプルサイコロの**{{ book.DevConsole.cek_interaction_model }}**項目の**{{ book.DevConsole.cek_edit }}**ボタンをクリックします。
-2. **{{ book.DevConsole.cek_builder_list_title_intent }}**の右側にある<img class="inlineImage" src="/CEK/Resources/Images/DevConsole_Plus_Button.png" />ボタンをクリックします。
-3. **{{ book.DevConsole.cek_builder_new_intent }}**の下の入力ウィンドウに「ThrowDiceIntent」と名前を入力します。
-4.Enterキーを押すか、または入力ウィンドウの右側にある**{{ book.DevConsole.cek_builder_new_intent_create }}**ボタンをクリックします。
+1. 設定画面の左メニューから、**{{ book.DevConsole.cek_interaction_model }}** を選択します。
+2. **{{ book.DevConsole.cek_edit_interaction_model }}** ボタンをクリックし、**{{ book.DevConsole.cek_builder_header_title_interaction_model }}：{{ book.DevConsole.cek_builder_header_title_dashboard }}** 画面を表示します。
+3. **{{ book.DevConsole.cek_builder_list_title_intent }}**の右側にある<img class="inlineImage" src="/CEK/Resources/Images/DevConsole_Plus_Button.png" />ボタンをクリックします。
+4. **{{ book.DevConsole.cek_builder_new_intent }}**の下の入力ウィンドウに「ThrowDiceIntent」と名前を入力します。
+5. Enterキーを押すか、または入力ウィンドウの右側にある**{{ book.DevConsole.cek_builder_new_intent_create }}**ボタンをクリックします。
 
 	<img src="/CEK/Resources/Images/CEK_Tutorial_NewIntent.png" style=" max-width:800px;" />
 
@@ -30,7 +31,7 @@
 ### ビルドおよびテストする
 対話モデルが入力された通りに動作するか確認するために、対話モデルをビルドしてテストします。
 
-1. **Custom Extension**画面の左上にある**{{ book.DevConsole.cek_builder_menu_build}}**ボタンをクリックします。
+1. **{{ book.DevConsole.cek_builder_header_title_interaction_model }}：{{ book.DevConsole.cek_builder_header_title_dashboard }}** 画面の左上にある**{{ book.DevConsole.cek_builder_menu_build}}**ボタンをクリックします。
 
 	<div class="note">
 		<p><strong>メモ</strong></p>

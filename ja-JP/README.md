@@ -25,6 +25,14 @@ Clovaの質問には`Clova`や`CEK`のタグをご利用ください。
   </thead>
   <tbody>
   <tr>
+    <td>v3.0.1</td><td>2019/01/24</td>
+    <td>
+      <ul>
+        <li>Xperia Ear DuoのAudioPlayer対応開始</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
     <td>v3.0.0</td><td>2019/01/22</td>
     <td>
       <ul>

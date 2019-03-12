@@ -60,7 +60,7 @@ CEKは、Clovaが解析したユーザーのリクエストをCustom Extension�
 | `context.AudioPlayer` | object   | クライアントが現在再生しているか、最後に再生したメディアの情報を持っているオブジェクト | Optional |
 | `context.AudioPlayer.offsetInMilliseconds` | number   | 最近再生したメディアの最後の再生ポイント(offset)。単位はミリ秒であり、`playerActivity`の値が`"IDLE"`の場合、このフィールドは空の場合があります。 | Optional |
 | `context.AudioPlayer.playerActivity` | string   | プレイヤーの状態を示す値。次のような値を持ちます。<ul><li><code>"IDLE"</code>：非アクティブ状態</li><li><code>"PLAYING"</code>：再生中</li><li><code>"PAUSED"</code>：一時停止状態</li><li><code>"STOPPED"</code>：中止状態</li></ul> | <!-- --> |
-| `context.AudioPlayer.stream` | AudioStreamInfoObject(準備中) | 再生中のオーディオの詳細情報を保存したオブジェクト。`playerActivity`の値が`"IDLE"`の場合、このフィールドが空であることがあります。 | Optional |
+| `context.AudioPlayer.stream` | AudioStreamInfoObject | 再生中のオーディオの詳細情報を保存したオブジェクト。`playerActivity`の値が`"IDLE"`の場合、このフィールドが空であることがあります。 | Optional |
 | `context.AudioPlayer.totalInMilliseconds` | number   | 最近再生したオーディオの全体の長さ。単位はミリ秒で、`playerActivity`の値が`"IDLE"`の場合、このフィールドが空であることがあります。 | Optional |
 | `context.System` | object   | クライアントシステムのコンテキスト情報を持っているオブジェクト | <!-- --> |
 | `context.System.application` | object   | ユーザーの意図によって実行されるExtensionの情報を持っているオブジェクト | <!-- --> |
@@ -270,7 +270,7 @@ CEKは、Clovaが解析したユーザーのリクエストをCustom Extension�
 
 #### 次の項目も参照してください。
 * [Custom Extensionリクエストを処理する](/CEK/Guides/Build_Custom_Extension.md#HandleCustomExtensionRequest)
-* AudioStreamInfoObject(準備中)
+* [AudioStreamInfoObject](#AudioStreamInfoObject)
 
 ### リクエストタイプ {#CustomExtRequestType}
 リクエストメッセージは、次の4つのタイプがあります。リクエストのタイプによって、リクエストメッセージの`request`オブジェクトのフィールドの構成が異なります。
@@ -1499,8 +1499,3 @@ CIC APIは、ユーザーのクライアントデバイスがClovaと通信を�
 * [`AudioPlayer.Play`](#Play)
 * [`AudioPlayer.StreamDeliver`](#StreamDeliver)
 * [`AudioPlayer.StreamRequested`](#StreamRequested)
-
-<div class="danger">
-  <p><strong>注意</strong></p>
-  <p>オーディオコンテンツの再生に対応していないClovaデバイスがあります。現時点ではXperia Ear Duoではオーディオコンテンツに対応していません。</p>
-</div>
