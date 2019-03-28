@@ -17,7 +17,7 @@ Custom ExtensionとLINEの連携を実施するには、以下の条件を満た
   LINE@の場合は、[LINE@マネージャー](https://admin-official.line.me/)の アカウント設定 > **Messaging API設定** の画面で、以下のように設定されているかを確認します。  
   - **webhookを送信** → 利用する
   - **自動応答メッセージ** → 利用しない  
-  ![](/CEK/Resources/Images/CEK_Messaging_API_LineManager.png)
+  ![](/CEK/Assets/Images/CEK_Messaging_API_LineManager.png)
 
   設定方法については、こちらのドキュメントもご確認ください。  
   [LINE Developers ドキュメント > Messaging API > ボットを作成する](https://developers.line.biz/ja/docs/messaging-api/building-bot/)

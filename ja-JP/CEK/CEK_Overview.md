@@ -4,7 +4,7 @@
 ## CEKとは? {#WhatisCEK}
 CEKは、Clova Extension(以下、Extension)を開発および配布する際に必要なツールとインターフェースを提供するプラットフォームです。ClovaプラットフォームとExtension間のデータの送受信をサポートします。Extensionは、音楽、ショッピングなどの外部のサービス(サードパーティサービス)、または家庭のIoTデバイスの制御など、Clovaの機能を拡張して、ユーザーに様々な体験を提供するWebアプリケーションです。
 
-![](/CEK/Resources/Images/CEK_Concept_Diagram.png)
+![](/CEK/Assets/Images/CEK_Concept_Diagram.png)
 
 CEKは次の機能を提供します。
 * [対話モデル](/Design/Design_Guideline_For_Extension.md#DefineInteractionModel)の管理([Clova Developer Center](/DevConsole/ClovaDevConsole_Overview.md)で使用可能)
@@ -15,7 +15,7 @@ Clovaは、CICから入力されたユーザーの発話を認識し、CEKを介
 
 ClovaプラットフォームとExtensionのデータフローは以下のようになります。
 
-![](/CEK/Resources/Images/CEK_Interaction_Structure.png)
+![](/CEK/Assets/Images/CEK_Interaction_Structure.png)
 
 
 ## Extensionの種類 {#ExtensionType}

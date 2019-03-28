@@ -5,7 +5,7 @@ Extensionの基本情報は、Clova Developer CenterでExtensionを作成する�
 
 次の順でExtensionの各項目を登録します。
 
-![](/DevConsole/Resources/Images/DevConsole-Create_New_Extension.png)
+![](/DevConsole/Assets/Images/DevConsole-Create_New_Extension.png)
 <ol>
   <li>次の項目を入力します。
     <ol>
@@ -19,10 +19,10 @@ Extensionの基本情報は、Clova Developer CenterでExtensionを作成する�
 </ol>
 
 Extensionの登録が完了すると、作成されたExtensionの情報を編集する画面に切り替わります。ページの下にある **{{ book.DevConsole.cek_save }}** ボタンをクリックして、入力中の内容を保存することができます。**{{ book.DevConsole.cek_next }}** をクリックすると、{{ book.DevConsole.cek_interaction_model }}の登録画面に遷移します。  
-![](/DevConsole/Resources/Images/DevConsole-Edit_Extension.png)
+![](/DevConsole/Assets/Images/DevConsole-Edit_Extension.png)
 
 またExtensionの登録が完了すると、CEKのメニューで、登録済みのExtensionのリストを確認することもできます。各Extensionの **管理** 項目の **編集** をクリックすると、**基本情報** の登録画面に遷移します。   
-![](/DevConsole/Resources/Images/DevConsole-Extension_List_After_Creation.png)
+![](/DevConsole/Assets/Images/DevConsole-Extension_List_After_Creation.png)
 
 <div class="note">
   <p><strong>メモ</strong></p>

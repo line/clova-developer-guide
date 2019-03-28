@@ -21,7 +21,7 @@ Clovaは、[Custom Extension](/CEK/Guides/Build_Custom_Extension.md)、または
 ### アカウント連携を設定する {#SetupAccountLinking}
 ユーザーがアカウント認証の必要なCustom ExtensionまたはClova Home Extensionをアクティブにすると、次のようにアカウント連携の設定が開始されます。
 
-![](/CEK/Resources/Images/CEK_Account_Linking_Setup_Sequence_Diagram.png)
+![](/CEK/Assets/Images/CEK_Account_Linking_Setup_Sequence_Diagram.png)
 
 1. ユーザーが特定のCustom ExtensionまたはClova Home Extensionを有効にします。
 

@@ -45,6 +45,7 @@ td .note {
   margin-bottom: 10px;
 }
 
+
 .midAlign {
     text-align: center;
 }
@@ -175,4 +176,18 @@ blockquote p.rdiag {
   color: #4a6785;
   background-color: #ffffff;
   border-color: #e4e8ed;
+}
+
+.soundLibrary table {
+  width: 100%;
+  table-layout: fixed;
+  background-color: #ffffff;
+}
+
+.soundLibrary audio {
+  width: 300px;
+}
+
+.soundLibrary td, .soundLibrary th {
+  overflow-wrap: break-word;
 }

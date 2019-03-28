@@ -11,15 +11,16 @@
 
 次の順で、サンプルサイコロExtensionがヘルプのリクエストを正しく処理するか確認します。
 1. <a href="{{ book.DeveloperConsoleURL }}" target="_blank">Clova Developer Center</a>に接続します。
-2. サンプルサイコロの**{{ book.DevConsole.cek_interaction_model }}**項目の**{{ book.DevConsole.cek_edit}}**ボタンをクリックします。
-3. 左側のメニューリストで**{{ book.DevConsole.cek_test }}**メニューをクリックします。
-4. **{{ book.DevConsole.cek_builder_test_expression_title }}**にヘルプをリクエストするフレーズを入力します。例えば、「使い方を教えて」と入力します。
-5. Enterキーを押すか、または**{{ book.DevConsole.cek_builder_test_request_test }}**ボタンをクリックします。
-6. **{{ book.DevConsole.cek_builder_test_result_title }}**の**{{ book.DevConsole.cek_builder_test_intent_result }}**項目に「Clova.GuideIntent」と表示されるか確認します。
+2. **スキル設定** または **スキルを開発する** をクリックし、登録済みのスキルのリストを表示します。
+3. サンプルサイコロの管理欄の **{{ book.DevConsole.cek_edit}}** ボタンをクリックします。
+4. 上部タブメニューで **{{ book.DevConsole.cek_builder_test_title }}** メニューをクリックします。
+5. テスト画面左下の入力フィールドに、ヘルプをリクエストするフレーズを入力します。例えば、「使い方を教えて」と入力します。
+6. Enterキーを押すか、または **{{ book.DevConsole.cek_builder_test_request_test }}** ボタンをクリックします。
+7. **{{ book.DevConsole.cek_builder_test_result_title }}** の **{{ book.DevConsole.cek_builder_test_intent_result }}** 項目に「Clova.GuideIntent」と表示されるか確認します。
 
-	<img src="/CEK/Resources/Images/CEK_Tutorial_Builtin_Intent_Test.png" style="max-width:800px;"/>
+	<img src="/CEK/Assets/Images/CEK_Tutorial_Builtin_Intent_Test.png" style="max-width:800px;"/>
 
   <div class="note">
     <p><strong>メモ</strong></p>
-    <p>外部からアクセスできるExtensionサーバーのURLを登録していない場合、<strong>{{ book.DevConsole.cek_builder_test_service_response }}</strong>は「応答がありません。(undefined)」と表示されます。</p>
+    <p>外部からアクセスできるExtensionサーバーのURLを登録していない場合、左側のチャットウィンドウ内に<strong>{{ book.DevConsole.cek_builder_test_service_response }}</strong>として<strong>"エラーが発生しました。詳細は[サービス応答]欄をご確認ください。"</strong>と表示されます。</p>
 	</div>

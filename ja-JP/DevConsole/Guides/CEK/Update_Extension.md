@@ -5,7 +5,7 @@ Extensionが審査を通過し、配布が承認されると、そのExtension�
 * **{{ book.DevConsole.cek_status_prd }}**：現在、**{{ book.DevConsole.cek_status_prd }}** 状態のExtensionの元の情報を持つバージョンです。Extension情報の照会のみできます。
 * **{{ book.DevConsole.cek_status_dev }}**：配布されたExtensionの元の情報をコピーして作成されたバージョンです。Extensionをアップデートする際に使用されます。
 
-![](/DevConsole/Resources/Images/DevConsole-Extension_List_After_Submission.png)
+![](/DevConsole/Assets/Images/DevConsole-Extension_List_After_Submission.png)
 
 **{{ book.DevConsole.cek_status_prd }}** バージョンのExtensionは、現在サービス中の内容を反映しているため、修正することができません。Extensionをアップデートするには、コピーされた **{{ book.DevConsole.cek_status_dev }}** バージョンを使用します。Extensionに次の項目に該当するアップデート事項がある場合、**{{ book.DevConsole.cek_status_dev }}** バージョンのExtensionに反映後、再び審査をリクエストします。
 * [基本情報](/DevConsole/Guides/CEK/Register_Extension.md#InputSkillInfo)
@@ -18,7 +18,7 @@ Extensionが審査を通過し、配布が承認されると、そのExtension�
 
 以下の図は、Clova Developer CenterでExtensionがアップデートされる仕組みを示します。
 
-![](/DevConsole/Resources/Images/DevConsole-Branch_Chart_For_Extension_Update.png)
+![](/DevConsole/Assets/Images/DevConsole-Branch_Chart_For_Extension_Update.png)
 
 現在サービス中の状態を"A"とした場合、開発者が修正するバージョンと、エンドユーザーに提供されるバージョンは次のようになります。
 

@@ -135,6 +135,8 @@
   * [Extensionをテストする](/DevConsole/Guides/CEK/Test_Extension.md)
     * [対話モデルをビルドする](/DevConsole/Guides/CEK/Test_Extension.md#BuildInteractionModel)
     * [対話モデルをテストする](/DevConsole/Guides/CEK/Test_Extension.md#TestInteractionModel)
+      * [対話モデルテストモード](/DevConsole/Guides/CEK/Test_Extension.md#InteractionModelTestMode)
+      * [シナリオテストモード](/DevConsole/Guides/CEK/Test_Extension.md#ScenarioTestMode)
     * [Clovaデバイスでテストする](/DevConsole/Guides/CEK/Test_Extension.md#DeviceTest)
   * [Extensionを配布する](/DevConsole/Guides/CEK/Deploy_Extension.md)
     * [審査情報を入力する](/DevConsole/Guides/CEK/Deploy_Extension.md#InputReviewInfo)
@@ -143,3 +145,12 @@
   * [Extensionをアップデートする](/DevConsole/Guides/CEK/Update_Extension.md)
   * [Extensionを中止および削除する](/DevConsole/Guides/CEK/Remove_Extension.md)
   * [Clova Analyticsを使用する](/DevConsole/Guides/CEK/Use_Analytics.md)
+
+## リソース
+
+* [Sound Library](/Resources/Sound_Library.md)
+  * [クイズ](/Resources/Sound_Library.md#Quiz)
+  * [演出](/Resources/Sound_Library.md#Dramatic)
+  * [効果音](/Resources/Sound_Library.md#Effect)
+  * [生活](/Resources/Sound_Library.md#Daily)
+  * [動物](/Resources/Sound_Library.md#Animal)

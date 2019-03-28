@@ -4,11 +4,11 @@ CEKがExtensionにユーザーのリクエストを送る際、ユーザーの�
 
 対話モデルを登録するには、左メニューの **{{ book.DevConsole.cek_interaction_model }}** をクリックします。
 
-![](/DevConsole/Resources/Images/DevConsole-Interaction_Model_Menu.png)
+![](/DevConsole/Assets/Images/DevConsole-Interaction_Model_Menu.png)
 
 **{{ book.DevConsole.cek_edit_interaction_model }}** ボタンをクリックすると、**{{ book.DevConsole.cek_builder_header_title_interaction_model }}：{{ book.DevConsole.cek_builder_header_title_dashboard }}** 画面が表示されます。
 
-![](/DevConsole/Resources/Images/DevConsole-Interaction_Model_Dashboard.png)
+![](/DevConsole/Assets/Images/DevConsole-Interaction_Model_Dashboard.png)
 
 Extensionを設計するための[対話モデル](/Design/Design_Guideline_For_Extension.md#DefineInteractionModel)は、次の順で登録していきます。
 
@@ -27,14 +27,14 @@ Extensionを設計するための[対話モデル](/Design/Design_Guideline_For_
 サービスを提供するExtensionがどの[ビルトインスロットタイプ](/Design/Design_Guideline_For_Extension.md#Slot)を使用するか決めたら、そのExtensionの対話モデルにビルトインスロットタイプを追加する必要があります。例えば、ピザの宅配Extensionを作成する場合、ユーザーの発話に、ピザの数量に関する情報の表現が含まれることが予想されます。従って、この場合は数量に関するビルトインスロットタイプを使用する必要があり、次の手順でExtensionに追加します。
 
 <ol>
-  <li><strong>{{ book.DevConsole.cek_builder_list_title_slottype }}</strong>パネル、または左側のサイドメニューの<strong>{{ book.DevConsole.cek_builder_list_title_slottype }}</strong>内にある<strong>{{ book.DevConsole.cek_builder_select_slottype_builtin }}</strong>の右に表示された<img class="inlineImage" src="/DevConsole/Resources/Images/DevConsole-Plus_Button.png" />ボタンをクリックします。</li>
+  <li><strong>{{ book.DevConsole.cek_builder_list_title_slottype }}</strong>パネル、または左側のサイドメニューの<strong>{{ book.DevConsole.cek_builder_list_title_slottype }}</strong>内にある<strong>{{ book.DevConsole.cek_builder_select_slottype_builtin }}</strong>の右に表示された<img class="inlineImage" src="/DevConsole/Assets/Images/DevConsole-Plus_Button.png" />ボタンをクリックします。</li>
   <li>必要なビルトインスロットタイプにチェックを入れ、右上の<strong>{{ book.DevConsole.cek_save }}</strong>ボタンをクリックします。</li>
-  <img src="/DevConsole/Resources/Images/DevConsole-Add_Built-in_Slot_Type.png" />
+  <img src="/DevConsole/Assets/Images/DevConsole-Add_Built-in_Slot_Type.png" />
 </ol>
 
 すると、**{{ book.DevConsole.cek_interaction_model }}：{{ book.DevConsole.cek_builder_header_title_dashboard }}** 画面の **{{ book.DevConsole.cek_builder_list_title_slottype }}** パネルに、次のようにビルトインスロットタイプが追加されたことを確認できます。
 
-![](/DevConsole/Resources/Images/DevConsole-Added_Built-in_Slot_Type.png)
+![](/DevConsole/Assets/Images/DevConsole-Added_Built-in_Slot_Type.png)
 
 ### カスタムスロットタイプを追加する {#AddCustomSlotType}
 
@@ -51,19 +51,19 @@ Extensionを設計するための[対話モデル](/Design/Design_Guideline_For_
 次の順でカスタムスロットタイプを追加します。
 
 <ol>
-  <li><strong>{{ book.DevConsole.cek_builder_list_title_slottype }}</strong>パネル、または左側のサイドメニューの<strong>{{ book.DevConsole.cek_builder_list_title_slottype }}</strong>内にある<strong>カスタムスロットタイプ</strong>の右に表示された<img class="inlineImage" src="/DevConsole/Resources/Images/DevConsole-Plus_Button.png" />ボタンをクリックします。</li>
+  <li><strong>{{ book.DevConsole.cek_builder_list_title_slottype }}</strong>パネル、または左側のサイドメニューの<strong>{{ book.DevConsole.cek_builder_list_title_slottype }}</strong>内にある<strong>カスタムスロットタイプ</strong>の右に表示された<img class="inlineImage" src="/DevConsole/Assets/Images/DevConsole-Plus_Button.png" />ボタンをクリックします。</li>
   <li><strong>{{ book.DevConsole.cek_builder_new_slottype_title }}</strong>の入力フィールドに、追加するカスタムスロットタイプの名前を入力し、<strong>{{ book.DevConsole.cek_create }}</strong>ボタンをクリックします。カスタムスロットタイプが生成されると、そのカスタムスロットタイプの詳細を確認できる画面が表示されます。</li>
-  <img src="/DevConsole/Resources/Images/DevConsole-Add_Custom_Slot_Type_1.png" />
-  <li><strong>{{ book.DevConsole.cek_builder_slottype_dictionary_title }}</strong>の入力フィールドに代表語を入力し、<img class="inlineImage" src="/DevConsole/Resources/Images/DevConsole-Plus_Button.png" />ボタンをクリックして代表語を追加します。</li>
-  <img src="/DevConsole/Resources/Images/DevConsole-Add_Custom_Slot_Type_2.png" />
+  <img src="/DevConsole/Assets/Images/DevConsole-Add_Custom_Slot_Type_1.png" />
+  <li><strong>{{ book.DevConsole.cek_builder_slottype_dictionary_title }}</strong>の入力フィールドに代表語を入力し、<img class="inlineImage" src="/DevConsole/Assets/Images/DevConsole-Plus_Button.png" />ボタンをクリックして代表語を追加します。</li>
+  <img src="/DevConsole/Assets/Images/DevConsole-Add_Custom_Slot_Type_2.png" />
   <li>追加した代表語に、同義語や類義語を追加します。</li>
-  <img src="/DevConsole/Resources/Images/DevConsole-Add_Custom_Slot_Type_3.png" />
+  <img src="/DevConsole/Assets/Images/DevConsole-Add_Custom_Slot_Type_3.png" />
   <li>最後に、右上の<strong>{{ book.DevConsole.cek_save }}</strong>ボタンをクリックします。</li>
 </ol>
 
 右の<strong>ダッシュボード</strong>メニューで**{{ book.DevConsole.cek_interaction_model }}：{{ book.DevConsole.cek_builder_header_title_dashboard }}** に移動すると、カスタムスロットタイプが追加されたことを確認できます。
 
-![](/DevConsole/Resources/Images/DevConsole-Added_Custom_Slot_Type.png)
+![](/DevConsole/Assets/Images/DevConsole-Added_Custom_Slot_Type.png)
 
 定義するカスタムスロットタイプに大量の情報を入力する必要がある場合、TSV(タブ区切りの値、.tsv)形式のファイルをアップロードすることもできます。TSVファイルの各行の1番目の値が代表語となります。それに続くタブ区切りの値は、その代表語の同義語または類義語になります。次は、「PIZZA_TYPE」というカスタムスロットタイプの定義を、TSV形式で表現したものです。
 
@@ -77,7 +77,7 @@ Extensionを設計するための[対話モデル](/Design/Design_Guideline_For_
 
 Clova Developer Centerには、以下のように **アップロード** ボタンと **ダウンロード** ボタンがあります。**アップロード** ボタンをクリックすると、あらかじめTSVファイルで定義したカスタムスロットタイプをアップロードできます。**ダウンロード** ボタンをクリックすると、現在作成中のカスタムスロットタイプをTSV形式でダウンロードできます。
 
-![](/DevConsole/Resources/Images/DevConsole-Custom_Slot_Upload_and_Download_Button.png)
+![](/DevConsole/Assets/Images/DevConsole-Custom_Slot_Upload_and_Download_Button.png)
 
 現在、1つのスロットタイプ毎に、代表語と同義語を合わせて20万件登録することが可能です。TSVファイルをアップロードする場合、登録できる件数は同様に20万件となります。
 
@@ -90,7 +90,7 @@ Clova Developer Centerには、以下のように **アップロード** ボタ�
 
 Clovaプラットフォームでは共通したユーザーリクエストのカテゴリを決め、それを共有して利用するために[ビルトインインテント](/Design/Design_Guideline_For_Extension.md#Intent)が提供されています。例えば、頻繁に発生すると予想されるユーザーの肯定・否定、キャンセルなどのリクエストを、インテントとしてあらかじめ定義したものです。すべてのExtensionは、Clovaの提供する全てのビルトインインテントに対応する必要があります。デフォルトで登録されているビルトインインテントは以下のとおりです。
 
-![](/DevConsole/Resources/Images/DevConsole-Built-in_Intent_List.png)
+![](/DevConsole/Assets/Images/DevConsole-Built-in_Intent_List.png)
 
 <div class="note">
   <p><strong>メモ</strong></p>
@@ -101,17 +101,17 @@ Clovaプラットフォームでは共通したユーザーリクエストのカ
 Extensionが使用する[ビルトインスロットタイプ](#AddBuiltinSlotType)と[カスタムスロットタイプ](#AddCustomSlotType)を追加したら、次はカスタムインテントを追加します。続けて、ピザを注文するユーザーのリクエストを仮定します。次の順で「OrderPizza」という名前のインテントを追加します。
 
 <ol>
-  <li><strong>{{ book.DevConsole.cek_builder_list_title_intent }}</strong>パネルか、左側のサイドメニューの<strong>{{ book.DevConsole.cek_builder_list_title_intent }}</strong>メニュー内の<strong>カスタムインテント</strong>の右に表示された<img class="inlineImage" src="/DevConsole/Resources/Images/DevConsole-Plus_Button.png" />ボタンをクリックします。</li>
+  <li><strong>{{ book.DevConsole.cek_builder_list_title_intent }}</strong>パネルか、左側のサイドメニューの<strong>{{ book.DevConsole.cek_builder_list_title_intent }}</strong>メニュー内の<strong>カスタムインテント</strong>の右に表示された<img class="inlineImage" src="/DevConsole/Assets/Images/DevConsole-Plus_Button.png" />ボタンをクリックします。</li>
   <li><strong>{{ book.DevConsole.cek_builder_new_intent }}</strong>の入力フィールドに、追加するカスタムインテントの名前を入力し、<strong>{{ book.DevConsole.cek_create }}</strong>ボタンをクリックします。カスタムインテントが生成されると、そのカスタムインテントの詳細を確認する画面が表示されます。</li>
-  <img src="/DevConsole/Resources/Images/DevConsole-Add_Custom_Intent_1.png" />
-  <li><strong>{{ book.DevConsole.cek_builder_intent_slot_title }}</strong>の入力フィールドに、追加するスロットの名前を入力し、右の<img class="inlineImage" src="/DevConsole/Resources/Images/DevConsole-Plus_Button.png" />ボタンをクリックしてスロットを追加します。</li>
-  <img src="/DevConsole/Resources/Images/DevConsole-Add_Custom_Intent_2.png" />
+  <img src="/DevConsole/Assets/Images/DevConsole-Add_Custom_Intent_1.png" />
+  <li><strong>{{ book.DevConsole.cek_builder_intent_slot_title }}</strong>の入力フィールドに、追加するスロットの名前を入力し、右の<img class="inlineImage" src="/DevConsole/Assets/Images/DevConsole-Plus_Button.png" />ボタンをクリックしてスロットを追加します。</li>
+  <img src="/DevConsole/Assets/Images/DevConsole-Add_Custom_Intent_2.png" />
   <li>スロットを追加し、そのスロットのタイプを指定します。</li>
-  <img src="/DevConsole/Resources/Images/DevConsole-Add_Custom_Intent_3.png" />
-  <li>次に、<strong>{{ book.DevConsole.cek_builder_intent_expression_title }}</strong>にサンプル発話を入力し、右の<img class="inlineImage" src="/DevConsole/Resources/Images/DevConsole-Plus_Button.png" />ボタンをクリックしてそのサンプル発話を追加します。</li>
-  <img src="/DevConsole/Resources/Images/DevConsole-Add_Custom_Intent_4.png" />
+  <img src="/DevConsole/Assets/Images/DevConsole-Add_Custom_Intent_3.png" />
+  <li>次に、<strong>{{ book.DevConsole.cek_builder_intent_expression_title }}</strong>にサンプル発話を入力し、右の<img class="inlineImage" src="/DevConsole/Assets/Images/DevConsole-Plus_Button.png" />ボタンをクリックしてそのサンプル発話を追加します。</li>
+  <img src="/DevConsole/Assets/Images/DevConsole-Add_Custom_Intent_4.png" />
   <li>追加したサンプル発話で、スロットとして処理される部分をドラッグしてスロットを指定します。</li>
-  <img src="/DevConsole/Resources/Images/DevConsole-Add_Custom_Intent_5.png" />
+  <img src="/DevConsole/Assets/Images/DevConsole-Add_Custom_Intent_5.png" />
   <li>ステップ5、6を繰り返して、インテントにサンプル発話を必要なだけ追加します。</li>
   <li>最後に、右上の<strong>{{ book.DevConsole.cek_save }}</strong>ボタンをクリックします。</li>
 </ol>
@@ -143,7 +143,7 @@ pizzaAmount	CLOVA.NUMBER
 
 Clova Developer Centerは、以下のように**アップロード**ボタンと**ダウンロード**ボタンが利用可能です。**アップロード** ボタンをクリックすると、あらかじめTSVファイルで定義したカスタムインテントをアップロードできます。**ダウンロード** ボタンをクリックすると、現在作成しているカスタムインテントをTSV形式でダウンロードできます。
 
-![](/DevConsole/Resources/Images/DevConsole-Utterance_Example_Upload_and_Download_Button.png)
+![](/DevConsole/Assets/Images/DevConsole-Utterance_Example_Upload_and_Download_Button.png)
 
 <div class="note">
   <p><strong>メモ</strong></p>
@@ -157,4 +157,4 @@ Clova Developer Centerは、以下のように**アップロード**ボタンと
 
 これまで、1つのインテントを対話モデルに追加する方法を説明しました。この方法を繰り返し、Extensionに必要なインテントを追加していくことで対話モデルが完成されます。
 
-![](/DevConsole/Resources/Images/DevConsole-Added_Interaction_Model.png)
+![](/DevConsole/Assets/Images/DevConsole-Added_Interaction_Model.png)

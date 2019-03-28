@@ -4,7 +4,7 @@ Clova Developer Center βには、スキルの利用状況を解析するため�
 
 Clova Analyticsは、Clova Developer Center βにログインした状態で<a href="https://clova-developers.line.biz/cek/#/list" target="_blank">スキル設定</a>画面を開き、各スキルの **統計** 欄に表示された **確認** をクリックすると表示されます。
 
-![](/DevConsole/Resources/Images/DevConsole-Analytics_Console_Home.png)
+![](/DevConsole/Assets/Images/DevConsole-Analytics_Console_Home.png)
 
 ここでは、画面の基本操作と、各解析項目について説明します。
 * [基本操作](#HowToOperate)
@@ -23,14 +23,14 @@ Clova Analyticsは、Clova Developer Center βにログインした状態で<a h
 
 **Move To** ドロップダウンリストで表示するスキルを切り替えることができます。スキル設定画面に戻ってスキルを選択し直す必要はありません。
 
-![](/DevConsole/Resources/Images/DevConsole-Analytics_Select_Extension.png)
+![](/DevConsole/Assets/Images/DevConsole-Analytics_Select_Extension.png)
 
 ### 表示期間
 
 **表示期間** ドロップダウンリストで、表示する集計期間を選択します。ここでは各表示期間の詳細について説明します。  
 ※ サマリー画面に本機能はありません。
 
-![](/DevConsole/Resources/Images/DevConsole-Analytics_Select_Inquiry_Period.png)  
+![](/DevConsole/Assets/Images/DevConsole-Analytics_Select_Inquiry_Period.png)  
 
 #### 前日
 前日の集計結果を表示します。
@@ -47,14 +47,14 @@ Clova Analyticsは、Clova Developer Center βにログインした状態で<a h
 #### カスタム
 表示期間の開始日と終了日を任意に指定します。表示できる期間は最大1年間です。日付はカレンダーで指定するか、**YYYY.MM.DD** の形式でフィールドに直接入力することが可能です。
 
-![](/DevConsole/Resources/Images/DevConsole-Analytics_Select_Inquiry_Period_Custom.png)  
+![](/DevConsole/Assets/Images/DevConsole-Analytics_Select_Inquiry_Period_Custom.png)  
 
 ### 時間単位
 
 グラフに表示する単位を「日」「時間」で切り替えることができます。  
 ※ サマリー画面に本機能はありません。
 
-![](/DevConsole/Resources/Images/DevConsole-Analytics_Select_Time_Unit_Day.png)  ![](/DevConsole/Resources/Images/DevConsole-Analytics_Select_Time_Unit_Hour.png)
+![](/DevConsole/Assets/Images/DevConsole-Analytics_Select_Time_Unit_Day.png)  ![](/DevConsole/Assets/Images/DevConsole-Analytics_Select_Time_Unit_Hour.png)
 
 <div class="note">
   <p><strong>メモ</strong></p>

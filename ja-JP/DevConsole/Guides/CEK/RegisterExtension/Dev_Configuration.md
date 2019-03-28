@@ -3,7 +3,7 @@
 Clova Developer Centerで[Extensionを登録](/DevConsole/Guides/CEK/Register_Extension.md)すると、サーバーやアカウント連携に関する設定が可能になります。
 左メニューから **{{ book.DevConsole.cek_dev_configuration }}** を選択してください。
 
-![](/DevConsole/Resources/Images/DevConsole-Dev_Config_Menu.png)
+![](/DevConsole/Assets/Images/DevConsole-Dev_Config_Menu.png)
 
 開発設定では次の項目を設定します。
 * [サーバー設定を行う](#SetServerConnection)
@@ -23,7 +23,7 @@ $ curl "https://example.com/pizzabot" -X POST
 
 次の順でサーバー設定を行います。
 
-![](/DevConsole/Resources/Images/DevConsole-Extension_Server_Settings.png)
+![](/DevConsole/Assets/Images/DevConsole-Extension_Server_Settings.png)
 
 <ol>
   <li><strong>{{ book.DevConsole.cek_configuration }}</strong>をクリックします。</li>
@@ -45,14 +45,14 @@ Extensionが提供するサービスのアカウントが、Clovaのユーザー
 
 <ol>
   <li><strong>{{ book.DevConsole.cek_dev_accountlinking }}</strong>をクリックします。</li>
-    <img src="/DevConsole/Resources/Images/DevConsole-Extension_Account_Linking_Settings_1.png" />
+    <img src="/DevConsole/Assets/Images/DevConsole-Extension_Account_Linking_Settings_1.png" />
   <li>Extensionが提供するサービスのアカウントが、Clovaのユーザーアカウントとの連携を必要とする場合、<strong>{{ book.DevConsole.cek_account_linking }}</strong>項目で<strong>{{ book.DevConsole.cek_yes }}</strong>を選択します。アカウント連携の詳細については、<a href="#SetAccountLinking">アカウント連携を設定する</a>を参照してください。</li>
   <li>ユーザーにアカウント認証UIを提供する認証URLを、<strong>{{ book.DevConsole.cek_authorization_url }}</strong>項目に入力します。ユーザーがExtensionをアクティブにすると、このページに移動します。</li>
   <li>ユーザーが自身のアカウントを即座に設定できるようにする場合には、<strong>{{ book.DevConsole.cek_configuration_url }}</strong>項目にアカウント設定ページのURLを入力します。</li>
   <li><strong>{{ book.DevConsole.cek_privacy_policy_url }}</strong>項目に、Extensionが提供するサービスのプライバシーポリシーが提供されるURLを入力します。このページの内容は、後ほどストアで表示されます。</li>
   <li><strong>{{ book.DevConsole.cek_authorization_url }}</strong>または<strong>{{ book.DevConsole.cek_privacy_policy_url }}</strong>で提供するページが別のドメインから必要なリソースを読み込む場合、<strong>{{ book.DevConsole.cek_domain_list }}</strong>項目に必要なドメインを追加します。</li>
   <li>アカウント連携の際に発行されるアクセストークンのスコープをあらかじめ定義している場合、<strong>{{ book.DevConsole.cek_scope }}</strong>項目に定義したスコープを追加します。</li>
-    <img src="/DevConsole/Resources/Images/DevConsole-Extension_Account_Linking_Settings_2.png" />
+    <img src="/DevConsole/Assets/Images/DevConsole-Extension_Account_Linking_Settings_2.png" />
   <li>現在、<strong>{{ book.DevConsole.cek_authorization_grant_type }}</strong>は<strong>認可コード承認</strong>のみサポートしています。</li>
   <li><strong>{{ book.DevConsole.cek_access_token_uri }}</strong>項目に、サービスのアクセストークンを発行できるURLを入力します。</li>
   <li><strong>{{ book.DevConsole.cek_refresh_token_uri }}</strong>項目に、サービスのアクセストークンを更新できるURLを入力します。</li>
@@ -70,5 +70,5 @@ Extensionが提供するサービスのアカウントが、Clovaのユーザー
 <div id="RedirectURI" class="note">
   <p><strong>メモ</strong></p>
   <p>アカウント認証を済ませた後、クライアントがリダイレクトされるURLは<code>{{ book.RedirectURLforAccountLinking }}</code>で、<strong>{{ book.DevConsole.cek_redirect_urls }}</strong>項目で確認できます。</strong></p>
-  <img src="/DevConsole/Resources/Images/DevConsole-Redirect_URL_for_Extension_Account_Linking.png" />
+  <img src="/DevConsole/Assets/Images/DevConsole-Redirect_URL_for_Extension_Account_Linking.png" />
 </div>

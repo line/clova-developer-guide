@@ -19,16 +19,16 @@
 1. [LINE Developersコンソール](https://developers.line.biz/console/)にログインします。
 
 2. **プロバイダーリスト** から、削除したいスキルが含まれるプロバイダーを選択します。  
-![](/DevConsole/Resources/Images/DevConsole-LineDev_Provider_List.png)  
+![](/DevConsole/Assets/Images/DevConsole-LineDev_Provider_List.png)  
 
 3. 削除したい **Clovaスキル** をクリックします。  
-![](/DevConsole/Resources/Images/DevConsole-LineDev_Channel_List.png)  
+![](/DevConsole/Assets/Images/DevConsole-LineDev_Channel_List.png)  
 
-4. 画面右上の<img class="inlineImage" src="/DevConsole/Resources/Images/DevConsole-LineDev_Dot_Menu.png" /> をクリックし、**このチャネルを削除** を選択します。  
-![](/DevConsole/Resources/Images/DevConsole-LineDev_Channel_Remove.png)  
+4. 画面右上の<img class="inlineImage" src="/DevConsole/Assets/Images/DevConsole-LineDev_Dot_Menu.png" /> をクリックし、**このチャネルを削除** を選択します。  
+![](/DevConsole/Assets/Images/DevConsole-LineDev_Channel_Remove.png)  
 
 5. 確認画面が表示されたら、**削除** をクリックします。  
-![](/DevConsole/Resources/Images/DevConsole-LineDev_Channel_Remove_Confirm.png)  
+![](/DevConsole/Assets/Images/DevConsole-LineDev_Channel_Remove_Confirm.png)  
 
 
 ## 2. 審査中のExtensionを削除する {#RemoveExtensionUnderReview}
@@ -38,10 +38,10 @@ Extensionが審査中の場合は、審査をキャンセルすると削除で�
 1. Clova Developer Center βにログインします。
 
 2. **スキル設定** または **スキルを開発する** をクリックします。  
-![](/DevConsole/Resources/Images/DevConsole-Entering_CEK_Menu.png)
+![](/DevConsole/Assets/Images/DevConsole-Entering_CEK_Menu.png)
 
 3. **審査をキャンセル** をクリックし、リクエストをキャンセルします。  
-![](/DevConsole/Resources/Images/DevConsole-Cancel_Submission.png)
+![](/DevConsole/Assets/Images/DevConsole-Cancel_Submission.png)
 
 4. 上記 [1. 審査をリクエストする前に削除する](#RemoveExtensionBeforeReview)の手順でExtensionを削除します。
 

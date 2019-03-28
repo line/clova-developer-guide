@@ -2,7 +2,7 @@
 
 Clova Developer CenterのCEKメニューは、Extensionを登録および配布する際に使用されます。CEKメニューでExtensionを登録し、また、[CEK](/CEK/CEK_Overview.md#WhatisCEK)がClovaとExtensionの間で情報を交換するためのサーバー連携情報や、ユーザーリクエストを正しく解析するための対話モデルを定義します。**スキル設定** または **スキルを開発する** をクリックすると、CEKのメニューに入ります。
 
-![](/DevConsole/Resources/Images/DevConsole-Console_Home.png)
+![](/DevConsole/Assets/Images/DevConsole-Console_Home.png)
 
 CEKメニューでは、次の作業を行うことができます。
 

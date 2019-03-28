@@ -3,7 +3,7 @@
 Clova Developer Centerで[Extensionを登録](/DevConsole/Guides/CEK/Register_Extension.md)すると、Clovaアプリの **{{ book.DevConsole.ManageExtensions }}** に表示する情報の入力が可能になります。
 左メニューから **{{ book.DevConsole.cek_user_configuration }}** を選択してください。
 
-![](/DevConsole/Resources/Images/DevConsole-User_Config_Menu.png)
+![](/DevConsole/Assets/Images/DevConsole-User_Config_Menu.png)
 
 ユーザー設定では次の項目を設定します。
 * [スキルストア](#InputSkillStoreInfo)
@@ -13,7 +13,7 @@ Clova Developer Centerで[Extensionを登録](/DevConsole/Guides/CEK/Register_Ex
 
 Extensionをユーザーに説明するための情報として、Clovaアプリの **{{ book.DevConsole.ManageExtensions }}** でユーザーに提供されます。次の順で情報を入力します。
 
-![](/DevConsole/Resources/Images/DevConsole-Input_Skill_Store_Info.png)
+![](/DevConsole/Assets/Images/DevConsole-Input_Skill_Store_Info.png)
 
 1. **{{ book.DevConsole.cek_category }}**：Extensionのカテゴリです。ユーザーがカテゴリごとにExtensionを探したり、検索する際に利用されます。(今後サービス予定)
 2. **{{ book.DevConsole.cek_countries_region }}**：現在、日本でのみExtensionを配布できます。
@@ -31,7 +31,7 @@ Extensionをユーザーに説明するための情報として、Clovaアプリ
 
 | {{ book.DevConsole.StoreHome }} | {{ book.DevConsole.ExtensionPage }} |
 | :-----------------------------: | :---------------------------------: |
-| ![Extension List](/DevConsole/Resources/Images/DevConsole-Store_UI_Example-Extension_Store_Home.png) | ![Extension Details](/DevConsole/Resources/Images/DevConsole-Store_UI_Example-Extension_Page.png) |
+| ![Extension List](/DevConsole/Assets/Images/DevConsole-Store_UI_Example-Extension_Store_Home.png) | ![Extension Details](/DevConsole/Assets/Images/DevConsole-Store_UI_Example-Extension_Page.png) |
 
 <div class="note">
   <p><strong>メモ</strong></p>
@@ -42,11 +42,11 @@ Extensionをユーザーに説明するための情報として、Clovaアプリ
 
 Extensionの配布に必要な情報を入力する最後の段階です。プライバシーポリシーおよびコンプライアンス関連の情報を入力します。Extensionの登録メニューで **{{ book.DevConsole.cek_privacy }}** を選択します。
 
-![](/DevConsole/Resources/Images/DevConsole-Policy_Menu.png)
+![](/DevConsole/Assets/Images/DevConsole-Policy_Menu.png)
 
 次のように情報を入力します。
 
-![](/DevConsole/Resources/Images/DevConsole-Input_Policy.png)
+![](/DevConsole/Assets/Images/DevConsole-Input_Policy.png)
 
 1. **{{ book.DevConsole.cek_allow_purchase }}**：Extensionを使用する際、ユーザーが決済をしたり支払いをする場面がある場合、**{{ book.DevConsole.cek_yes }}** を選択します。
 2. **{{ book.DevConsole.cek_use_personal_info }}**：Extensionがユーザーの個人情報を取得する場合、**{{ book.DevConsole.cek_yes }}** を選択します。
@@ -56,4 +56,4 @@ Extensionの配布に必要な情報を入力する最後の段階です。プ�
 
 **{{ book.DevConsole.cek_privacy_policy_url }}** と **{{ book.DevConsole.cek_terms_of_use }}** に入力された内容は、**{{ book.DevConsole.ExtensionPage }}** で次のように表示されます。
 
-![](/DevConsole/Resources/Images/DevConsole-Store_UI_Example-Extension_Policy.png)
+![](/DevConsole/Assets/Images/DevConsole-Store_UI_Example-Extension_Policy.png)

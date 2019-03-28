@@ -203,7 +203,7 @@ Clovaデバイスの実機を使用して発話履歴（音声認識の結果）
 
 音声から認識されたユーザーのリクエストは、まずサービスの提供に必要なフォーマット(JSON)に変換され、Extensionに渡されます。例えば、ピザの宅配サービスを提供するCustom Extensionがあると仮定します。その場合、ユーザーから「ペパロニピザを2枚注文して」のようなリクエストが入力されます。Clovaの対話モデルとは、このようなユーザーのリクエストを、次のようにサービスの提供に必要な標準形式(JSON)に変換するルールを定義したものです。
 
-![](/Design/Resources/Images/Extension_Design-Interaction_Model_Analysis_Diagram.png)
+![](/Design/Assets/Images/Extension_Design-Interaction_Model_Analysis_Diagram.png)
 
 対話モデルをClova Developer Centerで定義するには、まず対話モデルとは何であるかを理解する必要があります。対話モデルをきちんと理解せずに定義してしまうと、パフォーマンスが低いか、ユーザーのリクエストを正しく処理できないExtensionになる可能性があります。ユーザーの実際の意図をうまく把握する対話モデルを作成するためには、対話モデルを作成する前に、まず以下の内容を理解して、設計に反映する必要があります。
 
@@ -233,7 +233,7 @@ Clovaデバイスの実機を使用して発話履歴（音声認識の結果）
 
 ピザの宅配サービス(Extension)の対話モデルを定義するということは、メニュー確認インテント、注文インテント、配達状況確認インテントのようにインテントのリストを宣言して、それぞれのインテントが必要とする情報(スロット)とサンプル発話を列挙するということです。従って、**対話モデルを定義する際、一番最初に、Extensionが処理するリクエストのカテゴリーを定義し、列挙する**必要があります。これはExtensionを開発する際に、ビジネスロジックでプログラムの分岐を分ける基準にもなります。
 
-![](/Design/Resources/Images/Extension_Design-Design_Interaction_Model.png)
+![](/Design/Assets/Images/Extension_Design-Design_Interaction_Model.png)
 
 **ユーザーリクエストのカテゴリーを区分したら、次はカテゴリーごとに名前を定義します。** これがインテント名です。ピザの宅配サービスの「注文インテント」のようなものは、あくまで抽象的な概念です。それをExtensionが認識できる具体的な名前、つまり識別しやすい文字列として宣言してください。例えば、「注文インテント」は、「OrderPizza」のような名前で宣言することができます。
 
@@ -304,7 +304,7 @@ Clovaデバイスの実機を使用して発話履歴（音声認識の結果）
 
 サンプル発話をたくさん入力しながらも、パターンが重複しないようにするという推奨事項について、以下の図を参照してください。
 
-![](/Design/Resources/Images/Extension_Design-Diagram_for_Utterance_Example.png)
+![](/Design/Assets/Images/Extension_Design-Diagram_for_Utterance_Example.png)
 
 例えば、ピザの宅配サービスで、注文に関するインテント(OrderPizza)に、以下のようなサンプル発話を作成したと仮定します。
 

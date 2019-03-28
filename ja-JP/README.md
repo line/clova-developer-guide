@@ -25,6 +25,19 @@ Clovaの質問には`Clova`や`CEK`のタグをご利用ください。
   </thead>
   <tbody>
   <tr>
+    <td>v3.1.0</td><td>2019/03/28</td>
+    <td>
+      <ul>
+        <li><a href="/DevConsole/Guides/CEK/Test_Extension.md">Extensionをテストする</a> 更新</li>
+          <ul>
+           <li>テスト画面のUI変更に対応</li>
+           <li>テストモードの追加（<a href="/DevConsole/Guides/CEK/Test_Extension.md#InteractionModelTestMode">対話モデルテストモード</a>、<a href="/DevConsole/Guides/CEK/Test_Extension.md#ScenarioTestMode">シナリオテストモード</a>）</li>
+          </ul>
+        <li><a href="/Resources/Sound_Library.md">Sound Library</a> 追加</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
     <td>v3.0.1</td><td>2019/01/24</td>
     <td>
       <ul>

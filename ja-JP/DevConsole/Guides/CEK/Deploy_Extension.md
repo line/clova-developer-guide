@@ -11,11 +11,11 @@ Extensionの配布は、通常、次の順で行われます。
 [Clova Developer Centerに登録](/DevConsole/Guides/CEK/Register_Extension.md)されたスキルは、Clova事務局による審査を受け、通過すると配布されます。その審査に必要な情報を入力します。
 **登録済みスキル** リストの **管理** 項目にある **審査申請** を選択します。
 
-![](/DevConsole/Resources/Images/DevConsole-Deployment_Info_Menu.png)
+![](/DevConsole/Assets/Images/DevConsole-Deployment_Info_Menu.png)
 
 **{{ book.DevConsole.cek_review_step_setting }}** の入力ページが開いたら、次のように情報を入力します。
 
-![](/DevConsole/Resources/Images/DevConsole-Input_Deployment_Info.png)
+![](/DevConsole/Assets/Images/DevConsole-Input_Deployment_Info.png)
 
 <ol>
   <li><strong>{{ book.DevConsole.cek_provider_type }}</strong>を選択すると、該当する入力項目が表示されます。</li>
@@ -35,7 +35,7 @@ Extensionの配布は、通常、次の順で行われます。
 
 Extensionの審査をリクエストするには、左のメニューから **{{ book.DevConsole.cek_review_step_submit}}** を選択します。
 
-![](/DevConsole/Resources/Images/DevConsole-Submit_Extension_1.png)
+![](/DevConsole/Assets/Images/DevConsole-Submit_Extension_1.png)
 
 **{{ book.DevConsole.cek_request_submit_info }}** を入力し、注意事項のチェックボックスにチェックを入れて、**{{ book.DevConsole.cek_request_submit }}** ボタンをクリックすると審査申請が完了します。
 
@@ -62,21 +62,21 @@ Extensionを審査する際に確認する評価項目は次のとおりです�
 
 審査中に **{{ book.DevConsole.cek_cancel_review }}** メニューをクリックすると、いつでも審査のリクエストをキャンセルできます。審査のリクエストをキャンセルすると、前のステータスに戻ります。
 
-![](/DevConsole/Resources/Images/DevConsole-Cancel_Submission.png)
+![](/DevConsole/Assets/Images/DevConsole-Cancel_Submission.png)
 
 審査を通過しなかった場合、Extensionの **{{ book.DevConsole.cek_status }}** が **{{ book.DevConsole.cek_status_rejected }}** に変更されます。これは **{{ book.DevConsole.cek_status_dev }}** と同じステータスで、再び審査をリクエストできます。
 
-![](/DevConsole/Resources/Images/DevConsole-Extension_Submission_Rejected.png)
+![](/DevConsole/Assets/Images/DevConsole-Extension_Submission_Rejected.png)
 
 その際、**{{ book.DevConsole.cek_message }}** の **{{ book.DevConsole.cek_view }}** メニューをクリックすると、審査のフィードバックを確認できます。
 
-![](/DevConsole/Resources/Images/DevConsole-Show_Submission_Feedback.png)
+![](/DevConsole/Assets/Images/DevConsole-Show_Submission_Feedback.png)
 
 ## スキルが公開される {#DeployInSkillStore}
 
 審査を通過すると、Clova Developer Centerのスキル設定画面に **{{ book.DevConsole.cek_status_prd }}** として表示されます。
 
-![](/DevConsole/Resources/Images/DevConsole-Extension_List_Version_Status.png)
+![](/DevConsole/Assets/Images/DevConsole-Extension_List_Version_Status.png)
 
 エンドユーザーは、Clovaアプリの **{{ book.DevConsole.ManageExtensions }}** の **スキルリスト** からスキルを選択し、**{{ book.DevConsole.ExtensionPage }}** に表示される **利用開始** ボタンをタップすることでスキルを利用することができます。
 
