@@ -56,6 +56,7 @@
   * [マルチターン対話をする](/CEK/Guides/Build_Custom_Extension.md#DoMultiturnDialog)
   * [オーディオコンテンツを提供する](/CEK/Guides/Build_Custom_Extension.md#ProvideAudioContent)
     * [オーディオコンテンツの再生を指示する](/CEK/Guides/Build_Custom_Extension.md#DirectClientToPlayAudio)
+    * [オーディオコンテンツの再生をコントロールする](/CEK/Guides/Build_Custom_Extension.md#ControlAudioPlayback)
     * [再生状態の変更および進行状況のレポートを収集する](/CEK/Guides/Build_Custom_Extension.md#CollectPlaybackStatusAndProgress)
     * [セキュリティのためにオーディオコンテンツのURLを更新する](/CEK/Guides/Build_Custom_Extension.md#UpdateAudioURLForSecurity)
   * [ユーザーの利用開始および停止を処理する](/CEK/Guides/Handle_ClovaSkill_EventRequest.md)

@@ -25,6 +25,21 @@ Clovaの質問には`Clova`や`CEK`のタグをご利用ください。
   </thead>
   <tbody>
   <tr>
+    <td>v3.1.1</td><td>2019/04/08</td>
+    <td>
+      <ul>
+        <li><a href="/Design/Design_Guideline_For_Extension.md">Extensionのデザインガイドライン</a> 更新</li>
+          <ul>
+           <li><a href="/Design/Design_Guideline_For_Extension.md#BuiltinIntent">ビルトインインテント</a>更新（Clova.NextIntent、Clova.PauseIntent、Clova.PreviousIntent、Clova.ResumeIntentを追加）</li>
+           <li><a href="/Design/Design_Guideline_For_Extension.md#AudioPlayer">オーディオコンテンツ再生タイプ</a> 更新（ユーザーシナリオに一時停止/再生再開の例を追加）</li>
+          </ul>
+        <li><a href="/CEK/Guides/Build_Custom_Extension.md#ProvideAudioContent">オーディオコンテンツを提供する</a> 更新（<a href="/CEK/Guides/Build_Custom_Extension.md#ControlAudioPlayback">オーディオコンテンツの再生をコントロールする</a> 追加）</li>          
+        <li><a href="/CEK/References/CEK_API.md">CEK APIのリファレンス</a> 更新（<a href="/CEK/References/CEK_API.md#BuiltinIntent">ビルトインインテント</a> 更新）</li>
+        <li><a href="/DevConsole/Guides/CEK/Test_Extension.md#TestInteractionModel">対話モデルをテストする</a> 更新（AudioPlayer使用時のテスト機能の動作について注記を追加）</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
     <td>v3.1.0</td><td>2019/03/28</td>
     <td>
       <ul>

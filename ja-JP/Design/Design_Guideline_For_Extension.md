@@ -243,12 +243,16 @@ Clovaデバイスの実機を使用して発話履歴（音声認識の結果）
 
 ビルトインインテントは、Clovaプラットフォームが一部の共通したユーザーリクエストのカテゴリーを決め、それを共有するために宣言した仕様です。頻繁に発生するインテントとして、次のようなリクエストがあらかじめ定義されています。
 
-| ビルトインインテントの名前 | 意図                       | ユーザーのサンプル発話 |
-| -------------------------- | -------------------------- | ---------------------- |
-| `Clova.CancelIntent`       | 対話キャンセルのリクエスト | キャンセル             |
-| `Clova.GuideIntent`        | ヘルプのリクエスト         | 使い方を教えて         |
-| `Clova.YesIntent`          | 肯定の返事(はい、Yes)      | はい                   |
-| `Clova.NoIntent`           | 否定の返事(いいえ、No)     | いいえ                 |
+| ビルトインインテントの名前 | 意図                                   | ユーザーのサンプル発話       |
+| -------------------------- | -------------------------------------- | ---------------------------- |
+| `Clova.CancelIntent`       | 対話キャンセルのリクエスト             | キャンセル                   |
+| `Clova.GuideIntent`        | ヘルプのリクエスト                     | 使い方を教えて               |
+| `Clova.NextIntent`         | 次のコンテンツをリクエストする         | 次、次の曲を再生して         |
+| `Clova.PauseIntent`        | 再生を一時停止するようにリクエストする | ちょっと止めて、止めて       |
+| `Clova.PreviousIntent`     | 前のコンテンツをリクエストする         | 前、前の曲を再生して         |
+| `Clova.ResumeIntent`       | 再生を再開するようにリクエストする     | 再生を再開して、再び再生して |
+| `Clova.YesIntent`          | 肯定の返事(はい、Yes)                  | はい                         |
+| `Clova.NoIntent`           | 否定の返事(いいえ、No)                 | いいえ                       |
 
 ### スロット {#Slot}
 
@@ -496,6 +500,7 @@ Extensionは、ユーザーのリクエストを処理し、その結果をClova
 * Custom Extensionは、ユーザーのリクエストがあると、クライアントがオーディオコンテンツを再生できるようにレスポンスメッセージ(`AudioPlayer.Play`)を返す必要があります。
 * Custom Extensionは、ユーザーのリクエストがあると、いつでもオーディオコンテンツを一時停止または停止できる必要があります。
 * Custom Extensionは、一時停止または停止したコンテンツを再開または再生できる必要があります。
+* Custom Extensionは、前や次に曲戻し/曲送りできる必要があります。
 
 以下は、オーディオコンテンツ再生タイプの簡単なユーザーシナリオです。
 
@@ -503,11 +508,13 @@ Extensionは、ユーザーのリクエストを処理し、その結果をClova
 > <p class="rdiag">「どんなクラシック音楽を再生しますか?」(TTS)</p>
 > <p class="ldiag">「ヴィヴァルディの四季を再生して」</p>
 > <p class="rdiag">「はい。ヴィヴァルディの四季を再生します」(TTS)</p>
-> <p class="rdiag">AudioPlayer.Play: ヴィヴァルディの四季第1楽章</p>
+> <p class="rdiag">ヴィヴァルディの四季第1楽章を再生するよう指示する (AudioPlayer.Play)</p>
 > <p class="ldiag">「ねぇClova、ちょっと止めて」</p>
-> <p class="rdiag">AudioPlayer.Pause: 再生を停止する</p>
-> <p class="ldiag">「ねぇClova、再生を再開して」</p>
-> <p class="rdiag">AudioPlayer.Resume: 再生を再開する</p>
+> <p class="rdiag">再生を停止するよう指示する (PlaybackController.Pause)</p>
+> <p class="ldiag">「ねぇClova、再開して」</p>
+> <p class="rdiag">再生を再開するよう指示する (PlaybackController.Resume)</p>
+> <p class="ldiag">「ねぇClova、次へ」</p>
+> <p class="rdiag">ヴィヴァルディの四季第2楽章を再生するよう指示する (AudioPlayer.Play)</p>
 
 <div class="note">
   <p><strong>メモ</strong></p>

@@ -59,7 +59,6 @@
 
 * チャットウィンドウに表示される **{{ book.DevConsole.cek_builder_test_service_response }}** から、[登録したCustom Extension](/DevConsole/Guides/CEK/Register_Extension.md)が正しく応答しているか確認します。
 * **{{ book.DevConsole.cek_builder_test_service_response }}** の右に表示される **読み上げ** ボタンをクリックすると、レスポンス内容を読み上げることができます。
-* オーディオコンテンツの再生にAudioPlayerを使用している場合は、**{{ book.DevConsole.cek_builder_test_service_response }}** として"AudioPlayerを利用したオーディオコンテンツはClovaデバイスで確認してください。"と表示され、テスト画面で再生することはできません。[Clovaデバイスでテスト](#DeviceTest)してください。
 * **{{ book.DevConsole.cek_builder_test_intent_result }}** 項目と **{{ book.DevConsole.cek_builder_test_slot_result }}** 項目から、インテントとスロットが正しく認識されているか確認します。
 * **{{ book.DevConsole.cek_builder_test_request_json }}** 項目から、CEKがCustom Extensionに送る[リクエストメッセージ](/CEK/References/CEK_API.md#CustomExtRequestMessage)を確認します。
 * **{{ book.DevConsole.cek_builder_test_response_json }}** 項目から、登録したCustom Extensionが正しく[レスポンスメッセージ](/CEK/References/CEK_API.md#CustomExtResponseMessage)を返しているか確認します。
@@ -69,8 +68,10 @@
   <p>
     <ul>
       <li>対話モデルテストモードでは、入力フィールドに新しいサンプル発話を入力して送信すると、直前のテスト履歴が削除されて、最新の結果だけが表示されます。</li>
-      <li><strong>{{ book.DevConsole.cek_builder_test_request_json }}</strong> 項目のコードは、直接編集することができます。例えばスロットの値を変更して<strong>{{ book.DevConsole.cek_builder_test_test_again }}</strong>ボタンをクリックして再度テストを行い、<strong>{{ book.DevConsole.cek_builder_test_service_response }}</strong>の違いを比較するといった使い方ができます。</li>
       <li>トグルボタンをクリックしてテストモードを変更すると、テスト履歴が削除されます。</li>
+      <li><strong>{{ book.DevConsole.cek_builder_test_request_json }}</strong> 項目のコードは、直接編集することができます。例えばスロットの値を変更して<strong>{{ book.DevConsole.cek_builder_test_test_again }}</strong>ボタンをクリックして再度テストを行い、<strong>{{ book.DevConsole.cek_builder_test_service_response }}</strong>の違いを比較するといった使い方ができます。</li>
+      <li>オーディオコンテンツの再生にAudioPlayerを使用している場合は、<strong>{{ book.DevConsole.cek_builder_test_service_response }}</strong>として"AudioPlayerを利用したオーディオコンテンツはClovaデバイスで確認してください。"と表示され、テスト画面で再生することはできません。<a href="#DeviceTest">Clovaデバイスでテスト</a>してください。</li>
+      <li>オーディオコンテンツの再生にAudioPlayerを使用している状態で、入力フィールドに「次」「前」等と入力して送信した場合、"解析されたインテント"として<code>Clova.NextIntent</code>、<code>Clova.PreviousIntent</code>が返されません。Clovaデバイスに話しかけた場合は正しくインテントが解析されるため、「次」「前」等の発話は<a href="#DeviceTest">Clovaデバイスでテスト</a>してください。</li>
     </ul>
   </p>
 </div>
@@ -96,8 +97,8 @@
   <p><strong>メモ</strong></p>
   <p>
     <li>シナリオテストモードでは、<strong>起動</strong>ボタンをクリックした後に入力フィールドに新しいサンプル発話を入力して送信してもチャットウィンドウ内のテスト結果は削除されず、表示は増えていきます。</li>
+    <li>トグルボタンをクリックしてテストモードを変更すると、すべてのテスト履歴が削除されます。</li>
     <li><strong>{{ book.DevConsole.cek_builder_test_request_json }}</strong>には、最新のサービスリクエストのみが表示されます。また、JSONの編集や、{{ book.DevConsole.cek_builder_test_test_again }}はできません。</li>
     <li><strong>終了</strong>ボタンをクリック、または「終了して」等の発話を入力して<code>SessionEndedRequest</code>が送信された場合、再度<strong>起動</strong>ボタンをクリックするまで入力フィールドにサンプル発話を入力することはできません。</li>
-    <li>トグルボタンをクリックしてテストモードを変更すると、すべてのテスト履歴が削除されます。</li>
   </p>
 </div>
