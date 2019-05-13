@@ -25,6 +25,24 @@ Clovaの質問には`Clova`や`CEK`のタグをご利用ください。
   </thead>
   <tbody>
   <tr>
+    <td>v3.1.2</td><td>2019/04/25</td>
+    <td>
+      <ul>
+        <li><a href="/Design/Design_Guideline_For_Extension.md">Extensionのデザインガイドライン</a> 更新</li>
+          <ul>
+           <li><a href="/Design/Design_Guideline_For_Extension.md#BuiltinIntent">ビルトインインテント</a> 更新（Clova.FallbackIntent 追加）</li>
+           <li><a href="/Design/Design_Guideline_For_Extension.md#BuiltinSlotType">ビルトインスロットタイプ</a> 更新（CLOVA.DATETIME_RECENT 追加）</li>
+          </ul>
+        <li><a href="/CEK/References/CEK_API.md">CEK APIのリファレンス</a> 更新</li>          
+          <ul>
+           <li><a href="/CEK/References/CEK_API.md#BuiltinIntent">ビルトインインテント</a> 更新（<a href="/CEK/References/CEK_API.md#ClovaFallbackIntent">Clova.FallbackIntent</a> 追加）</li>
+           <li><a href="/CEK/References/CEK_API.md#BuiltinSlotType">ビルトインスロットタイプ</a> 更新（<a href="/CEK/References/CEK_API.md#ClovaDatetimeRecent">CLOVA.DATETIME_RECENT</a> 追加）</li>
+          </ul>
+        <li><a href="/CEK/References/CEK_API.md">Extensionを登録する</a> 更新（<a href="/DevConsole/Guides/CEK/Register_Extension.md#AddBuiltinIntent">ビルトインインテントを追加する</a> 更新）</li>          
+      </ul>
+    </td>
+  </tr>
+  <tr>
     <td>v3.1.1</td><td>2019/04/08</td>
     <td>
       <ul>

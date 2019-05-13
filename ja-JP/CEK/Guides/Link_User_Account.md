@@ -115,7 +115,7 @@ Extensionにアカウント連携を適用するには、ユーザーがアカ�
 
 次は、ユーザーのアカウント認証が完了してから移動されるリダイレクトURLの例です。
 
-<pre><code>{{ book.ServiceEnv.RedirectURLforAccountLinking }}?&state=qwer123
+<pre><code>{{ book.RedirectURLforAccountLinking }}?&state=qwer123
                                 &code=nl__eCSTdsdlkjfweyuxXvnl
 </code></pre>
 

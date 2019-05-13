@@ -88,8 +88,11 @@
     * [レスポンスメッセージ](/CEK/References/CEK_API.md#CustomExtResponseMessage)
   * [対話モデル](/CEK/References/CEK_API.md#InteractionModel)
     * [ビルトインインテント](/CEK/References/CEK_API.md#BuiltinIntent)
+      * [`Clova.FallbackIntent`](/CEK/References/CEK_API.md#ClovaFallbackIntent)
+      * [`Clova.GuideIntent`](/CEK/References/CEK_API.md#ClovaGuideIntent)
     * [ビルトインスロットタイプ](/CEK/References/CEK_API.md#BuiltinSlotType)
       * [`CLOVA.DATETIME`](/CEK/References/CEK_API.md#ClovaDatetime)
+      * [`CLOVA.DATETIME_RECENT`](/CEK/References/CEK_API.md#ClovaDatetimeRecent)
       * [`CLOVA.DURATION`](/CEK/References/CEK_API.md#ClovaDuration)
 
 ## Clova Home Extension

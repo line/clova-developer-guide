@@ -6,7 +6,7 @@
   "author": "LINE Corporation",
   "variables": {
     "ClassifiedInfo": "Confidential",
-    "DocVersion": "v3.1.1",
+    "DocVersion": "v3.1.2",
     "language": "ja",
     "TargetCountryCode": "JP",
     "TargetReaderType": "Internal",
@@ -180,8 +180,10 @@
       "cek_builder_slottype_dictionary_title": "スロットタイプの辞書",
       "cek_builder_intent_slot_title": "スロットリスト",
       "cek_builder_intent_expression_title": "サンプル発話リスト",
+      "cek_builder_new_intent_builtin_title": "Clovaのビルトインインテントを使用",
       "cek_builder_new_slottype_builtin_title": "Clovaのビルトインスロットタイプを使用",
       "cek_builder_utterance_select_slot": "スロットタイプを選択してください",
+      "cek_builder_select_intent_builtin": "ビルトインインテント",
       "cek_builder_select_slottype_builtin": "ビルトインスロットタイプ",
       "cek_builder_slot_layer_select_slot": "登録されたスロットを選択"
     },

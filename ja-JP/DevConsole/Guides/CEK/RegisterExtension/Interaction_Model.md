@@ -88,9 +88,20 @@ Clova Developer Centerには、以下のように **アップロード** ボタ�
 
 ### ビルトインインテントを追加する {#AddBuiltinIntent}
 
-Clovaプラットフォームでは共通したユーザーリクエストのカテゴリを決め、それを共有して利用するために[ビルトインインテント](/Design/Design_Guideline_For_Extension.md#Intent)が提供されています。例えば、頻繁に発生すると予想されるユーザーの肯定・否定、キャンセルなどのリクエストを、インテントとしてあらかじめ定義したものです。すべてのExtensionは、Clovaの提供する全てのビルトインインテントに対応する必要があります。デフォルトで登録されているビルトインインテントは以下のとおりです。
+Clovaプラットフォームでは共通したユーザーリクエストのカテゴリを決め、それを共有して利用するために[ビルトインインテント](/Design/Design_Guideline_For_Extension.md#Intent)が提供されています。例えば、頻繁に発生すると予想されるユーザーの肯定・否定の返事や、キャンセルなどのリクエストを、インテントとしてあらかじめ定義したものです。
+ビルトインインテントは次の手順でExtensionに追加します。
+
+<ol>
+  <li><strong>{{ book.DevConsole.cek_builder_list_title_intent }}</strong>パネル、または左側のサイドメニューの<strong>{{ book.DevConsole.cek_builder_list_title_intent }}</strong>内にある<strong>{{ book.DevConsole.cek_builder_select_intent_builtin }}</strong>の右に表示された<img class="inlineImage" src="/DevConsole/Assets/Images/DevConsole-Plus_Button.png" />ボタンをクリックします。</li>
+  <li>必要なビルトインインテントにチェックを入れ、右上の<strong>{{ book.DevConsole.cek_save }}</strong>ボタンをクリックします。</li>
+  <img src="/DevConsole/Assets/Images/DevConsole-Add_Built-in_Intent.png" />
+</ol>
+
+デフォルトで選択されているビルトインインテントは以下のとおりです。
 
 ![](/DevConsole/Assets/Images/DevConsole-Built-in_Intent_List.png)
+
+すべてのExtensionは、[**Clova.GuideIntent**](/CEK/References/CEK_API.md#ClovaGuideIntent) に対応する必要があります。それ以外のビルトインインテントについては、必要に応じて選択し対応してください。
 
 <div class="note">
   <p><strong>メモ</strong></p>

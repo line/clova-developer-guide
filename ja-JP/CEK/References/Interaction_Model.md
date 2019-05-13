@@ -11,16 +11,74 @@ CEKでは、あらかじめ次の情報が定義されています。
 
 ビルトインインテントは、Clovaプラットフォームが一部の共通したユーザーリクエストのカテゴリーを決め、それを共有するために宣言した仕様です。頻繁に発生するインテントとして、次のようなリクエストがあらかじめ定義されています。
 
-| インテント             | 意図                                   | ユーザーのサンプル発話       |
-| ---------------------- | -------------------------------------- | ---------------------------- |
-| `Clova.CancelIntent`   | 対話キャンセルのリクエスト             | キャンセル                   |
-| `Clova.GuideIntent`    | ヘルプのリクエスト                     | 使い方を教えて               |
-| `Clova.NextIntent`     | 次のコンテンツをリクエストする         | 次、次の曲を再生して         |
-| `Clova.PauseIntent`    | 再生を一時停止するようにリクエストする | ちょっと止めて、止めて       |
-| `Clova.PreviousIntent` | 前のコンテンツをリクエストする         | 前、前の曲を再生して         |
-| `Clova.ResumeIntent`   | 再生を再開するようにリクエストする     | 再生を再開して、再び再生して |
-| `Clova.YesIntent`      | 肯定の返事(はい、Yes)                  | はい                         |
-| `Clova.NoIntent`       | 否定の返事(いいえ、No)                 | いいえ                       |
+| インテント             | 意図                                     | ユーザーのサンプル発話       |
+| ---------------------- | ---------------------------------------- | ---------------------------- |
+| `Clova.CancelIntent`   | 対話キャンセルのリクエスト               | キャンセル                   |
+| `Clova.FallbackIntent` | 予想していない発話の入力を処理するリクエスト | (予想していない発話)     |
+| `Clova.GuideIntent`    | ヘルプのリクエスト                       | 使い方を教えて               |
+| `Clova.NextIntent`     | 次のコンテンツをリクエストする           | 次、次の曲を再生して         |
+| `Clova.PauseIntent`    | 再生を一時停止するようにリクエストする   | ちょっと止めて、止めて       |
+| `Clova.PreviousIntent` | 前のコンテンツをリクエストする           | 前、前の曲を再生して         |
+| `Clova.ResumeIntent`   | 再生を再開するようにリクエストする       | 再生を再開して、再び再生して |
+| `Clova.YesIntent`      | 肯定の返事(はい、Yes)                    | はい                         |
+| `Clova.NoIntent`       | 否定の返事(いいえ、No)                   | いいえ                       |
+
+ここでは次のビルトインインテントについて説明します。  
+※ 説明は今後も追加される予定です。
+
+* [`Clova.FallbackIntent`](#ClovaFallbackIntent)
+* [`Clova.GuideIntent`](#ClovaGuideIntent)
+
+#### Clova.FallbackIntent {#ClovaFallbackIntent}
+
+予想していない発話の入力を処理するリクエストです。`Clova.FallbackIntent`は選択項目で、必要に応じて実装します。
+
+Extensionを開発する際は、Extensionとユーザーがどのような対話をするかをあらかじめ予想して対話モデルを設定します。しかしユーザーは、予想していない発話、つまり他のどのインテントとも一致しない発話をすることがあります。このような発話が入力された場合に分類されるのが`Clova.FallbackIntent`です。
+
+`Clova.FallbackIntent`が選択されているとき、"ピザを注文するスキル"の場合は以下のような対話が考えられます。
+
+| 発話の主体 | サンプル発話                                   |
+| ---------- | ---------------------------------------------- |
+| ユーザー   | ピザボットを起動して。                         |
+| Extension  | ピザボットへようこそ。何を注文しますか?        |
+| ユーザー   | 明日の天気はどう？<br>(この発話はピザボットのどのインテントとも一致しないため、Extensionに`Clova.FallbackIntent`を送信する) |
+| Extension  | ピザボットはその質問にはお答えできませんが、おいしいピザを注文することができます。何を注文しますか？<br>(`Clova.FallbackIntent`を受けて、ユーザーに正しい発話をするように促すレスポンスを返す) |
+
+なお、`Clova.FallbackIntent`を選択している場合と、選択していない場合では動作が異なります。
+
+* **Clova.FallbackIntentを選択している場合**：予想していない発話は`Clova.FallbackIntent`に分類され、「使い方を教えて」というように明示的にヘルプをリクエストした場合は[`Clova.GuideIntent`](#ClovaGuideIntent)に分類されます。
+* **Clova.FallbackIntentを選択していない場合**：予想していない発話と、ヘルプのリクエストは、いずれも[`Clova.GuideIntent`](#ClovaGuideIntent)に分類されます。
+
+<div class="note">
+  <p><strong>メモ</strong></p>
+  <p>
+    <ul>
+    <li><code>Clova.FallbackIntent</code>はデフォルトでは選択されていません。使用する際は<strong>{{ book.DevConsole.cek_builder_header_title_interaction_model }}：{{ book.DevConsole.cek_builder_header_title_dashboard }}</strong>を開き、<strong>{{ book.DevConsole.cek_builder_select_intent_builtin }}</strong>の右に表示された<img class="inlineImage" src="/DevConsole/Assets/Images/DevConsole-Plus_Button.png" />ボタンをクリックして<strong>{{ book.DevConsole.cek_builder_header_title_interaction_model }}：ビルトインインテントを追加</strong>画面を開きます。チェックボックスにチェックを入れ、<strong>{{ book.DevConsole.cek_save }}</strong>ボタンをクリックすると有効になります。</li>
+    <li><code>Clova.FallbackIntent</code>は選択項目のため、すでに作成済みのスキルに必ずしも追加する必要はありません。あとから<code>Clova.FallbackIntent</code>を追加した場合は、対話モデルを再度ビルドしてください。</li>
+  </p>
+</div>
+
+##### 次の項目も参照してください。
+* [`Clova.GuideIntent`](#ClovaGuideIntent)
+
+#### Clova.GuideIntent {#ClovaGuideIntent}
+
+ヘルプのリクエストです。`Clova.GuideIntent`は実装必須の項目で、すべてのExtensionが対応する必要があります。
+
+`Clova.GuideIntent`は、ユーザーが「使い方を教えて」「ヘルプ」等の発話をした場合に送信されます。Extensionは`Clova.GuideIntent`が含まれるリクエストメッセージを受け取ったら、使い方などを説明するように実装します。
+
+なお、[`Clova.FallbackIntent`](#ClovaFallbackIntent)を選択している場合と、選択していない場合では動作が異なります。
+
+* **[Clova.FallbackIntent](#ClovaFallbackIntent)を選択している場合**：予想していない発話は[`Clova.FallbackIntent`](#ClovaFallbackIntent)に分類され、「使い方を教えて」というように明示的にヘルプをリクエストした場合は`Clova.GuideIntent`に分類されます。
+* **[Clova.FallbackIntent](#ClovaFallbackIntent)を選択していない場合**：予想していない発話と、ヘルプのリクエストは、いずれも`Clova.GuideIntent`に分類されます。
+
+<div class="note">
+  <p><strong>メモ</strong></p>
+  <p><code>Clova.GuideIntent</code>はデフォルトで選択されています。また、開発者が選択を解除することはできません。</p>
+</div>
+
+##### 次の項目も参照してください。
+* [`Clova.FallbackIntent`](#ClovaFallbackIntent)
 
 ### ビルトインスロットタイプ {#BuiltinSlotType}
 
@@ -28,7 +86,8 @@ CEKでは、あらかじめ次の情報が定義されています。
 
 | ビルトインスロットタイプ | 説明                                              |
 | ------------------------ | ------------------------------------------------- |
-| `CLOVA.DATETIME`         | 日付や時刻表現を提供します。(例："1日"、"10分30秒"、"午前9時"、"1時間前"、"12時"、"正午"、"2017年8月4日") |
+| `CLOVA.DATETIME`         | 日付や時刻表現を提供します。現在の日付またはそれより先の日時を返します。(例："1日"、"10分30秒"、"午前9時"、"1時間前"、"12時"、"正午"、"2017年8月4日") |
+| `CLOVA.DATETIME_RECENT`  | 日付や時刻表現を提供します。現在の日付またはそれより前の日時を返します。(例："火曜日"、"7月29日"、"7月") |
 | `CLOVA.DURATION`         | 期間の表現を提供します。(例："1秒間"、"1分間"、"1時間"、"1週間"、"1日間"、"一ヶ月"、"1年間") |
 | `CLOVA.MONEY`            | 数字+通貨単位を提供します。(例:"四千円"、"1ドル") |
 | `CLOVA.NUMBER`           | 数字表現を提供します。(例:"7"人、"一"つ、"30"歳、"8"個) |
@@ -47,13 +106,21 @@ CEKでは、あらかじめ次の情報が定義されています。
 ※ 説明は今後も追加される予定です。
 
 * [`CLOVA.DATETIME`](#ClovaDatetime)
+* [`CLOVA.DATETIME_RECENT`](#ClovaDatetimeRecent)
 * [`CLOVA.DURATION`](#ClovaDuration)
 
 
 #### CLOVA.DATETIME {#ClovaDatetime}
 
 日付や時刻の表現を[ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)の拡張形式に変換して提供します。現在の日付またはそれより先の日時を返します。
+
 「朝」「夕方」などの時間細分や季節の定義については、[備考](#Remarks)を参照してください。
+
+<div class="note">
+  <p><strong>メモ</strong></p>
+  <p>1つのインテントで<a href="#ClovaDatetime"><code>CLOVA.DATETIME</code></a>と<a href="#ClovaDatetimeRecent"><code>CLOVA.DATETIME_RECENT</code></a>を同時に使用することはできません。</p>
+  <p>また、1つのExtensionの中で<a href="#ClovaDatetime"><code>CLOVA.DATETIME</code></a>と<a href="#ClovaDatetimeRecent"><code>CLOVA.DATETIME_RECENT</code></a>を同時に使用すると対話モデルの分析精度に影響を与えるため、同時使用は避けてください。</p>
+</div>
 
 ##### Object structure
 {% raw %}
@@ -69,9 +136,9 @@ CEKでは、あらかじめ次の情報が定義されています。
 {% endraw %}
 
 ##### Object fields
-| フィールド名           | データ型 | フィールドの説明 | Optional |
-| ---------------------- | -------- | ---------------- | :------: |
-| `slots`                | object   | Extensionがインテントを処理する際に要求される情報(スロット)が保存されたオブジェクト | <!-- --> |
+| フィールド名                 | データ型 | フィールドの説明 | Optional |
+| ---------------------------- | -------- | ---------------- | :------: |
+| `slots`                      | object   | Extensionがインテントを処理する際に要求される情報(スロット)が保存されたオブジェクト | <!-- --> |
 | `slots.{slotName}`           | object   | CLOVA.DATETIMEスロットの情報が保存されたオブジェクト | <!-- --> |
 | `slots.{slotName}.name`      | string   | 開発者が定義したスロット名 | <!-- --> |
 | `slots.{slotName}.value`     | string   | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)拡張形式に変換された日付・時刻 | <!-- --> |
@@ -134,6 +201,34 @@ CEKでは、あらかじめ次の情報が定義されています。
     "valueType": "DATE.INTERVAL"
   }
 }
+
+//例7: 「火曜日」と発話した場合
+"slots": {
+  "TravelDate": {
+    "name": "TravelDate",
+    "value": "2018-08-14",
+    "valueType": "DATE"
+  }
+}
+
+//例8: 「7月29日」と発話した場合
+"slots": {
+  "TravelDate": {
+    "name": "TravelDate",
+    "value": "2019-07-29",
+    "valueType": "DATE"
+  }
+}
+
+//例9: 「7月」と発話した場合
+"slots": {
+  "TravelDate": {
+    "name": "TravelDate",
+    "value": "2019-07-01/2019-07-31",
+    "valueType": "DATE.INTERVAL"
+  }
+}
+
 ```
 {% endraw %}
 
@@ -165,6 +260,133 @@ CEKでは、あらかじめ次の情報が定義されています。
 | 冬         | 12月1日  | 2月28日 ※ |
 
 ※ 閏年の場合は2月29日
+
+##### 次の項目も参照してください。
+* [`CLOVA.DATETIME_RECENT`](#ClovaDatetimeRecent)
+
+#### CLOVA.DATETIME_RECENT {#ClovaDatetimeRecent}
+
+日付や時刻の表現を[ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)の拡張形式に変換して提供します。現在の日付またはそれより前の日時を返します。
+
+各フィールドの構成は基本的に[`CLOVA.DATETIME`](#ClovaDatetime)と同じです。
+
+<div class="note">
+  <p><strong>メモ</strong></p>
+  <p>1つのインテントで<a href="#ClovaDatetime"><code>CLOVA.DATETIME</code></a>と<a href="#ClovaDatetimeRecent"><code>CLOVA.DATETIME_RECENT</code></a>を同時に使用することはできません。</p>
+  <p>また、1つのExtensionの中で<a href="#ClovaDatetime"><code>CLOVA.DATETIME</code></a>と<a href="#ClovaDatetimeRecent"><code>CLOVA.DATETIME_RECENT</code></a>を同時に使用すると対話モデルの分析精度に影響を与えるため、同時利用は避けてください。</p>
+</div>
+
+##### Object structure
+{% raw %}
+```json
+"slots": {
+  {{slotName}}:{
+    "name": {{slotName}},
+    "value": {{string}},
+    "valueType": {{string}}
+  }
+}
+```
+{% endraw %}
+
+##### Object fields
+| フィールド名                 | データ型 | フィールドの説明 | Optional |
+| ---------------------------- | -------- | ---------------- | :------: |
+| `slots`                      | object   | Extensionがインテントを処理する際に要求される情報(スロット)が保存されたオブジェクト | <!-- --> |
+| `slots.{slotName}`           | object   | CLOVA.DATETIME_RECENTスロットの情報が保存されたオブジェクト | <!-- --> |
+| `slots.{slotName}.name`      | string   | 開発者が定義したスロット名 | <!-- --> |
+| `slots.{slotName}.value`     | string   | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)拡張形式に変換された日付・時刻 | <!-- --> |
+| `slots.{slotName}.valueType` | string   | ユーザーのリクエストを解析した日付・時刻情報によって値が異なります。<ul><li>`TIME`：時刻</li><li>`DATE`：日付</li><li>`DATETIME`：日付と時刻</li><li>`TIME.INTERVAL`：時刻の範囲</li><li>`DATE.INTERVAL`：日付の範囲</li><li>`DATETIME.INTERVAL`：日時の範囲</li></ul> | <!-- --> |
+
+##### Object example
+※ 発話日付・時刻が「2018年8月10日（金）午前9時」、スロット名を"QuoteDate"と定義した場合
+{% raw %}
+```json
+//例1: 「3時」と発話した場合
+"slots": {
+  "QuoteDate": {
+    "name": "QuoteDate",
+    "value": "03:00:00",
+    "valueType": "TIME"
+  }
+}
+
+//例2: 「2018年8月10日」と発話した場合
+"slots": {
+  "QuoteDate": {
+    "name": "QuoteDate",
+    "value": "2018-08-10",
+    "valueType": "DATE"
+  }
+}
+
+//例3: 「2018年8月10日3時」と発話した場合
+"slots": {
+  "QuoteDate": {
+    "name": "QuoteDate",
+    "value": "2018-08-10T03:00:00+09:00",
+    "valueType": "DATETIME"
+  }
+}
+
+//例4: 「朝」と発話した場合
+"slots": {
+  "QuoteDate": {
+    "name": "QuoteDate",
+    "value": "06:00:00/09:00:00",
+    "valueType": "TIME.INTERVAL"
+  }
+}
+
+//例5: 「秋」と発話した場合
+"slots": {
+  "QuoteDate": {
+    "name": "QuoteDate",
+    "value": "2017-09-01/2017-11-30",
+    "valueType": "DATE.INTERVAL"
+  }
+}
+
+//例6: 「明日の昼」と発話した場合
+"slots": {
+  "QuoteDate": {
+    "name": "QuoteDate",
+    "value": "2018-08-11T11:00:00+09:00/2018-08-09T13:00:00+09:00",
+    "valueType": "DATE.INTERVAL"
+  }
+}
+
+//例7: 「火曜日」と発話した場合
+"slots": {
+  "QuoteDate": {
+    "name": "QuoteDate",
+    "value": "2018-08-07",
+    "valueType": "DATE"
+  }
+}
+
+//例8: 「7月29日」と発話した場合
+"slots": {
+  "QuoteDate": {
+    "name": "QuoteDate",
+    "value": "2018-07-29",
+    "valueType": "DATE"
+  }
+}
+
+//例9: 「7月」と発話した場合
+"slots": {
+  "QuoteDate": {
+    "name": "QuoteDate",
+    "value": "2018-07-01/2018-07-31",
+    "valueType": "DATE.INTERVAL"
+  }
+}
+```
+{% endraw %}
+
+##### 次の項目も参照してください。
+* [`CLOVA.DATETIME`](#ClovaDatetime)
 
 #### CLOVA.DURATION {#ClovaDuration}
 
@@ -198,9 +420,9 @@ CEKでは、あらかじめ次の情報が定義されています。
 {% endraw %}
 
 ##### Object fields
-| フィールド名           | データ型 | フィールドの説明 | Optional |
-| ---------------------- | -------- | ---------------- | :------: |
-| `slots`                | object   | Extensionがインテントを処理する際に要求される情報(スロット)が保存されたオブジェクト | <!-- --> |
+| フィールド名             | データ型 | フィールドの説明 | Optional |
+| ------------------------ | -------- | ---------------- | :------: |
+| `slots`                  | object   | Extensionがインテントを処理する際に要求される情報(スロット)が保存されたオブジェクト | <!-- --> |
 | `slots.{slotName}`       | object   | CLOVA.DURATIONスロットの情報が保存されたオブジェクト | <!-- --> |
 | `slots.{slotName}.name`  | string   | 開発者が定義したスロット名 | <!-- --> |
 | `slots.{slotName}.value` | string   | [ISO 8601 Duration](https://en.wikipedia.org/wiki/ISO_8601#Durations)形式に変換した値 | <!-- --> |
