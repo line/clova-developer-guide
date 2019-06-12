@@ -25,6 +25,33 @@ Clovaの質問には`Clova`や`CEK`のタグをご利用ください。
   </thead>
   <tbody>
   <tr>
+    <td>v3.1.3</td><td>2019/06/12</td>
+    <td>
+      <ul>
+        <li><a href="/Design/Design_Guideline_For_Extension.md">Extensionのデザインガイドライン</a> 更新</li>
+          <ul>
+           <li><a href="/Design/Design_Guideline_For_Extension.md#BuiltinSlotType">ビルトインスロットタイプ</a> 更新（新規ビルトインスロットタイプ 追加）</li>
+           <li><a href="/Design/Design_Guideline_For_Extension.md#DecideSoundOutputType">応答タイプを決める</a> 更新（音源のリソースに関する注意を追加）</li>
+          </ul>
+        <li><a href="/CEK/Tutorials/Introduction.md">チュートリアル</a> 更新（LINE Developersの<a href="https://developers.line.biz/ja/docs/clova-extensions-kit/" target="_blank">Clova Extensions Kitチュートリアル</a>へのリンクを追加）</li>
+        <li><a href="/CEK/Guides/Build_Custom_Extension.md">Custom Extensionを作成する</a> 更新（<a href="/CEK/Guides/Build_Custom_Extension.md#ProvideAudioContent">オーディオコンテンツを提供する</a>に音源のリソースに関する注意を追加）</li>
+        <li><a href="/CEK/References/CEK_API.md">CEK APIのリファレンス</a> 更新</li>
+          <ul>
+           <li><a href="/CEK/References/CEK_API.md#BuiltinSlotType">ビルトインスロットタイプ</a> 更新</li>
+            <ul>
+              <li><a href="/CEK/References/CEK_API.md#Location">地域・都市名を取得する</a></li>
+              <li><a href="/CEK/References/CEK_API.md#Time">日時・時間を取得する</a></li>
+              <li><a href="/CEK/References/CEK_API.md#Number">数値を取得する</a>（<a href="/CEK/References/CEK_API.md#ClovaWholeNumber">CLOVA.WHOLE_NUMBER</a> 追加）</li>
+              <li><a href="/CEK/References/CEK_API.md#Unit">単位を取得する</a>（<a href="/CEK/References/CEK_API.md#ClovaUnit">CLOVA.UNIT</a>、<a href="/CEK/References/CEK_API.md#ClovaUnitCurrency">CLOVA.UNIT_CURRENCY</a> 追加）</li>
+              <li><a href="/CEK/References/CEK_API.md#NumberUnit">数値と単位を取得する</a>（<a href="/CEK/References/CEK_API.md#ClovaNumber">CLOVA.NUMBER</a>、<a href="/CEK/References/CEK_API.md#ClovaGenericNumber">CLOVA.GENERIC_NUMBER</a>、<a href="/CEK/References/CEK_API.md#ClovaMoney">CLOVA.MONEY</a> 追加）</li>
+            </ul>
+          </ul>
+        <li><a href="/CEK/References/CEK_API.md">Extensionを登録する</a> 更新（<a href="/DevConsole/Guides/CEK/Register_Extension.md#AddBuiltinSlotType">ビルトインスロットタイプを追加する</a> 更新）</li>
+        <li><a href="https://clova-developers.line.biz/#/updatehistory/">アップデート履歴</a> 追加</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
     <td>v3.1.2</td><td>2019/04/25</td>
     <td>
       <ul>
@@ -33,12 +60,12 @@ Clovaの質問には`Clova`や`CEK`のタグをご利用ください。
            <li><a href="/Design/Design_Guideline_For_Extension.md#BuiltinIntent">ビルトインインテント</a> 更新（Clova.FallbackIntent 追加）</li>
            <li><a href="/Design/Design_Guideline_For_Extension.md#BuiltinSlotType">ビルトインスロットタイプ</a> 更新（CLOVA.DATETIME_RECENT 追加）</li>
           </ul>
-        <li><a href="/CEK/References/CEK_API.md">CEK APIのリファレンス</a> 更新</li>          
+        <li><a href="/CEK/References/CEK_API.md">CEK APIのリファレンス</a> 更新</li>
           <ul>
            <li><a href="/CEK/References/CEK_API.md#BuiltinIntent">ビルトインインテント</a> 更新（<a href="/CEK/References/CEK_API.md#ClovaFallbackIntent">Clova.FallbackIntent</a> 追加）</li>
            <li><a href="/CEK/References/CEK_API.md#BuiltinSlotType">ビルトインスロットタイプ</a> 更新（<a href="/CEK/References/CEK_API.md#ClovaDatetimeRecent">CLOVA.DATETIME_RECENT</a> 追加）</li>
           </ul>
-        <li><a href="/CEK/References/CEK_API.md">Extensionを登録する</a> 更新（<a href="/DevConsole/Guides/CEK/Register_Extension.md#AddBuiltinIntent">ビルトインインテントを追加する</a> 更新）</li>          
+        <li><a href="/CEK/References/CEK_API.md">Extensionを登録する</a> 更新（<a href="/DevConsole/Guides/CEK/Register_Extension.md#AddBuiltinIntent">ビルトインインテントを追加する</a> 更新）</li>
       </ul>
     </td>
   </tr>
@@ -51,7 +78,7 @@ Clovaの質問には`Clova`や`CEK`のタグをご利用ください。
            <li><a href="/Design/Design_Guideline_For_Extension.md#BuiltinIntent">ビルトインインテント</a>更新（Clova.NextIntent、Clova.PauseIntent、Clova.PreviousIntent、Clova.ResumeIntentを追加）</li>
            <li><a href="/Design/Design_Guideline_For_Extension.md#AudioPlayer">オーディオコンテンツ再生タイプ</a> 更新（ユーザーシナリオに一時停止/再生再開の例を追加）</li>
           </ul>
-        <li><a href="/CEK/Guides/Build_Custom_Extension.md#ProvideAudioContent">オーディオコンテンツを提供する</a> 更新（<a href="/CEK/Guides/Build_Custom_Extension.md#ControlAudioPlayback">オーディオコンテンツの再生をコントロールする</a> 追加）</li>          
+        <li><a href="/CEK/Guides/Build_Custom_Extension.md#ProvideAudioContent">オーディオコンテンツを提供する</a> 更新（<a href="/CEK/Guides/Build_Custom_Extension.md#ControlAudioPlayback">オーディオコンテンツの再生をコントロールする</a> 追加）</li>
         <li><a href="/CEK/References/CEK_API.md">CEK APIのリファレンス</a> 更新（<a href="/CEK/References/CEK_API.md#BuiltinIntent">ビルトインインテント</a> 更新）</li>
         <li><a href="/DevConsole/Guides/CEK/Test_Extension.md#TestInteractionModel">対話モデルをテストする</a> 更新（AudioPlayer使用時のテスト機能の動作について注記を追加）</li>
       </ul>

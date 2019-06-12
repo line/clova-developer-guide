@@ -10,3 +10,5 @@
 * [1番目のチュートリアル：簡単なExtensionを作成してテストする](/CEK/Tutorials/Build_Simple_Extension.md)
 * [2番目のチュートリアル：「はい」「いいえ」のような基本的な意図表現を処理する](/CEK/Tutorials/Handle_Builtin_Intents.md)
 * 3番目のチュートリアル(追加予定)：ユーザーが入力した情報を活用する対話モデルを適用する
+
+また<a href="https://developers.line.biz/" target="_blank">LINE Developers</a>では、<a href="https://developers.line.biz/ja/docs/clova-extensions-kit/" target="_blank">Clova Extensions Kitソフトウェア開発キット（CEK SDK）を利用してCustom Extensionを作成するチュートリアル</a>が公開されています。こちらも合わせて参照してください。

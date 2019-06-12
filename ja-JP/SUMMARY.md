@@ -91,9 +91,21 @@
       * [`Clova.FallbackIntent`](/CEK/References/CEK_API.md#ClovaFallbackIntent)
       * [`Clova.GuideIntent`](/CEK/References/CEK_API.md#ClovaGuideIntent)
     * [ビルトインスロットタイプ](/CEK/References/CEK_API.md#BuiltinSlotType)
-      * [`CLOVA.DATETIME`](/CEK/References/CEK_API.md#ClovaDatetime)
-      * [`CLOVA.DATETIME_RECENT`](/CEK/References/CEK_API.md#ClovaDatetimeRecent)
-      * [`CLOVA.DURATION`](/CEK/References/CEK_API.md#ClovaDuration)
+      * [地域・都市名を取得する](/CEK/References/CEK_API.md#Location)
+      * [日時・時間を取得する](/CEK/References/CEK_API.md#Time)
+        * [`CLOVA.DATETIME`](/CEK/References/CEK_API.md#ClovaDatetime)
+        * [`CLOVA.DATETIME_RECENT`](/CEK/References/CEK_API.md#ClovaDatetimeRecent)
+        * [`CLOVA.DURATION`](/CEK/References/CEK_API.md#ClovaDuration)
+      * [数値を取得する](/CEK/References/CEK_API.md#Number)
+        * [`CLOVA.WHOLE_NUMBER`](/CEK/References/CEK_API.md#ClovaWholeNumber)
+      * [単位を取得する](/CEK/References/CEK_API.md#Unit)
+        * [`CLOVA.UNIT`](/CEK/References/CEK_API.md#ClovaUnit)
+        * [`CLOVA.UNIT_CURRENCY`](/CEK/References/CEK_API.md#ClovaUnitCurrency)
+      * [数値と単位を取得する](/CEK/References/CEK_API.md#NumberUnit)
+        * [`CLOVA.NUMBER`](/CEK/References/CEK_API.md#ClovaNumber)
+        * [`CLOVA.GENERIC_NUMBER`](/CEK/References/CEK_API.md#ClovaGenericNumber)
+        * [`CLOVA.MONEY`](/CEK/References/CEK_API.md#ClovaMoney)
+        
 
 ## Clova Home Extension
 

@@ -10,6 +10,12 @@ Custom Extensionで、ユーザーに音楽やポッドキャストなどのオ�
   * [再生状態の変更および進行状況のレポートを収集する](#CollectPlaybackStatusAndProgress)
   * [セキュリティのためにオーディオコンテンツのURLを更新する](#UpdateAudioURLForSecurity)
 
+
+<div class="note">
+  <p><strong>メモ</strong></p>
+  <p>音声出力タイプ、オーディオコンテンツの再生タイプ共に、音源（.mp3）のリソースはHTTPSのみ許可されます。</p>
+</div>
+
 ### オーディオコンテンツの再生を指示する {#DirectClientToPlayAudio}
 
 ユーザーから音楽や、または音楽のような形でオーディオコンテンツの再生をリクエストされたとき、そのオーディオコンテンツの情報を渡す必要があります。ユーザーからのオーディオコンテンツ再生のリクエストが[`IntentRequest`](/CEK/References/CEK_API.md#CustomExtIntentRequest)タイプのリクエストでCustom Extensionに渡され、Custom Extensionはその`IntentRequest`タイプのリクエストメッセージに対する[レスポンスメッセージ](/CEK/References/CEK_API.md#CustomExtResponseMessage)を返す必要があります。そのとき、そのメッセージにクライアントがオーディオコンテンツを再生するように指示する[`AudioPlayer.Play`](/CEK/References/CEK_API.md#Play)ディレクティブを含めます。
@@ -108,7 +114,7 @@ Custom Extensionで、ユーザーに音楽やポッドキャストなどのオ�
       "playerActivity": "STOPPED",
       "stream": {
         "token": "TR-NM-17413540",
-        "url": "http://music.serviceprovider.net/content?id=17413540",
+        "url": "https://music.serviceprovider.net/content?id=17413540",
         "urlPlayable": true
       },
       "totalInmillisecodns": 300000
@@ -152,7 +158,7 @@ Custom Extensionで、ユーザーに音楽やポッドキャストなどのオ�
   "playerActivity": "PLAYING",
   "stream": {
     "token": "TR-NM-17413540",
-    "url": "http://music.serviceprovider.net/content?id=17413540",
+    "url": "https://music.serviceprovider.net/content?id=17413540",
     "urlPlayable": true
   },
   "totalInMilliseconds": 195265

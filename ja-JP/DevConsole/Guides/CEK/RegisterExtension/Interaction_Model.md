@@ -28,8 +28,10 @@ Extensionを設計するための[対話モデル](/Design/Design_Guideline_For_
 
 <ol>
   <li><strong>{{ book.DevConsole.cek_builder_list_title_slottype }}</strong>パネル、または左側のサイドメニューの<strong>{{ book.DevConsole.cek_builder_list_title_slottype }}</strong>内にある<strong>{{ book.DevConsole.cek_builder_select_slottype_builtin }}</strong>の右に表示された<img class="inlineImage" src="/DevConsole/Assets/Images/DevConsole-Plus_Button.png" />ボタンをクリックします。</li>
-  <li>必要なビルトインスロットタイプにチェックを入れ、右上の<strong>{{ book.DevConsole.cek_save }}</strong>ボタンをクリックします。</li>
-  <img src="/DevConsole/Assets/Images/DevConsole-Add_Built-in_Slot_Type.png" />
+  <li>使用したいビルトインスロットタイプのカテゴリーをクリックします。</li>
+  <img src="/DevConsole/Assets/Images/DevConsole-Add_Built-in_Slot_Type_1.png" />
+  <li>リストが展開されたら、必要なビルトインスロットタイプにチェックを入れ、ウィンドウ右上の<strong>{{ book.DevConsole.cek_save }}</strong>ボタンをクリックします。</li>
+  <img src="/DevConsole/Assets/Images/DevConsole-Add_Built-in_Slot_Type_2.png" />
 </ol>
 
 すると、**{{ book.DevConsole.cek_interaction_model }}：{{ book.DevConsole.cek_builder_header_title_dashboard }}** 画面の **{{ book.DevConsole.cek_builder_list_title_slottype }}** パネルに、次のようにビルトインスロットタイプが追加されたことを確認できます。
