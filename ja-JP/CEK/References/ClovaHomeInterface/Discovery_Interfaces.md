@@ -121,6 +121,10 @@ IoTサービスを提供する際、ユーザーアカウントに登録され�
             "TurnOn",
             "TurnOff"
         ],
+          "actionsNeededUserConfirmation": [
+            "TurnOn",
+            "TurnOff"
+        ],
         "applianceTypes": ["LIGHT"],
         "additionalApplianceDetails": {}
       },
@@ -137,6 +141,10 @@ IoTサービスを提供する際、ユーザーアカウントに登録され�
           "HealthCheck",
           "TurnOn",
           "TurnOff"
+        ],
+          "actionsNeededUserConfirmation": [
+            "TurnOn",
+            "TurnOff"
         ],
         "applianceTypes": ["SMARTPLUG"],
         "additionalApplianceDetails": {},
