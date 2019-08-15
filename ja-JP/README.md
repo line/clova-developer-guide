@@ -25,6 +25,35 @@ Clovaの質問には`Clova`や`CEK`のタグをご利用ください。
   </thead>
   <tbody>
     <tr>
+      <td>v3.1.5</td><td>2019/08/15</td>
+      <td>
+        <ul>
+          <li><a href="/CEK/Guides/Build_Clova_Home_Extension.md">Clova Home Extensionを作成する</a> 更新（<a href="/CEK/Guides/Build_Clova_Home_Extension.md#ProvideSceneDiscovery">SceneDiscovery機能を提供する</a> 追加）</li>
+          <li><a href="/CEK/References/CEK_API_ClovaHome.md">Clova Home Extension APIのリファレンス</a> 更新</li>
+          <ul>
+            <li><a href="/CEK/References/ClovaHomeInterface/Discovery_Interfaces.md#discovery">Discovery</a> 更新</li>
+            <ul>
+              <li><a href="/CEK/References/ClovaHomeInterface/Discovery_Interfaces.md#DiscoverScenesRequest">DiscoverScenesRequest</a> 追加</li>
+              <li><a href="/CEK/References/ClovaHomeInterface/Discovery_Interfaces.md#DiscoverScenesResponse">DiscoverScenesResponse</a> 追加</li>
+            </ul>
+          </ul>
+          <ul>
+            <li><a href="/CEK/References/ClovaHomeInterface/Control_Interfaces.md">Control</a> 更新</li>
+            <ul>
+              <li><a href="/CEK/References/ClovaHomeInterface/Control_Interfaces.html#ActionSceneConfirmation">ActionSceneConfirmation</a> 追加</li>
+              <li><a href="/CEK/References/ClovaHomeInterface/Control_Interfaces.html#ActionSceneRequest">ActionSceneRequest</a> 追加</li>
+            </ul>
+          </ul>
+          <ul>
+            <li><a href="/CEK/References/ClovaHomeInterface/Shared_Objects.md">共有オブジェクト</a> 更新</li>
+            <ul>
+              <li><a href="/CEK/References/ClovaHomeInterface/Shared_Objects.md#SceneInfoObject">SceneInfoObject </a> 追加</li>
+            </ul>
+          </ul>
+        </ul>
+      </td>
+    </tr>
+    <tr>
       <td>v3.1.4</td><td>2019/07/19</td>
       <td>
         <ul>

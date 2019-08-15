@@ -8,6 +8,8 @@ IoTデバイスの情報の確認、デバイス操作のリクエストおよ�
 
 | メッセージ            | タイプ   | 説明                                      |
 | --------------------- | -------- | ----------------------------------------- |
+| [`ActionSceneConfirmation`](#ActionSceneConfirmation) | Response | [`ActionSceneRequest`](#ActionSceneRequest)メッセージに対するレスポンスです。シーンを動作させるようリクエストした後、その処理結果をCEKに返します。 |
+| [`ActionSceneRequest`](#ActionSceneRequest)  | Request  | シーンを動作させるようClova Home Extensionにリクエストします。 |
 | [`ChangeInputSourceConfirmation`](#ChangeInputSourceConfirmation) | Response | [`ChangeInputSourceRequest`](#ChangeInputSourceRequest)メッセージに対するレスポンスです。入力ソースを変更するようにリクエストした後、その処理結果をCEKに返します。 |
 | [`ChangeInputSourceRequest`](#ChangeInputSourceRequest)  | Request  | 入力ソースを変更するようClova Home Extensionにリクエストします。 |
 | [`ChargeConfirmation`](#ChargeConfirmation) | Response | [`ChargeRequest`](#ChargeRequest)メッセージに対するレスポンスです。デバイスの充電を開始するようにリクエストした後、その処理結果をCEKに返します。 |
@@ -142,6 +144,77 @@ IoTデバイスの情報の確認、デバイス操作のリクエストおよ�
 | [`TurnOnRequest`](#TurnOnRequest) | Request  | デバイスの電源をオンにするようClova Home Extensionにリクエストします。 |
 | [`UnmuteConfirmation`](#UnmuteConfirmation) | Response | [`UnmuteRequest`](#UnmuteRequest)メッセージに対するレスポンスです。デバイスのミュートを解除するように設定した結果をCEKに返します。 |
 | [`UnmuteRequest`](#UnmuteRequest) | Request  | デバイスのミュートを解除するようClova Home Extensionにリクエストします。 |
+
+
+
+## ActionSceneConfirmation {#ActionSceneConfirmation}
+[`ActionSceneRequest`](#ActionSceneRequest)メッセージに対するレスポンスです。シーンの動作せせるようにリクエストした後、その処理結果をCEKに返します。
+
+### Payload fields
+
+なし
+
+### Message example
+
+{% raw %}
+
+```json
+{
+  "header": {
+    "messageId": "4ec35000-88ce-4724-b7e4-7f52050558fd",
+    "name": "ActionSceneConfirmation",
+    "namespace": "ClovaHome",
+    "payloadVersion": "1.0"
+  },
+  "payload": {}
+}
+```
+
+{% endraw %}
+
+### 次の項目も参照してください。
+* [`ActionSceneRequest`](#ActionSceneRequest)
+
+## ActionSceneRequest {#ActionSceneRequest}
+主にホームゲートウェイなどを制御する際に使用します。複数の機器に対する操作をシーンとしてまとめておき、それらを同時に動作させるよう、Clova Home Extensionにリクエストします。このリクエストに対するレスポンスとして、[`ActionSceneConfirmation`](#ActionSceneConfirmation)メッセージを使用する必要があります。
+
+### Payload fields
+
+| フィールド名  | データ型 | フィールドの説明                       | Optional |
+| ------------- | -------- | -------------------------------------- | :------: |
+| `accessToken` | string   | IoTサービスのユーザーアカウントのアクセストークン。CEKは、外部サービスの認可サーバーから取得したユーザーアカウントのアクセストークンを渡します。詳細については、[ユーザーアカウントを連携する](/CEK/Guides/Link_User_Account.md)を参照してください。 | <!-- --> |
+| `scene`   | [SceneInfoObject](/CEK/References/ClovaHomeInterface/Shared_Objects.md#SceneInfoObject) | エンドポイントの情報を持つオブジェクト。`sceneId`, `sceneName`フィールドは必須です。 | <!-- --> |
+
+
+### Message example
+
+{% raw %}
+
+```json
+// "おはようシーンにして"という発話の場合
+{
+  "header": {
+    "messageId": "6c04fc2d-64dd-41a0-9162-7cb0d4cf7c08",
+    "name": "ActionSceneRequest",
+    "namespace": "ClovaHome",
+    "payloadVersion": "1.0"
+  },
+  "payload": {
+    "accessToken": "92ebcb67fe33",
+    "scene": {
+      "applianceId": "scene-001",
+      "additionalSceneDetails": {}
+    }
+  }
+}
+```
+
+{% endraw %}
+
+### 次の項目も参照してください。
+* [`ActionSceneConfirmation`](#ActionSceneConfirmation)
+
+
 
 ## ChangeInputSourceConfirmation {#ChangeInputSourceConfirmation}
 [`ChangeInputSourceRequest`](#ChangeInputSourceRequest)メッセージに対するレスポンスです。デバイスの充電を開始するようにリクエストした後、その処理結果をCEKに返します。

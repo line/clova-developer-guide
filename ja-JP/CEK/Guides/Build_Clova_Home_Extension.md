@@ -21,6 +21,8 @@ Clova Home Extensionの開発者は、次の内容を知っておく必要があ
 
 {% include 'BuildClovaHomeExtension/Provide_Device_Discovery.md' %}
 
+{% include 'BuildClovaHomeExtension/Provide_Scene_Discovery.md' %}
+
 {% include 'BuildClovaHomeExtension/Handle_Clova_Home_Extension_Request.md'  %}
 
 {% include 'BuildClovaHomeExtension/Return_Clova_Home_Extension_Response.md'  %}

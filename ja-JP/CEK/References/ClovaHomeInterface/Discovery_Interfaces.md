@@ -4,12 +4,14 @@
 
 # Discovery
 
-ユーザーアカウントに登録されているIoTデバイスのリストを確認する際に使用されるインターフェースです。
+ユーザーアカウントに登録されているIoTデバイス・シーンのリストを確認する際に使用されるインターフェースです。
 
 | メッセージ                    | タイプ   | 説明                              |
 | ----------------------------- | -------- | --------------------------------- |
 | [`DiscoverAppliancesRequest`](#DiscoverAppliancesRequest)   | Request  | ユーザーが登録したIoTデバイスのリストをClova Home Extensionにリクエストします。 |
 | [`DiscoverAppliancesResponse`](#DiscoverAppliancesResponse) | Response | [`DiscoverAppliancesRequest`](#DiscoverAppliancesRequest)メッセージに対するレスポンスです。ユーザーが登録したIoTデバイスのリストをCEKに返します。 |
+| [`DiscoverScenesRequest`](#DiscoverScenesRequest)   | Request  | ユーザーが登録したシーンのリストをClova Home Extensionにリクエストします。 |
+| [`DiscoverScenesResponse`](#DiscoverScenesResponse) | Response | [`DiscoverScenesRequest`](#DiscoverScenesRequest)メッセージに対するレスポンスです。ユーザーが登録したシーンのリストをCEKに返します。 |
 
 ## DiscoverAppliancesRequest {#DiscoverAppliancesRequest}
 ユーザーが登録したデバイスのリストをClova Home Extensionにリクエストします。このリクエストに対するレスポンスとして、[`DiscoverAppliancesResponse`](#DiscoverAppliancesResponse)メッセージを使用する必要があります。
@@ -159,3 +161,82 @@ IoTサービスを提供する際、ユーザーアカウントに登録され�
 
 ### 次の項目も参照してください。
 * [`DiscoverAppliancesRequest`](#DiscoverAppliancesRequest)
+
+
+
+## DiscoverScenesRequest {#DiscoverScenesRequest}
+ユーザーが登録したシーンのリストをClova Home Extensionにリクエストします。このリクエストに対するレスポンスとして、[`DiscoverScenesResponse`](#DiscoverScenesResponse)メッセージを使用する必要があります。
+
+### Payload fields
+
+| フィールド名  | データ型 | フィールドの説明                       | Optional |
+| ------------- | -------- | -------------------------------------- | :------: |
+| `accessToken` | string   | Clova Home Extensionのアクセストークン | <!-- --> |
+
+### Message example
+
+{% raw %}
+```json
+{
+    "header": {
+        "messageId": "8ddd7f05-7703-4cb4-a6dd-93c209c6647b",
+        "name": "DiscoverScenesRequest",
+        "namespace": "ClovaHome",
+        "payloadVersion": "1.0"
+    },
+    "payload": {
+        "accessToken": "92ebcb67fe33"
+    }
+}
+```
+{% endraw %}
+
+### 次の項目も参照してください。
+* [`DiscoverScenesResponse`](#DiscoverScenesResponse)
+
+## DiscoverScenesResponse {#DiscoverScenesResponse}
+ユーザーが登録したシーンのリストをCEKに返します。このメッセージは、[`DiscoverScenesRequest`](#DiscoverScenesRequest)メッセージに対するレスポンスとして使用します。
+
+### Payload fields
+
+| フィールド名             | データ型 | フィールドの説明            | Optional |
+| ------------------------ | -------- | --------------------------- | :------: |
+| `discoveredScenes[]`     | [SceneInfoObject](/CEK/References/ClovaHomeInterface/Shared_Objects.md#SceneInfoObject) array | ユーザーアカウントに登録されているシーンを説明するオブジェクト配列 | <!-- --> |
+
+### 備考
+IoTサービスを提供する際、ユーザーアカウントに登録されているシーンのリストを提供する必要があります。
+
+### Message example
+
+{% raw %}
+```json
+// サンプル：DiscoverScenesResponseメッセージで使用されたサンプル
+{
+  "header": {
+    "messageId": "99f9d8ff-9366-4cab-a90c-b4c7eca0abbe",
+    "name": "DiscoverScenesResponse",
+    "namespace": "ClovaHome",
+    "payloadVersion": "1.0"
+  },
+  "payload": {
+    "discoveredScenes": [
+      {
+        "sceneId": "scene-001",
+        "sceneName": "おはよう",
+        "needsUserConfirmation" : true,
+        "additionalSceneDetails": {}
+      },
+      {
+        "sceneId": "scene-002",
+        "sceneName": "おやすみ",
+        "needsUserConfirmation" : false,
+        "additionalSceneDetails": {}
+      }
+    ]
+  }
+}
+```
+{% endraw %}
+
+### 次の項目も参照してください。
+* [`DiscoverScenesRequest`](#DiscoverScenesRequest)

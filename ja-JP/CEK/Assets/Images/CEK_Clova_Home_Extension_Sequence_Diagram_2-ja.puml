@@ -1,0 +1,107 @@
+scale max 880 width
+skinparam sequenceMessageAlign center
+skinparam shadowing false
+skinparam roundcorner 10
+skinparam padding 10
+skinparam defaultFontSize 12
+skinparam defaultFontName sans-serif
+skinparam sequence {
+	ArrowColor #000000
+	ActorBorderColor #000000
+	ActorFontStyle Bolder
+
+	LifeLineBorderColor #000000
+	LifeLineBackgroundColor transparent
+	ParticipantBorderColor transparent
+	ParticipantFontSize 14
+	ParticipantFontColor #ffffff
+	ParticipantFontStyle bold
+
+	BoxBorderColor #000000
+	BoxFontColor #ffffff
+    BoxFontSize 14
+    BoxFontStyle bold
+}
+skinparam note {
+	BackgroundColor #9EA0CA
+	BorderColor #ffffff
+	FontColor #ffffff
+	FontSize 14
+	FontStyle bold
+}
+hide footbox
+
+participant "クライアントアプリ\nまたはペアリングアプリ" as client #9EA0CA
+participant "Clova" as clova #05D686
+participant "Extension" as ext #9EA0CA
+participant "IoTデバイスハブ" as hub #9EA0CA
+
+group Enable extension
+
+  [->> client: Clova Home Extensionをアクティブにする
+
+  activate client
+
+  ref over client, clova: アカウントリンク(Account Linking)
+
+end
+
+... ...
+
+group Discover scenes
+
+  [->> client: シーンリスト照会のリクエスト
+  client ->> clova: シーンリスト照会のリクエストを送信する
+
+  activate clova
+
+    clova ->> ext: DiscoverScenesRequestを送信する
+
+    activate ext
+
+      ext ->> hub: ユーザーアカウントに登録されている\nシーンのリストをリクエストする
+
+      activate hub
+        hub -->> ext: ユーザーのシーンリストを返す
+      deactivate hub
+
+      ext -->> clova: DiscoverScenesResponseを返す
+
+    deactivate ext
+
+    clova -->> client: ユーザーのシーンスリストを返す
+
+  deactivate clova
+
+  client -> client: ユーザーのシーンのリストを表示する
+
+end
+
+... ...
+
+group Control device
+
+  [->> client: シーン操作のリクエスト
+  client ->> clova: シーン操作のリクエストを送信する
+
+  activate clova
+
+    clova ->> ext: ActionSceneRequestを送信する
+
+    activate ext
+
+      ext ->> hub: シーン操作のリクエスト
+
+      activate hub
+        hub -->> ext: サービス応答
+      deactivate hub
+
+      ext -->> clova: ActionSceneConfirmationを返す
+
+    deactivate ext
+
+    clova -->> client: リクエストの結果を送信する
+
+  deactivate clova
+
+end

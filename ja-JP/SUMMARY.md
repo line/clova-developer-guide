@@ -105,13 +105,14 @@
         * [`CLOVA.NUMBER`](/CEK/References/CEK_API.md#ClovaNumber)
         * [`CLOVA.GENERIC_NUMBER`](/CEK/References/CEK_API.md#ClovaGenericNumber)
         * [`CLOVA.MONEY`](/CEK/References/CEK_API.md#ClovaMoney)
-        
+
 
 ## Clova Home Extension
 
 * [Clova Home Extensionを作成する](/CEK/Guides/Build_Clova_Home_Extension.md)
   * [準備事項](/CEK/Guides/Build_Clova_Home_Extension.md#Preparation)
-  * [Discoveryを提供する](/CEK/Guides/Build_Clova_Home_Extension.md#ProvideDeviceDiscovery)
+  * [Discovery機能を提供する](/CEK/Guides/Build_Clova_Home_Extension.md#ProvideDeviceDiscovery)
+  * [SceneDiscovery機能を提供する](/CEK/Guides/Build_Clova_Home_Extension.md#ProvideSceneDiscovery)
   * [Clova Home Extensionリクエストを処理する](/CEK/Guides/Build_Clova_Home_Extension.md#HandleClovaHomeExtensionRequest)
   * [Clova Home Extensionレスポンスを返す](/CEK/Guides/Build_Clova_Home_Extension.md#ReturnClovaHomeExtensionResponse)
   * [リクエストメッセージを検証する](/CEK/Guides/Build_Clova_Home_Extension.md#RequestMessageValidation)
@@ -122,8 +123,8 @@
   * [Clova Home Extensionメッセージ](/CEK/References/CEK_API_ClovaHome.md#ClovaHomeExtMessage)
     * [メッセージフォーマット](/CEK/References/CEK_API_ClovaHome.md#ClovaHomeExtMessageFormat)
     * [インターフェース](/CEK/References/CEK_API_ClovaHome.md#ClovaHomeExtInterface)
-      * [Control](/CEK/References/ClovaHomeInterface/Control_Interfaces.md)
       * [Discovery](/CEK/References/ClovaHomeInterface/Discovery_Interfaces.md)
+      * [Control](/CEK/References/ClovaHomeInterface/Control_Interfaces.md)
       * [Error](/CEK/References/ClovaHomeInterface/Error_Interfaces.md)
       * [共有オブジェクト](/CEK/References/ClovaHomeInterface/Shared_Objects.md)
 

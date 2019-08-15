@@ -28,6 +28,7 @@
 | [PeriodInfoObject](#PeriodInfoObject) | 期間情報を持っています。 |
 | [PhaseInfoObject](#PhaseInfoObject)  | エンドポイントの動作の段階情報を持っています。 |
 | [ProgressiveTaxBracketInfoObject](#ProgressiveTaxBracketInfoObject) | 累進税の段階情報を持っています。 |
+| [SceneInfoObject](#SceneInfoObject) | シーンの情報を持っています。 |
 | [SittingStateInfoObject](#SittingStateInfoObject) | スマートチェアなどのエンドポイントに対する、ユーザーの着席情報を持っています。 |
 | [SleepScoreInfoObject](#SleepScoreInfoObject) | 睡眠スコアの情報を持っています。 |
 | [SpeedInfoObject](#SpeedInfoObject) | 速度情報を持っています。 |
@@ -1377,6 +1378,21 @@ PM10の情報を持っているオブジェクトです。エンドポイント�
 ### 次の項目も参照してください。
 * [`GetProgressiveTaxBracketRequest`](/CEK/References/ClovaHomeInterface/Control_Interfaces.md#GetProgressiveTaxBracketRequest)
 * [`GetProgressiveTaxBracketResponse`](/CEK/References/ClovaHomeInterface/Control_Interfaces.md#GetProgressiveTaxBracketResponse)
+
+## SceneInfoObject {#SceneInfoObject}
+シーンの情報を持っているオブジェクトです。ユーザーアカウントに登録されているシーンのリストをCEKに渡したり、特定のエンドポイントをターゲットに指定して、Clova Home Extensionにそのエンドポイントの操作をリクエストする際に使われます。
+
+### Object fields
+| フィールド名                      | データ型     | フィールドの説明          |   必須/任意   |
+| --------------------------------- | ------------ | ------------------------- | :-----------: |
+| `needsUserConfirmation`           | boolean | シーンの実行にユーザ確認が必要かどうかのフラグ |   任意/常時   |
+| `sceneId`                         | string | エンドポイントのID |   必須/常時   |
+| `sceneName`                       | string | エンドポイントの名前 |   必須/常時   |
+| `additionalSceneDetails`          | object | メーカーまたはIoTサービスが提供する追加情報を持っているフィールド |   任意/常時   |
+
+### 次の項目も参照してください。
+* [`DiscoverScenesResponse`](/CEK/References/ClovaHomeInterface/Discover_Interfaces.md#DiscoverScenesResponse)
+* [`DiscoverScenesR`](/CEK/References/ClovaHomeInterface/Control_Interfaces.md#ActionSceneRequest)
 
 ## SittingStateInfoObject {#SittingStateInfoObject}
 スマートチェアなどのデバイスに対する、ユーザーの着席情報を持っているオブジェクトです。
