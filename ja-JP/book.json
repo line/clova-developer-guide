@@ -6,7 +6,7 @@
   "author": "LINE Corporation",
   "variables": {
     "ClassifiedInfo": "Confidential",
-    "DocVersion": "v3.1.4",
+    "DocVersion": "v3.1.6",
     "language": "ja",
     "TargetCountryCode": "JP",
     "TargetReaderType": "Internal",
@@ -20,7 +20,7 @@
     "AuthServerBaseURL": "https://clova-authgw.line-apps.com/",
     "CICBaseURL": "https://clova-cic.line-apps.com/",
     "RedirectURLforAccountLinking": "https://clova-cic.line-apps.com/v1/al/token/",
-    "ReleaseYear": "2018",
+    "ReleaseYear": "2020",
     "DevConsole": {
       "ManageExtensions": "スキルストア",
       "ExtensionPage": "Extensionページ",

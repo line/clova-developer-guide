@@ -28,8 +28,7 @@ Clova Developer Center βにログインします。
 
 <div class="note">
   <p><strong>メモ</strong></p>
-  <p>Clova Developer Center βを使用するには、LINE Developersの開発者アカウントの登録が必要です。
-  登録については <a href="https://developers.line.biz/ja/docs/line-login/getting-started/">LINE Developers のドキュメント</a>の<strong>2. 開発者として登録する(初回ログイン時のみ)</strong>を参照してください。</p>
+    <p>LINE Developersの開発者アカウントの登録については、<a href="https://developers.line.biz/ja/docs/messaging-api/getting-started/#%E3%83%81%E3%83%A3%E3%83%8D%E3%83%AB%E3%81%AE%E4%BD%9C%E6%88%90">LINE Developers のドキュメント</a>の<strong>1. コンソールにログインする</strong>と<strong>2. 開発者として登録する(初回ログイン時のみ)</strong>を参照してください。</p>
 </div>
 
 ## LINE Developersコンソールでチャネルを作成する {#CreateSkillChannel}
@@ -42,10 +41,9 @@ LINE Developersコンソールでチャネルを作成します。
   お手数ですが、<a href="https://partners.line.me/ja/partner/join" target="_blank"> LINE Partners</a> よりお問い合わせください。</p>
 </div>
 
-1. 新規チャネル作成画面で、プロバイダーを選択します。あらかじめ作成したプロバイダーを使用する場合は、当該のプロバイダーをラジオボタンで選択し、**次のページ** をクリックします。  
-  ![](/DevConsole/Assets/Images/DevConsole-Create_Channel_1.png)  
-  新規にプロバイダーを作成する場合は、ラジオボタンで **新規プロバイダー作成** を選択すると入力フォームが表示されます。新しく追加するプロバイダー名を入力して **次のページ**  をクリックします。
-
+1. LINE Developersの新規チャネル作成画面で、プロバイダーを選択します。あらかじめ作成したプロバイダーを使用する場合は、**プロバイダー**のドロップダウンリストで選択します。
+![](/DevConsole/Assets/Images/DevConsole-Create_Channel_1.png)  
+  新規にプロバイダーを作成する場合は、**プロバイダー**のドロップダウンリストで **新規プロバイダー作成** を選択すると入力フォームが表示されます。新しく作成するプロバイダー名を入力します。
   ![](/DevConsole/Assets/Images/DevConsole-Create_Channel_2.png)  
   <div class="note">
       <p><strong>メモ</strong></p>
@@ -53,7 +51,7 @@ LINE Developersコンソールでチャネルを作成します。
       ご自分の名前、あるいは企業名などを入力してください。</p>
   </div>
 
-2. **チャネル名** を入力し、**入力内容を確認する** をクリックします。  
+2. **チャネル名** を入力し、**チャネルを作成してClovaスキルに移動** ボタンをクリックします。  
 ![](/DevConsole/Assets/Images/DevConsole-Create_Channel_3.png)
 
     <div class="note">
@@ -62,7 +60,4 @@ LINE Developersコンソールでチャネルを作成します。
       Clovaで提供するサービスの名前などを入力してください。</p>
     </div>
 
-3. 内容を確認し、**作成してClova Developer Centerに移動** をクリックします。  
-![](/DevConsole/Assets/Images/DevConsole-Create_Channel_4.png)
-
-4. チャネルの作成が完了すると、Clova Developer Center β に遷移します。
+3. チャネルの作成が完了すると、Clova Developer Center β に遷移します。

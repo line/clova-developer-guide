@@ -24,7 +24,7 @@
 3. 削除したい **Clovaスキル** をクリックします。  
 ![](/DevConsole/Assets/Images/DevConsole-LineDev_Channel_List.png)  
 
-4. 画面右上の<img class="inlineImage" src="/DevConsole/Assets/Images/DevConsole-LineDev_Dot_Menu.png" /> をクリックし、**このチャネルを削除** を選択します。  
+4. 画面左下の**削除**ボタンをクリックします。  
 ![](/DevConsole/Assets/Images/DevConsole-LineDev_Channel_Remove.png)  
 
 5. 確認画面が表示されたら、**削除** をクリックします。  

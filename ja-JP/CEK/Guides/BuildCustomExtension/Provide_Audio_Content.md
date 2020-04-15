@@ -78,7 +78,7 @@ Custom Extensionで、ユーザーに音楽やポッドキャストなどのオ�
 
 <div class="danger">
   <p><strong>注意</strong></p>
-  <p>日本では現在、cardをサポートしておりません。</p>
+  <p>cardは、Custom Extensionには対応しておりません。</p>
 </div>
 
 ### オーディオコンテンツの再生をコントロールする {#ControlAudioPlayback}
@@ -267,5 +267,5 @@ Custom Extensionは、そのタイミングで、再生できるオーディオ�
 
 <div class="danger">
   <p><strong>注意</strong></p>
-  <p>日本では現在、cardをサポートしておりません。</p>
+  <p>cardは、Custom Extensionには対応しておりません。</p>
 </div>

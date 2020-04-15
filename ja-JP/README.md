@@ -25,6 +25,17 @@ Clovaの質問には`Clova`や`CEK`のタグをご利用ください。
   </thead>
   <tbody>
     <tr>
+      <td>v3.1.6</td><td>2020/04/15</td>
+      <td>
+        <ul>
+          <li><a href="/CEK/Guides/Build_Custom_Extension.md">Custom Extensionを作成する</a> 更新（cardがCustom Extensionに対応していない旨を記載）</li>
+          <li><a href="/CEK/Guides/Register_Collaborator.md">複数のユーザーでExtensionの編集・テストを行う</a> 更新（LINE DevelopersコンソールのUI変更に対応）</li>
+          <li><a href="/DevConsole/Guides/CEK/Create_Channel.md">チャネルを作成する</a> 更新（LINE DevelopersコンソールのUI変更に対応）</li>
+          <li><a href="/DevConsole/Guides/CEK/Remove_Extension.md">Extensionを中止および削除する</a> 更新（LINE DevelopersコンソールのUI変更に対応）</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
       <td>v3.1.5</td><td>2019/08/15</td>
       <td>
         <ul>

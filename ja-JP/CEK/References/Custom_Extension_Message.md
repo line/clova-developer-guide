@@ -494,7 +494,7 @@ Extensionは、リクエストメッセージを処理して、レスポンス�
 
 <div class="danger">
   <p><strong>注意</strong></p>
-  <p>日本では現在、cardをサポートしておりません。</p>
+  <p>cardは、Custom Extensionには対応しておりません。</p>
 </div>
 
 #### Message fields
@@ -539,7 +539,7 @@ Extensionは、リクエストメッセージを処理して、レスポンス�
 
 <div class="danger">
   <p><strong>注意</strong></p>
-  <p>日本では現在、cardをサポートしておりません。</p>
+  <p>cardは、Custom Extensionには対応しておりません。</p>
 </div>
 
 #### SpeechInfoObject {#CustomExtSpeechInfoObject}
@@ -729,7 +729,7 @@ SpeechInfoObjectオブジェクトはレスポンスメッセージの`response.
 
 <div class="danger">
   <p><strong>注意</strong></p>
-  <p>日本では現在、cardをサポートしておりません。</p>
+  <p>cardは、Custom Extensionには対応しておりません。</p>
 </div>
 
 #### 次の項目も参照してください。

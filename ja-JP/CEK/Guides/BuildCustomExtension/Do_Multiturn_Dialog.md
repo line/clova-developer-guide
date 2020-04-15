@@ -110,5 +110,5 @@ Custom Extensionがピザの種類だけでなく、注文する数量に関す�
 
 <div class="danger">
   <p><strong>注意</strong></p>
-  <p>日本では現在、cardをサポートしておりません。</p>
+  <p>cardは、Custom Extensionには対応しておりません。</p>
 </div>
