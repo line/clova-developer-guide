@@ -25,6 +25,14 @@ Clovaの質問には`Clova`や`CEK`のタグをご利用ください。
   </thead>
   <tbody>
     <tr>
+      <td>v3.1.7</td><td>2020/06/16</td>
+      <td>
+        <ul>
+          <li><a href="/CEK/Guides/Handle_ClovaSkill_EventRequest.md">ユーザーの利用開始および停止を処理する</a> 更新（"SkillEnabled"または"SkillDisabled"が含まれたリクエストを受け取った際のレスポンスについて追記）</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
       <td>v3.1.6</td><td>2020/04/15</td>
       <td>
         <ul>
