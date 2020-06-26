@@ -10,8 +10,8 @@ LINE株式会社（以下、当社といいます）は、Clova事務局とし�
 
 ## お問い合わせ
 このドキュメントに関するお問い合わせや開発時のご質問の際にはこちらをご利用ください。
-Clovaの質問には`Clova`や`CEK`のタグをご利用ください。
-<a href="https://www.line-community.me/questions" target="_blank">LINE developers community > Q&A</a>
+Clovaの質問には`Clova Extensions Kit`のタグをご利用ください。
+<a href="https://www.line-community.me/questions" target="_blank">LINE Developers Community > Q&A</a>
 
 ## ドキュメントのバージョンおよび変更履歴
 
@@ -24,6 +24,14 @@ Clovaの質問には`Clova`や`CEK`のタグをご利用ください。
     </tr>
   </thead>
   <tbody>
+    <tr>
+      <td>v3.1.8</td><td>2020/06/26</td>
+      <td>
+        <ul>
+          <li><a href="/README.md">はじめに</a> 更新（LINE Developers Communityでのお問い合わせに使用するタグを変更）</li>
+        </ul>
+      </td>
+    </tr>
     <tr>
       <td>v3.1.7</td><td>2020/06/16</td>
       <td>
