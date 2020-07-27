@@ -9,141 +9,141 @@ IoTデバイスの情報の確認、デバイス操作のリクエストおよ�
 | メッセージ            | タイプ   | 説明                                      |
 | --------------------- | -------- | ----------------------------------------- |
 | [`ActionSceneConfirmation`](#ActionSceneConfirmation) | Response | [`ActionSceneRequest`](#ActionSceneRequest)メッセージに対するレスポンスです。シーンを動作させるようリクエストした後、その処理結果をCEKに返します。 |
-| [`ActionSceneRequest`](#ActionSceneRequest)  | Request  | シーンを動作させるようClova Home Extensionにリクエストします。 |
+| [`ActionSceneRequest`](#ActionSceneRequest)  | Request  | シーンを動作させるようCLOVA Home Extensionにリクエストします。 |
 | [`ChangeInputSourceConfirmation`](#ChangeInputSourceConfirmation) | Response | [`ChangeInputSourceRequest`](#ChangeInputSourceRequest)メッセージに対するレスポンスです。入力ソースを変更するようにリクエストした後、その処理結果をCEKに返します。 |
-| [`ChangeInputSourceRequest`](#ChangeInputSourceRequest)  | Request  | 入力ソースを変更するようClova Home Extensionにリクエストします。 |
+| [`ChangeInputSourceRequest`](#ChangeInputSourceRequest)  | Request  | 入力ソースを変更するようCLOVA Home Extensionにリクエストします。 |
 | [`ChargeConfirmation`](#ChargeConfirmation) | Response | [`ChargeRequest`](#ChargeRequest)メッセージに対するレスポンスです。デバイスの充電を開始するようにリクエストした後、その処理結果をCEKに返します。 |
-| [`ChargeRequest`](#ChargeRequest) | Request  | デバイスの充電を開始するようClova Home Extensionにリクエストします。 |
+| [`ChargeRequest`](#ChargeRequest) | Request  | デバイスの充電を開始するようCLOVA Home Extensionにリクエストします。 |
 | [`CloseConfirmation`](#CloseConfirmation) | Response | [`CloseRequest`](#CloseRequest)メッセージに対するレスポンスです。スマートカーテンや温水洗浄便座の蓋を閉めるようにリクエストした後、その処理結果をCEKに返します。 |
-| [`CloseRequest`](#CloseRequest) | Request  | スマートカーテンや温水洗浄便座などのデバイスを制御する際に使用します。スマートカーテンや温水洗浄便座の蓋を閉めるようClova Home Extensionにリクエストします。 |
+| [`CloseRequest`](#CloseRequest) | Request  | スマートカーテンや温水洗浄便座などのデバイスを制御する際に使用します。スマートカーテンや温水洗浄便座の蓋を閉めるようCLOVA Home Extensionにリクエストします。 |
 | [`DecrementBrightnessConfirmation`](#DecrementBrightnessConfirmation) | Response | [`DecrementBrightnessRequest`](#DecrementBrightnessRequest)メッセージに対するレスポンスです。照明の輝度を下げるようにリクエストした後、その処理結果をCEKに返します。 |
-| [`DecrementBrightnessRequest`](#DecrementBrightnessRequest) | Request  | 照明の輝度を指定された値に下げるようClova Home Extensionにリクエストします。 |
+| [`DecrementBrightnessRequest`](#DecrementBrightnessRequest) | Request  | 照明の輝度を指定された値に下げるようCLOVA Home Extensionにリクエストします。 |
 | [`DecrementChannelConfirmation`](#DecrementChannelConfirmation) | Response | [`DecrementChannelRequest`](#DecrementChannelRequest)メッセージに対するレスポンスです。テレビのチャンネルを下げるようにリクエストした後、その処理結果をCEKに返します。 |
-| [`DecrementChannelRequest`](#DecrementChannelRequest) | Request  | テレビのチャンネルを指定された値に下げるようClova Home Extensionにリクエストします。 |
+| [`DecrementChannelRequest`](#DecrementChannelRequest) | Request  | テレビのチャンネルを指定された値に下げるようCLOVA Home Extensionにリクエストします。 |
 | [`DecrementFanSpeedConfirmation`](#DecrementFanSpeedConfirmation) | Response | [`DecrementFanSpeedRequest`](#DecrementFanSpeedRequest)メッセージに対するレスポンスです。ファンの速度を下げるようにリクエストした後、その処理結果をCEKに返します。 |
-| [`DecrementFanSpeedRequest`](#DecrementFanSpeedRequest) | Request  | ファンの速度を指定された値に下げるようClova Home Extensionにリクエストします。 |
+| [`DecrementFanSpeedRequest`](#DecrementFanSpeedRequest) | Request  | ファンの速度を指定された値に下げるようCLOVA Home Extensionにリクエストします。 |
 | [`DecrementIntensityLevelConfirmation`](#DecrementIntensityLevelConfirmation) | Response | [`DecrementIntensityLevelRequest`](#DecrementIntensityLevelRequest)メッセージに対するレスポンスです。圧力や水圧などの強度を下げるようにリクエストした後、その処理結果をCEKに返します。 |
-| [`DecrementIntensityLevelRequest`](#DecrementIntensityLevelRequest) | Request  | 主にエアコンやサーモスタットのようなデバイスの制御に使用します。圧力や水圧の強度を指定された値に下げるようClova Home Extensionにリクエストします。 |
+| [`DecrementIntensityLevelRequest`](#DecrementIntensityLevelRequest) | Request  | 主にエアコンやサーモスタットのようなデバイスの制御に使用します。圧力や水圧の強度を指定された値に下げるようCLOVA Home Extensionにリクエストします。 |
 | [`DecrementTargetTemperatureConfirmation`](#DecrementTargetTemperatureConfirmation) | Response | [`DecrementTargetTemperatureRequest`](#DecrementTargetTemperatureRequest)メッセージに対するレスポンスです。温度を下げるようにリクエストした後、その処理結果をCEKに返します。 |
-| [`DecrementTargetTemperatureRequest`](#DecrementTargetTemperatureRequest) | Request  | 設定温度を指定された値に下げるようClova Home Extensionにリクエストします。 |
+| [`DecrementTargetTemperatureRequest`](#DecrementTargetTemperatureRequest) | Request  | 設定温度を指定された値に下げるようCLOVA Home Extensionにリクエストします。 |
 | [`DecrementVolumeConfirmation`](#DecrementVolumeConfirmation) | Response | [`DecrementVolumeRequest`](#DecrementVolumeRequest)メッセージに対するレスポンスです。スピーカーの音量を下げるようにリクエストした後、その処理結果をCEKに返します。 |
-| [`DecrementVolumeRequest`](#DecrementVolumeRequest) | Request  | スピーカーの音量を下げるようClova Home Extensionにリクエストします。 |
-| [`GetAirQualityRequest`](#GetAirQualityRequest) | Request  | デバイスで測定された空気質情報をClova Home Extensionにリクエストします。 |
+| [`DecrementVolumeRequest`](#DecrementVolumeRequest) | Request  | スピーカーの音量を下げるようCLOVA Home Extensionにリクエストします。 |
+| [`GetAirQualityRequest`](#GetAirQualityRequest) | Request  | デバイスで測定された空気質情報をCLOVA Home Extensionにリクエストします。 |
 | [`GetAirQualityResponse`](#GetAirQualityResponse) | Response | [`GetAirQualityRequest`](#GetAirQualityRequest)メッセージに対するレスポンスです。デバイスで測定された空気質情報をCEKに返します。 |
-| [`GetAsleepDurationRequest`](#GetAsleepDurationRequest) | Request  | 主に睡眠センサーで測定された情報を確認する際に使用します。デバイスで測定されたユーザーの睡眠時間をClova Home Extensionにリクエストします。 |
+| [`GetAsleepDurationRequest`](#GetAsleepDurationRequest) | Request  | 主に睡眠センサーで測定された情報を確認する際に使用します。デバイスで測定されたユーザーの睡眠時間をCLOVA Home Extensionにリクエストします。 |
 | [`GetAsleepDurationResponse`](#GetAsleepDurationResponse) | Response | [`GetAsleepDurationRequest`](#GetAsleepDurationRequest)メッセージに対するレスポンスです。デバイスで測定されたユーザーの睡眠時間をCEKに返します。 |
-| [`GetAwakeDurationRequest`](#GetAwakeDurationRequest) | Request  | 主に睡眠センサーで測定された情報を確認する際に使用します。デバイスで測定されたユーザーの入眠潜時、つまりユーザーが就寝してから睡眠状態に入るまでの時間をClova Home Extensionにリクエストします。 |
+| [`GetAwakeDurationRequest`](#GetAwakeDurationRequest) | Request  | 主に睡眠センサーで測定された情報を確認する際に使用します。デバイスで測定されたユーザーの入眠潜時、つまりユーザーが就寝してから睡眠状態に入るまでの時間をCLOVA Home Extensionにリクエストします。 |
 | [`GetAwakeDurationResponse`](#GetAwakeDurationResponse) | Response | [`GetAwakeDurationRequest`](#GetAwakeDurationRequest)メッセージに対するレスポンスです。デバイスで測定されたユーザーの入眠潜時、つまりユーザーが就寝してから睡眠状態に入るまでの時間をCEKに返します。 |
-| [`GetBatteryInfoRequest`](#GetBatteryInfoRequest) | Request  | デバイスの電池の情報をClova Home Extensionにリクエストします。 |
+| [`GetBatteryInfoRequest`](#GetBatteryInfoRequest) | Request  | デバイスの電池の情報をCLOVA Home Extensionにリクエストします。 |
 | [`GetBatteryInfoResponse`](#GetBatteryInfoResponse) | Response | [`GetBatteryInfoRequest`](#GetBatteryInfoRequest)メッセージに対するレスポンスです。デバイスの電池の情報をCEKに返します。 |
-| [`GetCleaningCycleRequest`](#GetCleaningCycleRequest) | Request  | デバイスをクリーニングする周期を確認する際に使用します。デバイスの次のクリーニング周期までの残り時間をClova Home Extensionにリクエストします。 |
+| [`GetCleaningCycleRequest`](#GetCleaningCycleRequest) | Request  | デバイスをクリーニングする周期を確認する際に使用します。デバイスの次のクリーニング周期までの残り時間をCLOVA Home Extensionにリクエストします。 |
 | [`GetCleaningCycleResponse`](#GetCleaningCycleResponse) | Response | [`GetCleaningCycleRequest`](#GetCleaningCycleRequest)メッセージに対するレスポンスです。デバイスの次のクリーニング周期までの残り時間をCEKに返します。 |
-| [`GetCloseTimeRequest`](#GetCloseTimeRequest) | Request  | 開閉センサーで検知された開閉状況のうち、検知対象が最後に閉まったときの日時情報をClova Home Extensionにリクエストします。 |
+| [`GetCloseTimeRequest`](#GetCloseTimeRequest) | Request  | 開閉センサーで検知された開閉状況のうち、検知対象が最後に閉まったときの日時情報をCLOVA Home Extensionにリクエストします。 |
 | [`GetCloseTimeResponse`](#GetCloseTimeResponse) | Response | [`GetCloseTimeRequest`](#GetCloseTimeRequest)メッセージに対するレスポンスです。開閉センサーの検知対象が最後に閉まったときの日時情報をCEKに返します。 |
-| [`GetConsumptionRequest`](#GetConsumptionRequest) | Request  | 主にスマートプラグやスマートテーブルタップのようなデバイスで測定された、現在までのエネルギーまたはリソースを確認する際に使用します。測定されたエネルギーまたはリソースの情報をClova Home Extensionにリクエストします。 |
+| [`GetConsumptionRequest`](#GetConsumptionRequest) | Request  | 主にスマートプラグやスマートテーブルタップのようなデバイスで測定された、現在までのエネルギーまたはリソースを確認する際に使用します。測定されたエネルギーまたはリソースの情報をCLOVA Home Extensionにリクエストします。 |
 | [`GetConsumptionResponse`](#GetConsumptionResponse) | Response | [`GetConsumptionRequest`](#GetConsumptionRequest)メッセージに対するレスポンスです。現在まで測定されたエネルギーまたはリソースの情報をCEKに返します。 |
-| [`GetCurrentBillRequest`](#GetCurrentBillRequest) | Request  | 主にスマートプラグやスマートテーブルタップのようなデバイスで測定された、現在までのエネルギー使用量に基づいた利用料金を確認する際に使用します。測定された料金情報をClova Home Extensionにリクエストします。 |
+| [`GetCurrentBillRequest`](#GetCurrentBillRequest) | Request  | 主にスマートプラグやスマートテーブルタップのようなデバイスで測定された、現在までのエネルギー使用量に基づいた利用料金を確認する際に使用します。測定された料金情報をCLOVA Home Extensionにリクエストします。 |
 | [`GetCurrentBillResponse`](#GetCurrentBillResponse) | Response | [`GetCurrentBillRequest`](#GetCurrentBillRequest)メッセージに対するレスポンスです。現在まで測定された料金情報をCEKに返します。 |
-| [`GetCurrentSittingStateRequest`](#GetCurrentSittingStateRequest) | Request  | スマートチェアなどのデバイスで、ユーザーの使用状況を確認する際に使用します。デバイスで検知されたユーザーの着席情報と、直近でユーザーがデバイスを使用した時間の情報をClova Home Extensionにリクエストします。 |
+| [`GetCurrentSittingStateRequest`](#GetCurrentSittingStateRequest) | Request  | スマートチェアなどのデバイスで、ユーザーの使用状況を確認する際に使用します。デバイスで検知されたユーザーの着席情報と、直近でユーザーがデバイスを使用した時間の情報をCLOVA Home Extensionにリクエストします。 |
 | [`GetCurrentSittingStateResponse`](#GetCurrentSittingStateResponse) | Response | [`GetCurrentSittingStateRequest`](#GetCurrentSittingStateRequest)メッセージに対するレスポンスです。デバイスで検知されたユーザーの着席情報と、直近でユーザーがデバイスを使用した時間の情報をCEKに返します。 |
-| [`GetCurrentTemperatureRequest`](#GetCurrentTemperatureRequest) | Request  | 現在の温度をClova Home Extensionにリクエストします。 |
+| [`GetCurrentTemperatureRequest`](#GetCurrentTemperatureRequest) | Request  | 現在の温度をCLOVA Home Extensionにリクエストします。 |
 | [`GetCurrentTemperatureResponse`](#GetCurrentTemperatureResponse) | Response | [`GetCurrentTemperatureRequest`](#GetCurrentTemperatureRequest)メッセージに対するレスポンスです。デバイスで測定された現在の温度をCEKに返します。 |
 | [`GetDeviceStateRequest`](#GetDeviceStateRequest) | Request  | デバイスが提供するすべてのステータス情報を確認する際に使用します。 |
 | [`GetDeviceStateResponse`](#GetDeviceStateResponse) | Response | [`GetDeviceStateRequest`](#GetDeviceStateRequest)メッセージに対するレスポンスです。デバイスが提供するすべてのステータス情報をCEKに返します。 |
-| [`GetEstimateBillRequest`](#GetEstimateBillRequest) | Request  | 主にスマートプラグやスマートテーブルタップのようなデバイスで測定されたエネルギー使用量に基づいて、利用料金を推定する際に使用します。推定された料金情報をClova Home Extensionにリクエストします。 |
+| [`GetEstimateBillRequest`](#GetEstimateBillRequest) | Request  | 主にスマートプラグやスマートテーブルタップのようなデバイスで測定されたエネルギー使用量に基づいて、利用料金を推定する際に使用します。推定された料金情報をCLOVA Home Extensionにリクエストします。 |
 | [`GetEstimateBillResponse`](#GetEstimateBillResponse) | Response | [`GetEstimateBillRequest`](#GetEstimateBillRequest)メッセージに対するレスポンスです。推定された料金情報をCEKに返します。 |
 | [`GetExpendableStateRequest`](#GetExpendableStateRequest) | Request  | フィルターなど、デバイスの消耗品の使用量や残り寿命を確認する際に使用します。デバイスが持つ消耗品の使用量や寿命情報をリクエストします。 |
 | [`GetExpendableStateResponse`](#GetExpendableStateResponse)  | Response | [`GetExpendableStateRequest`](#GetExpendableStateRequest)メッセージに対するレスポンスです。デバイスが提供するすべての消耗品の使用量や寿命情報をCEKに返します。 |
-| [`GetFineDustRequest`](#GetFineDustRequest) | Request  | デバイスで測定された微細粉塵(PM10)の情報をClova Home Extensionにリクエストします。 |
+| [`GetFineDustRequest`](#GetFineDustRequest) | Request  | デバイスで測定された微細粉塵(PM10)の情報をCLOVA Home Extensionにリクエストします。 |
 | [`GetFineDustResponse`](#GetFineDustResponse) | Response | [`GetFineDustRequest`](#GetFineDustRequest)メッセージに対するレスポンスです。デバイスで測定された微細粉塵(PM10)の情報をCEKに返します。 |
-| [`GetHumidityRequest`](#GetHumidityRequest) | Request  | デバイスで測定された湿度をClova Home Extensionにリクエストします。 |
+| [`GetHumidityRequest`](#GetHumidityRequest) | Request  | デバイスで測定された湿度をCLOVA Home Extensionにリクエストします。 |
 | [`GetHumidityResponse`](#GetHumidityResponse) | Response | [`GetHumidityRequest`](#GetHumidityRequest)メッセージに対するレスポンスです。デバイスで測定された湿度をCEKに返します。 |
-| [`GetKeepWarmTimeRequest`](#GetKeepWarmTimeRequest) | Request  | 炊飯器のようなデバイスで、食べ物が保温された時間を確認する際に使用します。デバイスで保温モードが維持された時間の情報をClova Home Extensionにリクエストします。 |
+| [`GetKeepWarmTimeRequest`](#GetKeepWarmTimeRequest) | Request  | 炊飯器のようなデバイスで、食べ物が保温された時間を確認する際に使用します。デバイスで保温モードが維持された時間の情報をCLOVA Home Extensionにリクエストします。 |
 | [`GetKeepWarmTimeResponse`](#GetKeepWarmTimeResponse) | Response | [`GetKeepWarmTimeRequest`](#GetKeepWarmTimeRequest)メッセージに対するレスポンスです。保温モードが維持された時間の情報をCEKに返します。 |
-| [`GetLockStateRequest`](#GetLockStateRequest) | Request  | 主にスマートバルブなどのデバイスの状態を確認する際に使用します。デバイスが持っているロック装置の現在のロック状態をClova Home Extensionにリクエストします。 |
+| [`GetLockStateRequest`](#GetLockStateRequest) | Request  | 主にスマートバルブなどのデバイスの状態を確認する際に使用します。デバイスが持っているロック装置の現在のロック状態をCLOVA Home Extensionにリクエストします。 |
 | [`GetLockStateResponse`](#GetLockStateResponse) | Response | [`GetLockStateRequest`](#GetLockStateRequest)メッセージに対するレスポンスです。デバイスが持っているロック装置の現在のロック状態をCEKに返します。 |
-| [`GetOpenStateRequest`](#GetOpenStateRequest) | Request  | 主に開閉センサーで検知された開閉状況のうち、検知対象の現在の状態(開いている/閉まっている)をClova Home Extensionにリクエストします。 |
+| [`GetOpenStateRequest`](#GetOpenStateRequest) | Request  | 主に開閉センサーで検知された開閉状況のうち、検知対象の現在の状態(開いている/閉まっている)をCLOVA Home Extensionにリクエストします。 |
 | [`GetOpenStateResponse`](#GetOpenStateResponse) | Response | [`GetOpenStateRequest`](#GetOpenStateRequest)メッセージに対するレスポンスです。主に検知対象の現在の状態(開いている/閉まっている)をCEKに返します。 |
-| [`GetOpenTimeRequest`](#GetOpenTimeRequest) | Request  | 主に開閉センサーで検知された開閉状況のうち、検知対象が最後に開いたときの日時情報をClova Home Extensionにリクエストします。 |
+| [`GetOpenTimeRequest`](#GetOpenTimeRequest) | Request  | 主に開閉センサーで検知された開閉状況のうち、検知対象が最後に開いたときの日時情報をCLOVA Home Extensionにリクエストします。 |
 | [`GetOpenTimeResponse`](#GetOpenTimeResponse) | Response | [`GetOpenTimeRequest`](#GetOpenTimeRequest)メッセージに対するレスポンスです。開閉センサーの検知対象が最後に開いたときの日時情報をCEKに返します。 |
-| [`GetPhaseRequest`](#GetPhaseRequest) | Request  | 主に炊飯器や洗濯機など、動作に段階があるデバイスで、現在の動作段階を確認する際に使用します。デバイスの現在の動作段階をClova Home Extensionにリクエストします。 |
+| [`GetPhaseRequest`](#GetPhaseRequest) | Request  | 主に炊飯器や洗濯機など、動作に段階があるデバイスで、現在の動作段階を確認する際に使用します。デバイスの現在の動作段階をCLOVA Home Extensionにリクエストします。 |
 | [`GetPhaseResponse`](#GetPhaseResponse) | Response | [`GetPhaseRequest`](#GetPhaseRequest)メッセージに対するレスポンスです。デバイスの現在の動作段階をCEKに返します。 |
-| [`GetProgressiveTaxBracketRequest`](#GetProgressiveTaxBracketRequest) | Request  | 主に電力量計やスマートプラグなどのデバイスで、累進税の段階を確認する際に使用します。判断された累進税の段階をClova Home Extensionにリクエストします。 |
+| [`GetProgressiveTaxBracketRequest`](#GetProgressiveTaxBracketRequest) | Request  | 主に電力量計やスマートプラグなどのデバイスで、累進税の段階を確認する際に使用します。判断された累進税の段階をCLOVA Home Extensionにリクエストします。 |
 | [`GetProgressiveTaxBracketResponse`](#GetProgressiveTaxBracketResponse) | Response | [`GetProgressiveTaxBracketRequest`](#GetProgressiveTaxBracketRequest)メッセージに対するレスポンスです。デバイスで判断された累進税の段階情報をCEKに返します。 |
-| [`GetRemainingTimeRequest`](#GetRemainingTimeRequest) | Request  | 主に炊飯器や洗濯機のようなデバイスで、動作終了までの残り時間を確認する際に使用します。デバイスの動作終了までの残り時間をClova Home Extensionにリクエストします。 |
+| [`GetRemainingTimeRequest`](#GetRemainingTimeRequest) | Request  | 主に炊飯器や洗濯機のようなデバイスで、動作終了までの残り時間を確認する際に使用します。デバイスの動作終了までの残り時間をCLOVA Home Extensionにリクエストします。 |
 | [`GetRemainingTimeResponse`](#GetRemainingTimeResponse) | Response | [`GetRemainingTimeRequest`](#GetRemainingTimeRequest)メッセージに対するレスポンスです。デバイスの動作終了までの残り時間をCEKに返します。 |
-| [`GetRightPostureRatioRequest`](#GetRightPostureRatioRequest) | Request  | ユーザーが正しい姿勢でデバイスを使用した割合を確認する際に使用します。ユーザーがデバイスを使用する際、特定の期間または現在まで正しい姿勢を保った割合の情報をClova Home Extensionにリクエストします。 |
+| [`GetRightPostureRatioRequest`](#GetRightPostureRatioRequest) | Request  | ユーザーが正しい姿勢でデバイスを使用した割合を確認する際に使用します。ユーザーがデバイスを使用する際、特定の期間または現在まで正しい姿勢を保った割合の情報をCLOVA Home Extensionにリクエストします。 |
 | [`GetRightPostureRatioResponse`](#GetRightPostureRatioResponse) | Response | [`GetRightPostureRatioRequest`](#GetRightPostureRatioRequest)メッセージに対するレスポンスです。ユーザーが正しい姿勢でデバイスを使用した割合をCEKに返します。 |
-| [`GetSleepScoreRequest`](#GetSleepScoreRequest) | Request  | 睡眠センサーのようなデバイスで、ユーザーの睡眠スコアの情報を確認する際に使用します。デバイスで評価されたユーザーの睡眠スコアをClova Home Extensionにリクエストします。 |
+| [`GetSleepScoreRequest`](#GetSleepScoreRequest) | Request  | 睡眠センサーのようなデバイスで、ユーザーの睡眠スコアの情報を確認する際に使用します。デバイスで評価されたユーザーの睡眠スコアをCLOVA Home Extensionにリクエストします。 |
 | [`GetSleepScoreResponse`](#GetSleepScoreResponse) | Response | [`GetSleepScoreRequest`](#GetSleepScoreRequest)メッセージに対するレスポンスです。デバイスで評価されたユーザーの睡眠スコアをCEKに返します。 |
-| [`GetSleepStartTimeRequest`](#GetSleepStartTimeRequest) | Request  | 睡眠センサーのようなデバイスで、ユーザーの睡眠スコアの情報を確認する際に使用します。デバイスで測定されたユーザーの睡眠開始時間をClova Home Extensionにリクエストします。 |
+| [`GetSleepStartTimeRequest`](#GetSleepStartTimeRequest) | Request  | 睡眠センサーのようなデバイスで、ユーザーの睡眠スコアの情報を確認する際に使用します。デバイスで測定されたユーザーの睡眠開始時間をCLOVA Home Extensionにリクエストします。 |
 | [`GetSleepStartTimeResponse`](#GetSleepStartTimeRequest) | Response | [`GetSleepStartTimeRequest`](#GetSleepStartTimeRequest)メッセージに対するレスポンスです。デバイスで測定されたユーザーの睡眠開始時間をCEKに返します。 |
-| [`GetTargetTemperatureRequest`](#GetTargetTemperatureRequest) | Request  | デバイスの設定温度をClova Home Extensionにリクエストします。 |
+| [`GetTargetTemperatureRequest`](#GetTargetTemperatureRequest) | Request  | デバイスの設定温度をCLOVA Home Extensionにリクエストします。 |
 | [`GetTargetTemperatureResponse`](#GetTargetTemperatureResponse) | Response | [`GetTargetTemperatureRequest`](#GetTargetTemperatureRequest)メッセージに対するレスポンスです。デバイスの設定温度をCEKに返します。 |
-| [`GetUltraFineDustRequest`](#GetUltraFineDustRequest) | Request  | デバイスで測定された超微細粉塵(PM2.5)の情報をClova Home Extensionにリクエストします。 |
+| [`GetUltraFineDustRequest`](#GetUltraFineDustRequest) | Request  | デバイスで測定された超微細粉塵(PM2.5)の情報をCLOVA Home Extensionにリクエストします。 |
 | [`GetUltraFineDustResponse`](#GetUltraFineDustResponse) | Response | [`GetUltraFineDustRequest`](#GetUltraFineDustRequest)メッセージに対するレスポンスです。デバイスで測定された超微細粉塵(PM2.5)の情報をCEKに返します。 |
-| [`GetUsageTimeRequest`](#GetUsageTimeRequest) | Request  | デバイスの使用時間を確認する際に使用します。特定の期間または現在までの累積使用時間をClova Home Extensionにリクエストします。 |
+| [`GetUsageTimeRequest`](#GetUsageTimeRequest) | Request  | デバイスの使用時間を確認する際に使用します。特定の期間または現在までの累積使用時間をCLOVA Home Extensionにリクエストします。 |
 | [`GetUsageTimeResponse`](#GetUsageTimeResponse) | Response | [`GetUsageTimeRequest`](#GetUsageTimeRequest)メッセージに対するレスポンスです。デバイスの累積使用時間をCEKに返します。 |
-| [`HealthCheckRequest`](#HealthCheckRequest) | Request  | デバイスのステータスを把握する際に使用します。デバイスのステータス情報をClova Home Extensionにリクエストします。 |
+| [`HealthCheckRequest`](#HealthCheckRequest) | Request  | デバイスのステータスを把握する際に使用します。デバイスのステータス情報をCLOVA Home Extensionにリクエストします。 |
 | [`HealthCheckResponse`](#HealthCheckResponse) | Response | [`HealthCheckRequest`](#HealthCheckRequest)メッセージに対するレスポンスです。デバイスのステータス情報をCEKに返します。 |
 | [`IncrementBrightnessConfirmation`](#IncrementBrightnessConfirmation) | Response | [`IncrementBrightnessRequest`](#IncrementBrightnessRequest)メッセージに対するレスポンスです。照明の輝度を上げるようにリクエストした後、その処理結果をCEKに返します。 |
-| [`IncrementBrightnessRequest`](#IncrementBrightnessRequest)  | Request  | 照明の輝度を指定された値に上げるようClova Home Extensionにリクエストします。 |
+| [`IncrementBrightnessRequest`](#IncrementBrightnessRequest)  | Request  | 照明の輝度を指定された値に上げるようCLOVA Home Extensionにリクエストします。 |
 | [`IncrementChannelConfirmation`](#IncrementChannelConfirmation) | Response | [`IncrementChannelRequest`](#IncrementChannelRequest)メッセージに対するレスポンスです。テレビのチャンネルを上げるようにリクエストした後、その処理結果をCEKに返します。 |
-| [`IncrementChannelRequest`](#IncrementChannelRequest) | Request  | テレビのチャンネルを指定された値に上げるようClova Home Extensionにリクエストします。 |
+| [`IncrementChannelRequest`](#IncrementChannelRequest) | Request  | テレビのチャンネルを指定された値に上げるようCLOVA Home Extensionにリクエストします。 |
 | [`IncrementFanSpeedConfirmation`](#IncrementFanSpeedConfirmation) | Response | [`IncrementFanSpeedRequest`](#IncrementFanSpeedRequest)メッセージに対するレスポンスです。ファンの速度を上げるようにリクエストした後、その処理結果をCEKに返します。 |
-| [`IncrementFanSpeedRequest`](#IncrementFanSpeedRequest) | Request  | ファンの速度を指定された値に上げるようClova Home Extensionにリクエストします。 |
+| [`IncrementFanSpeedRequest`](#IncrementFanSpeedRequest) | Request  | ファンの速度を指定された値に上げるようCLOVA Home Extensionにリクエストします。 |
 | [`IncrementIntensityLevelConfirmation`](#IncrementIntensityLevelConfirmation) | Response | [`IncrementIntensityLevelRequest`](#IncrementIntensityLevelRequest)メッセージに対するレスポンスです。圧力や水圧などの強度を上げるようにリクエストした後、その処理結果をCEKに返します。 |
-| [`IncrementIntensityLevelRequest`](#IncrementIntensityLevelRequest) | Request  | 圧力や水圧などの強度を指定された値に上げるようClova Home Extensionにリクエストします。 |
+| [`IncrementIntensityLevelRequest`](#IncrementIntensityLevelRequest) | Request  | 圧力や水圧などの強度を指定された値に上げるようCLOVA Home Extensionにリクエストします。 |
 | [`IncrementTargetTemperatureConfirmation`](#IncrementTargetTemperatureConfirmation) | Response | [`IncrementTargetTemperatureRequest`](#IncrementTargetTemperatureRequest)メッセージに対するレスポンスです。温度を上げるようにリクエストした後、その処理結果をCEKに返します。 |
-| [`IncrementTargetTemperatureRequest`](#IncrementTargetTemperatureRequest) | Request  | 温度を指定された値に上げるようClova Home Extensionにリクエストします。 |
+| [`IncrementTargetTemperatureRequest`](#IncrementTargetTemperatureRequest) | Request  | 温度を指定された値に上げるようCLOVA Home Extensionにリクエストします。 |
 | [`IncrementVolumeConfirmation`](#IncrementVolumeConfirmation) | Response | [`IncrementVolumeRequest`](#IncrementVolumeRequest)メッセージに対するレスポンスです。スピーカーの音量を上げるようにリクエストした後、その処理結果をCEKに返します。 |
-| [`IncrementVolumeRequest`](#IncrementVolumeRequest) | Request  | スピーカーの音量を指定された値に上げるようClova Home Extensionにリクエストします。 |
+| [`IncrementVolumeRequest`](#IncrementVolumeRequest) | Request  | スピーカーの音量を指定された値に上げるようCLOVA Home Extensionにリクエストします。 |
 | [`LowerConfirmation`](#LowerConfirmation) | Response | [`LowerRequest`](#LowerRequest)メッセージに対するレスポンスです。デバイスの高さを下げるようにリクエストした後、その処理結果をCEKに返します。 |
-| [`LowerRequest`](#LowerRequest) | Request  | 主にカーテンやブラインド、ベッドなどのデバイスを制御する際に使用します。デバイスの高さを下げるようClova Home Extensionにリクエストします。 |
+| [`LowerRequest`](#LowerRequest) | Request  | 主にカーテンやブラインド、ベッドなどのデバイスを制御する際に使用します。デバイスの高さを下げるようCLOVA Home Extensionにリクエストします。 |
 | [`MuteConfirmation`](#MuteConfirmation) | Response | [`MuteRequest`](#MuteRequest)メッセージに対するレスポンスです。デバイスの音をミュートにするように設定した結果をCEKに返します。 |
-| [`MuteRequest`](#MuteRequest) | Request  | デバイスの音をミュートにするようClova Home Extensionにリクエストします。 |
+| [`MuteRequest`](#MuteRequest) | Request  | デバイスの音をミュートにするようCLOVA Home Extensionにリクエストします。 |
 | [`OpenConfirmation`](#OpenConfirmation) | Response | [`OpenRequest`](#OpenRequest)メッセージに対するレスポンスです。スマートカーテンや温水洗浄便座の蓋を開けるようにリクエストした後、その処理結果をCEKに返します。 |
-| [`OpenRequest`](#OpenRequest) | Request  | スマートカーテンや温水洗浄便座などのデバイスを制御する際に使用します。スマートカーテンや温水洗浄便座の蓋を開けるようClova Home Extensionにリクエストします。 |
+| [`OpenRequest`](#OpenRequest) | Request  | スマートカーテンや温水洗浄便座などのデバイスを制御する際に使用します。スマートカーテンや温水洗浄便座の蓋を開けるようCLOVA Home Extensionにリクエストします。 |
 | [`RaiseConfirmation`](#RaiseConfirmation) | Response | [`RaiseRequest`](#RaiseRequest)メッセージに対するレスポンスです。デバイスの高さを上げるようにリクエストした後、その処理結果をCEKに返します。 |
-| [`RaiseRequest`](#RaiseRequest) | Request  | 主にカーテンやブラインド、ベッドなどのデバイスを制御する際に使用します。デバイスの高さを上げるようClova Home Extensionにリクエストします。 |
+| [`RaiseRequest`](#RaiseRequest) | Request  | 主にカーテンやブラインド、ベッドなどのデバイスを制御する際に使用します。デバイスの高さを上げるようCLOVA Home Extensionにリクエストします。 |
 | [`ReleaseModeConfirmation`](#ReleaseModeConfirmation) | Response | [`ReleaseModeRequest`](#ReleaseModeRequest)メッセージに対するレスポンスです。デバイスの現在の運転モード(operation mode)を解除するようにリクエストした後、その処理結果をCEKに返します。 |
-| [`ReleaseModeRequest`](#ReleaseModeRequest) | Request  | 現在、デバイスに設定されている運転モード(operation mode)を解除する際に使用します。デバイスの運転モードを解除し、前の運転モードまたはデフォルトの運転モードに戻るようにClova Home Extensionにリクエストします。 |
+| [`ReleaseModeRequest`](#ReleaseModeRequest) | Request  | 現在、デバイスに設定されている運転モード(operation mode)を解除する際に使用します。デバイスの運転モードを解除し、前の運転モードまたはデフォルトの運転モードに戻るようにCLOVA Home Extensionにリクエストします。 |
 | [`SetBrightnessConfirmation`](#SetBrightnessConfirmation) | Response | [`SetBrightnessRequest`](#SetBrightnessRequest)メッセージに対するレスポンスです。照明の輝度を変更するようにリクエストした後、その処理結果をCEKに返します。 |
-| [`SetBrightnessRequest`](#SetBrightnessRequest) | Request  | 照明の輝度を指定された値に変更するようClova Home Extensionにリクエストします。 |
+| [`SetBrightnessRequest`](#SetBrightnessRequest) | Request  | 照明の輝度を指定された値に変更するようCLOVA Home Extensionにリクエストします。 |
 | [`SetChannelByNameConfirmation`](#SetChannelByNameConfirmation) | Response | [`SetChannelByNameRequest`](#SetChannelByNameRequest)メッセージに対するレスポンスです。指定されたチャンネル名にテレビのチャンネルを変更するようにリクエストした後、その処理結果をCEKに返します。 |
-| [`SetChannelByNameRequest`](#SetChannelByNameRequest) | Request  | 指定されたチャンネル名にチャンネルを変更するようClova Home Extensionにリクエストします。 |
+| [`SetChannelByNameRequest`](#SetChannelByNameRequest) | Request  | 指定されたチャンネル名にチャンネルを変更するようCLOVA Home Extensionにリクエストします。 |
 | [`SetChannelConfirmation`](#SetChannelConfirmation) | Response | [`SetChannelRequest`](#SetChannelRequest)メッセージに対するレスポンスです。指定されたチャンネル番号にテレビのチャンネルを変更するようにリクエストした後、その処理結果をCEKに返します。 |
-| [`SetChannelRequest`](#SetChannelRequest) | Request  | 指定されたチャンネル番号にテレビのチャンネルを変更するようClova Home Extensionにリクエストします。 |
+| [`SetChannelRequest`](#SetChannelRequest) | Request  | 指定されたチャンネル番号にテレビのチャンネルを変更するようCLOVA Home Extensionにリクエストします。 |
 | [`SetColorConfirmation`](#SetColorConfirmation) | Response | [`SetColorRequest`](#SetColorRequest)メッセージに対するレスポンスです。照明や画面、電球の色を変更するようにリクエストした後、その処理結果をCEKに返します。 |
-| [`SetColorRequest`](#SetColorRequest) | Request  | 主にスマート照明などのデバイスを制御する際に使用します。照明や画面、電球の色を変更するようClova Home Extensionにリクエストします。 |
+| [`SetColorRequest`](#SetColorRequest) | Request  | 主にスマート照明などのデバイスを制御する際に使用します。照明や画面、電球の色を変更するようCLOVA Home Extensionにリクエストします。 |
 | [`SetColorTemperatureConfirmation`](#SetColorTemperatureConfirmation) | Response | [`SetColorTemperatureRequest`](#SetColorTemperatureRequest)メッセージに対するレスポンスです。照明や画面、電球の色温度を変更するようにリクエストした後、その処理結果をCEKに返します。 |
-| [`SetColorTemperatureRequest`](#SetColorTemperatureRequest)  | Request  | 主にスマート照明などのデバイスを制御する際に使用します。照明や画面、電球の色温度を変更するようClova Home Extensionにリクエストします。 |
+| [`SetColorTemperatureRequest`](#SetColorTemperatureRequest)  | Request  | 主にスマート照明などのデバイスを制御する際に使用します。照明や画面、電球の色温度を変更するようCLOVA Home Extensionにリクエストします。 |
 | [`SetFanSpeedConfirmation`](#SetFanSpeedConfirmation) | Response | [`SetFanSpeedRequest`](#SetFanSpeedRequest)メッセージに対するレスポンスです。ファンの速度を変更するようにリクエストした後、その処理結果をCEKに返します。 |
-| [`SetFanSpeedRequest`](#SetFanSpeedRequest) | Request  | ファンの速度を指定された値に変更するようClova Home Extensionにリクエストします。 |
+| [`SetFanSpeedRequest`](#SetFanSpeedRequest) | Request  | ファンの速度を指定された値に変更するようCLOVA Home Extensionにリクエストします。 |
 | [`SetFreezerTargetTemperatureConfirmation`](#SetFreezerTargetTemperatureConfirmation) | Response | [`SetFreezerTargetTemperatureRequest`](#SetFreezerTargetTemperatureRequest)メッセージに対するレスポンスです。冷凍室の設定温度を変更するようにリクエストした後、その処理結果をCEKに返します。 |
-| [`SetFreezerTargetTemperatureRequest`](#SetFreezerTargetTemperatureRequest) | Request  | 冷蔵庫などのデバイスを制御する際に使用します。冷凍庫の設定温度を指定された値に変更するようClova Home Extensionにリクエストします。 |
+| [`SetFreezerTargetTemperatureRequest`](#SetFreezerTargetTemperatureRequest) | Request  | 冷蔵庫などのデバイスを制御する際に使用します。冷凍庫の設定温度を指定された値に変更するようCLOVA Home Extensionにリクエストします。 |
 | [`SetFridgeTargetTemperatureConfirmation`](#SetFridgeTargetTemperatureConfirmation) | Response | [`SetFridgeTargetTemperatureRequest`](#SetFridgeTargetTemperatureRequest)メッセージに対するレスポンスです。冷蔵室の設定温度を変更するようにリクエストした後、その処理結果をCEKに返します。 |
-| [`SetFridgeTargetTemperatureRequest`](#SetFridgeTargetTemperatureRequest) | Request  | 冷蔵庫などのデバイスを制御する際に使用します。冷蔵室の設定温度を指定された値に変更するようClova Home Extensionにリクエストします。 |
+| [`SetFridgeTargetTemperatureRequest`](#SetFridgeTargetTemperatureRequest) | Request  | 冷蔵庫などのデバイスを制御する際に使用します。冷蔵室の設定温度を指定された値に変更するようCLOVA Home Extensionにリクエストします。 |
 | [`SetInputSourceByNameConfirmation`](#SetInputSourceByNameConfirmation) | Response | [`SetInputSourceByNameRequest`](#SetInputSourceByNameRequest)メッセージに対するレスポンスです。指定された入力ソース名にテレビの入力ソースを変更するようにリクエストした後、その処理結果をCEKに返します。 |
-| [`SetInputSourceByNameRequest`](#SetInputSourceByNameRequest) | Request  | 指定された入力ソース名にテレビの入力ソースを変更するようClova Home Extensionにリクエストします。 |
+| [`SetInputSourceByNameRequest`](#SetInputSourceByNameRequest) | Request  | 指定された入力ソース名にテレビの入力ソースを変更するようCLOVA Home Extensionにリクエストします。 |
 | [`SetLockStateConfirmation`](#SetLockStateConfirmation) | Response | [`SetLockStateRequest`](#SetLockStateRequest)メッセージに対するレスポンスです。デバイスの開閉をリクエストした後、その処理結果をCEKに返します。 |
-| [`SetLockStateRequest`](#SetLockStateRequest) | Request  | デバイスの開閉をClova Home Extensionにリクエストします。 |
+| [`SetLockStateRequest`](#SetLockStateRequest) | Request  | デバイスの開閉をCLOVA Home Extensionにリクエストします。 |
 | [`SetModeConfirmation`](#SetModeConfirmation) | Response | [`SetModeRequest`](#SetModeRequest)メッセージに対するレスポンスです。運転モード(operation mode)を変更するようにリクエストした後、その処理結果をCEKに返します。 |
-| [`SetModeRequest`](#SetModeRequest) | Request  | デバイスの運転モードを指定されたモードに変更するようClova Home Extensionにリクエストします。 |
+| [`SetModeRequest`](#SetModeRequest) | Request  | デバイスの運転モードを指定されたモードに変更するようCLOVA Home Extensionにリクエストします。 |
 | [`SetTargetTemperatureConfirmation`](#SetTargetTemperatureConfirmation) | Response | [`SetTargetTemperatureRequest`](#SetTargetTemperatureRequest)メッセージに対するレスポンスです。設定温度を変更するようにリクエストした後、その処理結果をCEKに返します。 |
-| [`SetTargetTemperatureRequest`](#SetTargetTemperatureRequest) | Request  | 設定温度を指定された値に変更するようClova Home Extensionにリクエストします。 |
+| [`SetTargetTemperatureRequest`](#SetTargetTemperatureRequest) | Request  | 設定温度を指定された値に変更するようCLOVA Home Extensionにリクエストします。 |
 | [`StartRecordingConfirmation`](#StartRecordingConfirmation)  | Response | [`StartRecordingRequest`](#StartRecordingRequest)メッセージに対するレスポンスです。現在見ているチャンネルに対する録画を開始するリクエストした後、その処理結果をCEKに返します。 |
-| [`StartRecordingRequest`](#StartRecordingRequest) | Request  | 現在見ているチャンネルに対する録画を開始するようClova Home Extensionにリクエストします。 |
+| [`StartRecordingRequest`](#StartRecordingRequest) | Request  | 現在見ているチャンネルに対する録画を開始するようCLOVA Home Extensionにリクエストします。 |
 | [`StopConfirmation`](#StopConfirmation) | Response | [`StopRequest`](#StopRequest)メッセージに対するレスポンスです。動作中止のリクエストを処理した結果をCEKに返します。 |
-| [`StopRequest`](#StopRequest) | Request  | デバイスの現在の動作を中止するようClova Home Extensionにリクエストします。 |
+| [`StopRequest`](#StopRequest) | Request  | デバイスの現在の動作を中止するようCLOVA Home Extensionにリクエストします。 |
 | [`StopRecordingConfirmation`](#StopRecordingConfirmation) | Response | [`StopRecordingRequest`](#StopRecordingRequest)メッセージに対するレスポンスです。現在見ているチャンネルに対する録画を停止するリクエストした後、その処理結果をCEKに返します。 |
-| [`StopRecordingRequest`](#StopRecordingRequest) | Request  | 現在見ているチャンネルに対する録画を停止するようClova Home Extensionにリクエストします。 |
+| [`StopRecordingRequest`](#StopRecordingRequest) | Request  | 現在見ているチャンネルに対する録画を停止するようCLOVA Home Extensionにリクエストします。 |
 | [`TurnOffConfirmation`](#TurnOffConfirmation) | Response | [`TurnOffRequest`](#TurnOffRequest)メッセージに対するレスポンスです。デバイスの電源をオフにするようにリクエストした後、その処理結果をCEKに返します。 |
-| [`TurnOffRequest`](#TurnOffRequest) | Request  | デバイスの電源をオフにするようClova Home Extensionにリクエストします。 |
+| [`TurnOffRequest`](#TurnOffRequest) | Request  | デバイスの電源をオフにするようCLOVA Home Extensionにリクエストします。 |
 | [`TurnOnConfirmation`](#TurnOnConfirmation) | Response | [`TurnOnRequest`](#TurnOnRequest)メッセージに対するレスポンスです。デバイスの電源をオンにするようにリクエストした後、その処理結果をCEKに返します。 |
-| [`TurnOnRequest`](#TurnOnRequest) | Request  | デバイスの電源をオンにするようClova Home Extensionにリクエストします。 |
+| [`TurnOnRequest`](#TurnOnRequest) | Request  | デバイスの電源をオンにするようCLOVA Home Extensionにリクエストします。 |
 | [`UnmuteConfirmation`](#UnmuteConfirmation) | Response | [`UnmuteRequest`](#UnmuteRequest)メッセージに対するレスポンスです。デバイスのミュートを解除するように設定した結果をCEKに返します。 |
-| [`UnmuteRequest`](#UnmuteRequest) | Request  | デバイスのミュートを解除するようClova Home Extensionにリクエストします。 |
+| [`UnmuteRequest`](#UnmuteRequest) | Request  | デバイスのミュートを解除するようCLOVA Home Extensionにリクエストします。 |
 
 
 
@@ -176,7 +176,7 @@ IoTデバイスの情報の確認、デバイス操作のリクエストおよ�
 * [`ActionSceneRequest`](#ActionSceneRequest)
 
 ## ActionSceneRequest {#ActionSceneRequest}
-主にホームゲートウェイなどを制御する際に使用します。複数の機器に対する操作をシーンとしてまとめておき、それらを同時に動作させるよう、Clova Home Extensionにリクエストします。このリクエストに対するレスポンスとして、[`ActionSceneConfirmation`](#ActionSceneConfirmation)メッセージを使用する必要があります。
+主にホームゲートウェイなどを制御する際に使用します。複数の機器に対する操作をシーンとしてまとめておき、それらを同時に動作させるよう、CLOVA Home Extensionにリクエストします。このリクエストに対するレスポンスとして、[`ActionSceneConfirmation`](#ActionSceneConfirmation)メッセージを使用する必要があります。
 
 ### Payload fields
 
@@ -245,7 +245,7 @@ IoTデバイスの情報の確認、デバイス操作のリクエストおよ�
 * [`ChangeInputSourceRequest`](#ChangeInputSourceRequest)
 
 ## ChangeInputSourceRequest {#ChangeInputSourceRequest}
-主にテレビのセットトップボックスなどのデバイスを制御する際に使用します。入力ソースの切り替え(HDMI1, HDMI2など)を行うよう、Clova Home Extensionにリクエストします。このリクエストに対するレスポンスとして、[`ChangeInputSourceConfirmation`](#ChargeConfirmation)メッセージを使用する必要があります。
+主にテレビのセットトップボックスなどのデバイスを制御する際に使用します。入力ソースの切り替え(HDMI1, HDMI2など)を行うよう、CLOVA Home Extensionにリクエストします。このリクエストに対するレスポンスとして、[`ChangeInputSourceConfirmation`](#ChargeConfirmation)メッセージを使用する必要があります。
 
 ### Payload fields
 
@@ -315,7 +315,7 @@ IoTデバイスの情報の確認、デバイス操作のリクエストおよ�
 * [`ChargeRequest`](#ChargeRequest)
 
 ## ChargeRequest {#ChargeRequest}
-主にロボット掃除機を制御する際に使用します。デバイスの充電を開始するようClova Home Extensionにリクエストします。このリクエストに対するレスポンスとして、[`ChargeConfirmation`](#ChargeConfirmation)メッセージを使用する必要があります。
+主にロボット掃除機を制御する際に使用します。デバイスの充電を開始するようCLOVA Home Extensionにリクエストします。このリクエストに対するレスポンスとして、[`ChargeConfirmation`](#ChargeConfirmation)メッセージを使用する必要があります。
 
 ### Payload fields
 
@@ -379,7 +379,7 @@ IoTデバイスの情報の確認、デバイス操作のリクエストおよ�
 * [`CloseRequest`](#CloseRequest)
 
 ## CloseRequest {#CloseRequest}
-スマートカーテンや温水洗浄便座などのデバイスを制御する際に使用します。スマートカーテンや温水洗浄便座の蓋を閉めるようClova Home Extensionにリクエストします。このリクエストに対するレスポンスとして、[`CloseConfirmation`](#CloseConfirmation)メッセージを使用する必要があります。
+スマートカーテンや温水洗浄便座などのデバイスを制御する際に使用します。スマートカーテンや温水洗浄便座の蓋を閉めるようCLOVA Home Extensionにリクエストします。このリクエストに対するレスポンスとして、[`CloseConfirmation`](#CloseConfirmation)メッセージを使用する必要があります。
 
 ### Payload fields
 
@@ -460,7 +460,7 @@ IoTデバイスの情報の確認、デバイス操作のリクエストおよ�
 * [`DecrementBrightnessRequest`](#DecrementBrightnessRequest)
 
 ## DecrementBrightnessRequest {#DecrementBrightnessRequest}
-主に照明などのデバイスを制御する際に使用します。照明の輝度を指定された値に下げるようClova Home Extensionにリクエストします。このリクエストに対するレスポンスとして、[`DecrementBrightnessConfirmation`](#DecrementBrightnessConfirmation)メッセージを使用する必要があります。
+主に照明などのデバイスを制御する際に使用します。照明の輝度を指定された値に下げるようCLOVA Home Extensionにリクエストします。このリクエストに対するレスポンスとして、[`DecrementBrightnessConfirmation`](#DecrementBrightnessConfirmation)メッセージを使用する必要があります。
 
 ### Payload fields
 
@@ -552,7 +552,7 @@ IoTデバイスの情報の確認、デバイス操作のリクエストおよ�
 * [`DecrementChannelRequest`](#DecrementChannelRequest)
 
 ## DecrementChannelRequest {#DecrementChannelRequest}
-主にテレビやセットトップボックスを制御する際に使用します。テレビのチャンネルを指定された値に下げるようClova Home Extensionにリクエストします。このリクエストに対するレスポンスとして、[`DecrementChannelConfirmation`](#DecrementChannelConfirmation)メッセージを使用する必要があります。
+主にテレビやセットトップボックスを制御する際に使用します。テレビのチャンネルを指定された値に下げるようCLOVA Home Extensionにリクエストします。このリクエストに対するレスポンスとして、[`DecrementChannelConfirmation`](#DecrementChannelConfirmation)メッセージを使用する必要があります。
 
 ### Payload fields
 
@@ -637,7 +637,7 @@ IoTデバイスの情報の確認、デバイス操作のリクエストおよ�
 * [`DecrementFanSpeedRequest`](#DecrementFanSpeedRequest)
 
 ## DecrementFanSpeedRequest {#DecrementFanSpeedRequest}
-主に空気清浄機などのデバイスを制御する際に使用します。ファンの速度を指定された値に下げるようClova Home Extensionにリクエストします。このリクエストに対するレスポンスとして、[`DecrementFanSpeedConfirmation`](#DecrementFanSpeedConfirmation)メッセージを使用する必要があります。
+主に空気清浄機などのデバイスを制御する際に使用します。ファンの速度を指定された値に下げるようCLOVA Home Extensionにリクエストします。このリクエストに対するレスポンスとして、[`DecrementFanSpeedConfirmation`](#DecrementFanSpeedConfirmation)メッセージを使用する必要があります。
 
 ### Payload fields
 
@@ -722,7 +722,7 @@ IoTデバイスの情報の確認、デバイス操作のリクエストおよ�
 * [`DecrementIntensityLevelRequest`](#DecrementIntensityLevelRequest)
 
 ## DecrementIntensityLevelRequest {#DecrementIntensityLevelRequest}
-主にエアコンやサーモスタットのようなデバイスの制御に使用します。圧力や水圧の強度を指定された値に下げるようClova Home Extensionにリクエストします。このリクエストに対するレスポンスとして、[`DecrementIntensityLevelConfirmation`](#DecrementIntensityLevelConfirmation)メッセージを使用する必要があります。
+主にエアコンやサーモスタットのようなデバイスの制御に使用します。圧力や水圧の強度を指定された値に下げるようCLOVA Home Extensionにリクエストします。このリクエストに対するレスポンスとして、[`DecrementIntensityLevelConfirmation`](#DecrementIntensityLevelConfirmation)メッセージを使用する必要があります。
 
 ### Payload fields
 
@@ -807,7 +807,7 @@ IoTデバイスの情報の確認、デバイス操作のリクエストおよ�
 * [`DecrementTargetTemperatureRequest`](#DecrementTargetTemperatureRequest)
 
 ## DecrementTargetTemperatureRequest {#DecrementTargetTemperatureRequest}
-主にエアコンやサーモスタットのようなデバイスの制御に使用します。指定された値に温度を下げるようClova Home Extensionにリクエストします。このリクエストに対するレスポンスとして、[`DecrementTargetTemperatureConfirmation`](#DecrementTargetTemperatureConfirmation)メッセージを使用する必要があります。
+主にエアコンやサーモスタットのようなデバイスの制御に使用します。指定された値に温度を下げるようCLOVA Home Extensionにリクエストします。このリクエストに対するレスポンスとして、[`DecrementTargetTemperatureConfirmation`](#DecrementTargetTemperatureConfirmation)メッセージを使用する必要があります。
 
 ### Payload fields
 
@@ -892,7 +892,7 @@ IoTデバイスの情報の確認、デバイス操作のリクエストおよ�
 * [`DecrementVolumeRequest`](#DecrementVolumeRequest)
 
 ## DecrementVolumeRequest {#DecrementVolumeRequest}
-主にテレビのセットトップボックスなどのデバイスを制御する際に使用します。スピーカーの音量を指定された値に下げるようClova Home Extensionにリクエストします。このリクエストに対するレスポンスとして、[`DecrementVolumeConfirmation`](#DecrementVolumeConfirmation)メッセージを使用する必要があります。
+主にテレビのセットトップボックスなどのデバイスを制御する際に使用します。スピーカーの音量を指定された値に下げるようCLOVA Home Extensionにリクエストします。このリクエストに対するレスポンスとして、[`DecrementVolumeConfirmation`](#DecrementVolumeConfirmation)メッセージを使用する必要があります。
 
 ### Payload fields
 
@@ -932,7 +932,7 @@ IoTデバイスの情報の確認、デバイス操作のリクエストおよ�
 * [`DecrementVolumeConfirmation`](#DecrementVolumeConfirmation)
 
 ## GetAirQualityRequest {#GetAirQualityRequest}
-主に空気清浄機などのデバイスで測定された空気質情報を確認する際に使用します。空気質情報をClova Home Extensionにリクエストします。このリクエストに対するレスポンスとして、[`GetAirQualityResponse`](#GetAirQualityResponse)メッセージを使用する必要があります。
+主に空気清浄機などのデバイスで測定された空気質情報を確認する際に使用します。空気質情報をCLOVA Home Extensionにリクエストします。このリクエストに対するレスポンスとして、[`GetAirQualityResponse`](#GetAirQualityResponse)メッセージを使用する必要があります。
 
 | フィールド名  | データ型 | フィールドの説明                       | Optional |
 | ------------- | -------- | -------------------------------------- | :------: |
@@ -1000,7 +1000,7 @@ IoTデバイスの情報の確認、デバイス操作のリクエストおよ�
 * [`GetAirQualityRequest`](#GetAirQualityRequest)
 
 ## GetAsleepDurationRequest {#GetAsleepDurationRequest}
-主に睡眠センサーで測定された情報を確認する際に使用します。デバイスで測定されたユーザーの睡眠時間をClova Home Extensionにリクエストします。このリクエストに対するレスポンスとして、[`GetAsleepDurationResponse`](#GetAsleepDurationResponse)メッセージを使用する必要があります。
+主に睡眠センサーで測定された情報を確認する際に使用します。デバイスで測定されたユーザーの睡眠時間をCLOVA Home Extensionにリクエストします。このリクエストに対するレスポンスとして、[`GetAsleepDurationResponse`](#GetAsleepDurationResponse)メッセージを使用する必要があります。
 
 | フィールド名  | データ型 | フィールドの説明                       | Optional |
 | ------------- | -------- | -------------------------------------- | :------: |
@@ -1071,7 +1071,7 @@ IoTデバイスの情報の確認、デバイス操作のリクエストおよ�
 * [`GetAsleepDurationRequest`](#GetAsleepDurationRequest)
 
 ## GetAwakeDurationRequest {#GetAwakeDurationRequest}
-主に睡眠センサーで測定された情報を確認する際に使用します。デバイスで測定されたユーザーの入眠潜時、つまりユーザーが就寝してから睡眠状態に入るまでの時間をClova Home Extensionにリクエストします。このリクエストに対するレスポンスとして、[`GetAwakeDurationResponse`](#GetAwakeDurationResponse)メッセージを使用する必要があります。
+主に睡眠センサーで測定された情報を確認する際に使用します。デバイスで測定されたユーザーの入眠潜時、つまりユーザーが就寝してから睡眠状態に入るまでの時間をCLOVA Home Extensionにリクエストします。このリクエストに対するレスポンスとして、[`GetAwakeDurationResponse`](#GetAwakeDurationResponse)メッセージを使用する必要があります。
 
 | フィールド名  | データ型 | フィールドの説明                       | Optional |
 | ------------- | -------- | -------------------------------------- | :------: |
@@ -1142,7 +1142,7 @@ IoTデバイスの情報の確認、デバイス操作のリクエストおよ�
 * [`GetAwakeDurationRequest`](#GetAwakeDurationRequest)
 
 ## GetBatteryInfoRequest {#GetBatteryInfoRequest}
-主にロボット掃除機などのワイヤレスデバイスの内蔵電池の情報を確認する際に使用します。現在の電池の情報をClova Home Extensionにリクエストします。このリクエストに対するレスポンスとして、[`GetBatteryInfoResponse`](#GetBatteryInfoResponse)メッセージを使用する必要があります。
+主にロボット掃除機などのワイヤレスデバイスの内蔵電池の情報を確認する際に使用します。現在の電池の情報をCLOVA Home Extensionにリクエストします。このリクエストに対するレスポンスとして、[`GetBatteryInfoResponse`](#GetBatteryInfoResponse)メッセージを使用する必要があります。
 
 | フィールド名  | データ型 | フィールドの説明                       | Optional |
 | ------------- | -------- | -------------------------------------- | :------: |
@@ -1210,7 +1210,7 @@ IoTデバイスの情報の確認、デバイス操作のリクエストおよ�
 * [`GetBatteryInfoRequest`](#GetBatteryInfoRequest)
 
 ## GetCleaningCycleRequest {#GetCleaningCycleRequest}
-デバイスをクリーニングする周期を確認する際に使用します。デバイスの次のクリーニング周期までの残り時間をClova Home Extensionにリクエストします。このリクエストに対するレスポンスとして、[`GetCleaningCycleResponse`](#GetCleaningCycleResponse)メッセージを使用する必要があります。
+デバイスをクリーニングする周期を確認する際に使用します。デバイスの次のクリーニング周期までの残り時間をCLOVA Home Extensionにリクエストします。このリクエストに対するレスポンスとして、[`GetCleaningCycleResponse`](#GetCleaningCycleResponse)メッセージを使用する必要があります。
 
 | フィールド名  | データ型 | フィールドの説明                       | Optional |
 | ------------- | -------- | -------------------------------------- | :------: |
@@ -1277,7 +1277,7 @@ IoTデバイスの情報の確認、デバイス操作のリクエストおよ�
 * [`GetCleaningCycleRequest`](#GetGetCleaningCycleRequest)
 
 ## GetCloseTimeRequest {#GetCloseTimeRequest}
-開閉センサーで検知された開閉状況のうち、検知対象が最後に閉まったときの日時情報をClova Home Extensionにリクエストします。このリクエストに対するレスポンスとして、[`GetCloseTimeResponse`](#GetCloseTimeResponse)メッセージを使用する必要があります。
+開閉センサーで検知された開閉状況のうち、検知対象が最後に閉まったときの日時情報をCLOVA Home Extensionにリクエストします。このリクエストに対するレスポンスとして、[`GetCloseTimeResponse`](#GetCloseTimeResponse)メッセージを使用する必要があります。
 
 | フィールド名  | データ型 | フィールドの説明                       | Optional |
 | ------------- | -------- | -------------------------------------- | :------: |
@@ -1344,7 +1344,7 @@ IoTデバイスの情報の確認、デバイス操作のリクエストおよ�
 * [`GetCloseTimeRequest`](#GetCloseTimeRequest)
 
 ## GetConsumptionRequest {#GetConsumptionRequest}
-主にスマートプラグやスマートテーブルタップのようなデバイスで測定された、現在までのエネルギーまたはリソースを確認する際に使用します。測定されたエネルギーまたはリソースの情報をClova Home Extensionにリクエストします。このリクエストに対するレスポンスとして、[`GetConsumptionResponse`](#GetConsumptionResponse)メッセージを使用する必要があります。
+主にスマートプラグやスマートテーブルタップのようなデバイスで測定された、現在までのエネルギーまたはリソースを確認する際に使用します。測定されたエネルギーまたはリソースの情報をCLOVA Home Extensionにリクエストします。このリクエストに対するレスポンスとして、[`GetConsumptionResponse`](#GetConsumptionResponse)メッセージを使用する必要があります。
 
 | フィールド名  | データ型 | フィールドの説明                       | Optional |
 | ------------- | -------- | -------------------------------------- | :------: |
@@ -1416,7 +1416,7 @@ IoTデバイスの情報の確認、デバイス操作のリクエストおよ�
 * [GetConsumptionRequest](#GetConsumptionRequest)
 
 ## GetCurrentBillRequest {#GetCurrentBillRequest}
-主にスマートプラグやスマートテーブルタップのようなデバイスで測定された、現在までのエネルギー使用量に基づいた利用料金を確認する際に使用します。測定された料金情報をClova Home Extensionにリクエストします。このリクエストに対するレスポンスとして、[`GetCurrentBillResponse`](#GetCurrentBillResponse)メッセージを使用する必要があります。
+主にスマートプラグやスマートテーブルタップのようなデバイスで測定された、現在までのエネルギー使用量に基づいた利用料金を確認する際に使用します。測定された料金情報をCLOVA Home Extensionにリクエストします。このリクエストに対するレスポンスとして、[`GetCurrentBillResponse`](#GetCurrentBillResponse)メッセージを使用する必要があります。
 
 | フィールド名  | データ型 | フィールドの説明                       | Optional |
 | ------------- | -------- | -------------------------------------- | :------: |
@@ -1485,7 +1485,7 @@ IoTデバイスの情報の確認、デバイス操作のリクエストおよ�
 * [GetCurrentBillRequest](#GetCurrentBillRequest)
 
 ## GetCurrentTemperatureRequest {#GetCurrentTemperatureRequest}
-主にエアコンやサーモスタットのようなデバイスで測定された現在の温度を確認する際に使用します。現在の温度をClova Home Extensionにリクエストします。このリクエストに対するレスポンスとして、[`GetCurrentTemperatureResponse`](#GetCurrentTemperatureResponse)メッセージを使用する必要があります。
+主にエアコンやサーモスタットのようなデバイスで測定された現在の温度を確認する際に使用します。現在の温度をCLOVA Home Extensionにリクエストします。このリクエストに対するレスポンスとして、[`GetCurrentTemperatureResponse`](#GetCurrentTemperatureResponse)メッセージを使用する必要があります。
 
 | フィールド名  | データ型 | フィールドの説明                       | Optional |
 | ------------- | -------- | -------------------------------------- | :------: |
@@ -1643,7 +1643,7 @@ IoTデバイスの情報の確認、デバイス操作のリクエストおよ�
 * [`GetDeviceStateRequest`](#GetDeviceStateRequest)
 
 ## GetEstimateBillRequest {#GetEstimateBillRequest}
-主にスマートプラグやスマートテーブルタップのようなデバイスで測定されたエネルギー使用量に基づいて、利用料金を推定する際に使用します。推定された料金情報をClova Home Extensionにリクエストします。このリクエストに対するレスポンスとして、[`GetEstimateBillResponse`](#GetEstimateBillResponse)メッセージを使用する必要があります。
+主にスマートプラグやスマートテーブルタップのようなデバイスで測定されたエネルギー使用量に基づいて、利用料金を推定する際に使用します。推定された料金情報をCLOVA Home Extensionにリクエストします。このリクエストに対するレスポンスとして、[`GetEstimateBillResponse`](#GetEstimateBillResponse)メッセージを使用する必要があります。
 
 | フィールド名  | データ型 | フィールドの説明                       | Optional |
 | ------------- | -------- | -------------------------------------- | :------: |
@@ -1791,7 +1791,7 @@ IoTデバイスの情報の確認、デバイス操作のリクエストおよ�
 * [`GetExpendableStateRequest`](#GetExpendableStateRequest)
 
 ## GetFineDustRequest {#GetFineDustRequest}
-主に空気清浄機などのデバイスで測定された微細粉塵(PM10)の情報を確認する際に使用します。微細粉塵(PM10)の情報をClova Home Extensionにリクエストします。このリクエストに対するレスポンスとして、[`GetFineDustResponse`](#GetFineDustResponse)メッセージを使用する必要があります。
+主に空気清浄機などのデバイスで測定された微細粉塵(PM10)の情報を確認する際に使用します。微細粉塵(PM10)の情報をCLOVA Home Extensionにリクエストします。このリクエストに対するレスポンスとして、[`GetFineDustResponse`](#GetFineDustResponse)メッセージを使用する必要があります。
 
 | フィールド名  | データ型 | フィールドの説明                       | Optional |
 | ------------- | -------- | -------------------------------------- | :------: |
@@ -1860,7 +1860,7 @@ IoTデバイスの情報の確認、デバイス操作のリクエストおよ�
 * [`GetFineDustRequest`](#GetFineDustRequest)
 
 ## GetHumidityRequest {#GetHumidityRequest}
-主に加湿器などのデバイスで測定された湿度を確認する際に使用します。湿度をClova Home Extensionにリクエストします。このリクエストに対するレスポンスとして、[`GetHumidityResponse`](#GetHumidityResponse)メッセージを使用する必要があります。
+主に加湿器などのデバイスで測定された湿度を確認する際に使用します。湿度をCLOVA Home Extensionにリクエストします。このリクエストに対するレスポンスとして、[`GetHumidityResponse`](#GetHumidityResponse)メッセージを使用する必要があります。
 
 | フィールド名  | データ型 | フィールドの説明                       | Optional |
 | ------------- | -------- | -------------------------------------- | :------: |
@@ -1928,7 +1928,7 @@ IoTデバイスの情報の確認、デバイス操作のリクエストおよ�
 * [GetHumidityRequest](#GetHumidityRequest)
 
 ## GetKeepWarmTimeRequest {#GetKeepWarmTimeRequest}
-炊飯器のようなデバイスで、食べ物が保温された時間を確認する際に使用します。デバイスで保温モードが維持された時間の情報をClova Home Extensionにリクエストします。このリクエストに対するレスポンスとして、[`GetKeepWarmTimeResponse`](#GetKeepWarmTimeResponse)メッセージを使用する必要があります。
+炊飯器のようなデバイスで、食べ物が保温された時間を確認する際に使用します。デバイスで保温モードが維持された時間の情報をCLOVA Home Extensionにリクエストします。このリクエストに対するレスポンスとして、[`GetKeepWarmTimeResponse`](#GetKeepWarmTimeResponse)メッセージを使用する必要があります。
 
 | フィールド名  | データ型 | フィールドの説明                       | Optional |
 | ------------- | -------- | -------------------------------------- | :------: |
@@ -1995,7 +1995,7 @@ IoTデバイスの情報の確認、デバイス操作のリクエストおよ�
 * [`GetKeepWarmTimeRequest`](#GetKeepWarmTimeRequest)
 
 ## GetLockStateRequest {#GetLockStateRequest}
-主にスマートバルブなどのデバイスの状態を確認する際に使用します。デバイスが持っているロック装置の現在のロック状態をClova Home Extensionにリクエストします。このリクエストに対するレスポンスとして、[`GetLockStateResponse`](#GetLockStateResponse)メッセージを使用する必要があります。
+主にスマートバルブなどのデバイスの状態を確認する際に使用します。デバイスが持っているロック装置の現在のロック状態をCLOVA Home Extensionにリクエストします。このリクエストに対するレスポンスとして、[`GetLockStateResponse`](#GetLockStateResponse)メッセージを使用する必要があります。
 
 | フィールド名  | データ型 | フィールドの説明                       | Optional |
 | ------------- | -------- | -------------------------------------- | :------: |
@@ -2062,7 +2062,7 @@ IoTデバイスの情報の確認、デバイス操作のリクエストおよ�
 * [`GetLockStateRequest`](#GetLockStateRequest)
 
 ## GetOpenStateRequest {#GetOpenStateRequest}
-主に開閉センサーで検知された開閉状況のうち、検知対象の現在の状態(開いている/閉まっている)をClova Home Extensionにリクエストします。このリクエストに対するレスポンスとして、[`GetOpenStateResponse`](#GetOpenStateResponse)メッセージを使用する必要があります。
+主に開閉センサーで検知された開閉状況のうち、検知対象の現在の状態(開いている/閉まっている)をCLOVA Home Extensionにリクエストします。このリクエストに対するレスポンスとして、[`GetOpenStateResponse`](#GetOpenStateResponse)メッセージを使用する必要があります。
 
 | フィールド名  | データ型 | フィールドの説明                       | Optional |
 | ------------- | -------- | -------------------------------------- | :------: |
@@ -2129,7 +2129,7 @@ IoTデバイスの情報の確認、デバイス操作のリクエストおよ�
 * [`GetOpenStateRequest`](#GetOpenStateRequest)
 
 ## GetOpenTimeRequest {#GetOpenTimeRequest}
-主に開閉センサーで検知された開閉状況のうち、検知対象が最後に開いたときの日時情報をClova Home Extensionにリクエストします。このリクエストに対するレスポンスとして、[`GetOpenTimeResponse`](#GetOpenTimeResponse)メッセージを使用する必要があります。
+主に開閉センサーで検知された開閉状況のうち、検知対象が最後に開いたときの日時情報をCLOVA Home Extensionにリクエストします。このリクエストに対するレスポンスとして、[`GetOpenTimeResponse`](#GetOpenTimeResponse)メッセージを使用する必要があります。
 
 | フィールド名  | データ型 | フィールドの説明                       | Optional |
 | ------------- | -------- | -------------------------------------- | :------: |
@@ -2196,7 +2196,7 @@ IoTデバイスの情報の確認、デバイス操作のリクエストおよ�
 * [`GetOpenTimeRequest`](#GetOpenTimeRequest)
 
 ## GetPhaseRequest {#GetPhaseRequest}
-主に炊飯器や洗濯機など、動作に段階があるデバイスで、現在の動作段階を確認する際に使用します。デバイスの現在の動作段階をClova Home Extensionにリクエストします。このリクエストに対するレスポンスとして、[`GetPhaseResponse`](#GetPhaseResponse)メッセージを使用する必要があります。
+主に炊飯器や洗濯機など、動作に段階があるデバイスで、現在の動作段階を確認する際に使用します。デバイスの現在の動作段階をCLOVA Home Extensionにリクエストします。このリクエストに対するレスポンスとして、[`GetPhaseResponse`](#GetPhaseResponse)メッセージを使用する必要があります。
 
 | フィールド名  | データ型 | フィールドの説明                       | Optional |
 | ------------- | -------- | -------------------------------------- | :------: |
@@ -2264,7 +2264,7 @@ IoTデバイスの情報の確認、デバイス操作のリクエストおよ�
 * [`GetPhaseRequest`](#GetPhaseRequest)
 
 ## GetProgressiveTaxBracketRequest {#GetProgressiveTaxBracketRequest}
-主に電力量計やスマートプラグなどのデバイスで、累進税の段階を確認する際に使用します。判断された累進税の段階をClova Home Extensionにリクエストします。このリクエストに対するレスポンスとして、[`GetProgressiveTaxBracketResponse`](#GetProgressiveTaxBracketResponse)メッセージを使用する必要があります。
+主に電力量計やスマートプラグなどのデバイスで、累進税の段階を確認する際に使用します。判断された累進税の段階をCLOVA Home Extensionにリクエストします。このリクエストに対するレスポンスとして、[`GetProgressiveTaxBracketResponse`](#GetProgressiveTaxBracketResponse)メッセージを使用する必要があります。
 
 | フィールド名  | データ型 | フィールドの説明                       | Optional |
 | ------------- | -------- | -------------------------------------- | :------: |
@@ -2333,7 +2333,7 @@ IoTデバイスの情報の確認、デバイス操作のリクエストおよ�
 * [`GetProgressiveTaxBracketRequest`](#GetProgressiveTaxBracketRequest)
 
 ## GetRemainingTimeRequest {#GetRemainingTimeRequest}
-主に炊飯器や洗濯機のようなデバイスで、動作終了までの残り時間を確認する際に使用します。デバイスの動作終了までの残り時間をClova Home Extensionにリクエストします。このリクエストに対するレスポンスとして、[`GetRemainingTimeResponse`](#GetRemainingTimeResponse)メッセージを使用する必要があります。
+主に炊飯器や洗濯機のようなデバイスで、動作終了までの残り時間を確認する際に使用します。デバイスの動作終了までの残り時間をCLOVA Home Extensionにリクエストします。このリクエストに対するレスポンスとして、[`GetRemainingTimeResponse`](#GetRemainingTimeResponse)メッセージを使用する必要があります。
 
 | フィールド名  | データ型 | フィールドの説明                       | Optional |
 | ------------- | -------- | -------------------------------------- | :------: |
@@ -2400,7 +2400,7 @@ IoTデバイスの情報の確認、デバイス操作のリクエストおよ�
 * [`GetRemainingTimeRequest`](#GetRemainingTimeRequest)
 
 ## GetRightPostureRatioRequest {#GetRightPostureRatioRequest}
-ユーザーが正しい姿勢でデバイスを使用した割合を確認する際に使用します。ユーザーがデバイスを使用する際、特定の期間または現在まで正しい姿勢を保った割合の情報をClova Home Extensionにリクエストします。このリクエストに対するレスポンスとして、[`GetRightPostureRatioResponse`](#GetRightPostureRatioResponse)メッセージを使用する必要があります。
+ユーザーが正しい姿勢でデバイスを使用した割合を確認する際に使用します。ユーザーがデバイスを使用する際、特定の期間または現在まで正しい姿勢を保った割合の情報をCLOVA Home Extensionにリクエストします。このリクエストに対するレスポンスとして、[`GetRightPostureRatioResponse`](#GetRightPostureRatioResponse)メッセージを使用する必要があります。
 
 | フィールド名  | データ型 | フィールドの説明                       | Optional |
 | ------------- | -------- | -------------------------------------- | :------: |
@@ -2474,7 +2474,7 @@ IoTデバイスの情報の確認、デバイス操作のリクエストおよ�
 * [`GetRightPostureRatioRequest`](#GetRightPostureRatioRequest)
 
 ## GetCurrentSittingStateRequest {#GetCurrentSittingStateRequest}
-スマートチェアなどのデバイスで、ユーザーの使用状況を確認する際に使用します。デバイスで検知されたユーザーの着席情報と、直近でユーザーがデバイスを使用した時間の情報をClova Home Extensionにリクエストします。このリクエストに対するレスポンスとして、[`GetCurrentSittingStateResponse`](#GetCurrentSittingStateResponse)メッセージを使用する必要があります。
+スマートチェアなどのデバイスで、ユーザーの使用状況を確認する際に使用します。デバイスで検知されたユーザーの着席情報と、直近でユーザーがデバイスを使用した時間の情報をCLOVA Home Extensionにリクエストします。このリクエストに対するレスポンスとして、[`GetCurrentSittingStateResponse`](#GetCurrentSittingStateResponse)メッセージを使用する必要があります。
 
 | フィールド名  | データ型 | フィールドの説明                       | Optional |
 | ------------- | -------- | -------------------------------------- | :------: |
@@ -2547,7 +2547,7 @@ IoTデバイスの情報の確認、デバイス操作のリクエストおよ�
 * [`GetCurrentSittingStateRequest`](#GetCurrentSittingStateRequest)
 
 ## GetSleepScoreRequest {#GetSleepScoreRequest}
-睡眠センサーのようなデバイスで、ユーザーの睡眠スコアの情報を確認する際に使用します。デバイスで評価されたユーザーの睡眠スコアをClova Home Extensionにリクエストします。このリクエストに対するレスポンスとして、[`GetSleepScoreResponse`](#GetSleepScoreResponse)メッセージを使用する必要があります。
+睡眠センサーのようなデバイスで、ユーザーの睡眠スコアの情報を確認する際に使用します。デバイスで評価されたユーザーの睡眠スコアをCLOVA Home Extensionにリクエストします。このリクエストに対するレスポンスとして、[`GetSleepScoreResponse`](#GetSleepScoreResponse)メッセージを使用する必要があります。
 
 | フィールド名  | データ型 | フィールドの説明                       | Optional |
 | ------------- | -------- | -------------------------------------- | :------: |
@@ -2620,7 +2620,7 @@ IoTデバイスの情報の確認、デバイス操作のリクエストおよ�
 * [`GetSleepScoreRequest`](#GetSleepScoreRequest)
 
 ## GetSleepStartTimeRequest {#GetSleepStartTimeRequest}
-睡眠センサーのようなデバイスで、ユーザーの睡眠スコアの情報を確認する際に使用します。デバイスで測定されたユーザーの睡眠開始時間をClova Home Extensionにリクエストします。このリクエストに対するレスポンスとして、[`GetSleepStartTimeResponse`](#GetSleepStartTimeResponse)メッセージを使用する必要があります。
+睡眠センサーのようなデバイスで、ユーザーの睡眠スコアの情報を確認する際に使用します。デバイスで測定されたユーザーの睡眠開始時間をCLOVA Home Extensionにリクエストします。このリクエストに対するレスポンスとして、[`GetSleepStartTimeResponse`](#GetSleepStartTimeResponse)メッセージを使用する必要があります。
 
 | フィールド名  | データ型 | フィールドの説明                       | Optional |
 | ------------- | -------- | -------------------------------------- | :------: |
@@ -2695,7 +2695,7 @@ IoTデバイスの情報の確認、デバイス操作のリクエストおよ�
 * [`GetSleepStartTimeRequest`](#GetSleepStartTimeRequest)
 
 ## GetTargetTemperatureRequest {#GetTargetTemperatureRequest}
-主にエアコンやサーモスタットのようなデバイスで、設定温度を確認する際に使用します。デバイスの設定温度をClova Home Extensionにリクエストします。このリクエストに対するレスポンスとして、[`GetTargetTemperatureResponse`](#GetTargetTemperatureResponse)メッセージを使用する必要があります。
+主にエアコンやサーモスタットのようなデバイスで、設定温度を確認する際に使用します。デバイスの設定温度をCLOVA Home Extensionにリクエストします。このリクエストに対するレスポンスとして、[`GetTargetTemperatureResponse`](#GetTargetTemperatureResponse)メッセージを使用する必要があります。
 
 | フィールド名  | データ型 | フィールドの説明                       | Optional |
 | ------------- | -------- | -------------------------------------- | :------: |
@@ -2763,7 +2763,7 @@ IoTデバイスの情報の確認、デバイス操作のリクエストおよ�
 * [`GetTargetTemperatureRequest`](#GetTargetTemperatureRequest)
 
 ## GetUltraFineDustRequest {#GetUltraFineDustRequest}
-主に空気清浄機などのデバイスで測定された超微細粉塵(PM2.5)の情報を確認する際に使用します。超微細粉塵(PM2.5)の情報をClova Home Extensionにリクエストします。このリクエストに対するレスポンスとして、[`GetUltraFineDustResponse`](#GetUltraFineDustResponse)メッセージを使用する必要があります。
+主に空気清浄機などのデバイスで測定された超微細粉塵(PM2.5)の情報を確認する際に使用します。超微細粉塵(PM2.5)の情報をCLOVA Home Extensionにリクエストします。このリクエストに対するレスポンスとして、[`GetUltraFineDustResponse`](#GetUltraFineDustResponse)メッセージを使用する必要があります。
 
 | フィールド名  | データ型 | フィールドの説明                       | Optional |
 | ------------- | -------- | -------------------------------------- | :------: |
@@ -2832,7 +2832,7 @@ IoTデバイスの情報の確認、デバイス操作のリクエストおよ�
 * [`GetUltraFineDustRequest`](#GetUltraFineDustRequest)
 
 ## GetUsageTimeRequest {#GetUsageTimeRequest}
-デバイスの使用時間を確認する際に使用します。特定の期間または現在までの累積使用時間をClova Home Extensionにリクエストします。このリクエストに対するレスポンスとして、[`GetUsageTimeResponse`](#GetUsageTimeResponse)メッセージを使用する必要があります。
+デバイスの使用時間を確認する際に使用します。特定の期間または現在までの累積使用時間をCLOVA Home Extensionにリクエストします。このリクエストに対するレスポンスとして、[`GetUsageTimeResponse`](#GetUsageTimeResponse)メッセージを使用する必要があります。
 
 | フィールド名  | データ型 | フィールドの説明                       | Optional |
 | ------------- | -------- | -------------------------------------- | :------: |
@@ -2904,7 +2904,7 @@ IoTデバイスの情報の確認、デバイス操作のリクエストおよ�
 * [`GetUsageTimeRequest`](#GetUsageTimeRequest)
 
 ## HealthCheckRequest {#HealthCheckRequest}
-デバイスのステータスを把握する際に使用します。デバイスのステータス情報をClova Home Extensionにリクエストします。このリクエストに対するレスポンスとして、[`HealthCheckResponse`](#HealthCheckResponse)メッセージを使用する必要があります。
+デバイスのステータスを把握する際に使用します。デバイスのステータス情報をCLOVA Home Extensionにリクエストします。このリクエストに対するレスポンスとして、[`HealthCheckResponse`](#HealthCheckResponse)メッセージを使用する必要があります。
 
 ### Payload fields
 
@@ -3019,7 +3019,7 @@ IoTデバイスの情報の確認、デバイス操作のリクエストおよ�
 * [`IncrementBrightnessRequest`](#IncrementBrightnessRequest)
 
 ## IncrementBrightnessRequest {#IncrementBrightnessRequest}
-主に照明などのデバイスを制御する際に使用します。照明の輝度を指定された値に上げるようClova Home Extensionにリクエストします。このリクエストに対するレスポンスとして、[`IncrementBrightnessConfirmation`](#IncrementBrightnessConfirmation)メッセージを使用する必要があります。
+主に照明などのデバイスを制御する際に使用します。照明の輝度を指定された値に上げるようCLOVA Home Extensionにリクエストします。このリクエストに対するレスポンスとして、[`IncrementBrightnessConfirmation`](#IncrementBrightnessConfirmation)メッセージを使用する必要があります。
 
 ### Payload fields
 
@@ -3112,7 +3112,7 @@ IoTデバイスの情報の確認、デバイス操作のリクエストおよ�
 * [`IncrementChannelRequest`](#IncrementChannelRequest)
 
 ## IncrementChannelRequest {#IncrementChannelRequest}
-主にテレビやセットトップボックスを制御する際に使用します。テレビのチャンネルを指定された値に上げるようClova Home Extensionにリクエストします。このリクエストに対するレスポンスとして、[`IncrementChannelConfirmation`](#IncrementChannelConfirmation)メッセージを使用する必要があります。
+主にテレビやセットトップボックスを制御する際に使用します。テレビのチャンネルを指定された値に上げるようCLOVA Home Extensionにリクエストします。このリクエストに対するレスポンスとして、[`IncrementChannelConfirmation`](#IncrementChannelConfirmation)メッセージを使用する必要があります。
 
 ### Payload fields
 
@@ -3197,7 +3197,7 @@ IoTデバイスの情報の確認、デバイス操作のリクエストおよ�
 * [`IncrementFanSpeedRequest`](#IncrementFanSpeedRequest)
 
 ## IncrementFanSpeedRequest {#IncrementFanSpeedRequest}
-主に空気清浄機などのデバイスを制御する際に使用します。ファンの速度を指定された値に上げるようClova Home Extensionにリクエストします。このリクエストに対するレスポンスとして、[`IncrementFanSpeedConfirmation`](#IncrementFanSpeedConfirmation)メッセージを使用する必要があります。
+主に空気清浄機などのデバイスを制御する際に使用します。ファンの速度を指定された値に上げるようCLOVA Home Extensionにリクエストします。このリクエストに対するレスポンスとして、[`IncrementFanSpeedConfirmation`](#IncrementFanSpeedConfirmation)メッセージを使用する必要があります。
 
 ### Payload fields
 
@@ -3282,7 +3282,7 @@ IoTデバイスの情報の確認、デバイス操作のリクエストおよ�
 * [`IncrementIntensityLevelRequest`](#IncrementIntensityLevelRequest)
 
 ## IncrementIntensityLevelRequest {#IncrementIntensityLevelRequest}
-圧力や水圧などの強度を指定された値に上げるようClova Home Extensionにリクエストします。このリクエストに対するレスポンスとして、[`IncrementIntensityLevelConfirmation`](#IncrementIntensityLevelConfirmation)メッセージを使用する必要があります。
+圧力や水圧などの強度を指定された値に上げるようCLOVA Home Extensionにリクエストします。このリクエストに対するレスポンスとして、[`IncrementIntensityLevelConfirmation`](#IncrementIntensityLevelConfirmation)メッセージを使用する必要があります。
 
 ### Payload fields
 
@@ -3367,7 +3367,7 @@ IoTデバイスの情報の確認、デバイス操作のリクエストおよ�
 * [`IncrementTargetTemperatureRequest`](#IncrementTargetTemperatureRequest)
 
 ## IncrementTargetTemperatureRequest {#IncrementTargetTemperatureRequest}
-主にエアコンやサーモスタットのようなデバイスを制御する際に使用します。指定された値に温度を上げるようClova Home Extensionにリクエストします。このリクエストに対するレスポンスとして、[`IncrementTargetTemperatureConfirmation`](#IncrementTargetTemperatureConfirmation)メッセージを使用する必要があります。
+主にエアコンやサーモスタットのようなデバイスを制御する際に使用します。指定された値に温度を上げるようCLOVA Home Extensionにリクエストします。このリクエストに対するレスポンスとして、[`IncrementTargetTemperatureConfirmation`](#IncrementTargetTemperatureConfirmation)メッセージを使用する必要があります。
 
 ### Payload fields
 
@@ -3448,7 +3448,7 @@ IoTデバイスの情報の確認、デバイス操作のリクエストおよ�
 * [`IncrementVolumeRequest`](#IncrementVolumeRequest)
 
 ## IncrementVolumeRequest {#IncrementVolumeRequest}
-主にテレビのセットトップボックスなどのデバイスを制御する際に使用します。スピーカーの音量を指定された値に上げるようClova Home Extensionにリクエストします。このリクエストに対するレスポンスとして、[`IncrementVolumeConfirmation`](#IncrementVolumeConfirmation)メッセージを使用する必要があります。
+主にテレビのセットトップボックスなどのデバイスを制御する際に使用します。スピーカーの音量を指定された値に上げるようCLOVA Home Extensionにリクエストします。このリクエストに対するレスポンスとして、[`IncrementVolumeConfirmation`](#IncrementVolumeConfirmation)メッセージを使用する必要があります。
 
 ### Payload fields
 
@@ -3516,7 +3516,7 @@ IoTデバイスの情報の確認、デバイス操作のリクエストおよ�
 * [`LowerRequest`](#LowerRequest)
 
 ## LowerRequest {#LowerRequest}
-スマートベッドなどのデバイスを制御する際に使用します。デバイスの高さを下げるようClova Home Extensionにリクエストします。このリクエストに対するレスポンスとして、[`LowerConfirmation`](#LowerConfirmation)メッセージを使用する必要があります。
+スマートベッドなどのデバイスを制御する際に使用します。デバイスの高さを下げるようCLOVA Home Extensionにリクエストします。このリクエストに対するレスポンスとして、[`LowerConfirmation`](#LowerConfirmation)メッセージを使用する必要があります。
 
 ### Payload fields
 
@@ -3583,7 +3583,7 @@ IoTデバイスの情報の確認、デバイス操作のリクエストおよ�
 * [`MuteRequest`](#MuteRequest)
 
 ## MuteRequest {#MuteRequest}
-主にテレビやセットトップボックスなどのデバイスを制御する際に使用します。デバイスの音をミュートにするようClova Home Extensionにリクエストします。このリクエストに対するレスポンスとして、[`MuteConfirmation`](#MuteConfirmation)メッセージを使用する必要があります。
+主にテレビやセットトップボックスなどのデバイスを制御する際に使用します。デバイスの音をミュートにするようCLOVA Home Extensionにリクエストします。このリクエストに対するレスポンスとして、[`MuteConfirmation`](#MuteConfirmation)メッセージを使用する必要があります。
 
 ### Payload fields
 
@@ -3647,7 +3647,7 @@ IoTデバイスの情報の確認、デバイス操作のリクエストおよ�
 * [`OpenRequest`](#OpenRequest)
 
 ## OpenRequest {#OpenRequest}
-スマートカーテンや温水洗浄便座などのデバイスを制御する際に使用します。スマートカーテンや温水洗浄便座の蓋を開けるようClova Home Extensionにリクエストします。このリクエストに対するレスポンスとして、[`OpenConfirmation`](#OpenConfirmation)メッセージを使用する必要があります。
+スマートカーテンや温水洗浄便座などのデバイスを制御する際に使用します。スマートカーテンや温水洗浄便座の蓋を開けるようCLOVA Home Extensionにリクエストします。このリクエストに対するレスポンスとして、[`OpenConfirmation`](#OpenConfirmation)メッセージを使用する必要があります。
 
 ### Payload fields
 
@@ -3711,7 +3711,7 @@ IoTデバイスの情報の確認、デバイス操作のリクエストおよ�
 * [`RaiseRequest`](#RaiseRequest)
 
 ## RaiseRequest {#RaiseRequest}
-スマートベッドなどのデバイスを制御する際に使用します。デバイスの高さを上げるようClova Home Extensionにリクエストします。このリクエストに対するレスポンスとして、[`RaiseConfirmation`](#RaiseConfirmation)メッセージを使用する必要があります。
+スマートベッドなどのデバイスを制御する際に使用します。デバイスの高さを上げるようCLOVA Home Extensionにリクエストします。このリクエストに対するレスポンスとして、[`RaiseConfirmation`](#RaiseConfirmation)メッセージを使用する必要があります。
 
 ### Payload fields
 
@@ -3796,7 +3796,7 @@ IoTデバイスの情報の確認、デバイス操作のリクエストおよ�
 * [`ReleaseModeRequest`](#ReleaseModeRequest)
 
 ## ReleaseModeRequest {#ReleaseModeRequest}
-現在、デバイスに設定されている運転モード(operation mode)を解除する際に使用します。デバイスの運転モードを解除し、前の運転モードまたはデフォルトの運転モードに戻るようにClova Home Extensionにリクエストします。このリクエストに対するレスポンスとして、[`ReleaseModeConfirmation`](#ReleaseModeConfirmation)メッセージを使用する必要があります。
+現在、デバイスに設定されている運転モード(operation mode)を解除する際に使用します。デバイスの運転モードを解除し、前の運転モードまたはデフォルトの運転モードに戻るようにCLOVA Home Extensionにリクエストします。このリクエストに対するレスポンスとして、[`ReleaseModeConfirmation`](#ReleaseModeConfirmation)メッセージを使用する必要があります。
 
 ### Payload fields
 
@@ -3872,7 +3872,7 @@ IoTデバイスの情報の確認、デバイス操作のリクエストおよ�
 * [`SetBrightnessRequest`](#SetBrightnessRequest)
 
 ## SetBrightnessRequest {#SetBrightnessRequest}
-主に照明などのデバイスを制御する際に使用します。照明の輝度を指定された値に変更するようClova Home Extensionにリクエストします。このリクエストに対するレスポンスとして、[`SetBrightnessConfirmation`](#SetBrightnessConfirmation)メッセージを使用する必要があります。
+主に照明などのデバイスを制御する際に使用します。照明の輝度を指定された値に変更するようCLOVA Home Extensionにリクエストします。このリクエストに対するレスポンスとして、[`SetBrightnessConfirmation`](#SetBrightnessConfirmation)メッセージを使用する必要があります。
 
 ### Payload fields
 
@@ -3950,7 +3950,7 @@ IoTデバイスの情報の確認、デバイス操作のリクエストおよ�
 * [`SetChannelByNameRequest`](#SetChannelByNameRequest)
 
 ## SetChannelByNameRequest {#SetChannelByNameRequest}
-主にテレビのセットトップボックスなどのデバイスを制御する際に使用します。指定されたチャンネル名にチャンネルを変更するようClova Home Extensionにリクエストします。このリクエストに対するレスポンスとして、[`SetChannelByNameConfirmation`](#SetChannelByNameConfirmation)メッセージを使用する必要があります。
+主にテレビのセットトップボックスなどのデバイスを制御する際に使用します。指定されたチャンネル名にチャンネルを変更するようCLOVA Home Extensionにリクエストします。このリクエストに対するレスポンスとして、[`SetChannelByNameConfirmation`](#SetChannelByNameConfirmation)メッセージを使用する必要があります。
 
 ### Payload fields
 
@@ -4032,7 +4032,7 @@ IoTデバイスの情報の確認、デバイス操作のリクエストおよ�
 * [`SetChannelRequest`](#SetChannelRequest)
 
 ## SetChannelRequest {#SetChannelRequest}
-主にテレビのセットトップボックスなどのデバイスを制御する際に使用します。指定されたチャンネル番号にチャンネルを変更するようClova Home Extensionにリクエストします。このリクエストに対するレスポンスとして、[`SetChannelConfirmation`](#SetChannelConfirmation)メッセージを使用する必要があります。
+主にテレビのセットトップボックスなどのデバイスを制御する際に使用します。指定されたチャンネル番号にチャンネルを変更するようCLOVA Home Extensionにリクエストします。このリクエストに対するレスポンスとして、[`SetChannelConfirmation`](#SetChannelConfirmation)メッセージを使用する必要があります。
 
 ### Payload fields
 
@@ -4116,7 +4116,7 @@ IoTデバイスの情報の確認、デバイス操作のリクエストおよ�
 * [`SetColorRequest`](#SetColorRequest)
 
 ## SetColorRequest {#SetColorRequest}
-主にスマート照明などのデバイスを制御する際に使用します。照明や画面、電球の色を変更するようClova Home Extensionにリクエストします。このリクエストに対するレスポンスとして、[`SetColorConfirmation`](#SetColorConfirmation)メッセージを使用する必要があります。
+主にスマート照明などのデバイスを制御する際に使用します。照明や画面、電球の色を変更するようCLOVA Home Extensionにリクエストします。このリクエストに対するレスポンスとして、[`SetColorConfirmation`](#SetColorConfirmation)メッセージを使用する必要があります。
 
 ### Payload fields
 
@@ -4196,7 +4196,7 @@ IoTデバイスの情報の確認、デバイス操作のリクエストおよ�
 * [`SetColorTemperatureRequest`](#SetColorTemperatureRequest)
 
 ## SetColorTemperatureRequest {#SetColorTemperatureRequest}
-主にスマート照明などのデバイスを制御する際に使用します。照明や画面、電球の色温度を変更するようClova Home Extensionにリクエストします。このリクエストに対するレスポンスとして、[`SetColorTemperatureConfirmation`](#SetColorTemperatureConfirmation)メッセージを使用する必要があります。
+主にスマート照明などのデバイスを制御する際に使用します。照明や画面、電球の色温度を変更するようCLOVA Home Extensionにリクエストします。このリクエストに対するレスポンスとして、[`SetColorTemperatureConfirmation`](#SetColorTemperatureConfirmation)メッセージを使用する必要があります。
 
 ### Payload fields
 
@@ -4274,7 +4274,7 @@ IoTデバイスの情報の確認、デバイス操作のリクエストおよ�
 * [`SetFanSpeedRequest`](#SetFanSpeedRequest)
 
 ## SetFanSpeedRequest {#SetFanSpeedRequest}
-主に空気清浄機などのデバイスを制御する際に使用します。ファンの速度を指定された値に変更するようClova Home Extensionにリクエストします。このリクエストに対するレスポンスとして、[`SetFanSpeedConfirmation`](#SetFanSpeedConfirmation)メッセージを使用する必要があります。
+主に空気清浄機などのデバイスを制御する際に使用します。ファンの速度を指定された値に変更するようCLOVA Home Extensionにリクエストします。このリクエストに対するレスポンスとして、[`SetFanSpeedConfirmation`](#SetFanSpeedConfirmation)メッセージを使用する必要があります。
 
 ### Payload fields
 
@@ -4352,7 +4352,7 @@ IoTデバイスの情報の確認、デバイス操作のリクエストおよ�
 * [`SetFreezerTargetTemperatureRequest`](#SetFreezerTargetTemperatureRequest)
 
 ## SetFreezerTargetTemperatureRequest {#SetFreezerTargetTemperatureRequest}
-冷蔵庫などのデバイスを制御する際に使用します。冷凍庫の設定温度を指定された値に変更するようClova Home Extensionにリクエストします。このリクエストに対するレスポンスとして、[`SetFreezerTargetTemperatureConfirmation`](#SetFreezerTargetTemperatureConfirmation)メッセージを使用する必要があります。
+冷蔵庫などのデバイスを制御する際に使用します。冷凍庫の設定温度を指定された値に変更するようCLOVA Home Extensionにリクエストします。このリクエストに対するレスポンスとして、[`SetFreezerTargetTemperatureConfirmation`](#SetFreezerTargetTemperatureConfirmation)メッセージを使用する必要があります。
 
 ### Payload fields
 
@@ -4430,7 +4430,7 @@ IoTデバイスの情報の確認、デバイス操作のリクエストおよ�
 * [`SetFridgeTargetTemperatureRequest`](#SetFridgeTargetTemperatureRequest)
 
 ## SetFridgeTargetTemperatureRequest {#SetFridgeTargetTemperatureRequest}
-冷蔵庫などのデバイスを制御する際に使用します。冷蔵室の設定温度を指定された値に変更するようClova Home Extensionにリクエストします。このリクエストに対するレスポンスとして、[`SetFridgeTargetTemperatureConfirmation`](#SetFridgeTargetTemperatureConfirmation)メッセージを使用する必要があります。
+冷蔵庫などのデバイスを制御する際に使用します。冷蔵室の設定温度を指定された値に変更するようCLOVA Home Extensionにリクエストします。このリクエストに対するレスポンスとして、[`SetFridgeTargetTemperatureConfirmation`](#SetFridgeTargetTemperatureConfirmation)メッセージを使用する必要があります。
 
 ### Payload fields
 
@@ -4508,7 +4508,7 @@ IoTデバイスの情報の確認、デバイス操作のリクエストおよ�
 * [`SetInputSourceByNameRequest`](#SetInputSourceByNameRequest)
 
 ## SetInputSourceByNameRequest {#SetInputSourceByNameRequest}
-主にテレビのセットトップボックスなどのデバイスを制御する際に使用します。指定された入力ソース名に入力ソースを変更するようClova Home Extensionにリクエストします。このリクエストに対するレスポンスとして、[`SetInputSourceByNameConfirmation`](#SetInputSourceByNameConfirmation)メッセージを使用する必要があります。
+主にテレビのセットトップボックスなどのデバイスを制御する際に使用します。指定された入力ソース名に入力ソースを変更するようCLOVA Home Extensionにリクエストします。このリクエストに対するレスポンスとして、[`SetInputSourceByNameConfirmation`](#SetInputSourceByNameConfirmation)メッセージを使用する必要があります。
 
 ### Payload fields
 
@@ -4581,7 +4581,7 @@ IoTデバイスの情報の確認、デバイス操作のリクエストおよ�
 * [`SetLockStateRequest`](#SetLockStateRequest)
 
 ## SetLockStateRequest {#SetLockStateRequest}
-主にスマートバルブなどのデバイスを制御する際に使用します。デバイスの開閉をClova Home Extensionにリクエストします。このリクエストに対するレスポンスとして、[`SetLockStateConfirmation`](#SetLockStateConfirmation)メッセージを使用する必要があります。
+主にスマートバルブなどのデバイスを制御する際に使用します。デバイスの開閉をCLOVA Home Extensionにリクエストします。このリクエストに対するレスポンスとして、[`SetLockStateConfirmation`](#SetLockStateConfirmation)メッセージを使用する必要があります。
 
 ### Payload fields
 
@@ -4657,7 +4657,7 @@ IoTデバイスの情報の確認、デバイス操作のリクエストおよ�
 * [`SetModeRequest`](#SetModeRequest)
 
 ## SetModeRequest {#SetModeRequest}
-デバイスの運転モードを制御する際に使用します。指定された値に運転モードを変更するようClova Home Extensionにリクエストします。このリクエストに対するレスポンスとして、[`SetModeConfirmation`](#SetModeConfirmation)メッセージを使用する必要があります。
+デバイスの運転モードを制御する際に使用します。指定された値に運転モードを変更するようCLOVA Home Extensionにリクエストします。このリクエストに対するレスポンスとして、[`SetModeConfirmation`](#SetModeConfirmation)メッセージを使用する必要があります。
 
 ### Payload fields
 
@@ -4735,7 +4735,7 @@ IoTデバイスの情報の確認、デバイス操作のリクエストおよ�
 * [`SetTargetTemperatureRequest`](#SetTargetTemperatureRequest)
 
 ## SetTargetTemperatureRequest {#SetTargetTemperatureRequest}
-主にエアコンやサーモスタットのようなデバイスの制御に使用します。設定温度を指定された値に変更するようClova Home Extensionにリクエストします。このリクエストに対するレスポンスとして、[`SetTargetTemperatureConfirmation`](#SetTargetTemperatureConfirmation)メッセージを使用する必要があります。
+主にエアコンやサーモスタットのようなデバイスの制御に使用します。設定温度を指定された値に変更するようCLOVA Home Extensionにリクエストします。このリクエストに対するレスポンスとして、[`SetTargetTemperatureConfirmation`](#SetTargetTemperatureConfirmation)メッセージを使用する必要があります。
 
 ### Payload fields
 
@@ -4803,7 +4803,7 @@ IoTデバイスの情報の確認、デバイス操作のリクエストおよ�
 * [`StartRecordingRequest`](#StartRecordingRequest)
 
 ## StartRecordingRequest {#StartRecordingRequest}
-主にテレビのセットトップボックスなどのデバイスを制御する際に使用します。現在見ているチャンネルの録画を開始するようClova Home Extensionにリクエストします。このリクエストに対するレスポンスとして、[`StartRecordingConfirmation`](#StartRecordingConfirmation)メッセージを使用する必要があります。
+主にテレビのセットトップボックスなどのデバイスを制御する際に使用します。現在見ているチャンネルの録画を開始するようCLOVA Home Extensionにリクエストします。このリクエストに対するレスポンスとして、[`StartRecordingConfirmation`](#StartRecordingConfirmation)メッセージを使用する必要があります。
 
 ### Payload fields
 
@@ -4873,7 +4873,7 @@ IoTデバイスの情報の確認、デバイス操作のリクエストおよ�
 * [`StopRequest`](#StopRequest)
 
 ## StopRequest {#StopRequest}
-デバイスの現在の動作を中止するようClova Home Extensionにリクエストします。このリクエストに対するレスポンスとして、[`StopConfirmation`](#StopConfirmation)メッセージを使用する必要があります。
+デバイスの現在の動作を中止するようCLOVA Home Extensionにリクエストします。このリクエストに対するレスポンスとして、[`StopConfirmation`](#StopConfirmation)メッセージを使用する必要があります。
 
 ### Payload fields
 
@@ -4937,7 +4937,7 @@ IoTデバイスの情報の確認、デバイス操作のリクエストおよ�
 * [`StopRecordingRequest`](#StopRecordingRequest)
 
 ## StopRecordingRequest {#StopRecordingRequest}
-主にテレビのセットトップボックスなどのデバイスを制御する際に使用します。現在行っている録画を停止するようClova Home Extensionにリクエストします。このリクエストに対するレスポンスとして、[`StopRecordingConfirmation`](#StopRecordingConfirmation)メッセージを使用する必要があります。
+主にテレビのセットトップボックスなどのデバイスを制御する際に使用します。現在行っている録画を停止するようCLOVA Home Extensionにリクエストします。このリクエストに対するレスポンスとして、[`StopRecordingConfirmation`](#StopRecordingConfirmation)メッセージを使用する必要があります。
 
 ### Payload fields
 
@@ -5000,7 +5000,7 @@ IoTデバイスの情報の確認、デバイス操作のリクエストおよ�
 * [`TurnOffRequest`](#TurnOffRequest)
 
 ## TurnOffRequest {#TurnOffRequest}
-デバイスの電源をオフにするようClova Home Extensionにリクエストします。このリクエストに対するレスポンスとして、[`TurnOffConfirmation`](#TurnOffConfirmation)メッセージを使用する必要があります。
+デバイスの電源をオフにするようCLOVA Home Extensionにリクエストします。このリクエストに対するレスポンスとして、[`TurnOffConfirmation`](#TurnOffConfirmation)メッセージを使用する必要があります。
 
 ### Payload fields
 
@@ -5078,7 +5078,7 @@ IoTデバイスの情報の確認、デバイス操作のリクエストおよ�
 * [`TurnOnRequest`](#TurnOnRequest)
 
 ## TurnOnRequest {#TurnOnRequest}
-デバイスの電源をオンにするようClova Home Extensionにリクエストします。このリクエストに対するレスポンスとして、[`TurnOnConfirmation`](#TurnOnConfirmation)メッセージを使用する必要があります。
+デバイスの電源をオンにするようCLOVA Home Extensionにリクエストします。このリクエストに対するレスポンスとして、[`TurnOnConfirmation`](#TurnOnConfirmation)メッセージを使用する必要があります。
 
 ### Payload fields
 
@@ -5141,7 +5141,7 @@ IoTデバイスの情報の確認、デバイス操作のリクエストおよ�
 * [`UnmuteRequest`](#UnmuteRequest)
 
 ## UnmuteRequest {#UnmuteRequest}
-主にテレビやセットトップボックスなどのデバイスを制御する際に使用します。デバイスのミュートを解除するようClova Home Extensionにリクエストします。このリクエストに対するレスポンスとして、[`UnmuteConfirmation`](#UnmuteConfirmation)メッセージを使用する必要があります。
+主にテレビやセットトップボックスなどのデバイスを制御する際に使用します。デバイスのミュートを解除するようCLOVA Home Extensionにリクエストします。このリクエストに対するレスポンスとして、[`UnmuteConfirmation`](#UnmuteConfirmation)メッセージを使用する必要があります。
 
 ### Payload fields
 

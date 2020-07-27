@@ -1,7 +1,7 @@
 # 汎用的な意図を処理する
 このチュートリアルでは、[簡単なExtensionを作成する](/CEK/Tutorials/Build_Simple_Extension.md)で作成したサンプルサイコロExtensionを利用して、「はい」「いいえ」などの汎用的な意図の表現を処理する方法について説明します。
 
-Clovaは、頻繁に発生するユーザーの基本的な意図表現をすべてのExtensionで共通で使用できるように、[ビルトインインテント](/Design/Design_Guideline_For_Extension.md#BuiltinIntent)としてあらかじめ定義しています。以下は、Clovaが提供するビルトインインテントの一覧です。
+CLOVAは、頻繁に発生するユーザーの基本的な意図表現をすべてのExtensionで共通で使用できるように、[ビルトインインテント](/Design/Design_Guideline_For_Extension.md#BuiltinIntent)としてあらかじめ定義しています。以下は、CLOVAが提供するビルトインインテントの一覧です。
 
 | ビルトインインテントの名前 | 意図                                     | ユーザーのサンプル発話       |
 | -------------------------- | ---------------------------------------- | ---------------------------- |
@@ -19,7 +19,7 @@ Clovaは、頻繁に発生するユーザーの基本的な意図表現をすべ
 
 ビルトインインテントを処理するためには、次の作業が必要です。
 * ステップ1 ビルトインインテントの処理を実装する(Extensionサーバーで作業)
-* ステップ2 ビルトインインテントの動作をテストする(Clova Developer Centerで作業)
+* ステップ2 ビルトインインテントの動作をテストする(CLOVA Developer Centerで作業)
 
 ## ステップ1 ビルトインインテントの処理を実装する {#Step1}
 {% include "/CEK/Tutorials/HandleBuiltinIntents/Implement_Builtin_Handler.md" %}

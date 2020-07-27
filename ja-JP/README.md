@@ -1,16 +1,16 @@
 # このドキュメントについて
-このドキュメントは、ClovaのCEKプラットフォームの開発ガイドおよびAPIリファレンスを提供します。対象となる読者は、CICを使用してClovaのサービスと連携するデバイスまたはアプリを開発するクライアント開発者と、CEKを使用したオンラインコンテンツおよびサービスの提供を希望するExtension開発者です。
+このドキュメントは、CLOVAのCEKプラットフォームの開発ガイドおよびAPIリファレンスを提供します。対象となる読者は、CICを使用してCLOVAのサービスと連携するデバイスまたはアプリを開発するクライアント開発者と、CEKを使用したオンラインコンテンツおよびサービスの提供を希望するExtension開発者です。
 
-LINE株式会社（以下、当社といいます）は、Clova事務局としてスキルの審査やスキルストアの運営を行います。
+LINE株式会社（以下、当社といいます）は、CLOVA事務局としてスキルの審査やスキルストアの運営を行います。
 
 <div class="note">
   <p><strong>メモ</strong></p>
-  <p>Clovaは、現在も開発が進められています。このドキュメントの内容は随時変更される可能性があります。</p>
+  <p>CLOVAは、現在も開発が進められています。このドキュメントの内容は随時変更される可能性があります。</p>
 </div>
 
 ## お問い合わせ
 このドキュメントに関するお問い合わせや開発時のご質問の際にはこちらをご利用ください。
-Clovaの質問には`Clova Extensions Kit`のタグをご利用ください。
+CLOVAの質問には`CLOVA Extensions Kit`のタグをご利用ください。
 <a href="https://www.line-community.me/questions" target="_blank">LINE Developers Community > Q&A</a>
 
 ## ドキュメントのバージョンおよび変更履歴
@@ -24,6 +24,14 @@ Clovaの質問には`Clova Extensions Kit`のタグをご利用ください。
     </tr>
   </thead>
   <tbody>
+    <tr>
+      <td>v3.2.0</td><td>2020/07/29</td>
+      <td>
+        <ul>
+          <li>LINE CLOVAブランド統合に伴い、Clovaの表記を「CLOVA」に変更</li>
+        </ul>
+      </td>
+    </tr>
     <tr>
       <td>v3.1.8</td><td>2020/06/26</td>
       <td>

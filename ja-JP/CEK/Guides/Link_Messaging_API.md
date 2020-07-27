@@ -50,7 +50,7 @@ Custom ExtensionとLINEの連携を実施するには、以下の条件を満た
 
 ## 利用方法 {#Settings}
 
-まず、LINE Developersコンソールで、同一のプロバイダー配下にボットのチャネル（Messaging APIチャネル）とCustom Extensionのチャネル（Clovaスキルチャネル）を作成してください。異なるプロバイダー配下に作成されている場合には連携することができません。
+まず、LINE Developersコンソールで、同一のプロバイダー配下にボットのチャネル（Messaging APIチャネル）とCustom Extensionのチャネル（CLOVAスキルチャネル）を作成してください。異なるプロバイダー配下に作成されている場合には連携することができません。
 同一のプロバイダー配下にチャネルを発行すると、Custom ExtensionのuserIdと、ボットのMessaging APIのuserIdに同じIDが渡ってきます。
 
 そのため、例えばCustom Extensionで受け取った発話を元に、LINEのボットからメッセージを送信したい場合には以下2つのAPIを利用してください。

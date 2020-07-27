@@ -1,6 +1,6 @@
 ## 開発設定を行う {#SetDevConfiguration}
 
-Clova Developer Centerで[Extensionを登録](/DevConsole/Guides/CEK/Register_Extension.md)すると、サーバーやアカウント連携に関する設定が可能になります。
+CLOVA Developer Centerで[Extensionを登録](/DevConsole/Guides/CEK/Register_Extension.md)すると、サーバーやアカウント連携に関する設定が可能になります。
 左メニューから **{{ book.DevConsole.cek_dev_configuration }}** を選択してください。
 
 ![](/DevConsole/Assets/Images/DevConsole-Dev_Config_Menu.png)
@@ -11,7 +11,7 @@ Clova Developer Centerで[Extensionを登録](/DevConsole/Guides/CEK/Register_Ex
 
 ### サーバー設定を行う {#SetServerConnection}
 
-ExtensionはCEKとHTTPSで通信します。その際、CEKはExtensionにHTTPリクエストを送り、ExtensionはCEKにHTTPレスポンスを返します。CEKがExtensionにHTTPリクエストを送るためには、Clova Developer Centerでサーバーとの連携を設定する必要があります。[Extensionの基本情報を入力](#InputSkillInfo)すると、作成されたExtensionに対し、サーバーとの連携を設定できます。
+ExtensionはCEKとHTTPSで通信します。その際、CEKはExtensionにHTTPリクエストを送り、ExtensionはCEKにHTTPレスポンスを返します。CEKがExtensionにHTTPリクエストを送るためには、CLOVA Developer Centerでサーバーとの連携を設定する必要があります。[Extensionの基本情報を入力](#InputSkillInfo)すると、作成されたExtensionに対し、サーバーとの連携を設定できます。
 
 Extensionのサーバーを登録するには、先にExtensionのサーバーと通信できるか確認する必要があります。次の例のように、簡単なcurlコマンドで通信状況を確認できます。
 
@@ -39,14 +39,14 @@ $ curl "https://example.com/pizzabot" -X POST
 
 ### アカウント連携を設定する {#SetAccountLinking}
 
-Extensionが提供するサービスのアカウントが、Clovaのユーザーアカウントとの連携を必要とする場合、[サーバーとの連携を設定する](#SetServerConnection)の内、[アカウント連携](/CEK/Guides/Link_User_Account.md)に関連情報を入力します。
+Extensionが提供するサービスのアカウントが、CLOVAのユーザーアカウントとの連携を必要とする場合、[サーバーとの連携を設定する](#SetServerConnection)の内、[アカウント連携](/CEK/Guides/Link_User_Account.md)に関連情報を入力します。
 
 次の順で、アカウント連携の設定に[必要な情報](/CEK/Guides/Link_User_Account.md#RegisterAccountLinkingInfo)を入力します。
 
 <ol>
   <li><strong>{{ book.DevConsole.cek_dev_accountlinking }}</strong>をクリックします。</li>
     <img src="/DevConsole/Assets/Images/DevConsole-Extension_Account_Linking_Settings_1.png" />
-  <li>Extensionが提供するサービスのアカウントが、Clovaのユーザーアカウントとの連携を必要とする場合、<strong>{{ book.DevConsole.cek_account_linking }}</strong>項目で<strong>{{ book.DevConsole.cek_yes }}</strong>を選択します。アカウント連携の詳細については、<a href="#SetAccountLinking">アカウント連携を設定する</a>を参照してください。</li>
+  <li>Extensionが提供するサービスのアカウントが、CLOVAのユーザーアカウントとの連携を必要とする場合、<strong>{{ book.DevConsole.cek_account_linking }}</strong>項目で<strong>{{ book.DevConsole.cek_yes }}</strong>を選択します。アカウント連携の詳細については、<a href="#SetAccountLinking">アカウント連携を設定する</a>を参照してください。</li>
   <li>ユーザーにアカウント認証UIを提供する認証URLを、<strong>{{ book.DevConsole.cek_authorization_url }}</strong>項目に入力します。ユーザーがExtensionをアクティブにすると、このページに移動します。</li>
   <li>ユーザーが自身のアカウントを即座に設定できるようにする場合には、<strong>{{ book.DevConsole.cek_configuration_url }}</strong>項目にアカウント設定ページのURLを入力します。</li>
   <li><strong>{{ book.DevConsole.cek_privacy_policy_url }}</strong>項目に、Extensionが提供するサービスのプライバシーポリシーが提供されるURLを入力します。このページの内容は、後ほどストアで表示されます。</li>

@@ -27,10 +27,10 @@
     * [音声出力タイプ](/Design/Design_Guideline_For_Extension.md#OutputSpeech)
     * [オーディオコンテンツの再生タイプ](/Design/Design_Guideline_For_Extension.md#AudioPlayer)
   * [プラットフォームでサポートされるオーディオ圧縮形式](/Design/Design_Guideline_For_Extension.md#SupportedAudioCompressionFormat)
-  * [Clovaコンテンツガイドライン](/Design/Design_Guideline_For_Extension.md#ClovaSkillContentGuideline)
+  * [CLOVAコンテンツガイドライン](/Design/Design_Guideline_For_Extension.md#ClovaSkillContentGuideline)
   * [継続的にアップデートする](/Design/Design_Guideline_For_Extension.md#ContinuousUpdate)
 
-## Clova Extensions Kit
+## CLOVA Extensions Kit
 
 * [CEKの概要](/CEK/CEK_Overview.md)
   * [CEKとは?](/CEK/CEK_Overview.md#WhatisCEK)
@@ -72,7 +72,7 @@
     * [アカウント権限の検証を実装する](/CEK/Guides/Link_User_Account.md#AddValidationLogic)
     * [アカウント連携情報を登録する](/CEK/Guides/Link_User_Account.md#RegisterAccountLinkingInfo)
 * [Custom ExtensionとLINEを連携する](/CEK/Guides/Link_Messaging_API.md)
-* [Clova Extensions Kitソフトウェア開発キット（CEK SDK）](/CEK/Guides/Clova_CEK_SDK.md)
+* [CLOVA Extensions Kitソフトウェア開発キット（CEK SDK）](/CEK/Guides/Clova_CEK_SDK.md)
 * [サンプルのExtension](/CEK/Examples/Extension_Examples.md)
 * [CEK APIのリファレンス](/CEK/References/CEK_API.md)
   * [HTTPメッセージ](/CEK/References/CEK_API.md#HTTPMessage)
@@ -107,20 +107,20 @@
         * [`CLOVA.MONEY`](/CEK/References/CEK_API.md#ClovaMoney)
 
 
-## Clova Home Extension
+## CLOVA Home Extension
 
-* [Clova Home Extensionを作成する](/CEK/Guides/Build_Clova_Home_Extension.md)
+* [CLOVA Home Extensionを作成する](/CEK/Guides/Build_Clova_Home_Extension.md)
   * [準備事項](/CEK/Guides/Build_Clova_Home_Extension.md#Preparation)
   * [Discovery機能を提供する](/CEK/Guides/Build_Clova_Home_Extension.md#ProvideDeviceDiscovery)
   * [SceneDiscovery機能を提供する](/CEK/Guides/Build_Clova_Home_Extension.md#ProvideSceneDiscovery)
-  * [Clova Home Extensionリクエストを処理する](/CEK/Guides/Build_Clova_Home_Extension.md#HandleClovaHomeExtensionRequest)
-  * [Clova Home Extensionレスポンスを返す](/CEK/Guides/Build_Clova_Home_Extension.md#ReturnClovaHomeExtensionResponse)
+  * [CLOVA Home Extensionリクエストを処理する](/CEK/Guides/Build_Clova_Home_Extension.md#HandleClovaHomeExtensionRequest)
+  * [CLOVA Home Extensionレスポンスを返す](/CEK/Guides/Build_Clova_Home_Extension.md#ReturnClovaHomeExtensionResponse)
   * [リクエストメッセージを検証する](/CEK/Guides/Build_Clova_Home_Extension.md#RequestMessageValidation)
-* [Clova Home Extension API のリファレンス](/CEK/References/CEK_API_ClovaHome.md)
+* [CLOVA Home Extension API のリファレンス](/CEK/References/CEK_API_ClovaHome.md)
   * [HTTPメッセージ](/CEK/References/CEK_API_ClovaHome.md#HTTPMessage)
     * [HTTPヘッダー](/CEK/References/CEK_API_ClovaHome.md#HTTPHeader)
     * [HTTPボディ](/CEK/References/CEK_API_ClovaHome.md#HTTPBody)
-  * [Clova Home Extensionメッセージ](/CEK/References/CEK_API_ClovaHome.md#ClovaHomeExtMessage)
+  * [CLOVA Home Extensionメッセージ](/CEK/References/CEK_API_ClovaHome.md#ClovaHomeExtMessage)
     * [メッセージフォーマット](/CEK/References/CEK_API_ClovaHome.md#ClovaHomeExtMessageFormat)
     * [インターフェース](/CEK/References/CEK_API_ClovaHome.md#ClovaHomeExtInterface)
       * [Discovery](/CEK/References/ClovaHomeInterface/Discovery_Interfaces.md)
@@ -128,12 +128,12 @@
       * [Error](/CEK/References/ClovaHomeInterface/Error_Interfaces.md)
       * [共有オブジェクト](/CEK/References/ClovaHomeInterface/Shared_Objects.md)
 
-## Clova Developer Center
+## CLOVA Developer Center
 
-* [Clova Developer Centerの概要](/DevConsole/ClovaDevConsole_Overview.md)
+* [CLOVA Developer Centerの概要](/DevConsole/ClovaDevConsole_Overview.md)
 * [CEKメニューを使用する](/DevConsole/Guides/CEK/Using_CEK_Menu.md)
   * [チャネルを作成する](/DevConsole/Guides/CEK/Create_Channel.md)
-    * [Clova Developer Center βにログインする](/DevConsole/Guides/CEK/Create_Channel.md#LoginClovaDevCenter)
+    * [CLOVA Developer Center βにログインする](/DevConsole/Guides/CEK/Create_Channel.md#LoginClovaDevCenter)
     * [LINE Developersコンソールでチャネルを作成する](/DevConsole/Guides/CEK/Create_Channel.md#CreateSkillChannel)
   * [Extensionを登録する](/DevConsole/Guides/CEK/Register_Extension.md)
     * [利用規約およびLINE User Data Policyに同意する](/DevConsole/Guides/CEK/Register_Extension.md#AgreeTermsOfUse)
@@ -154,14 +154,14 @@
     * [対話モデルをテストする](/DevConsole/Guides/CEK/Test_Extension.md#TestInteractionModel)
       * [対話モデルテストモード](/DevConsole/Guides/CEK/Test_Extension.md#InteractionModelTestMode)
       * [シナリオテストモード](/DevConsole/Guides/CEK/Test_Extension.md#ScenarioTestMode)
-    * [Clovaデバイスでテストする](/DevConsole/Guides/CEK/Test_Extension.md#DeviceTest)
+    * [CLOVAデバイスでテストする](/DevConsole/Guides/CEK/Test_Extension.md#DeviceTest)
   * [Extensionを配布する](/DevConsole/Guides/CEK/Deploy_Extension.md)
     * [審査情報を入力する](/DevConsole/Guides/CEK/Deploy_Extension.md#InputReviewInfo)
     * [審査申請する](/DevConsole/Guides/CEK/Deploy_Extension.md#RequestExtensionSubmission)
     * [スキルが公開される](/DevConsole/Guides/CEK/Deploy_Extension.md#DeployInSkillStore)
   * [Extensionをアップデートする](/DevConsole/Guides/CEK/Update_Extension.md)
   * [Extensionを中止および削除する](/DevConsole/Guides/CEK/Remove_Extension.md)
-  * [Clova Analyticsを使用する](/DevConsole/Guides/CEK/Use_Analytics.md)
+  * [CLOVA Analyticsを使用する](/DevConsole/Guides/CEK/Use_Analytics.md)
 
 ## リソース
 

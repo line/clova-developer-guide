@@ -1,4 +1,4 @@
-﻿<a href="{{ book.DeveloperConsoleURL }}" target="_blank">Clova Developer Center</a>で対話モデルを登録します。
+﻿<a href="{{ book.DeveloperConsoleURL }}" target="_blank">CLOVA Developer Center</a>で対話モデルを登録します。
 
 対話モデルに保存する情報は[インテント](/Design/Design_Guideline_For_Extension.md#Intent)と[スロット](/Design/Design_Guideline_For_Extension.md#Slot)です。インテントは入力されたフレーズを解析してExtensionサーバーに渡す情報で、スロットはそのインテントの解析に必要な情報です。
 

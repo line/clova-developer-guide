@@ -1,6 +1,6 @@
 # サンプルのExtension
 
-Clovaでサービス提供中の一部のExtensionを紹介します。簡単なアクションを行うExtensionで、Extensionを開発する際に役立ちます。
+CLOVAでサービス提供中の一部のExtensionを紹介します。簡単なアクションを行うExtensionで、Extensionを開発する際に役立ちます。
 
 * [サイコロ遊び(Dice drawer)](#DiceDrawer)
 
@@ -15,5 +15,3 @@ Clovaでサービス提供中の一部のExtensionを紹介します。簡単な
 
 ### GitHubリポジトリ
 [{{ book.GitHubBaseURLforExtensionExample }}/clova-extension-sample-dice]({{ book.GitHubBaseURLforExtensionExample }}/clova-extension-sample-dice)
-
-

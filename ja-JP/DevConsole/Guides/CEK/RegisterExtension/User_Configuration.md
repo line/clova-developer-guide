@@ -1,6 +1,6 @@
 ## ユーザー設定を行う {#SetUserConfiguration}
 
-Clova Developer Centerで[Extensionを登録](/DevConsole/Guides/CEK/Register_Extension.md)すると、Clovaアプリの **{{ book.DevConsole.ManageExtensions }}** に表示する情報の入力が可能になります。
+CLOVA Developer Centerで[Extensionを登録](/DevConsole/Guides/CEK/Register_Extension.md)すると、CLOVAアプリの **{{ book.DevConsole.ManageExtensions }}** に表示する情報の入力が可能になります。
 左メニューから **{{ book.DevConsole.cek_user_configuration }}** を選択してください。
 
 ![](/DevConsole/Assets/Images/DevConsole-User_Config_Menu.png)
@@ -11,7 +11,7 @@ Clova Developer Centerで[Extensionを登録](/DevConsole/Guides/CEK/Register_Ex
 
 ### スキルストアの情報を入力する {#InputSkillStoreInfo}
 
-Extensionをユーザーに説明するための情報として、Clovaアプリの **{{ book.DevConsole.ManageExtensions }}** でユーザーに提供されます。次の順で情報を入力します。
+Extensionをユーザーに説明するための情報として、CLOVAアプリの **{{ book.DevConsole.ManageExtensions }}** でユーザーに提供されます。次の順で情報を入力します。
 
 ![](/DevConsole/Assets/Images/DevConsole-Input_Skill_Store_Info.png)
 
@@ -21,13 +21,13 @@ Extensionをユーザーに説明するための情報として、Clovaアプリ
 3. **{{ book.DevConsole.cek_short_skill_desc }}**：音声でスキルを説明するためのテキストです。
 -->
 3. **{{ book.DevConsole.cek_full_skill_desc }}**：**{{ book.DevConsole.ExtensionPage }}** でユーザーに提供するExtensionの説明です。案内に従って作成します。
-4. **{{ book.DevConsole.cek_example_phrases }}**：ユーザーがExtensionをどのように使用できるかを示す例です。**{{ book.DevConsole.ExtensionPage }}** に表示されます。なお、1番目の例は **{{ book.DevConsole.StoreHome }}** にも表示されるため、「〜を起動して」「〜を開いて」など、スキルを起動するフレーズを含めて登録してください。（例：ねぇClova、ピザボットを起動して）
+4. **{{ book.DevConsole.cek_example_phrases }}**：ユーザーがExtensionをどのように使用できるかを示す例です。**{{ book.DevConsole.ExtensionPage }}** に表示されます。なお、1番目の例は **{{ book.DevConsole.StoreHome }}** にも表示されるため、「〜を起動して」「〜を開いて」など、スキルを起動するフレーズを含めて登録してください。（例：ねぇCLOVA、ピザボットを起動して）
 5. **{{ book.DevConsole.cek_keywords }}**：ユーザーが特定のキーワードでExtensionを検索する際に、その検索結果にExtensionが含まれるように設定します（カンマ区切りで5つまで登録可能）。スキルストアの検索機能の検索対象になります。
-6. **{{ book.DevConsole.cek_large_icon }}**：スキルストアおよびClovaアプリで表示されるExtensionのアイコンファイルです。512x512ピクセルの円形もしくは正方形で作成してください。
-7. **{{ book.DevConsole.cek_supported_clients }}** : Extensionが動作するClovaデバイスを選択します。チェックを外したデバイスからはスキルを呼び出すことができません。
+6. **{{ book.DevConsole.cek_large_icon }}**：スキルストアおよびCLOVAアプリで表示されるExtensionのアイコンファイルです。512x512ピクセルの円形もしくは正方形で作成してください。
+7. **{{ book.DevConsole.cek_supported_clients }}** : Extensionが動作するCLOVAデバイスを選択します。チェックを外したデバイスからはスキルを呼び出すことができません。
 8. **{{ book.DevConsole.cek_save }}** ボタンをクリックして、入力した内容を保存します。**{{ book.DevConsole.cek_next }}** をクリックすると、{{ book.DevConsole.cek_privacy }}の設定画面に遷移します。
 
-このように入力された情報は、Clovaアプリの **{{ book.DevConsole.ManageExtensions }}** で次のように表示されます。
+このように入力された情報は、CLOVAアプリの **{{ book.DevConsole.ManageExtensions }}** で次のように表示されます。
 
 | {{ book.DevConsole.StoreHome }} | {{ book.DevConsole.ExtensionPage }} |
 | :-----------------------------: | :---------------------------------: |

@@ -1,12 +1,12 @@
-﻿<a href="{{ book.DeveloperConsoleURL }}" target="_blank">Clova Developer Center</a>に接続して、Extensionの基本情報を登録します。
+﻿<a href="{{ book.DeveloperConsoleURL }}" target="_blank">CLOVA Developer Center</a>に接続して、Extensionの基本情報を登録します。
 主な項目は次のとおりです。
 
 * 基本情報
 	* **{{ book.DevConsole.cek_id }}**: Extensionの一意のIDです。通常、パッケージ名とExtension名を組み合わせて作成します。サンプルサイコロExtensionのIDは、「my.clova.extension.sampledice」を入力します。
-	* **{{ book.DevConsole.cek_invocation_name }}**：Extensionを実行する際に呼び出す名前です。Clovaアプリやスピーカー機器で正しく音声認識される言葉に設定します。サンプルサイコロExtensionの呼び出し名は、「サンプルサイコロ」です。
+	* **{{ book.DevConsole.cek_invocation_name }}**：Extensionを実行する際に呼び出す名前です。CLOVAアプリやスピーカー機器で正しく音声認識される言葉に設定します。サンプルサイコロExtensionの呼び出し名は、「サンプルサイコロ」です。
 
 * 開発設定
-	* **{{ book.DevConsole.cek_service_endpoint_url }}**：Clovaと通信するExtensionのREST APIサーバーです。外部からアクセスできるURLにする必要があります。
+	* **{{ book.DevConsole.cek_service_endpoint_url }}**：CLOVAと通信するExtensionのREST APIサーバーです。外部からアクセスできるURLにする必要があります。
 ステップ1でサンプルサイコロのソースコードを実行したサーバーのURLを入力します。
 
 	<div class="note">

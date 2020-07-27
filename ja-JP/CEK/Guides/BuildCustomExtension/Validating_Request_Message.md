@@ -1,11 +1,11 @@
 ### リクエストメッセージを検証する {#RequestMessageValidation}
 
-ExtensionがCEKからHTTPリクエストを受信するとき、そのリクエストが第三者ではなく、Clovaから送信された信頼できるリクエストかどうかを検証する必要があります。[HTTPヘッダー](#HTTPHeader)にある`SignatureCEK`フィールドとRSA公開鍵を使用して、以下のようにリクエストメッセージを検証してください。
+ExtensionがCEKからHTTPリクエストを受信するとき、そのリクエストが第三者ではなく、CLOVAから送信された信頼できるリクエストかどうかを検証する必要があります。[HTTPヘッダー](#HTTPHeader)にある`SignatureCEK`フィールドとRSA公開鍵を使用して、以下のようにリクエストメッセージを検証してください。
 
 #### RSA公開鍵を用いてリクエストメッセージを検証する
 <ol>
 <li><p>`context.System.application.applicationId`が設定済みの`ExtensionId`と同一であることを確認してください</p></li>
-<li><p>Clovaの署名用RSA公開鍵を以下のURLからダウンロードしてください</p>
+<li><p>CLOVAの署名用RSA公開鍵を以下のURLからダウンロードしてください</p>
 <p>https://clova-cek-requests.line.me/.well-known/signature-public-key.pem</p></li>
 <li><p><code>SignatureCEK</code>ヘッダーの値を取得してください</p>
 <p><code>SignatureCEK</code>ヘッダーの値は、Base64エンコードされた、HTTP bodyの<a href="https://tools.ietf.org/html/rfc3447" target="_blank">RSA PKCS #1 v1.5</a>署名値です。</p></li>

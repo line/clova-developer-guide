@@ -96,7 +96,7 @@ Custom Extensionで、ユーザーに音楽やポッドキャストなどのオ�
 
 ### 再生状態の変更および進行状況のレポートを収集する {#CollectPlaybackStatusAndProgress}
 
-[`AudioPlayer.Play`](/CEK/References/CEK_API.md#Play)ディレクティブでオーディオを再生するクライアントは、再生が開始、一時停止、再開、終了するタイミングで、[`AudioPlayer.PlayStarted`](/CEK/References/CEK_API.md#PlayStarted)、[`AudioPlayer.PlayPaused`](/CEK/References/CEK_API.md#PlayPaused)、[`AudioPlayer.PlayResumed`](/CEK/References/CEK_API.md#PlayResumed)、[`AudioPlayer.PlayStopped`](/CEK/References/CEK_API.md#PlayStopped)、[`AudioPlayer.PlayFinished`](/CEK/References/CEK_API.md#PlayFinished)のようなイベントをClovaに送信します。そのとき、Clovaはそのイベントの内容を[`EventRequest`](/CEK/References/CEK_API.md#CustomExtEventRequest)タイプのリクエストメッセージでCustom Extensionに送信します。
+[`AudioPlayer.Play`](/CEK/References/CEK_API.md#Play)ディレクティブでオーディオを再生するクライアントは、再生が開始、一時停止、再開、終了するタイミングで、[`AudioPlayer.PlayStarted`](/CEK/References/CEK_API.md#PlayStarted)、[`AudioPlayer.PlayPaused`](/CEK/References/CEK_API.md#PlayPaused)、[`AudioPlayer.PlayResumed`](/CEK/References/CEK_API.md#PlayResumed)、[`AudioPlayer.PlayStopped`](/CEK/References/CEK_API.md#PlayStopped)、[`AudioPlayer.PlayFinished`](/CEK/References/CEK_API.md#PlayFinished)のようなイベントをCLOVAに送信します。そのとき、CLOVAはそのイベントの内容を[`EventRequest`](/CEK/References/CEK_API.md#CustomExtEventRequest)タイプのリクエストメッセージでCustom Extensionに送信します。
 
 また、クライアントは[オーディオコンテンツを再生するように指示(`AudioPlayer.Play`)](#DirectClientToPlayAudio)を受けた後、`AudioPlayer.Play`ディレクティブの`progressReport`フィールドに定義されている設定に従って再生の進行状況をレポートします。その内容もまた、[`EventRequest`](/CEK/References/CEK_API.md#CustomExtEventRequest)タイプのリクエストメッセージでCustom Extensionに送信されます。クライアントは、進行状況をレポートするために、以下のイベントを送信します。
 
@@ -171,7 +171,7 @@ Custom Extensionがクライアントに[オーディオコンテンツの再生
 
 ただし、サービスの提供元によっては、セキュリティ上の問題により、永久に有効なURLを含めることができないことがあります。例えば、そのURLがさらされた場合、コンテンツを盗み取るための攻撃が発生する可能性がある場合などが考えられます。そのため、大抵の場合、比較的短い有効期限を持つインスタンスURLを使用します。また、クライアントが`AudioPlayer.Play`ディレクティブを受信していても、より優先順位の高いタスクや、先に開始したタスク、またはネットワークの状況によって、オーディオコンテンツの再生開始が遅延することがあります。その場合、URLの有効期限が切れ、オーディオコンテンツを正常に再生できない可能性があります。
 
-そのため、Clovaはクライアントがオーディオコンテンツを再生できるURLを、再生の直前に取得する方法を提供しています。最初に、以下のように`AudioPlayer.Play`ディレクティブの`urlPlayable`フィールドを`false`に指定し、`url`フィールドにURLではない、他の形式の値を設定します。
+そのため、CLOVAはクライアントがオーディオコンテンツを再生できるURLを、再生の直前に取得する方法を提供しています。最初に、以下のように`AudioPlayer.Play`ディレクティブの`urlPlayable`フィールドを`false`に指定し、`url`フィールドにURLではない、他の形式の値を設定します。
 
 ```json
 {
@@ -195,7 +195,7 @@ Custom Extensionがクライアントに[オーディオコンテンツの再生
 }
 ```
 
-後にクライアントが`AudioPlayer.Play`ディレクティブを処理するとき、`urlPlayable`フィールドが`false`に指定されていると、有効なオーディオコンテンツのURLを取得するために[`AudioPlayer.StreamRequested`](/CEK/References/CEK_API.md#StreamRequested)イベントをClovaに送信します。そのとき、イベントの内容は[`EventRequest`](/CEK/References/CEK_API.md#CustomExtEventRequest)タイプのリクエストメッセージで、以下のように送信されます。
+後にクライアントが`AudioPlayer.Play`ディレクティブを処理するとき、`urlPlayable`フィールドが`false`に指定されていると、有効なオーディオコンテンツのURLを取得するために[`AudioPlayer.StreamRequested`](/CEK/References/CEK_API.md#StreamRequested)イベントをCLOVAに送信します。そのとき、イベントの内容は[`EventRequest`](/CEK/References/CEK_API.md#CustomExtEventRequest)タイプのリクエストメッセージで、以下のように送信されます。
 
 ```json
 {

@@ -1,3 +1,3 @@
 ## Introduction
 
-[Clova Developer Center](https://clova-developers.line.biz/) で提供されるドキュメントです。
+[CLOVA Developer Center](https://clova-developers.line.biz/) で提供されるドキュメントです。

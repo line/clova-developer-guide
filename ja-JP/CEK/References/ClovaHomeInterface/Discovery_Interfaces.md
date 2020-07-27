@@ -8,19 +8,19 @@
 
 | メッセージ                    | タイプ   | 説明                              |
 | ----------------------------- | -------- | --------------------------------- |
-| [`DiscoverAppliancesRequest`](#DiscoverAppliancesRequest)   | Request  | ユーザーが登録したIoTデバイスのリストをClova Home Extensionにリクエストします。 |
+| [`DiscoverAppliancesRequest`](#DiscoverAppliancesRequest)   | Request  | ユーザーが登録したIoTデバイスのリストをCLOVA Home Extensionにリクエストします。 |
 | [`DiscoverAppliancesResponse`](#DiscoverAppliancesResponse) | Response | [`DiscoverAppliancesRequest`](#DiscoverAppliancesRequest)メッセージに対するレスポンスです。ユーザーが登録したIoTデバイスのリストをCEKに返します。 |
-| [`DiscoverScenesRequest`](#DiscoverScenesRequest)   | Request  | ユーザーが登録したシーンのリストをClova Home Extensionにリクエストします。 |
+| [`DiscoverScenesRequest`](#DiscoverScenesRequest)   | Request  | ユーザーが登録したシーンのリストをCLOVA Home Extensionにリクエストします。 |
 | [`DiscoverScenesResponse`](#DiscoverScenesResponse) | Response | [`DiscoverScenesRequest`](#DiscoverScenesRequest)メッセージに対するレスポンスです。ユーザーが登録したシーンのリストをCEKに返します。 |
 
 ## DiscoverAppliancesRequest {#DiscoverAppliancesRequest}
-ユーザーが登録したデバイスのリストをClova Home Extensionにリクエストします。このリクエストに対するレスポンスとして、[`DiscoverAppliancesResponse`](#DiscoverAppliancesResponse)メッセージを使用する必要があります。
+ユーザーが登録したデバイスのリストをCLOVA Home Extensionにリクエストします。このリクエストに対するレスポンスとして、[`DiscoverAppliancesResponse`](#DiscoverAppliancesResponse)メッセージを使用する必要があります。
 
 ### Payload fields
 
 | フィールド名  | データ型 | フィールドの説明                       | Optional |
 | ------------- | -------- | -------------------------------------- | :------: |
-| `accessToken` | string   | Clova Home Extensionのアクセストークン | <!-- --> |
+| `accessToken` | string   | CLOVA Home Extensionのアクセストークン | <!-- --> |
 
 ### Message example
 
@@ -165,13 +165,13 @@ IoTサービスを提供する際、ユーザーアカウントに登録され�
 
 
 ## DiscoverScenesRequest {#DiscoverScenesRequest}
-ユーザーが登録したシーンのリストをClova Home Extensionにリクエストします。このリクエストに対するレスポンスとして、[`DiscoverScenesResponse`](#DiscoverScenesResponse)メッセージを使用する必要があります。
+ユーザーが登録したシーンのリストをCLOVA Home Extensionにリクエストします。このリクエストに対するレスポンスとして、[`DiscoverScenesResponse`](#DiscoverScenesResponse)メッセージを使用する必要があります。
 
 ### Payload fields
 
 | フィールド名  | データ型 | フィールドの説明                       | Optional |
 | ------------- | -------- | -------------------------------------- | :------: |
-| `accessToken` | string   | Clova Home Extensionのアクセストークン | <!-- --> |
+| `accessToken` | string   | CLOVA Home Extensionのアクセストークン | <!-- --> |
 
 ### Message example
 

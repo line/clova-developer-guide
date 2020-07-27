@@ -1,6 +1,6 @@
 # Extensionをアップデートする
 
-Extensionが審査を通過し、配布が承認されると、そのExtensionは **{{ book.DevConsole.cek_status_prd }}** 状態になります。Clova Developer Centerはその際、次の2つを作成します。
+Extensionが審査を通過し、配布が承認されると、そのExtensionは **{{ book.DevConsole.cek_status_prd }}** 状態になります。CLOVA Developer Centerはその際、次の2つを作成します。
 
 * **{{ book.DevConsole.cek_status_prd }}**：現在、**{{ book.DevConsole.cek_status_prd }}** 状態のExtensionの元の情報を持つバージョンです。Extension情報の照会のみできます。
 * **{{ book.DevConsole.cek_status_dev }}**：配布されたExtensionの元の情報をコピーして作成されたバージョンです。Extensionをアップデートする際に使用されます。
@@ -16,7 +16,7 @@ Extensionが審査を通過し、配布が承認されると、そのExtension�
 
 審査を通過すると、**{{ book.DevConsole.cek_status_prd }}** バージョンから、アップデートが反映された **{{ book.DevConsole.cek_status_dev }}** バージョンに置き換えられます。その後、**{{ book.DevConsole.cek_status_prd }}** バージョンのExtensionをコピーし、**{{ book.DevConsole.cek_status_dev }}** バージョンのExtensionが生成されます。
 
-以下の図は、Clova Developer CenterでExtensionがアップデートされる仕組みを示します。
+以下の図は、CLOVA Developer CenterでExtensionがアップデートされる仕組みを示します。
 
 ![](/DevConsole/Assets/Images/DevConsole-Branch_Chart_For_Extension_Update.png)
 

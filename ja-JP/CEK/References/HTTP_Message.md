@@ -22,9 +22,9 @@ SignatureCEK：{{ SignatureCEK }}
 * HTTP/1.1バージョンでHTTP通信し、POSTメソッドを使用します。
 * Hostとリクエストパスは、Extensionの開発者があらかじめ定義したURIに設定されます。
 * リクエストボディのデータはJSON形式で、UTF-8エンコーディングを使用します。
-* `SignatureCEK`フィールドとRSA公開鍵を使用して、[Clovaから送信されたリクエストかどうかを検証](#RequestMessageValidation)することができます。
+* `SignatureCEK`フィールドとRSA公開鍵を使用して、[CLOVAから送信されたリクエストかどうかを検証](#RequestMessageValidation)することができます。
 
-逆に、ExtensionがClovaに処理結果を返す際、HTTPレスポンスを使用します。その際のHTTPレスポンスヘッダーは、以下のように設定をしてください。
+逆に、ExtensionがCLOVAに処理結果を返す際、HTTPレスポンスを使用します。その際のHTTPレスポンスヘッダーは、以下のように設定をしてください。
 {% raw %}
 ```
 HTTP/1.1 200 OK
@@ -36,7 +36,7 @@ Content-Type: application/json;charset-UTF-8
 
 #### リクエストメッセージの検証 {#RequestMessageValidation}
 
-ExtensionがCEKからHTTPリクエストを受信するとき、そのリクエストが第三者ではなく、Clovaから送信された信頼できるリクエストかどうかを検証する必要があります。検証の方法については、[リクエストメッセージを検証する](/CEK/Guides/Build_Custom_Extension.md#RequestMessageValidation)を参照してください。
+ExtensionがCEKからHTTPリクエストを受信するとき、そのリクエストが第三者ではなく、CLOVAから送信された信頼できるリクエストかどうかを検証する必要があります。検証の方法については、[リクエストメッセージを検証する](/CEK/Guides/Build_Custom_Extension.md#RequestMessageValidation)を参照してください。
 
 ### HTTPボディ {#HTTPBody}
-リクエストメッセージとレスポンスメッセージのボディはJSON形式で、解析されたユーザーの発話情報や、Extensionの処理結果が含まれています。それぞれのメッセージの構成は、使用するExtensionの種類によって異なります。メッセージ構成の詳細については、[Custom Extensionメッセージ](/CEK/References/CEK_API.md#CustomExtMessage)と[Clova Home Extensionメッセージ](/CEK/References/CEK_API_ClovaHome.md#ClovaHomeExtMessage)を参照してください。
+リクエストメッセージとレスポンスメッセージのボディはJSON形式で、解析されたユーザーの発話情報や、Extensionの処理結果が含まれています。それぞれのメッセージの構成は、使用するExtensionの種類によって異なります。メッセージ構成の詳細については、[Custom Extensionメッセージ](/CEK/References/CEK_API.md#CustomExtMessage)と[CLOVA Home Extensionメッセージ](/CEK/References/CEK_API_ClovaHome.md#ClovaHomeExtMessage)を参照してください。

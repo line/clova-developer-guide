@@ -1,6 +1,6 @@
-# Clova Extensions Kitソフトウェア開発キット（CEK SDK）
+# CLOVA Extensions Kitソフトウェア開発キット（CEK SDK）
 
-GitHubにてClova Extensions Kitソフトウェア開発キット（CEK SDK）を提供しています。このSDKにはライブラリ、サンプル等が含まれており、Clovaスキルを開発する際に役立ちます。
+GitHubにてCLOVA Extensions Kitソフトウェア開発キット（CEK SDK）を提供しています。このSDKにはライブラリ、サンプル等が含まれており、CLOVAスキルを開発する際に役立ちます。
 
 現在は、以下の環境向けのSDKを提供しています。
 

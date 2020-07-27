@@ -1,14 +1,14 @@
 # チャネルを作成する
 
-Clova Developer Center βで[Extensionを登録](/DevConsole/Guides/CEK/Register_Extension.md)するには、まずLINE Developersコンソールでチャネルを作成する必要があります。チャネルの作成は、以下の手順で行います。
+CLOVA Developer Center βで[Extensionを登録](/DevConsole/Guides/CEK/Register_Extension.md)するには、まずLINE Developersコンソールでチャネルを作成する必要があります。チャネルの作成は、以下の手順で行います。
 
-1. [Clova Developer Center βにログインする](#LoginClovaDevCenter)
+1. [CLOVA Developer Center βにログインする](#LoginClovaDevCenter)
 2. [LINE Developersコンソールでチャネルを作成する](#CreateSkillChannel)
 
-## Clova Developer Center βにログインする {#LoginClovaDevCenter}
-Clova Developer Center βにログインします。
+## CLOVA Developer Center βにログインする {#LoginClovaDevCenter}
+CLOVA Developer Center βにログインします。
 
-1. [Clova Developer Center β](https://clova-developers.line.biz/)ホーム画面の **ログイン** をクリックします。  
+1. [CLOVA Developer Center β](https://clova-developers.line.biz/)ホーム画面の **ログイン** をクリックします。  
 ![](/DevConsole/Assets/Images/DevConsole-Console_Login.png)
 
 2. アカウントの選択画面が表示されたら、**LINEアカウントでログイン** をクリックします。  
@@ -51,13 +51,13 @@ LINE Developersコンソールでチャネルを作成します。
       ご自分の名前、あるいは企業名などを入力してください。</p>
   </div>
 
-2. **チャネル名** を入力し、**チャネルを作成してClovaスキルに移動** ボタンをクリックします。  
+2. **チャネル名** を入力し、**チャネルを作成してCLOVAスキルに移動** ボタンをクリックします。  
 ![](/DevConsole/Assets/Images/DevConsole-Create_Channel_3.png)
 
     <div class="note">
       <p><strong>メモ</strong></p>
       <p>チャネル名は、あなたがスキルを管理するために利用します。
-      Clovaで提供するサービスの名前などを入力してください。</p>
+      CLOVAで提供するサービスの名前などを入力してください。</p>
     </div>
 
-3. チャネルの作成が完了すると、Clova Developer Center β に遷移します。
+3. チャネルの作成が完了すると、CLOVA Developer Center β に遷移します。

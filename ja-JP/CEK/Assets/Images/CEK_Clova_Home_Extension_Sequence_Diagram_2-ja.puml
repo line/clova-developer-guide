@@ -32,13 +32,13 @@ skinparam note {
 hide footbox
 
 participant "クライアントアプリ\nまたはペアリングアプリ" as client #9EA0CA
-participant "Clova" as clova #05D686
+participant "CLOVA" as clova #05D686
 participant "Extension" as ext #9EA0CA
 participant "IoTデバイスハブ" as hub #9EA0CA
 
 group Enable extension
 
-  [->> client: Clova Home Extensionをアクティブにする
+  [->> client: CLOVA Home Extensionをアクティブにする
 
   activate client
 

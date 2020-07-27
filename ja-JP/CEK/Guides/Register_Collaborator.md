@@ -14,8 +14,8 @@
 
 | 権限の種類 | 実行できること                                               |
 | ---------- | ------------------------------------------------------------ |
-| Admin      | <ul><li><a href="https://developers.line.biz/console/">LINE Developersコンソール</a>でチャネルを管理する（基本設定、権限管理、テスター管理）</li><li><a href="https://clova-developers.line.biz/">Clova Developer Center β</a>でスキルを開発する（基本情報の修正、配布情報の修正、対話モデルの修正）</li><li>Clovaデバイスでの動作検証</li></ul> |
-| Tester     | <ul><li>Clovaデバイスでの動作検証</li></ul>                  |
+| Admin      | <ul><li><a href="https://developers.line.biz/console/">LINE Developersコンソール</a>でチャネルを管理する（基本設定、権限管理、テスター管理）</li><li><a href="https://clova-developers.line.biz/">CLOVA Developer Center β</a>でスキルを開発する（基本情報の修正、配布情報の修正、対話モデルの修正）</li><li>CLOVAデバイスでの動作検証</li></ul> |
+| Tester     | <ul><li>CLOVAデバイスでの動作検証</li></ul>                  |
 
 <div class="note">
   <p><strong>メモ</strong></p>
@@ -38,7 +38,7 @@ AdminおよびTester権限は、次の手順で追加します。
 1. [LINE Developersコンソール](https://developers.line.biz/console/)に接続し、**プロバイダー** を表示します。
 ![](/CEK/Assets/Images/CEK_LineDev_Provider_List.png)
 
-2. 共同で開発したいスキルが含まれるプロバイダーを選択し、当該の **Clovaスキル** をクリックします。
+2. 共同で開発したいスキルが含まれるプロバイダーを選択し、当該の **CLOVAスキル** をクリックします。
 ![](/CEK/Assets/Images/CEK_LineDev_Channel_List.png)
 
 3. **権限設定** タブをクリックし、**メールで招待**をクリックします。
@@ -60,7 +60,7 @@ AdminからTester、またはTesterからAdminへ権限の種類を変更する�
 1. [LINE Developersコンソール](https://developers.line.biz/console/)に接続し、**プロバイダー** を表示します。
 ![](/CEK/Assets/Images/CEK_LineDev_Provider_List.png)
 
-2. プロバイダーを選択し、当該の **Clovaスキル** をクリックします。
+2. プロバイダーを選択し、当該の **CLOVAスキル** をクリックします。
 ![](/CEK/Assets/Images/CEK_LineDev_Channel_List.png)
 
 3. **権限設定** タブを開き、**リスト**からチェックボックスで権限を変更したいユーザーを選択して、**編集**ボタンをクリックします。
@@ -82,7 +82,7 @@ AdminからTester、またはTesterからAdminへ権限の種類を変更する�
 1. Admin権限を持つユーザーが[LINE Developersコンソール](https://developers.line.biz/console/)に接続します。  
 ![](/CEK/Assets/Images/CEK_LineDev_Provider_List.png)
 
-2. プロバイダーを選択し、当該の **Clovaスキル** をクリックします。  
+2. プロバイダーを選択し、当該の **CLOVAスキル** をクリックします。  
 ![](/CEK/Assets/Images/CEK_LineDev_Channel_List.png)
 
 3. **権限設定** タブを開き、**リスト**からチェックボックスで削除したいユーザーを選択して **選択したデータを削除** ボタンをクリックします。  
@@ -97,7 +97,7 @@ AdminからTester、またはTesterからAdminへ権限の種類を変更する�
 1. Tester権限を持つユーザーが[LINE Developersコンソール](https://developers.line.biz/console/)に接続します。  
 ![](/CEK/Assets/Images/CEK_LineDev_Provider_List_2.png)
 
-2. プロバイダーを選択し、当該の **Clovaスキル** をクリックします。  
+2. プロバイダーを選択し、当該の **CLOVAスキル** をクリックします。  
 ![](/CEK/Assets/Images/CEK_LineDev_Channel_List_2.png)
 
 3. **辞める** ボタンをクリックします。  

@@ -4,7 +4,7 @@
 
 # 共有オブジェクト {#SharedObjects}
 
-[Clova Home Extensionメッセージ](/CEK/References/CEK_API_ClovaHome.md#ClovaHomeExtMessage)を送信する際、`payload`には以下のような共有オブジェクトが含まれます。
+[CLOVA Home Extensionメッセージ](/CEK/References/CEK_API_ClovaHome.md#ClovaHomeExtMessage)を送信する際、`payload`には以下のような共有オブジェクトが含まれます。
 
 | オブジェクト           | 説明                                                |
 | ---------------------- | --------------------------------------------------- |
@@ -183,7 +183,7 @@
 * [`GetAirQualityResponse`](/CEK/References/ClovaHomeInterface/Control_Interfaces.md#GetAirQualityResponse)
 
 ## ApplianceInfoObject {#ApplianceInfoObject}
-IoTデバイスの情報を持っているオブジェクトです。ユーザーアカウントに登録されているデバイスのリストをCEKに渡したり、特定のエンドポイントをターゲットに指定して、Clova Home Extensionにそのエンドポイントの操作をリクエストする際に使われます。
+IoTデバイスの情報を持っているオブジェクトです。ユーザーアカウントに登録されているデバイスのリストをCEKに渡したり、特定のエンドポイントをターゲットに指定して、CLOVA Home Extensionにそのエンドポイントの操作をリクエストする際に使われます。
 
 ### Object fields
 | フィールド名                      | データ型     | フィールドの説明          |   必須/任意   |
@@ -195,16 +195,16 @@ IoTデバイスの情報を持っているオブジェクトです。ユーザ�
 | `applianceTypes[]`                | string array | エンドポイントのタイプ。`applicationType`によって、そのエンドポイントでサポートされている動作を示す`actions`フィールドの値が異なります。IoTサービスでユーザーアカウントに登録されているエンドポイントのタイプを、次のいずれかに指定する必要があります。備考を参考にして、エンドポイントのタイプを入力します。 |   必須/常時   |
 | `friendlyName`                    | string       | ユーザーがつけたエンドポイントの名前 |   任意/常時   |
 | `friendlyDescription`             | string       | エンドポイントの説明      |   任意/常時   |
-| `isIr`                            | boolean      | エンドポイントのコントロールに、赤外線通信を利用するかどうかを示すフィールド<ul><li>true：赤外線通信を利用する</li><li>false：赤外線通信を利用しない</li></ul><div class="note"><p><strong>メモ</strong></p><p>エンドポイントを赤外線通信でコントロールする場合、Clovaはユーザーにエンドポイントのコントロール結果を伝えません。</p></div> | 任意/条件付き |
+| `isIr`                            | boolean      | エンドポイントのコントロールに、赤外線通信を利用するかどうかを示すフィールド<ul><li>true：赤外線通信を利用する</li><li>false：赤外線通信を利用しない</li></ul><div class="note"><p><strong>メモ</strong></p><p>エンドポイントを赤外線通信でコントロールする場合、CLOVAはユーザーにエンドポイントのコントロール結果を伝えません。</p></div> | 任意/条件付き |
 | `isReachable`                     | boolean      | エンドポイントが遠隔操作できる状態にあるかどうかを示す値<ul><li>true：遠隔操作できる</li><li>false：遠隔操作できない</li></ul> |   任意/常時   |
 | `manufacturerName`                | string       | デバイスメーカーの名前    |   任意/常時   |
 | `modelName`                       | string       | デバイスのモデル名        |   任意/常時   |
 | `version`                         | string       | メーカーのソフトウェアバージョン |   任意/常時   |
 | `location`                        | string       | エンドポイントが設置されている場所。[Locations](#Locations)項目内のコードを入力します。入力したコードに対応する位置情報のテキストが`tags`フィールドに追加されます。 |   任意/常時   |
-| `tags[]`                          | string array | ユーザーがデバイスに追加したタグのリスト。ユーザーはClovaアプリまたはIoTサービスで、デバイスの設置場所、使用目的、メーカーなど、さまざまな属性をタグとしてデバイスに追加することができます。同じ属性(タグ)を持つデバイスは、同じグループになります。同じグループ内に、同じ動作がサポートされているデバイスがある場合、同時に制御することができます。 |   任意/常時   |
+| `tags[]`                          | string array | ユーザーがデバイスに追加したタグのリスト。ユーザーはCLOVAアプリまたはIoTサービスで、デバイスの設置場所、使用目的、メーカーなど、さまざまな属性をタグとしてデバイスに追加することができます。同じ属性(タグ)を持つデバイスは、同じグループになります。同じグループ内に、同じ動作がサポートされているデバイスがある場合、同時に制御することができます。 |   任意/常時   |
 
 ### 備考
-[`DiscoverAppliancesRequest`](/CEK/References/ClovaHomeInterface/Discovery_Interfaces.md#DiscoverAppliancesRequest)メッセージでユーザーのデバイスリストをリクエストすると、Clova Home Extensionは`additionalApplianceDetails`を除くすべてのフィールドを設定して返す必要があります。その際、 `actions` の値は通常`applianceTypes`によって決定され、`applianceTypes`フィールドの値により次の値を持ちます。
+[`DiscoverAppliancesRequest`](/CEK/References/ClovaHomeInterface/Discovery_Interfaces.md#DiscoverAppliancesRequest)メッセージでユーザーのデバイスリストをリクエストすると、CLOVA Home Extensionは`additionalApplianceDetails`を除くすべてのフィールドを設定して返す必要があります。その際、 `actions` の値は通常`applianceTypes`によって決定され、`applianceTypes`フィールドの値により次の値を持ちます。
 
 | applianceTypes         | 説明          | サポートされる動作                  |
 | ---------------------- | ------------- | ----------------------------------- |
@@ -733,7 +733,7 @@ actions項目と関連する[インターフェース](/CEK/References/CEK_API_C
 
 ## CustomCommandInfoObject {#CustomCommandInfoObject}
 
-カスタムコマンドの情報を持っているオブジェクトです。ユーザーがClovaアプリで登録したカスタムコマンドの情報を持っています。[`DiscoverAppliancesResponse`](/CEK/References/ClovaHomeInterface/Control_Interfaces.md#DiscoverAppliancesResponse)メッセージ内のデバイス照会結果に、ユーザーのアカウントに登録されているコマンドが追加されます。このオブジェクトには、カスタムコマンドを呼び出すと処理されるエンドポイント制御動作が含まれます。
+カスタムコマンドの情報を持っているオブジェクトです。ユーザーがCLOVAアプリで登録したカスタムコマンドの情報を持っています。[`DiscoverAppliancesResponse`](/CEK/References/ClovaHomeInterface/Control_Interfaces.md#DiscoverAppliancesResponse)メッセージ内のデバイス照会結果に、ユーザーのアカウントに登録されているコマンドが追加されます。このオブジェクトには、カスタムコマンドを呼び出すと処理されるエンドポイント制御動作が含まれます。
 
 ### Object fields
 
@@ -1361,7 +1361,7 @@ PM10の情報を持っているオブジェクトです。エンドポイント�
   "header": {
     "messageId": "b502dd42-b698-4d3b-9ddb-bbdda70f254f",
     "name": "GetProgressiveTaxBracketResponse",
-    "namespace": "ClovaHome",
+    "namespace": "CLOVAHome",
     "payloadVersion": "1.0"
   },
   "payload": {
@@ -1380,7 +1380,7 @@ PM10の情報を持っているオブジェクトです。エンドポイント�
 * [`GetProgressiveTaxBracketResponse`](/CEK/References/ClovaHomeInterface/Control_Interfaces.md#GetProgressiveTaxBracketResponse)
 
 ## SceneInfoObject {#SceneInfoObject}
-シーンの情報を持っているオブジェクトです。ユーザーアカウントに登録されているシーンのリストをCEKに渡したり、特定のエンドポイントをターゲットに指定して、Clova Home Extensionにそのエンドポイントの操作をリクエストする際に使われます。
+シーンの情報を持っているオブジェクトです。ユーザーアカウントに登録されているシーンのリストをCEKに渡したり、特定のエンドポイントをターゲットに指定して、CLOVA Home Extensionにそのエンドポイントの操作をリクエストする際に使われます。
 
 ### Object fields
 | フィールド名                      | データ型     | フィールドの説明          |   必須/任意   |

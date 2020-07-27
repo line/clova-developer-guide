@@ -1,6 +1,6 @@
 ﻿サンプルサイコロExtensionで、ヘルプをリクエストするビルトインインテントが正しく処理するかテストする必要があります。
 
-[1番目のチュートリアル](/CEK/Tutorials/Build_Simple_Extension.md)のように、2つのテスト方法があります。1つは、Clova Developer Centerで対話モデルの動作を確認する方法です。もう1つは、Clovaデバイスで実際の動作を確認する方法です。
+[1番目のチュートリアル](/CEK/Tutorials/Build_Simple_Extension.md)のように、2つのテスト方法があります。1つは、CLOVA Developer Centerで対話モデルの動作を確認する方法です。もう1つは、CLOVAデバイスで実際の動作を確認する方法です。
 このチュートリアルでは、対話モデルの動作のみ確認します。
 
 <div class="note">
@@ -10,7 +10,7 @@
 </div>
 
 次の順で、サンプルサイコロExtensionがヘルプのリクエストを正しく処理するか確認します。
-1. <a href="{{ book.DeveloperConsoleURL }}" target="_blank">Clova Developer Center</a>に接続します。
+1. <a href="{{ book.DeveloperConsoleURL }}" target="_blank">CLOVA Developer Center</a>に接続します。
 2. **スキル設定** または **スキルを開発する** をクリックし、登録済みのスキルのリストを表示します。
 3. サンプルサイコロの管理欄の **{{ book.DevConsole.cek_edit}}** ボタンをクリックします。
 4. 上部タブメニューで **{{ book.DevConsole.cek_builder_test_title }}** メニューをクリックします。

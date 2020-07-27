@@ -110,7 +110,7 @@
       },
       "referenceText": {
         "type": "string",
-        "value": "Clova検索結果"
+        "value": "CLOVA検索結果"
       },
       "referenceUrl": {
         "type": "url",

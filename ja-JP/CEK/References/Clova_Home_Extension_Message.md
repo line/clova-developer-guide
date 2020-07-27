@@ -1,13 +1,13 @@
-## Clova Home Extensionメッセージ {#ClovaHomeExtMessage}
-Clova Home Extensionメッセージは、IoTデバイスを制御するExtensionがCEKと情報のやり取りをする際、専用で使用するメッセージ仕様です。ここでは、Clova Home Extensionメッセージの[メッセージフォーマット](#ClovaHomeExtMessageFormat)と[インターフェース](#ClovaHomeExtInterface)について説明します。
+## CLOVA Home Extensionメッセージ {#ClovaHomeExtMessage}
+CLOVA Home Extensionメッセージは、IoTデバイスを制御するExtensionがCEKと情報のやり取りをする際、専用で使用するメッセージ仕様です。ここでは、CLOVA Home Extensionメッセージの[メッセージフォーマット](#ClovaHomeExtMessageFormat)と[インターフェース](#ClovaHomeExtInterface)について説明します。
 
 ### メッセージフォーマット {#ClovaHomeExtMessageFormat}
 
-Clova Home Extensionメッセージは、`header`フィールドと`payload`で構成されます。リクエストメッセージとレスポンスメッセージの両方に共通します。そのうち、`payload`は、使用された[インターフェース](#ClovaHomeExtInterface)によって構成が異なることがあります。ここでは、Clova Home Extensionメッセージの共通フォーマットについて説明します。
+CLOVA Home Extensionメッセージは、`header`フィールドと`payload`で構成されます。リクエストメッセージとレスポンスメッセージの両方に共通します。そのうち、`payload`は、使用された[インターフェース](#ClovaHomeExtInterface)によって構成が異なることがあります。ここでは、CLOVA Home Extensionメッセージの共通フォーマットについて説明します。
 
 <div class="note">
   <p><strong>メモ</strong></p>
-  <p>Clova Home Extensionメッセージは、リクエストメッセージとレスポンスメッセージの2種類があります。CEKがExtensionに渡すリクエストメッセージは、`XxxxRequest`のような名前を持ちます。ExtensionからCEKに返すレスポンスメッセージは、`XxxxConfirmation`または`XxxxResponse`のような名前を持ちます。また、エラーが発生しても正常にHTTPレスポンス(200 OK)を返す必要があり、その際、レスポンスメッセージは`XxxxError`のような名前で返される必要があります。</p>
+  <p>CLOVA Home Extensionメッセージは、リクエストメッセージとレスポンスメッセージの2種類があります。CEKがExtensionに渡すリクエストメッセージは、`XxxxRequest`のような名前を持ちます。ExtensionからCEKに返すレスポンスメッセージは、`XxxxConfirmation`または`XxxxResponse`のような名前を持ちます。また、エラーが発生しても正常にHTTPレスポンス(200 OK)を返す必要があり、その際、レスポンスメッセージは`XxxxError`のような名前で返される必要があります。</p>
 </div>
 
 #### Message structure
@@ -30,10 +30,10 @@ Clova Home Extensionメッセージは、`header`フィールドと`payload`で�
 | フィールド名            | データ型 | フィールドの説明             | Optional |
 | ----------------------- | -------- | ---------------------------- | :------: |
 | `header`                | object   | メッセージのヘッダー         | <!-- --> |
-| `header.messageId`      | string   | メッセージID(UUID)。個別メッセージを区別するために、Clovaで作成された識別子です。 | <!-- --> |
+| `header.messageId`      | string   | メッセージID(UUID)。個別メッセージを区別するために、CLOVAで作成された識別子です。 | <!-- --> |
 | `header.name`           | string   | メッセージのAPI名            | <!-- --> |
 | `header.namespace`      | string   | このフィールドは`"ClovaHome"`に固定されます | <!-- --> |
-| `header.payloadVersion` | string   | `header.name`に明示されたClova Home Extensionメッセージのバージョン。このバージョンによって、`payload`フィールドの構成が異なることがあります。 | <!-- --> |
+| `header.payloadVersion` | string   | `header.name`に明示されたCLOVA Home Extensionメッセージのバージョン。このバージョンによって、`payload`フィールドの構成が異なることがあります。 | <!-- --> |
 | `payload`               | object   | `header.name`に指定された[インターフェース](#ClovaHomeExtInterface)によって、payloadオブジェクトの構成とフィールド値が異なります。 | <!-- --> |
 
 #### Message example
@@ -140,11 +140,11 @@ Clova Home Extensionメッセージは、`header`フィールドと`payload`で�
 {% endraw %}
 
 #### 次の項目も参照してください。
-* [Clova Home Extensionを作成する](/CEK/Guides/Build_Clova_Home_Extension.md)
+* [CLOVA Home Extensionを作成する](/CEK/Guides/Build_Clova_Home_Extension.md)
 * [インターフェース](#ClovaHomeExtInterface)
 
 ### インターフェース {#ClovaHomeExtInterface}
-Clova Home Extensionメッセージのインターフェースは、次のようなものがあります。
+CLOVA Home Extensionメッセージのインターフェースは、次のようなものがあります。
 
 * インターフェース
   * [Discoveryインターフェース](/CEK/References/ClovaHomeInterface/Discovery_Interfaces.md)

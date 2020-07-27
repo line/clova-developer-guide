@@ -1,6 +1,6 @@
 # Extensionを登録する
 
-LINE Developersコンソールで[チャネルを作成](/DevConsole/Guides/CEK/Create_Channel.md)すると、**Clova Developer Center β** に遷移し、次の画面が開きます。ここで必要な情報を入力し、Extensionの登録を完了させます。  
+LINE Developersコンソールで[チャネルを作成](/DevConsole/Guides/CEK/Create_Channel.md)すると、**CLOVA Developer Center β** に遷移し、次の画面が開きます。ここで必要な情報を入力し、Extensionの登録を完了させます。  
 ![](/DevConsole/Assets/Images/DevConsole-New_Extension.png)
 
 Extensionの登録は、通常、次の順で行われます。
@@ -31,7 +31,7 @@ Extensionの登録は、通常、次の順で行われます。
 
 ## 利用規約およびLINE User Data Policyに同意する {#AgreeTermsOfUse}
 
-Extensionを登録するには、Clova Extensions Kit利用規約とLINE User Data Policyに同意する必要があります。それぞれの項目にチェックを入れ、**スキル開発を始める** をクリックします。  
+Extensionを登録するには、CLOVA Extensions Kit利用規約とLINE User Data Policyに同意する必要があります。それぞれの項目にチェックを入れ、**スキル開発を始める** をクリックします。  
 ![](/DevConsole/Assets/Images/DevConsole-Agree_Terms_of_Use_and_Collecting_Personal_Info.png)
 
 {% include "/DevConsole/Guides/CEK/RegisterExtension/Skill_Information.md" %}

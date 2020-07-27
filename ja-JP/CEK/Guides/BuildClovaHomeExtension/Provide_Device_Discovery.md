@@ -2,11 +2,11 @@
 
 ## Discovery機能を提供する {#ProvideDeviceDiscovery}
 
-ユーザーがIoTサービスを有効にすると、クライアントアプリ、またはクライアントデバイスとペアリングするアプリで、ユーザーアカウントに登録されているIoTデバイスのリストを提供する必要があります。Clova Home Extensionは、CEKから[`DiscoverAppliancesRequest`](/CEK/References/ClovaHomeInterface/Discovery_Interfaces.md#DiscoverAppliancesRequest)メッセージを受け取ります(HTTPリクエスト)。Clova Home Extensionは、受け取ったユーザーアカウントのアクセストークンを使用して、IoTサービスからユーザーアカウントに登録されているデバイスのリストを取得し、そのリストを[`DiscoverAppliancesResponse`](/CEK/References/ClovaHomeInterface/Discovery_Interfaces.md#DiscoverAppliancesResponse)メッセージで応答する必要があります(HTTPレスポンス)。CEKとClova Home Extensionの間でやり取りするメッセージについての詳細は、[Clova Home Extensionメッセージ](/CEK/References/CEK_API_ClovaHome.md#ClovaHomeExtMessage)を参照してください。
+ユーザーがIoTサービスを有効にすると、クライアントアプリ、またはクライアントデバイスとペアリングするアプリで、ユーザーアカウントに登録されているIoTデバイスのリストを提供する必要があります。CLOVA Home Extensionは、CEKから[`DiscoverAppliancesRequest`](/CEK/References/ClovaHomeInterface/Discovery_Interfaces.md#DiscoverAppliancesRequest)メッセージを受け取ります(HTTPリクエスト)。CLOVA Home Extensionは、受け取ったユーザーアカウントのアクセストークンを使用して、IoTサービスからユーザーアカウントに登録されているデバイスのリストを取得し、そのリストを[`DiscoverAppliancesResponse`](/CEK/References/ClovaHomeInterface/Discovery_Interfaces.md#DiscoverAppliancesResponse)メッセージで応答する必要があります(HTTPレスポンス)。CEKとCLOVA Home Extensionの間でやり取りするメッセージについての詳細は、[CLOVA Home Extensionメッセージ](/CEK/References/CEK_API_ClovaHome.md#ClovaHomeExtMessage)を参照してください。
 
 ![](/CEK/Assets/Images/CEK_Clova_Home_Extension_Sequence_Diagram.png)
 
-以下は、Clova Home Extensionが受け取る[`DiscoverAppliancesRequest`](/CEK/References/ClovaHomeInterface/Discovery_Interfaces.md#DiscoverAppliancesRequest)メッセージのサンプルです。
+以下は、CLOVA Home Extensionが受け取る[`DiscoverAppliancesRequest`](/CEK/References/ClovaHomeInterface/Discovery_Interfaces.md#DiscoverAppliancesRequest)メッセージのサンプルです。
 {% raw %}
 ```json
 {
@@ -23,9 +23,9 @@
 ```
 {% endraw %}
 
-このメッセージを受信すると、Clova Home Extensionは受け取ったアクセストークンを使用してユーザーアカウントを特定し、そのアカウントに登録されているデバイスのリストを[`DiscoverAppliancesResponse`](/CEK/References/ClovaHomeInterface/Discovery_Interfaces.md#DiscoverAppliancesResponse)メッセージで返す必要があります。デバイスごとに、デバイスの識別子および名前、デバイスのタイプ、アクセスできるかどうか(オンラインか否か)、そしてサポートする動作(`actions`)などの情報が含まれます。
+このメッセージを受信すると、CLOVA Home Extensionは受け取ったアクセストークンを使用してユーザーアカウントを特定し、そのアカウントに登録されているデバイスのリストを[`DiscoverAppliancesResponse`](/CEK/References/ClovaHomeInterface/Discovery_Interfaces.md#DiscoverAppliancesResponse)メッセージで返す必要があります。デバイスごとに、デバイスの識別子および名前、デバイスのタイプ、アクセスできるかどうか(オンラインか否か)、そしてサポートする動作(`actions`)などの情報が含まれます。
 
-以下は、Clova Home Extensionが`DiscoverAppliancesResponse`メッセージでCEKに応答するサンプルです。
+以下は、CLOVA Home Extensionが`DiscoverAppliancesResponse`メッセージでCEKに応答するサンプルです。
 
 {% raw %}
 ```json

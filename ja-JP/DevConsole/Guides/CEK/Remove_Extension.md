@@ -21,7 +21,7 @@
 2. **プロバイダーリスト** から、削除したいスキルが含まれるプロバイダーを選択します。  
 ![](/DevConsole/Assets/Images/DevConsole-LineDev_Provider_List.png)  
 
-3. 削除したい **Clovaスキル** をクリックします。  
+3. 削除したい **CLOVAスキル** をクリックします。  
 ![](/DevConsole/Assets/Images/DevConsole-LineDev_Channel_List.png)  
 
 4. 画面左下の**削除**ボタンをクリックします。  
@@ -35,7 +35,7 @@
 
 Extensionが審査中の場合は、審査をキャンセルすると削除できるようになります。
 
-1. Clova Developer Center βにログインします。
+1. CLOVA Developer Center βにログインします。
 
 2. **スキル設定** または **スキルを開発する** をクリックします。  
 ![](/DevConsole/Assets/Images/DevConsole-Entering_CEK_Menu.png)
@@ -51,6 +51,6 @@ Extensionが審査を通過し、サービスが開始されている場合に�
 
 <div class="note">
   <p><strong>メモ</strong></p>
-  <p>サービス中のExtensionを中止する際にはClova事務局の確認が必要で、webから中止の申請はできません。
+  <p>サービス中のExtensionを中止する際にはCLOVA事務局の確認が必要で、webから中止の申請はできません。
   <p>中止する際は、停止を申請する理由を記載し<a href="mailto:{{ book.ExtensionAdminEmail }}">{{ book.ExtensionAdminEmail }}</a>までご連絡ください。</p>
 </div>

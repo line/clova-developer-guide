@@ -4,7 +4,7 @@
 
 # Error
 
-Clova Home ExtensionがCEKにエラーを返す際に使用されるインターフェースです。以下のエラーメッセージを使用できます。
+CLOVA Home ExtensionがCEKにエラーを返す際に使用されるインターフェースです。以下のエラーメッセージを使用できます。
 
 | メッセージ            | タイプ         | 説明                                |
 | --------------------- | -------------- | ----------------------------------- |
@@ -210,7 +210,7 @@ Clova Home ExtensionがCEKにエラーを返す際に使用されるインター
 * [`ExpiredAccessTokenError`](#ExpiredAccessTokenError)
 
 ## NoSuchTargetError {#NoSuchTargetError}
-エンドポイントが存在しない場合、CEKにこのメッセージをレスポンスとして返します。例えば、ユーザーがIoTサービスから特定のデバイスを削除したが、そのことがClovaアプリにまだ反映されていない状態でそのデバイスの操作をリクエストされた場合、このメッセージを返します。CEKはこのメッセージを受け取ると、あらかじめ用意されたエラーメッセージをクライアントに送信します。
+エンドポイントが存在しない場合、CEKにこのメッセージをレスポンスとして返します。例えば、ユーザーがIoTサービスから特定のデバイスを削除したが、そのことがCLOVAアプリにまだ反映されていない状態でそのデバイスの操作をリクエストされた場合、このメッセージを返します。CEKはこのメッセージを受け取ると、あらかじめ用意されたエラーメッセージをクライアントに送信します。
 
 ### Payload fields
 
@@ -303,9 +303,9 @@ Clova Home ExtensionがCEKにエラーを返す際に使用されるインター
 
 ## UnsupportedOperationError {#UnsupportedOperationError}
 
-エンドポイントでサポートされないリクエストを示します。ユーザーがエンドポイントでサポートされていない動作をリクエストした場合、CEKはすぐユーザーに有効な範囲外のリクエストであることを伝えます。ただし、`SetMode`のような動作は、Clova Home Extensionが[SetModeRequest](/CEK/References/ClovaHomeInterface/Control_Interfaces.md#SetModeRequest)メッセージを受信して`mode`フィールドの値を確認するまで、範囲内の動作かどうかを判断できません。もし、Clova Home Extensionがメッセージを受信し、サポートされていないモードである場合、エラーレスポンスを返す必要があります。その際、`UnsupportedOperationError`メッセージをCEKに返します。
+エンドポイントでサポートされないリクエストを示します。ユーザーがエンドポイントでサポートされていない動作をリクエストした場合、CEKはすぐユーザーに有効な範囲外のリクエストであることを伝えます。ただし、`SetMode`のような動作は、CLOVA Home Extensionが[SetModeRequest](/CEK/References/ClovaHomeInterface/Control_Interfaces.md#SetModeRequest)メッセージを受信して`mode`フィールドの値を確認するまで、範囲内の動作かどうかを判断できません。もし、CLOVA Home Extensionがメッセージを受信し、サポートされていないモードである場合、エラーレスポンスを返す必要があります。その際、`UnsupportedOperationError`メッセージをCEKに返します。
 
-例えば、ユーザーのサーモスタット(`"THERMOSTAT"`タイプ)が`SetMode`動作をサポートし、スリープモード(`"sleep"`)、外出モード(`"away"`)をサポートしている場合を仮定します。その場合、ユーザーがそのデバイスに冷房モード(`"cool"`)を設定するようにリクエストすると、Clova Home Extensionは`UnsupportedOperationError`メッセージをCEKに返す必要があります。
+例えば、ユーザーのサーモスタット(`"THERMOSTAT"`タイプ)が`SetMode`動作をサポートし、スリープモード(`"sleep"`)、外出モード(`"away"`)をサポートしている場合を仮定します。その場合、ユーザーがそのデバイスに冷房モード(`"cool"`)を設定するようにリクエストすると、CLOVA Home Extensionは`UnsupportedOperationError`メッセージをCEKに返す必要があります。
 
 ### Payload fields
 

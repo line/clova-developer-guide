@@ -70,8 +70,8 @@
       <li>対話モデルテストモードでは、入力フィールドに新しいサンプル発話を入力して送信すると、直前のテスト履歴が削除されて、最新の結果だけが表示されます。</li>
       <li>トグルボタンをクリックしてテストモードを変更すると、テスト履歴が削除されます。</li>
       <li><strong>{{ book.DevConsole.cek_builder_test_request_json }}</strong> 項目のコードは、直接編集することができます。例えばスロットの値を変更して<strong>{{ book.DevConsole.cek_builder_test_test_again }}</strong>ボタンをクリックして再度テストを行い、<strong>{{ book.DevConsole.cek_builder_test_service_response }}</strong>の違いを比較するといった使い方ができます。</li>
-      <li>オーディオコンテンツの再生にAudioPlayerを使用している場合は、<strong>{{ book.DevConsole.cek_builder_test_service_response }}</strong>として"AudioPlayerを利用したオーディオコンテンツはClovaデバイスで確認してください。"と表示され、テスト画面で再生することはできません。<a href="#DeviceTest">Clovaデバイスでテスト</a>してください。</li>
-      <li>オーディオコンテンツの再生にAudioPlayerを使用している状態で、入力フィールドに「次」「前」等と入力して送信した場合、"解析されたインテント"として<code>Clova.NextIntent</code>、<code>Clova.PreviousIntent</code>が返されません。Clovaデバイスに話しかけた場合は正しくインテントが解析されるため、「次」「前」等の発話は<a href="#DeviceTest">Clovaデバイスでテスト</a>してください。</li>
+      <li>オーディオコンテンツの再生にAudioPlayerを使用している場合は、<strong>{{ book.DevConsole.cek_builder_test_service_response }}</strong>として"AudioPlayerを利用したオーディオコンテンツはCLOVAデバイスで確認してください。"と表示され、テスト画面で再生することはできません。<a href="#DeviceTest">CLOVAデバイスでテスト</a>してください。</li>
+      <li>オーディオコンテンツの再生にAudioPlayerを使用している状態で、入力フィールドに「次」「前」等と入力して送信した場合、"解析されたインテント"として<code>Clova.NextIntent</code>、<code>Clova.PreviousIntent</code>が返されません。CLOVAデバイスに話しかけた場合は正しくインテントが解析されるため、「次」「前」等の発話は<a href="#DeviceTest">CLOVAデバイスでテスト</a>してください。</li>
     </ul>
   </p>
 </div>
@@ -82,7 +82,7 @@
 
 <ol>
   <li>トグルボタンで<strong>シナリオテスト</strong>モードに切り替えます。</li>
-  <li><strong>起動</strong>ボタンをクリックすると、<code>LaunchRequest</code>が送信されます。チャットウィンドウには、"＜スキル名＞を起動して"と表示され、スキルが起動した際のClovaの応答が表示されます。</li>
+  <li><strong>起動</strong>ボタンをクリックすると、<code>LaunchRequest</code>が送信されます。チャットウィンドウには、"＜スキル名＞を起動して"と表示され、スキルが起動した際のCLOVAの応答が表示されます。</li>
   <li><strong>入力フィールド</strong>にテストするサンプル発話を入力します。</li>
   <li>Enterキーを押すか、または<strong>{{ book.DevConsole.cek_builder_test_request_test }}</strong>ボタンをクリックします。</li>
   <li>対話を続ける場合は、3～4の手順を繰り返します。</li>

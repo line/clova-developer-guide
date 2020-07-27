@@ -2,7 +2,7 @@
 Custom Extensionメッセージは、CEKとCustom Extensionが情報をやり取りする際に使用されるメッセージです。Custom Extensionメッセージは、[リクエストメッセージ](#CustomExtRequestMessage)と[レスポンスメッセージ](#CustomExtResponseMessage)の2種類があります。リクエストメッセージには、[リクエストタイプ](#CustomExtRequestType)によって`EventRequest`、`IntentRequest`、`LaunchRequest`、`SessionEndedRequest`の4つのタイプがあります。
 
 ### リクエストメッセージ {#CustomExtRequestMessage}
-CEKは、Clovaが解析したユーザーのリクエストをCustom Extensionに渡すために、リクエストメッセージを送信します(HTTPリクエスト)。ここでは、リクエストメッセージの構造、各フィールドの説明、リクエストタイプとそれによって異なる`request`フィールドについて説明します。
+CEKは、CLOVAが解析したユーザーのリクエストをCustom Extensionに渡すために、リクエストメッセージを送信します(HTTPリクエスト)。ここでは、リクエストメッセージの構造、各フィールドの説明、リクエストタイプとそれによって異なる`request`フィールドについて説明します。
 
 #### Message structure
 
@@ -75,7 +75,7 @@ CEKは、Clovaが解析したユーザーのリクエストをCustom Extension�
 | `context.System.device.display.orientation` | string   | ディスプレイ装置の向き。`context.System.device.display.size`の値が`"none"`の場合、このフィールドは省略されます。<ul><li><code>"landscape"</code>：横方向</li><li><code>"portrait"</code>：縦方向</li></ul> | Optional |
 | `context.System.device.display.size` | string   | ディスプレイ装置の解像度を示す値。あらかじめ指定された値または任意の解像度のサイズを表す値(`"custom"`)が入力されています。しかし、ディスプレイ装置がないことを表す値(`"none"`)が入力されていることもあります。<ul><li><code>"none"</code>：クライアントデバイスにディスプレイ装置がない</li><li><code>"s100"</code>：低解像度(160px X 107px)</li><li><code>"m100"</code>：中解像度(427px X 240px)</li><li><code>"l100"</code>：高解像度(640px X 360px)</li><li><code>"xl100"</code>：超高解像度(xlarge type、899px X 506px)</li><li><code>"custom"</code>：あらかじめ定義された規格ではない解像度。</li></ul><div class="note"><p><strong>メモ</strong></p><p>クライアントデバイスのアスペクト比とDPIに適合した画質のメディアコンテンツを提供する必要があります。</p></div> | <!-- --> |
 | `context.System.user` | object   | クライアントデバイスに認証されたデフォルトユーザーの情報を持っているオブジェクト | <!-- --> |
-| `context.System.user.userId` | string   | デバイスのデフォルトユーザーのClova ID | <!-- --> |
+| `context.System.user.userId` | string   | デバイスのデフォルトユーザーのCLOVA ID | <!-- --> |
 | `context.System.user.accessToken` | string   | 特定のサービスのユーザーアカウントのアクセストークン。デバイスのデフォルトユーザーと連携されたユーザーアカウントのアクセストークンが渡されます。CEKは、外部サービスの認可サーバーから取得したユーザーアカウントのアクセストークンを渡します。詳細については、[ユーザーアカウントを連携する](/CEK/Guides/Link_User_Account.md)を参照してください。 | <!-- --> |
 | `request`    | object   | 解析されたユーザーの発話情報を持っているオブジェクト。[リクエストタイプ](#CustomExtRequestType)によって、構成されるフィールドが異なります。 | <!-- --> |
 | `session`    | object   | セッション情報を持っているオブジェクト。ここでいうセッションとは、ユーザーのリクエストを区分する単位です。 | <!-- --> |
@@ -83,7 +83,7 @@ CEKは、Clovaが解析したユーザーのリクエストをCustom Extension�
 | `session.sessionAttributes` | object   | ユーザーとのマルチターン対話に必要な情報を保存したオブジェクト。Custom Extensionは、[レスポンスメッセージ](#CustomExtResponseMessage)の`response.sessionAttributes`フィールドを使用して中間情報をCEKに渡します。ユーザーの追加のリクエストを受け付けると、その情報は再びリクエストメッセージの`session.sessionAttributes`フィールドで渡されます。オブジェクトはキー(key)と値(value)のペアで構成され、Custom Extensionを実装する際、任意に定義できます。保存された値がない場合、空のオブジェクトが渡されます。 | <!-- --> |
 | `session.sessionId` | string   | セッションID | <!-- --> |
 | `session.user` | object   | 現在のユーザーの情報を持っているオブジェクト | <!-- --> |
-| `session.user.userId` | string   | 現在のユーザーのClova ID。`context.System.user.userId`の値と異なることがあります。 | <!-- --> |
+| `session.user.userId` | string   | 現在のユーザーのCLOVA ID。`context.System.user.userId`の値と異なることがあります。 | <!-- --> |
 | `session.user.accessToken` | string   | 特定のサービスのユーザーアカウントのアクセストークン。現在のユーザーと連携されたユーザーアカウントのアクセストークンが渡されます。CEKは、外部サービスの認可サーバーから取得したユーザーアカウントのアクセストークンを渡します。詳細については、[ユーザーアカウントを連携する](/CEK/Guides/Link_User_Account.md)を参照してください。 | Optional |
 | `version`    | string   | メッセージフォーマットのバージョン(CEKのバージョン) | <!-- --> |
 
@@ -313,12 +313,12 @@ CEKは、Clovaが解析したユーザーのリクエストをCustom Extension�
 
 | フィールド名      | データ型 | フィールドの説明 | Optional |
 | ----------------- | -------- | ---------------- | :------: |
-| `event`           | object   | クライアントがClovaに渡した情報が保存されているオブジェクト  | <!-- --> |
-| `event.name`      | string   | クライアントがClovaに送信したイベントの名前。例えばスキルが有効、もしくは無効への切り替えを示すイベントの名前は、`SkillEnabled`や`SkillDisabled`になります。スキルの有効/無効の切り替えを示すリクエストを受け取った際には、[リクエストメッセージ](#CustomExtRequestMessage)の`context.System.application.applicationId`フィールドと`context.System.user.userId`フィールドを利用してユーザー情報を初期登録したり、利用終了したユーザーのデータを廃棄する実装をしてください。 | <!-- --> |
-| `event.namespace` | string   | クライアントがClovaに送信したイベントの名前空間、または、スキルが有効か無効かを示す名前空間。スキルが有効か無効かを示す名前空間は、`ClovaSkill`に固定されます。 | <!-- --> |
-| `event.payload`   | object   | クライアントがClovaに送信した`payload`または`payload`の一部の情報。一部のイベント、または、スキルが有効か無効かを示すための`EventRequest`リクエストは、`payload`が空のオブジェクトの場合があります。 | <!-- --> |
-| `requestId`       | string   | クライアントがClovaに情報を渡すときに作成されたダイアログID(`event.header.dialogRequestId`) | <!-- --> |
-| `timestamp`       | string   | クライアントがClovaに情報を渡した日時(タイムスタンプ、<a href="https://en.wikipedia.org/wiki/ISO_8601" target="_blank">ISO 8601</a>)<div class="note"><p><strong>メモ</strong></p><p>CEKは<code>EventRequest</code>タイプのリクエストの順序を保証しません。クライアントからのリクエストの順序は、このフィールドの値から把握することができます。</p></div> | <!-- --> |
+| `event`           | object   | クライアントがCLOVAに渡した情報が保存されているオブジェクト  | <!-- --> |
+| `event.name`      | string   | クライアントがCLOVAに送信したイベントの名前。例えばスキルが有効、もしくは無効への切り替えを示すイベントの名前は、`SkillEnabled`や`SkillDisabled`になります。スキルの有効/無効の切り替えを示すリクエストを受け取った際には、[リクエストメッセージ](#CustomExtRequestMessage)の`context.System.application.applicationId`フィールドと`context.System.user.userId`フィールドを利用してユーザー情報を初期登録したり、利用終了したユーザーのデータを廃棄する実装をしてください。 | <!-- --> |
+| `event.namespace` | string   | クライアントがCLOVAに送信したイベントの名前空間、または、スキルが有効か無効かを示す名前空間。スキルが有効か無効かを示す名前空間は、`ClovaSkill`に固定されます。 | <!-- --> |
+| `event.payload`   | object   | クライアントがCLOVAに送信した`payload`または`payload`の一部の情報。一部のイベント、または、スキルが有効か無効かを示すための`EventRequest`リクエストは、`payload`が空のオブジェクトの場合があります。 | <!-- --> |
+| `requestId`       | string   | クライアントがCLOVAに情報を渡すときに作成されたダイアログID(`event.header.dialogRequestId`) | <!-- --> |
+| `timestamp`       | string   | クライアントがCLOVAに情報を渡した日時(タイムスタンプ、<a href="https://en.wikipedia.org/wiki/ISO_8601" target="_blank">ISO 8601</a>)<div class="note"><p><strong>メモ</strong></p><p>CEKは<code>EventRequest</code>タイプのリクエストの順序を保証しません。クライアントからのリクエストの順序は、このフィールドの値から把握することができます。</p></div> | <!-- --> |
 | `type`            | string   | リクエストメッセージのタイプ。`"EventRequest"`の値に固定されます。 | <!-- --> |
 
 以下は、`EventRequest`タイプのメッセージの`request`オブジェクトフィールドのサンプルです。
@@ -362,7 +362,7 @@ CEKは、Clovaが解析したユーザーのリクエストをCustom Extension�
 ```
 
 #### IntentRequest {#CustomExtIntentRequest}
-`IntentRequest`は、解析されたユーザーのリクエストを渡し、その内容を処理するように要求するリクエストタイプです。Extensionの開発者はサービスを開発する際、ユーザーのリクエストをどう受け付けるかについて[対話モデルを定義](/Design/Design_Guideline_For_Extension.md#DefineInteractionModel)する必要があります。対話モデルは、[Clova Developer Center](/DevConsole/ClovaDevConsole_Overview.md)で登録できます。その際、区別されるユーザーのリクエストをインテントという情報形式で定義します。解析されたユーザーの発話情報はインテントに変換され、`intent`フィールドでExtensionに渡されます。
+`IntentRequest`は、解析されたユーザーのリクエストを渡し、その内容を処理するように要求するリクエストタイプです。Extensionの開発者はサービスを開発する際、ユーザーのリクエストをどう受け付けるかについて[対話モデルを定義](/Design/Design_Guideline_For_Extension.md#DefineInteractionModel)する必要があります。対話モデルは、[CLOVA Developer Center](/DevConsole/ClovaDevConsole_Overview.md)で登録できます。その際、区別されるユーザーのリクエストをインテントという情報形式で定義します。解析されたユーザーの発話情報はインテントに変換され、`intent`フィールドでExtensionに渡されます。
 
 `IntentRequest`タイプのメッセージの`request`オブジェクトのフィールドは、次のように構成されます。
 
@@ -737,7 +737,7 @@ SpeechInfoObjectオブジェクトはレスポンスメッセージの`response.
 
 ## オーディオコンテンツ再生関連のCIC API {#CICAPIforAudioPlayback}
 
-CIC APIは、ユーザーのクライアントデバイスがClovaと通信を行うときにやり取りするメッセージの規格です。ここで説明されているCIC APIとは、Custom Extensionの[オーディオコンテンツの提供](/CEK/Guides/Build_Custom_Extension.md#ProvideAudioContent)に関連して、CEKでサポートしているCIC APIのことです。CEKは、クライアントがClovaに渡したイベントを、[`EventRequest`](#CustomExtEventRequest)タイプのメッセージの`event`フィールドに設定して送信します。また、Custom Extensionは、ユーザーにオーディオコンテンツを提供するために、オーディオコンテンツの再生コントロールに関連するディレクティブを[`レスポンスメッセージ`](#CustomExtResponseMessage)の`response.directives[]`フィールドに設定して送信する必要があります。
+CIC APIは、ユーザーのクライアントデバイスがCLOVAと通信を行うときにやり取りするメッセージの規格です。ここで説明されているCIC APIとは、Custom Extensionの[オーディオコンテンツの提供](/CEK/Guides/Build_Custom_Extension.md#ProvideAudioContent)に関連して、CEKでサポートしているCIC APIのことです。CEKは、クライアントがCLOVAに渡したイベントを、[`EventRequest`](#CustomExtEventRequest)タイプのメッセージの`event`フィールドに設定して送信します。また、Custom Extensionは、ユーザーにオーディオコンテンツを提供するために、オーディオコンテンツの再生コントロールに関連するディレクティブを[`レスポンスメッセージ`](#CustomExtResponseMessage)の`response.directives[]`フィールドに設定して送信する必要があります。
 
 従って、Custom Extensionがオーディオコンテンツを提供する場合、以下のCIC APIを理解しておく必要があります。
 
@@ -1415,7 +1415,7 @@ CIC APIは、ユーザーのクライアントデバイスがClovaと通信を�
 * [`AudioPlayer.StreamRequested`](#StreamRequested)
 
 ## オーディオコンテンツ再生関連のコンテキスト {#ContextObjectforAudioPlayback}
-クライアントがClovaに[CIC API](#CICAPIforAudioPlayback)イベントを送信するとき、以下のようなさまざまなコンテキストが含まれます。そのうち、オーディオコンテンツの再生に関連するコンテキストは、[`AudioPlayer.PlaybackState`](#PlaybackState)です。
+クライアントがCLOVAに[CIC API](#CICAPIforAudioPlayback)イベントを送信するとき、以下のようなさまざまなコンテキストが含まれます。そのうち、オーディオコンテンツの再生に関連するコンテキストは、[`AudioPlayer.PlaybackState`](#PlaybackState)です。
 
 ### AudioPlayer.PlaybackState {#PlaybackState}
 `AudioPlayer.PlaybackState`は、現在再生しているか、または最後に再生したオーディオの情報をCICにレポートするときに使用されるメッセージ形式です。

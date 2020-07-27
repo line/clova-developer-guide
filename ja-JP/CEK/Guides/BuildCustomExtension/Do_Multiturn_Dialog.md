@@ -38,7 +38,7 @@ Custom Extensionがサービスを提供したり、または動作するため�
 
 Custom Extensionがピザの種類だけでなく、注文する数量に関する情報を必要とすることがあります。その際、[レスポンスメッセージ](/CEK/References/CEK_API.md#CustomExtResponseMessage)の`response.shouldEndSession`フィールドを`false`に設定すると、マルチターン対話で足りない情報を確認することができます。また、ユーザーが先に入力した情報を`sessionAttributes`フィールドにキー(key)-値(value)の形で保存することもできます。
 
-以下のようにレスポンスを返すことで、ユーザーがすでにリクエストした`intent`フィールドと`pizzaType`の情報を保存するようにClovaにリクエストすることができます。また、ユーザーに数量に関する追加の情報を求めることができます。
+以下のようにレスポンスを返すことで、ユーザーがすでにリクエストした`intent`フィールドと`pizzaType`の情報を保存するようにCLOVAにリクエストすることができます。また、ユーザーに数量に関する追加の情報を求めることができます。
 
 {% raw %}
 ```json
